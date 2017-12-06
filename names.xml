@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<items>
+  <item id="byte-064" value="grail-guidance" />
+  <item id="byte-065" value="grail-maus" />
+  <item id="byte-066" value="grail-sun" />
+  <item id="byte-067" value="grail-spring" />
+  <item id="byte-068" value="grail-inferno" />
+  <item id="byte-069" value="grail-extinct" />
+  <item id="byte-06a" value="grail-twins-f" />
+  <item id="byte-06b" value="grail-endless" />
+  <item id="byte-06c" value="grail-shrine-f" />
+  <item id="byte-06d" value="grail-illusion" />
+  <item id="byte-06e" value="grail-grave" />
+  <item id="byte-06f" value="grail-moon" />
+  <item id="byte-070" value="grail-goddess" />
+  <item id="byte-071" value="grail-ruin" />
+  <item id="byte-072" value="grail-birth" />
+  <item id="byte-073" value="grail-twins-b" />
+  <item id="byte-074" value="grail-dimension" />
+  <item id="byte-075" value="grail-shrine-b" />
+  <item id="byte-077" value="coin-chests" comments="28 to get luck fairy in the credits" />
+  <item id="byte-078" value="giltoriyo-ladder" comments="1=spoken 2,3=endless ladder" />
+  <item id="byte-07a" value="alsedana-ladder" comments="1=talked 2,3=ladder" />
+  <item id="byte-07d" value="w-chain" />
+  <item id="byte-07e" value="w-flail" />
+  <item id="byte-07f" value="w-knife" />
+  <item id="byte-080" value="w-keysword" />
+  <item id="byte-081" value="w-axe" />
+  <item id="byte-082" value="w-katana" />
+  <item id="byte-083" value="w-shuriken" />
+  <item id="byte-084" value="w-roll-shuriken" />
+  <item id="byte-085" value="w-spear" />
+  <item id="byte-086" value="w-flare" />
+  <item id="byte-087" value="w-bomb" />
+  <item id="byte-088" value="w-chakram" />
+  <item id="byte-089" value="w-caltrop" />
+  <item id="byte-08a" value="w-pistol" />
+  <item id="byte-08e" value="jewel-guidance" />
+  <item id="byte-08f" value="jewel-maus" />
+  <item id="byte-090" value="jewel-sun" />
+  <item id="byte-091" value="jewel-spring" />
+  <item id="byte-092" value="jewel-ruin" />
+  <item id="byte-093" value="jewel-birth" />
+  <item id="byte-094" value="jewel-twins" />
+  <item id="byte-095" value="jewel-dimension" />
+  <item id="byte-096" value="w-scanner" />
+  <item id="byte-097" value="w-djed" />
+  <item id="byte-098" value="w-doll" />
+  <item id="byte-099" value="w-magatama" />
+  <item id="byte-09a" value="w-cog" />
+  <item id="byte-09b" value="w-lamp" />
+  <item id="byte-09c" value="w-pochettekey" />
+  <item id="byte-a8d" value="w-dragonbone" comments="custom" />
+  <item id="byte-09e" value="w-cskull" />
+  <item id="byte-09f" value="w-vessel" />
+  <item id="byte-a8e" value="w-pepper" />
+  <item id="byte-0a1" value="w-woman" />
+  <item id="byte-0a2" value="w-endless-key" />
+  <item id="byte-0a3" value="w-serpent" />
+  <item id="byte-0a4" value="w-talisman" />
+  <item id="byte-0a5" value="w-water-case" />
+  <item id="byte-0a6" value="w-heat-case" />
+  <item id="byte-0a7" value="w-shell-horn" />
+  <item id="byte-0a8" value="w-glove" />
+  <item id="byte-0a9" value="w-grail" />
+  <item id="byte-0aa" value="w-isispendant" />
+  <item id="byte-0ab" value="w-crucifix" />
+  <item id="byte-0ac" value="w-helmet" />
+  <item id="byte-0ad" value="w-grapple" />
+  <item id="byte-0ae" value="w-mirror" />
+  <item id="byte-0af" value="w-eye-truth" />
+  <item id="byte-0b0" value="w-ring" />
+  <item id="byte-0b1" value="w-scale" />
+  <item id="byte-0b2" value="w-gauntlet" />
+  <item id="byte-a92" value="w-anchor" />
+  <item id="byte-0b4" value="w-plane" />
+  <item id="byte-0b5" value="w-ocarina" />
+  <item id="byte-0b6" value="w-feather" />
+  <item id="byte-a8f" value="w-book" />	
+  <item id="byte-0b8" value="w-clothes" />
+  <item id="byte-0b9" value="w-scriptures" />
+  <item id="byte-0ba" value="w-hermes" />
+  <item id="byte-0bb" value="w-fruit" />
+  <item id="byte-0bc" value="w-twin-statue" />
+  <item id="byte-0bd" value="w-bracelet" />
+  <item id="byte-0be" value="w-perfume" />
+  <item id="byte-0bf" value="w-spaulder" />
+  <item id="byte-0c0" value="w-dimension-key" />
+  <item id="byte-0c1" value="w-icecape" />
+  <item id="byte-0c2" value="w-seal1" />
+  <item id="byte-0c3" value="w-seal2" />  
+  <item id="byte-0c4" value="w-seal3" />  
+  <item id="byte-0c5" value="w-seal4" />
+  <item id="byte-0c7" value="w-orb-guidance" />
+  <item id="byte-0c8" value="w-orb-surface" />
+  <item id="byte-0c9" value="w-orb-maus" />
+  <item id="byte-0ca" value="w-orb-sun" />
+  <item id="byte-0cb" value="w-orb-spring" />
+  <item id="byte-0cc" value="w-orb-extinct" />
+  <item id="byte-0cd" value="w-orb-twins" />
+  <item id="byte-0ce" value="w-orb-shrine" />
+  <item id="byte-0cf" value="w-orb-ruin" />
+  <item id="byte-0d0" value="w-orb-dimension" />
+  <item id="byte-0d1" value="w-map-surface" />
+  <item id="byte-0d2" value="w-map-guidance" />
+  <item id="byte-0d3" value="w-map-maus" />
+  <item id="byte-0d4" value="w-map-sun" />
+  <item id="byte-0d5" value="w-map-spring" />
+  <item id="byte-0d6" value="w-map-inferno" />
+  <item id="byte-0d7" value="w-map-extinct" />
+  <item id="byte-0d8" value="w-map-twins" />
+  <item id="byte-0d9" value="w-map-endless" />
+  <item id="byte-0da" value="w-map-shrine" />
+  <item id="byte-0db" value="w-map-illusion" />
+  <item id="byte-0dc" value="w-map-grave" />
+  <item id="byte-0dd" value="w-map-moon" />
+  <item id="byte-0de" value="w-map-goddess" />
+  <item id="byte-0df" value="w-map-ruins" />
+  <item id="byte-0e0" value="w-map-birth" />
+  <item id="byte-0e1" value="w-map-dimensional" />
+  <item id="byte-0e2" value="w-reader" />
+  <item id="byte-0e3" value="w-xmailer" />
+  <item id="byte-0e4" value="w-yagomap" />
+  <item id="byte-0e5" value="w-yagostr" />
+  <item id="byte-0e6" value="w-bunemon" />
+  <item id="byte-0e7" value="w-bunplus" />
+  <item id="byte-0e8" value="w-torude" />
+  <item id="byte-a91" value="w-guild" />
+  <item id="byte-0ea" value="w-mantra" />
+  <item id="byte-0eb" value="w-emusic" />
+  <item id="byte-0ec" value="w-beolamu" />
+  <item id="byte-0ee" value="w-randc" />
+  <item id="byte-0ef" value="w-capstar" />
+  <item id="byte-0f0" value="w-move" />
+  <item id="byte-0f1" value="w-mekuri" />
+  <item id="byte-0f2" value="w-bounce" />
+  <item id="byte-0f3" value="w-miracle" />
+  <item id="byte-0f4" value="w-mirai" />
+  <item id="byte-0f5" value="w-lamulana" />
+  <item id="byte-0f6" value="boss-amphisbaena" />
+  <item id="byte-0f7" value="boss-sakit" />
+  <item id="byte-0f8" value="boss-ellmac" />
+  <item id="byte-0f9" value="boss-bahamut" />
+  <item id="byte-0fa" value="boss-viy" />
+  <item id="byte-0fb" value="boss-palenque" />
+  <item id="byte-0fc" value="boss-baphomet" />
+  <item id="byte-0fd" value="boss-tiamat" />
+  <item id="byte-102" value="guardian-kills" comments="counter" />
+  <item id="byte-103" value="w-treasures" />
+  <item id="byte-104" value="w-diary" />
+  <item id="byte-105" value="w-mulanatalisman" />
+  <item id="byte-106" value="w-forbidden" comments="2" />
+  <item id="byte-108" value="w-medicine" comments="2" />
+  <item id="byte-10b" value="w-maternity" />
+  <item id="byte-118" value="fairypointsactive" comment="fairy points work and healing fairy in credits" />
+  <item id="byte-aea" value="mantra-amphisbaena" comments="2=recited?" />
+  <item id="byte-125" value="mantra-sakit" comments="4=recited" />
+  <item id="byte-126" value="mantra-ellmac" comments="4=recited" />
+  <item id="byte-127" value="mantra-bahamut" comments="4=recited" />
+  <item id="byte-128" value="mantra-viy" comments="4=recited" />
+  <item id="byte-129" value="mantra-palenque" comments="4=recited" />
+  <item id="byte-12a" value="mantra-baphomet" comments="4=recited" />
+  <item id="byte-12b" value="mantra-tiamat" comments="4=recited" />
+  <item id="byte-124" value="mantra-keysword" comments="4=keysword empowered?" />
+  <item id="byte-2e6" value="w-msx2" comment="definitely set when you buy it but goes 2 then 1, I don't even" />
+  <item id="byte-2e5" value="rosetta-count" />
+  <item id="byte-2ea" value="learnt-lamulanese" comments="1" />
+  <item id="byte-354" value="orb-count" />
+  <item id="byte-355" value="orb-guidance" />
+  <item id="byte-356" value="orb-surface" />
+  <item id="byte-357" value="orb-maus" />
+  <item id="byte-358" value="orb-sun" />
+  <item id="byte-359" value="orb-spring" />
+  <item id="byte-35a" value="orb-extinct" />
+  <item id="byte-35b" value="orb-twins" />
+  <item id="byte-35c" value="orb-shrine-f" />
+  <item id="byte-35d" value="orb-ruin" />
+  <item id="byte-35e" value="orb-dimension" />
+  <item id="byte-aec" value="xelpud-talisman" comments="?" />
+  <item id="byte-a94" value="w-map-a94" />
+  <item id="byte-a95" value="w-map-a95" />
+  <item id="byte-a96" value="w-map-a96" />
+  <item id="byte-a97" value="w-map-a97" />
+  <item id="byte-a98" value="w-map-a98" />
+  <item id="byte-a99" value="w-map-a99" />
+  <item id="byte-a9a" value="w-map-a9a" />
+  <item id="byte-a9b" value="w-map-a9b" />
+  <item id="byte-a9c" value="w-map-a9c" />
+  <item id="byte-a9d" value="w-map-a9d" />
+  <item id="byte-a9e" value="w-map-a9e" />
+  <item id="byte-a9f" value="w-map-a9f" />
+  <item id="byte-aa0" value="w-map-aa0" />
+  <item id="byte-aa1" value="w-map-aa1" />
+  <item id="byte-aa2" value="w-map-aa2" />
+  <item id="byte-aa3" value="w-map-aa3" />
+  <item id="byte-aa4" value="w-map-aa4" />
+  <item id="word-010" value="invsw-shield-buckler" />
+  <item id="word-011" value="invsw-shield-silver" />
+  <item id="word-012" value="invsw-shield-angel" />
+  <item id="word-013" value="ankh-jewels" />
+  <item id="word-019" value="invus-lamp-lit" />
+  <item id="word-046" value="maps" />
+  <item id="word-047" value="invtr-treasures" />
+  <item id="word-048" value="invus-diary" />
+  <item id="word-049" value="invus-lamulana" />
+  <item id="word-04a" value="inv-forbidden" />
+  <item id="word-04b" value="invus-shield-fake" />
+  <item id="word-050" value="invus-lamp-unlit" />
+  <item id="word-052" value="invtr-grailbr" />
+  <item id="word-053" value="invtr-grailfull" />
+  <item id="word-069" value="weights" />
+  <item id="word-06a" value="coins" />
+  <item id="word-06b" value="ammo-shuriken" />
+  <item id="word-06c" value="ammo-roll-shuriken" />
+  <item id="word-06d" value="ammo-spear" />
+  <item id="word-06e" value="ammo-flare" />
+  <item id="word-06f" value="ammo-bomb" />
+  <item id="word-070" value="ammo-chakram" />
+  <item id="word-071" value="ammo-caltrop" />
+  <item id="word-072" value="ammo-clip" />
+  <item id="word-073" value="ammo-mystery-73" />
+  <item id="word-074" value="ammo-bullet" />
+</items>

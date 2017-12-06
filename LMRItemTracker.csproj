@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{68CA971C-51F9-480D-ADED-EBD7D31C9CCE}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LMRItemTracker</RootNamespace>
+    <AssemblyName>LMRItemTracker</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LiveSplit.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\Downloads\LiveSplit_1.7.4\LiveSplit.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LaMulanaItemTrackerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LaMulanaItemTrackerForm.Designer.cs">
+      <DependentUpon>LaMulanaItemTrackerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LaMulanaItemTrackerForm.resx">
+      <DependentUpon>LaMulanaItemTrackerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss_amphisbaena.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss_amphisbaena_blank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss_bahamut.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss_bahamut_blank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss_baphomet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss_baphomet_blank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss_ellmac.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss_ellmac_blank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss_palenque.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss_palenque_blank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss_sakit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss_sakit_blank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss_tiamat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss_tiamat_blank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss_viy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss_viy_blank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_ankhjewel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_ankhjewel_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_birthseal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_birthseal_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_deathseal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_deathseal_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_djedpillar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_djedpillar_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_feather.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_feather_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_feather2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_handscanner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_handscanner_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_holygrail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_holygrail_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_holygrail3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_keysword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_keysword_awakened_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_lampoftime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_lampoftime_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_lifeseal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_lifeseal_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_mantra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_mantra_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_medicineofthemind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_originseal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_originseal_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_philosophersocarina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_philosophersocarina_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_reader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_reader_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_vessel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_vessel_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="names.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Resources\Icon_talisman.png" />
+    <None Include="Resources\Icon_ring_blank.png" />
+    <None Include="Resources\Icon_ring.png" />
+    <None Include="Resources\Icon_mulanatalisman_blank.png" />
+    <None Include="Resources\Icon_mulanatalisman.png" />
+    <None Include="Resources\Icon_isispendant_blank.png" />
+    <None Include="Resources\Icon_isispendant.png" />
+    <None Include="Resources\Icon_hermesboots_blank.png" />
+    <None Include="Resources\Icon_hermesboots.png" />
+    <None Include="Resources\Icon_grappleclaw_blank.png" />
+    <None Include="Resources\Icon_grappleclaw.png" />
+    <None Include="Resources\Icon_gauntlet_blank.png" />
+    <None Include="Resources\Icon_gauntlet.png" />
+    <None Include="Resources\Icon_diary_blank.png" />
+    <None Include="Resources\Icon_diary.png" />
+    <None Include="Resources\Icon_talisman_blank.png" />
+    <None Include="Resources\Icon_map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_dragonbone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_dragonbone_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_yagomap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_yagomap_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_yagostr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_yagostr_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_bomb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_bomb_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_bronzemirror.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_bronzemirror_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_capstar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_capstar_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_cogofthesoul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_cogofthesoul_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_crystalskull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_crystalskull_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_dimensionalkey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_dimensionalkey_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_fruitofeden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_fruitofeden_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_helmet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_helmet_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_keyofeternity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_keyofeternity_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_mekuri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_mekuri_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_miracle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_miracle_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_mirai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_mirai_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_planemodel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_planemodel_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_twinstatue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_twinstatue_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_keysword_awakened.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_treasures.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_treasures_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_map_shrine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_lampoftime_unlit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_pochettekey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_pochettekey_blank.png" />
+  </ItemGroup>
+  <Import Project="..\EyeOfTruth.Shared\EyeOfTruth.Shared.projitems" Label="Shared" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
