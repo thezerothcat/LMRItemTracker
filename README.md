@@ -5,7 +5,7 @@
 * Tracks progress for randomized playthroughs
 
 ## Installation
-Download the zipfile from the latest build, unzip, and run the executable.
+Download the zipfile from the latest build at <https://github.com/thezerothcat/LMRItemTracker/releases>, unzip, and run the executable.
 
 ## Attribution
 * Item tracker code written by thezerothcat.
