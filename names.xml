@@ -1,23 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <items>
-  <item id="byte-064" value="grail-guidance" />
-  <item id="byte-065" value="grail-maus" />
-  <item id="byte-066" value="grail-sun" />
-  <item id="byte-067" value="grail-spring" />
-  <item id="byte-068" value="grail-inferno" />
-  <item id="byte-069" value="grail-extinct" />
-  <item id="byte-06a" value="grail-twins-f" />
-  <item id="byte-06b" value="grail-endless" />
-  <item id="byte-06c" value="grail-shrine-f" />
-  <item id="byte-06d" value="grail-illusion" />
-  <item id="byte-06e" value="grail-grave" />
-  <item id="byte-06f" value="grail-moon" />
-  <item id="byte-070" value="grail-goddess" />
-  <item id="byte-071" value="grail-ruin" />
-  <item id="byte-072" value="grail-birth" />
-  <item id="byte-073" value="grail-twins-b" />
-  <item id="byte-074" value="grail-dimension" />
-  <item id="byte-075" value="grail-shrine-b" />
   <item id="byte-077" value="coin-chests" comments="28 to get luck fairy in the credits" />
   <item id="byte-078" value="giltoriyo-ladder" comments="1=spoken 2,3=endless ladder" />
   <item id="byte-07a" value="alsedana-ladder" comments="1=talked 2,3=ladder" />
@@ -194,9 +176,9 @@
   <item id="byte-aa2" value="w-map-aa2" />
   <item id="byte-aa3" value="w-map-aa3" />
   <item id="byte-aa4" value="w-map-aa4" />
-  <item id="word-010" value="invsw-shield-buckler" />
-  <item id="word-011" value="invsw-shield-silver" />
-  <item id="word-012" value="invsw-shield-angel" />
+  <item id="word-010" value="shield-buckler" />
+  <item id="word-011" value="shield-silver" />
+  <item id="word-012" value="shield-angel" />
   <item id="word-013" value="ankh-jewels" />
   <item id="word-019" value="invus-lamp-lit" />
   <item id="word-046" value="maps" />
@@ -204,7 +186,7 @@
   <item id="word-048" value="invus-diary" />
   <item id="word-049" value="invus-lamulana" />
   <item id="word-04a" value="inv-forbidden" />
-  <item id="word-04b" value="invus-shield-fake" />
+  <item id="word-04b" value="shield-fake" />
   <item id="word-050" value="invus-lamp-unlit" />
   <item id="word-052" value="invtr-grailbr" />
   <item id="word-053" value="invtr-grailfull" />

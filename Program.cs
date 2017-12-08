@@ -68,6 +68,13 @@ namespace LMRItemTracker
             {
                 laMulanaItemTrackerForm.updateTranslationTablets((byte)cur);
             }
+            else if (displayname.StartsWith("shield-"))
+            {
+                if(cur is ushort)
+                    laMulanaItemTrackerForm.updateShield(displayname, (ushort)cur > (ushort)0);
+                else if(cur is short)
+                    laMulanaItemTrackerForm.updateShield(displayname, (short)cur > (short)0);
+            }
             else if (displayname.StartsWith("invus-lamp"))
             {
                 laMulanaItemTrackerForm.updateLampOfTime(displayname, (ushort)cur >= 1);
@@ -122,13 +129,27 @@ namespace LMRItemTracker
                         rwords_new = remake.readwords();
                         for (int i = 100; i < 0x1000; i++)
                             if (rbytes_new[i] != rbytes_old[i])
-                                changed(rbytes_new[i], rbytes_old[i], String.Format("byte-{0:x3}", i), laMulanaItemTrackerForm);
+                                try
+                                {
+                                    changed(rbytes_new[i], rbytes_old[i], String.Format("byte-{0:x3}", i), laMulanaItemTrackerForm);
+                                }
+                                catch(Exception ex)
+                                {
+                                    System.Console.WriteLine(ex.StackTrace);
+                                }
                         for (int i = 0; i < 510; i += 2)
                         {
                             ushort oldval = BitConverter.ToUInt16(rwords_old, i);
                             ushort newval = BitConverter.ToUInt16(rwords_new, i);
                             if (newval != oldval)
-                                changed(newval, oldval, String.Format("word-{0:x3}", i >> 1), laMulanaItemTrackerForm);
+                                try
+                                {
+                                    changed(newval, oldval, String.Format("word-{0:x3}", i >> 1), laMulanaItemTrackerForm);
+                                }
+                                catch (Exception ex)
+                                {
+                                    System.Console.WriteLine(ex.StackTrace);
+                                }
                         }
                         rbytes_old = rbytes_new;
                         rwords_old = rwords_new;

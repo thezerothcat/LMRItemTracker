@@ -409,6 +409,204 @@
   <ItemGroup>
     <None Include="Resources\Icon_pochettekey_blank.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keyfairy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_keyfairy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_keyfairy_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_skullwall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_anchor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_anchor_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_angelshield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_axe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_axe_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_bookofthedead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_bookofthedead_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_bracelet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_bracelet_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_buckler.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_buckler_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_chainwhip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_chakram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_chakram_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_crucifix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_crucifix_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_earthspear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_earthspear_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_eyeoftruth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_eyeoftruth_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_fairyclothes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_fairyclothes_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_flailwhip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_flaregun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_flaregun_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_glove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_glove_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_icecape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_icecape_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_katana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_katana_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_knife.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_knife_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_magatamajewel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_magatamajewel_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_maternitystatue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_minidoll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_minidoll_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_msx2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_msx2_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_pepper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_pepper_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_perfume.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_perfume_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_pistol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_pistol_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_scalesphere.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_scalesphere_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_scriptures.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_scriptures_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_serpentstaff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_serpentstaff_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_torude.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_torude_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_whip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_womanstatue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_womanstatue_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_dragonbone_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_djedpillar_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_spaulder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_spaulder_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_silvershield.png" />
+  </ItemGroup>
   <Import Project="..\EyeOfTruth.Shared\EyeOfTruth.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
