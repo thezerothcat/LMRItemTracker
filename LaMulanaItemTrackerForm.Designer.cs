@@ -129,6 +129,7 @@ namespace LMRItemTracker
             this.reader = new System.Windows.Forms.PictureBox();
             this.scanner = new System.Windows.Forms.PictureBox();
             this.lampOfTime = new System.Windows.Forms.PictureBox();
+            this.whips = new System.Windows.Forms.Panel();
             this.shields.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buckler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.angelShield)).BeginInit();
@@ -216,6 +217,7 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.reader)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scanner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lampOfTime)).BeginInit();
+            this.whips.SuspendLayout();
             this.SuspendLayout();
             // 
             // mapCount
@@ -348,8 +350,9 @@ namespace LMRItemTracker
             // 
             // flailWhip
             // 
+            this.flailWhip.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flailWhip.Image = global::LMRItemTracker.Properties.Resources.Icon_flailwhip;
-            this.flailWhip.Location = new System.Drawing.Point(12, 352);
+            this.flailWhip.Location = new System.Drawing.Point(0, 0);
             this.flailWhip.Name = "flailWhip";
             this.flailWhip.Size = new System.Drawing.Size(40, 40);
             this.flailWhip.TabIndex = 105;
@@ -358,8 +361,9 @@ namespace LMRItemTracker
             // 
             // chainWhip
             // 
+            this.chainWhip.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chainWhip.Image = global::LMRItemTracker.Properties.Resources.Icon_chainwhip;
-            this.chainWhip.Location = new System.Drawing.Point(12, 352);
+            this.chainWhip.Location = new System.Drawing.Point(0, 0);
             this.chainWhip.Name = "chainWhip";
             this.chainWhip.Size = new System.Drawing.Size(40, 40);
             this.chainWhip.TabIndex = 104;
@@ -512,8 +516,9 @@ namespace LMRItemTracker
             // 
             // whip
             // 
+            this.whip.Dock = System.Windows.Forms.DockStyle.Fill;
             this.whip.Image = global::LMRItemTracker.Properties.Resources.Icon_whip;
-            this.whip.Location = new System.Drawing.Point(12, 352);
+            this.whip.Location = new System.Drawing.Point(0, 0);
             this.whip.Name = "whip";
             this.whip.Size = new System.Drawing.Size(40, 40);
             this.whip.TabIndex = 84;
@@ -1102,15 +1107,24 @@ namespace LMRItemTracker
             this.lampOfTime.TabIndex = 64;
             this.lampOfTime.TabStop = false;
             // 
+            // whips
+            // 
+            this.whips.Controls.Add(this.flailWhip);
+            this.whips.Controls.Add(this.chainWhip);
+            this.whips.Controls.Add(this.whip);
+            this.whips.Location = new System.Drawing.Point(12, 352);
+            this.whips.Name = "whips";
+            this.whips.Size = new System.Drawing.Size(40, 40);
+            this.whips.TabIndex = 108;
+            // 
             // LaMulanaItemTrackerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 561);
+            this.Controls.Add(this.whips);
             this.Controls.Add(this.shields);
             this.Controls.Add(this.maternityStatue);
-            this.Controls.Add(this.flailWhip);
-            this.Controls.Add(this.chainWhip);
             this.Controls.Add(this.spaulder);
             this.Controls.Add(this.caltrops);
             this.Controls.Add(this.rollingShuriken);
@@ -1127,7 +1141,6 @@ namespace LMRItemTracker
             this.Controls.Add(this.anchor);
             this.Controls.Add(this.flareGun);
             this.Controls.Add(this.earthSpear);
-            this.Controls.Add(this.whip);
             this.Controls.Add(this.chakram);
             this.Controls.Add(this.axe);
             this.Controls.Add(this.iceCape);
@@ -1285,6 +1298,7 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.reader)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scanner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lampOfTime)).EndInit();
+            this.whips.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1399,5 +1413,6 @@ namespace LMRItemTracker
         private PictureBox womanStatue;
         private PictureBox maternityStatue;
         private Panel shields;
+        private Panel whips;
     }
 }

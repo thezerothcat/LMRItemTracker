@@ -16,6 +16,11 @@ namespace LMRItemTracker
             this.keySwordCollected = false;
             this.miracleCollected = false;
             this.mekuriCollected = false;
+            this.buckler.VisibleChanged += new System.EventHandler(this.setBucklerIndex);
+            this.silverShield.VisibleChanged += new System.EventHandler(this.setSilverShieldIndex);
+            this.angelShield.VisibleChanged += new System.EventHandler(this.setAngelShieldIndex);
+            this.chainWhip.VisibleChanged += new System.EventHandler(this.setChainWhipIndex);
+            this.flailWhip.VisibleChanged += new System.EventHandler(this.setFlailWhipIndex);
             InitializeBackgroundWorker();
         }
 
@@ -1209,6 +1214,15 @@ namespace LMRItemTracker
                     }
                 }
             }));
+        }
+
+        private void setFlailWhipIndex(object sender, EventArgs e)
+        {
+            whips.Controls.SetChildIndex(chainWhip, 0);
+        }
+        private void setChainWhipIndex(object sender, EventArgs e)
+        {
+            whips.Controls.SetChildIndex(chainWhip, 1);
         }
 
         private void setAngelShieldIndex(object sender, EventArgs e)
