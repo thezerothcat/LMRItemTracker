@@ -42,8 +42,14 @@ namespace LMRItemTracker
             this.translationTablets = new System.Windows.Forms.Label();
             this.formColorDialog = new System.Windows.Forms.ColorDialog();
             this.skullWallCount = new System.Windows.Forms.Label();
-            this.silverShield = new System.Windows.Forms.PictureBox();
+            this.shields = new System.Windows.Forms.Panel();
+            this.buckler = new System.Windows.Forms.PictureBox();
+            this.angelShield = new System.Windows.Forms.PictureBox();
             this.fakeSilverShield = new System.Windows.Forms.PictureBox();
+            this.silverShield = new System.Windows.Forms.PictureBox();
+            this.maternityStatue = new System.Windows.Forms.PictureBox();
+            this.flailWhip = new System.Windows.Forms.PictureBox();
+            this.chainWhip = new System.Windows.Forms.PictureBox();
             this.spaulder = new System.Windows.Forms.PictureBox();
             this.caltrops = new System.Windows.Forms.PictureBox();
             this.rollingShuriken = new System.Windows.Forms.PictureBox();
@@ -62,13 +68,13 @@ namespace LMRItemTracker
             this.earthSpear = new System.Windows.Forms.PictureBox();
             this.whip = new System.Windows.Forms.PictureBox();
             this.chakram = new System.Windows.Forms.PictureBox();
-            this.buckler = new System.Windows.Forms.PictureBox();
             this.axe = new System.Windows.Forms.PictureBox();
             this.iceCape = new System.Windows.Forms.PictureBox();
             this.magatamaJewel = new System.Windows.Forms.PictureBox();
             this.miniDoll = new System.Windows.Forms.PictureBox();
             this.eyeOfTruth = new System.Windows.Forms.PictureBox();
             this.pepper = new System.Windows.Forms.PictureBox();
+            this.womanStatue = new System.Windows.Forms.PictureBox();
             this.gauntlet = new System.Windows.Forms.PictureBox();
             this.bracelet = new System.Windows.Forms.PictureBox();
             this.fairyClothes = new System.Windows.Forms.PictureBox();
@@ -123,13 +129,14 @@ namespace LMRItemTracker
             this.reader = new System.Windows.Forms.PictureBox();
             this.scanner = new System.Windows.Forms.PictureBox();
             this.lampOfTime = new System.Windows.Forms.PictureBox();
-            this.angelShield = new System.Windows.Forms.PictureBox();
-            this.chainWhip = new System.Windows.Forms.PictureBox();
-            this.flailWhip = new System.Windows.Forms.PictureBox();
-            this.womanStatue = new System.Windows.Forms.PictureBox();
-            this.maternityStatue = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.silverShield)).BeginInit();
+            this.shields.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buckler)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.angelShield)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fakeSilverShield)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.silverShield)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maternityStatue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flailWhip)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chainWhip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spaulder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.caltrops)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rollingShuriken)).BeginInit();
@@ -148,13 +155,13 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.earthSpear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.whip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chakram)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buckler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iceCape)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.magatamaJewel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.miniDoll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyeOfTruth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pepper)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.womanStatue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gauntlet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bracelet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fairyClothes)).BeginInit();
@@ -209,11 +216,6 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.reader)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scanner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lampOfTime)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.angelShield)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chainWhip)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flailWhip)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.womanStatue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maternityStatue)).BeginInit();
             this.SuspendLayout();
             // 
             // mapCount
@@ -280,25 +282,89 @@ namespace LMRItemTracker
             this.skullWallCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.skullWallCount.DoubleClick += new System.EventHandler(this.textDoubleClick);
             // 
+            // shields
+            // 
+            this.shields.Controls.Add(this.buckler);
+            this.shields.Controls.Add(this.angelShield);
+            this.shields.Controls.Add(this.fakeSilverShield);
+            this.shields.Controls.Add(this.silverShield);
+            this.shields.Location = new System.Drawing.Point(172, 352);
+            this.shields.Name = "shields";
+            this.shields.Size = new System.Drawing.Size(40, 40);
+            this.shields.TabIndex = 107;
+            // 
+            // buckler
+            // 
+            this.buckler.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buckler.Image = global::LMRItemTracker.Properties.Resources.Icon_buckler_blank;
+            this.buckler.Location = new System.Drawing.Point(0, 0);
+            this.buckler.Name = "buckler";
+            this.buckler.Size = new System.Drawing.Size(40, 40);
+            this.buckler.TabIndex = 82;
+            this.buckler.TabStop = false;
+            // 
+            // angelShield
+            // 
+            this.angelShield.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.angelShield.Image = global::LMRItemTracker.Properties.Resources.Icon_angelshield;
+            this.angelShield.Location = new System.Drawing.Point(0, 0);
+            this.angelShield.Name = "angelShield";
+            this.angelShield.Size = new System.Drawing.Size(40, 40);
+            this.angelShield.TabIndex = 102;
+            this.angelShield.TabStop = false;
+            this.angelShield.Visible = false;
+            // 
+            // fakeSilverShield
+            // 
+            this.fakeSilverShield.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fakeSilverShield.Image = global::LMRItemTracker.Properties.Resources.Icon_silvershield;
+            this.fakeSilverShield.Location = new System.Drawing.Point(0, 0);
+            this.fakeSilverShield.Name = "fakeSilverShield";
+            this.fakeSilverShield.Size = new System.Drawing.Size(40, 40);
+            this.fakeSilverShield.TabIndex = 101;
+            this.fakeSilverShield.TabStop = false;
+            this.fakeSilverShield.Visible = false;
+            // 
             // silverShield
             // 
+            this.silverShield.Dock = System.Windows.Forms.DockStyle.Fill;
             this.silverShield.Image = global::LMRItemTracker.Properties.Resources.Icon_silvershield;
-            this.silverShield.Location = new System.Drawing.Point(172, 352);
+            this.silverShield.Location = new System.Drawing.Point(0, 0);
             this.silverShield.Name = "silverShield";
             this.silverShield.Size = new System.Drawing.Size(40, 40);
             this.silverShield.TabIndex = 103;
             this.silverShield.TabStop = false;
             this.silverShield.Visible = false;
             // 
-            // fakeSilverShield
+            // maternityStatue
             // 
-            this.fakeSilverShield.Image = global::LMRItemTracker.Properties.Resources.Icon_silvershield;
-            this.fakeSilverShield.Location = new System.Drawing.Point(172, 352);
-            this.fakeSilverShield.Name = "fakeSilverShield";
-            this.fakeSilverShield.Size = new System.Drawing.Size(40, 40);
-            this.fakeSilverShield.TabIndex = 101;
-            this.fakeSilverShield.TabStop = false;
-            this.fakeSilverShield.Visible = false;
+            this.maternityStatue.Image = global::LMRItemTracker.Properties.Resources.Icon_maternitystatue;
+            this.maternityStatue.Location = new System.Drawing.Point(52, 152);
+            this.maternityStatue.Name = "maternityStatue";
+            this.maternityStatue.Size = new System.Drawing.Size(40, 40);
+            this.maternityStatue.TabIndex = 106;
+            this.maternityStatue.TabStop = false;
+            this.maternityStatue.Visible = false;
+            // 
+            // flailWhip
+            // 
+            this.flailWhip.Image = global::LMRItemTracker.Properties.Resources.Icon_flailwhip;
+            this.flailWhip.Location = new System.Drawing.Point(12, 352);
+            this.flailWhip.Name = "flailWhip";
+            this.flailWhip.Size = new System.Drawing.Size(40, 40);
+            this.flailWhip.TabIndex = 105;
+            this.flailWhip.TabStop = false;
+            this.flailWhip.Visible = false;
+            // 
+            // chainWhip
+            // 
+            this.chainWhip.Image = global::LMRItemTracker.Properties.Resources.Icon_chainwhip;
+            this.chainWhip.Location = new System.Drawing.Point(12, 352);
+            this.chainWhip.Name = "chainWhip";
+            this.chainWhip.Size = new System.Drawing.Size(40, 40);
+            this.chainWhip.TabIndex = 104;
+            this.chainWhip.TabStop = false;
+            this.chainWhip.Visible = false;
             // 
             // spaulder
             // 
@@ -311,7 +377,7 @@ namespace LMRItemTracker
             // 
             // caltrops
             // 
-            this.caltrops.Image = global::LMRItemTracker.Properties.Resources.Icon_flaregun_blank;
+            this.caltrops.Image = global::LMRItemTracker.Properties.Resources.Icon_caltrops_blank;
             this.caltrops.Location = new System.Drawing.Point(92, 392);
             this.caltrops.Name = "caltrops";
             this.caltrops.Size = new System.Drawing.Size(40, 40);
@@ -320,7 +386,7 @@ namespace LMRItemTracker
             // 
             // rollingShuriken
             // 
-            this.rollingShuriken.Image = global::LMRItemTracker.Properties.Resources.Icon_flaregun_blank;
+            this.rollingShuriken.Image = global::LMRItemTracker.Properties.Resources.Icon_rollingshuriken_blank;
             this.rollingShuriken.Location = new System.Drawing.Point(52, 392);
             this.rollingShuriken.Name = "rollingShuriken";
             this.rollingShuriken.Size = new System.Drawing.Size(40, 40);
@@ -329,7 +395,7 @@ namespace LMRItemTracker
             // 
             // shuriken
             // 
-            this.shuriken.Image = global::LMRItemTracker.Properties.Resources.Icon_flaregun_blank;
+            this.shuriken.Image = global::LMRItemTracker.Properties.Resources.Icon_shuriken_blank;
             this.shuriken.Location = new System.Drawing.Point(12, 392);
             this.shuriken.Name = "shuriken";
             this.shuriken.Size = new System.Drawing.Size(40, 40);
@@ -462,15 +528,6 @@ namespace LMRItemTracker
             this.chakram.TabIndex = 83;
             this.chakram.TabStop = false;
             // 
-            // buckler
-            // 
-            this.buckler.Image = global::LMRItemTracker.Properties.Resources.Icon_buckler_blank;
-            this.buckler.Location = new System.Drawing.Point(172, 352);
-            this.buckler.Name = "buckler";
-            this.buckler.Size = new System.Drawing.Size(40, 40);
-            this.buckler.TabIndex = 82;
-            this.buckler.TabStop = false;
-            // 
             // axe
             // 
             this.axe.Image = global::LMRItemTracker.Properties.Resources.Icon_axe_blank;
@@ -524,6 +581,15 @@ namespace LMRItemTracker
             this.pepper.Size = new System.Drawing.Size(40, 40);
             this.pepper.TabIndex = 76;
             this.pepper.TabStop = false;
+            // 
+            // womanStatue
+            // 
+            this.womanStatue.Image = global::LMRItemTracker.Properties.Resources.Icon_womanstatue_blank;
+            this.womanStatue.Location = new System.Drawing.Point(52, 152);
+            this.womanStatue.Name = "womanStatue";
+            this.womanStatue.Size = new System.Drawing.Size(40, 40);
+            this.womanStatue.TabIndex = 75;
+            this.womanStatue.TabStop = false;
             // 
             // gauntlet
             // 
@@ -1036,66 +1102,15 @@ namespace LMRItemTracker
             this.lampOfTime.TabIndex = 64;
             this.lampOfTime.TabStop = false;
             // 
-            // angelShield
-            // 
-            this.angelShield.Image = global::LMRItemTracker.Properties.Resources.Icon_angelshield;
-            this.angelShield.Location = new System.Drawing.Point(172, 352);
-            this.angelShield.Name = "angelShield";
-            this.angelShield.Size = new System.Drawing.Size(40, 40);
-            this.angelShield.TabIndex = 102;
-            this.angelShield.TabStop = false;
-            this.angelShield.Visible = false;
-            // 
-            // chainWhip
-            // 
-            this.chainWhip.Image = global::LMRItemTracker.Properties.Resources.Icon_chainwhip;
-            this.chainWhip.Location = new System.Drawing.Point(12, 352);
-            this.chainWhip.Name = "chainWhip";
-            this.chainWhip.Size = new System.Drawing.Size(40, 40);
-            this.chainWhip.TabIndex = 104;
-            this.chainWhip.TabStop = false;
-            this.chainWhip.Visible = false;
-            // 
-            // flailWhip
-            // 
-            this.flailWhip.Image = global::LMRItemTracker.Properties.Resources.Icon_flailwhip;
-            this.flailWhip.Location = new System.Drawing.Point(12, 352);
-            this.flailWhip.Name = "flailWhip";
-            this.flailWhip.Size = new System.Drawing.Size(40, 40);
-            this.flailWhip.TabIndex = 105;
-            this.flailWhip.TabStop = false;
-            this.flailWhip.Visible = false;
-            // 
-            // womanStatue
-            // 
-            this.womanStatue.Image = global::LMRItemTracker.Properties.Resources.Icon_womanstatue_blank;
-            this.womanStatue.Location = new System.Drawing.Point(52, 152);
-            this.womanStatue.Name = "womanStatue";
-            this.womanStatue.Size = new System.Drawing.Size(40, 40);
-            this.womanStatue.TabIndex = 75;
-            this.womanStatue.TabStop = false;
-            // 
-            // maternityStatue
-            // 
-            this.maternityStatue.Image = global::LMRItemTracker.Properties.Resources.Icon_maternitystatue;
-            this.maternityStatue.Location = new System.Drawing.Point(52, 152);
-            this.maternityStatue.Name = "maternityStatue";
-            this.maternityStatue.Size = new System.Drawing.Size(40, 40);
-            this.maternityStatue.TabIndex = 106;
-            this.maternityStatue.TabStop = false;
-            this.maternityStatue.Visible = false;
-            // 
             // LaMulanaItemTrackerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 561);
-            this.Controls.Add(this.angelShield);
+            this.Controls.Add(this.shields);
             this.Controls.Add(this.maternityStatue);
             this.Controls.Add(this.flailWhip);
             this.Controls.Add(this.chainWhip);
-            this.Controls.Add(this.silverShield);
-            this.Controls.Add(this.fakeSilverShield);
             this.Controls.Add(this.spaulder);
             this.Controls.Add(this.caltrops);
             this.Controls.Add(this.rollingShuriken);
@@ -1114,7 +1129,6 @@ namespace LMRItemTracker
             this.Controls.Add(this.earthSpear);
             this.Controls.Add(this.whip);
             this.Controls.Add(this.chakram);
-            this.Controls.Add(this.buckler);
             this.Controls.Add(this.axe);
             this.Controls.Add(this.iceCape);
             this.Controls.Add(this.magatamaJewel);
@@ -1184,8 +1198,14 @@ namespace LMRItemTracker
             this.Text = "Item Tracker";
             this.Load += new System.EventHandler(this.LaMulanaItemTrackerForm_Load);
             this.DoubleClick += new System.EventHandler(this.LaMulanaItemTrackerForm_DoubleClick);
-            ((System.ComponentModel.ISupportInitialize)(this.silverShield)).EndInit();
+            this.shields.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.buckler)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.angelShield)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fakeSilverShield)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.silverShield)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maternityStatue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flailWhip)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chainWhip)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spaulder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.caltrops)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rollingShuriken)).EndInit();
@@ -1204,13 +1224,13 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.earthSpear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.whip)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chakram)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buckler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iceCape)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.magatamaJewel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.miniDoll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyeOfTruth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pepper)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.womanStatue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gauntlet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bracelet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fairyClothes)).EndInit();
@@ -1265,11 +1285,6 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.reader)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scanner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lampOfTime)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.angelShield)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chainWhip)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flailWhip)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.womanStatue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maternityStatue)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1383,5 +1398,6 @@ namespace LMRItemTracker
         private PictureBox flailWhip;
         private PictureBox womanStatue;
         private PictureBox maternityStatue;
+        private Panel shields;
     }
 }

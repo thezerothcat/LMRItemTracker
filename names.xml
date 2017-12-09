@@ -3,20 +3,20 @@
   <item id="byte-077" value="coin-chests" comments="28 to get luck fairy in the credits" />
   <item id="byte-078" value="giltoriyo-ladder" comments="1=spoken 2,3=endless ladder" />
   <item id="byte-07a" value="alsedana-ladder" comments="1=talked 2,3=ladder" />
-  <item id="byte-07d" value="w-chain" />
-  <item id="byte-07e" value="w-flail" />
-  <item id="byte-07f" value="w-knife" />
-  <item id="byte-080" value="w-keysword" />
-  <item id="byte-081" value="w-axe" />
-  <item id="byte-082" value="w-katana" />
-  <item id="byte-083" value="w-shuriken" />
-  <item id="byte-084" value="w-roll-shuriken" />
-  <item id="byte-085" value="w-spear" />
-  <item id="byte-086" value="w-flare" />
-  <item id="byte-087" value="w-bomb" />
-  <item id="byte-088" value="w-chakram" />
-  <item id="byte-089" value="w-caltrop" />
-  <item id="byte-08a" value="w-pistol" />
+  <item id="byte-07d" value="w-main-chain" />
+  <item id="byte-07e" value="w-main-flail" />
+  <item id="byte-07f" value="w-main-knife" />
+  <item id="byte-080" value="w-main-keysword" />
+  <item id="byte-081" value="w-main-axe" />
+  <item id="byte-082" value="w-main-katana" />
+  <item id="byte-083" value="w-sub-shuriken" />
+  <item id="byte-084" value="w-sub-rshuriken" />
+  <item id="byte-085" value="w-sub-spear" />
+  <item id="byte-086" value="w-sub-flare" />
+  <item id="byte-087" value="w-sub-bomb" />
+  <item id="byte-088" value="w-sub-chakram" />
+  <item id="byte-089" value="w-sub-caltrops" />
+  <item id="byte-08a" value="w-sub-pistol" />
   <item id="byte-08e" value="jewel-guidance" />
   <item id="byte-08f" value="jewel-maus" />
   <item id="byte-090" value="jewel-sun" />
@@ -100,25 +100,25 @@
   <item id="byte-0df" value="w-map-ruins" />
   <item id="byte-0e0" value="w-map-birth" />
   <item id="byte-0e1" value="w-map-dimensional" />
-  <item id="byte-0e2" value="w-reader" />
-  <item id="byte-0e3" value="w-xmailer" />
-  <item id="byte-0e4" value="w-yagomap" />
-  <item id="byte-0e5" value="w-yagostr" />
-  <item id="byte-0e6" value="w-bunemon" />
-  <item id="byte-0e7" value="w-bunplus" />
-  <item id="byte-0e8" value="w-torude" />
-  <item id="byte-a91" value="w-guild" />
-  <item id="byte-0ea" value="w-mantra" />
-  <item id="byte-0eb" value="w-emusic" />
-  <item id="byte-0ec" value="w-beolamu" />
-  <item id="byte-0ee" value="w-randc" />
-  <item id="byte-0ef" value="w-capstar" />
-  <item id="byte-0f0" value="w-move" />
-  <item id="byte-0f1" value="w-mekuri" />
-  <item id="byte-0f2" value="w-bounce" />
-  <item id="byte-0f3" value="w-miracle" />
-  <item id="byte-0f4" value="w-mirai" />
-  <item id="byte-0f5" value="w-lamulana" />
+  <item id="byte-0e2" value="w-soft-reader" />
+  <item id="byte-0e3" value="w-soft-xmailer" />
+  <item id="byte-0e4" value="w-soft-yagomap" />
+  <item id="byte-0e5" value="w-soft-yagostr" />
+  <item id="byte-0e6" value="w-soft-bunemon" />
+  <item id="byte-0e7" value="w-soft-bunplus" />
+  <item id="byte-0e8" value="w-soft-torude" />
+  <item id="byte-a91" value="w-soft-guild" />
+  <item id="byte-0ea" value="w-soft-mantra" />
+  <item id="byte-0eb" value="w-soft-emusic" />
+  <item id="byte-0ec" value="w-soft-beolamu" />
+  <item id="byte-0ee" value="w-soft-randc" />
+  <item id="byte-0ef" value="w-soft-capstar" />
+  <item id="byte-0f0" value="w-soft-move" />
+  <item id="byte-0f1" value="w-soft-mekuri" />
+  <item id="byte-0f2" value="w-soft-bounce" />
+  <item id="byte-0f3" value="w-soft-miracle" />
+  <item id="byte-0f4" value="w-soft-mirai" />
+  <item id="byte-0f5" value="w-soft-lamulana" />
   <item id="byte-0f6" value="boss-amphisbaena" />
   <item id="byte-0f7" value="boss-sakit" />
   <item id="byte-0f8" value="boss-ellmac" />

@@ -628,4 +628,22 @@
   <data name="Icon_womanstatue_blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_womanstatue_blank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Icon_caltrops" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_caltrops.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_caltrops_blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_caltrops_blank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_rollingshuriken" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_rollingshuriken.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_rollingshuriken_blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_rollingshuriken_blank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_shuriken" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_shuriken.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_shuriken_blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_shuriken_blank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

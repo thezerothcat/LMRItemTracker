@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{68CA971C-51F9-480D-ADED-EBD7D31C9CCE}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LMRItemTracker</RootNamespace>
     <AssemblyName>LMRItemTracker</AssemblyName>
@@ -606,6 +606,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Icon_silvershield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_caltrops.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_caltrops_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_rollingshuriken.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_rollingshuriken_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_shuriken.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_shuriken_blank.png" />
   </ItemGroup>
   <Import Project="..\EyeOfTruth.Shared\EyeOfTruth.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

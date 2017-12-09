@@ -39,835 +39,833 @@ namespace LMRItemTracker
 
         public void toggleItem(string itemName, bool isAdd)
         {
-            if ("w-chain".Equals(itemName))
+            if (itemName.StartsWith("w-main-"))
             {
-                chainWhip.Visible = (bool)isAdd;
-                chainWhip.Refresh();
+                toggleMainWeapon(itemName, isAdd);
             }
-            else if ("w-flail".Equals(itemName))
+            else if (itemName.StartsWith("w-sub-"))
             {
-                flailWhip.Visible = (bool)isAdd;
-                flailWhip.Refresh();
+                toggleSubWeapon(itemName, isAdd);
             }
-            else if ("w-axe".Equals(itemName))
+            else if (itemName.StartsWith("w-soft-"))
+            {
+                toggleSoftware(itemName, isAdd);
+            }
+            else if (itemName.StartsWith("w-seal"))
+            {
+                toggleSeal(itemName, isAdd);
+            }
+            else if ("w-maternity".Equals(itemName))
+            {
+                toggleImage(maternityStatue, isAdd);
+            }
+            else if ("w-vessel".Equals(itemName))
+            {
+                toggleImage(vesselNotFound, !isAdd);
+            }
+            else if ("w-lamp".Equals(itemName))
+            {
+                toggleImage(lampOfTimeNotFound, !isAdd);
+            }
+            else if ("w-scanner".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    axe.Image = global::LMRItemTracker.Properties.Resources.Icon_axe;
+                    setImage(scanner, global::LMRItemTracker.Properties.Resources.Icon_handscanner);
                 }
                 else
                 {
-                    axe.Image = global::LMRItemTracker.Properties.Resources.Icon_axe_blank;
+                    setImage(scanner, global::LMRItemTracker.Properties.Resources.Icon_handscanner_blank);
                 }
-                axe.Refresh();
-            }
-            else if ("w-knife".Equals(itemName))
-            {
-                if (isAdd)
-                {
-                    this.knife.Image = global::LMRItemTracker.Properties.Resources.Icon_knife;
-                }
-                else
-                {
-                    this.knife.Image = global::LMRItemTracker.Properties.Resources.Icon_knife_blank;
-                }
-                this.knife.Refresh();
-            }
-            else if ("w-katana".Equals(itemName))
-            {
-                if (isAdd)
-                {
-                    this.katana.Image = global::LMRItemTracker.Properties.Resources.Icon_katana;
-                }
-                else
-                {
-                    this.katana.Image = global::LMRItemTracker.Properties.Resources.Icon_katana_blank;
-                }
-                this.katana.Refresh();
-            }
-            else if ("w-keysword".Equals(itemName))
-            {
-                if (isAdd)
-                {
-                    this.keySwordCollected = true;
-                    if (this.mantrasRecited)
-                    {
-                        this.keySword.Image = global::LMRItemTracker.Properties.Resources.Icon_keysword_awakened;
-                    }
-                    else
-                    {
-                        this.keySword.Image = global::LMRItemTracker.Properties.Resources.Icon_keysword;
-                    }
-                }
-                else
-                {
-                    this.keySword.Image = global::LMRItemTracker.Properties.Resources.Icon_keysword_blank;
-                }
-                this.keySword.Refresh();
-            }
-            if ("w-scanner".Equals(itemName))
-            {
-                if (isAdd)
-                {
-                    this.scanner.Image = global::LMRItemTracker.Properties.Resources.Icon_handscanner;
-                }
-                else
-                {
-                    this.scanner.Image = global::LMRItemTracker.Properties.Resources.Icon_handscanner_blank;
-                }
-                this.scanner.Refresh();
-            }
-            else if ("w-reader".Equals(itemName))
-            {
-                if (isAdd)
-                {
-                    this.reader.Image = global::LMRItemTracker.Properties.Resources.Icon_reader;
-                }
-                else
-                {
-                    this.reader.Image = global::LMRItemTracker.Properties.Resources.Icon_reader_blank;
-                }
-                this.reader.Refresh();
             }
             else if ("w-grail".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.grail.Image = global::LMRItemTracker.Properties.Resources.Icon_holygrail;
+                    setImage(grail, global::LMRItemTracker.Properties.Resources.Icon_holygrail);
                 }
                 else
                 {
-                    this.grail.Image = global::LMRItemTracker.Properties.Resources.Icon_holygrail_blank;
+                    setImage(grail, global::LMRItemTracker.Properties.Resources.Icon_holygrail_blank);
                 }
-                this.grail.Refresh();
             }
             else if ("w-doll".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.miniDoll.Image = global::LMRItemTracker.Properties.Resources.Icon_minidoll;
+                    setImage(miniDoll, global::LMRItemTracker.Properties.Resources.Icon_minidoll);
                 }
                 else
                 {
-                    this.miniDoll.Image = global::LMRItemTracker.Properties.Resources.Icon_minidoll_blank;
+                    setImage(miniDoll, global::LMRItemTracker.Properties.Resources.Icon_minidoll_blank);
                 }
-                this.miniDoll.Refresh();
             }
             else if ("w-magatama".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.magatamaJewel.Image = global::LMRItemTracker.Properties.Resources.Icon_magatamajewel;
+                    setImage(magatamaJewel, global::LMRItemTracker.Properties.Resources.Icon_magatamajewel);
                 }
                 else
                 {
-                    this.magatamaJewel.Image = global::LMRItemTracker.Properties.Resources.Icon_magatamajewel_blank;
+                    setImage(magatamaJewel, global::LMRItemTracker.Properties.Resources.Icon_magatamajewel_blank);
                 }
-                this.magatamaJewel.Refresh();
             }
             else if ("w-pepper".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.pepper.Image = global::LMRItemTracker.Properties.Resources.Icon_pepper;
+                    setImage(pepper, global::LMRItemTracker.Properties.Resources.Icon_pepper);
                 }
                 else
                 {
-                    this.pepper.Image = global::LMRItemTracker.Properties.Resources.Icon_pepper_blank;
+                    setImage(pepper, global::LMRItemTracker.Properties.Resources.Icon_pepper_blank);
                 }
-                this.pepper.Refresh();
             }
             else if ("w-woman".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.womanStatue.Image = global::LMRItemTracker.Properties.Resources.Icon_womanstatue;
+                    setImage(womanStatue, global::LMRItemTracker.Properties.Resources.Icon_womanstatue);
                 }
                 else
                 {
-                    this.womanStatue.Image = global::LMRItemTracker.Properties.Resources.Icon_womanstatue_blank;
+                    setImage(womanStatue, global::LMRItemTracker.Properties.Resources.Icon_womanstatue_blank);
                 }
-                this.womanStatue.Refresh();
-            }
-            else if ("w-maternity".Equals(itemName))
-            {
-                this.maternityStatue.Visible = (bool)isAdd;
-                this.maternityStatue.Refresh();
             }
             else if ("w-serpent".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.serpentStaff.Image = global::LMRItemTracker.Properties.Resources.Icon_serpentstaff;
+                    setImage(serpentStaff, global::LMRItemTracker.Properties.Resources.Icon_serpentstaff);
                 }
                 else
                 {
-                    this.serpentStaff.Image = global::LMRItemTracker.Properties.Resources.Icon_serpentstaff_blank;
+                    setImage(serpentStaff, global::LMRItemTracker.Properties.Resources.Icon_serpentstaff_blank);
                 }
-                this.serpentStaff.Refresh();
             }
             else if ("w-glove".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.glove.Image = global::LMRItemTracker.Properties.Resources.Icon_glove;
+                    setImage(glove, global::LMRItemTracker.Properties.Resources.Icon_glove);
                 }
                 else
                 {
-                    this.glove.Image = global::LMRItemTracker.Properties.Resources.Icon_glove_blank;
+                    setImage(glove, global::LMRItemTracker.Properties.Resources.Icon_glove_blank);
                 }
-                this.glove.Refresh();
             }
             else if ("w-crucifix".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.crucifix.Image = global::LMRItemTracker.Properties.Resources.Icon_crucifix;
+                    setImage(crucifix, global::LMRItemTracker.Properties.Resources.Icon_crucifix);
                 }
                 else
                 {
-                    this.crucifix.Image = global::LMRItemTracker.Properties.Resources.Icon_crucifix_blank;
+                    setImage(crucifix, global::LMRItemTracker.Properties.Resources.Icon_crucifix_blank);
                 }
-                this.crucifix.Refresh();
             }
             else if ("w-eye-truth".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.eyeOfTruth.Image = global::LMRItemTracker.Properties.Resources.Icon_eyeoftruth;
+                    setImage(eyeOfTruth, global::LMRItemTracker.Properties.Resources.Icon_eyeoftruth);
                 }
                 else
                 {
-                    this.eyeOfTruth.Image = global::LMRItemTracker.Properties.Resources.Icon_eyeoftruth_blank;
+                    setImage(eyeOfTruth, global::LMRItemTracker.Properties.Resources.Icon_eyeoftruth_blank);
                 }
-                this.eyeOfTruth.Refresh();
             }
             else if ("w-scale".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.scalesphere.Image = global::LMRItemTracker.Properties.Resources.Icon_scalesphere;
+                    setImage(scalesphere, global::LMRItemTracker.Properties.Resources.Icon_scalesphere);
                 }
                 else
                 {
-                    this.scalesphere.Image = global::LMRItemTracker.Properties.Resources.Icon_scalesphere_blank;
+                    setImage(scalesphere, global::LMRItemTracker.Properties.Resources.Icon_scalesphere_blank);
                 }
-                this.scalesphere.Refresh();
             }
             else if ("w-gauntlet".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.gauntlet.Image = global::LMRItemTracker.Properties.Resources.Icon_gauntlet;
+                    setImage(gauntlet, global::LMRItemTracker.Properties.Resources.Icon_gauntlet);
                 }
                 else
                 {
-                    this.gauntlet.Image = global::LMRItemTracker.Properties.Resources.Icon_gauntlet_blank;
+                    setImage(gauntlet, global::LMRItemTracker.Properties.Resources.Icon_gauntlet_blank);
                 }
-                this.gauntlet.Refresh();
             }
             else if ("w-anchor".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.anchor.Image = global::LMRItemTracker.Properties.Resources.Icon_anchor;
+                    setImage(anchor, global::LMRItemTracker.Properties.Resources.Icon_anchor);
                 }
                 else
                 {
-                    this.anchor.Image = global::LMRItemTracker.Properties.Resources.Icon_anchor_blank;
+                    setImage(anchor, global::LMRItemTracker.Properties.Resources.Icon_anchor_blank);
                 }
-                this.anchor.Refresh();
             }
             else if ("w-book".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.bookOfTheDead.Image = global::LMRItemTracker.Properties.Resources.Icon_bookofthedead;
+                    setImage(bookOfTheDead, global::LMRItemTracker.Properties.Resources.Icon_bookofthedead);
                 }
                 else
                 {
-                    this.bookOfTheDead.Image = global::LMRItemTracker.Properties.Resources.Icon_bookofthedead_blank;
+                    setImage(bookOfTheDead, global::LMRItemTracker.Properties.Resources.Icon_bookofthedead_blank);
                 }
-                this.bookOfTheDead.Refresh();
             }
             else if ("w-clothes".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.fairyClothes.Image = global::LMRItemTracker.Properties.Resources.Icon_fairyclothes;
+                    setImage(fairyClothes, global::LMRItemTracker.Properties.Resources.Icon_fairyclothes);
                 }
                 else
                 {
-                    this.fairyClothes.Image = global::LMRItemTracker.Properties.Resources.Icon_fairyclothes_blank;
+                    setImage(fairyClothes, global::LMRItemTracker.Properties.Resources.Icon_fairyclothes_blank);
                 }
-                this.fairyClothes.Refresh();
             }
             else if ("w-scriptures".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.scriptures.Image = global::LMRItemTracker.Properties.Resources.Icon_scriptures;
+                    setImage(scriptures, global::LMRItemTracker.Properties.Resources.Icon_scriptures);
                 }
                 else
                 {
-                    this.scriptures.Image = global::LMRItemTracker.Properties.Resources.Icon_scriptures_blank;
+                    setImage(scriptures, global::LMRItemTracker.Properties.Resources.Icon_scriptures_blank);
                 }
-                this.scriptures.Refresh();
             }
             else if ("w-bracelet".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.bracelet.Image = global::LMRItemTracker.Properties.Resources.Icon_bracelet;
+                    setImage(bracelet, global::LMRItemTracker.Properties.Resources.Icon_bracelet);
                 }
                 else
                 {
-                    this.bracelet.Image = global::LMRItemTracker.Properties.Resources.Icon_bracelet_blank;
+                    setImage(bracelet, global::LMRItemTracker.Properties.Resources.Icon_bracelet_blank);
                 }
-                this.bracelet.Refresh();
             }
             else if ("w-perfume".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.perfume.Image = global::LMRItemTracker.Properties.Resources.Icon_perfume;
+                    setImage(perfume, global::LMRItemTracker.Properties.Resources.Icon_perfume);
                 }
                 else
                 {
-                    this.perfume.Image = global::LMRItemTracker.Properties.Resources.Icon_perfume_blank;
+                    setImage(perfume, global::LMRItemTracker.Properties.Resources.Icon_perfume_blank);
                 }
-                this.perfume.Refresh();
             }
             else if ("w-spaulder".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.spaulder.Image = global::LMRItemTracker.Properties.Resources.Icon_spaulder;
+                    setImage(spaulder, global::LMRItemTracker.Properties.Resources.Icon_spaulder);
                 }
                 else
                 {
-                    this.spaulder.Image = global::LMRItemTracker.Properties.Resources.Icon_spaulder_blank;
+                    setImage(spaulder, global::LMRItemTracker.Properties.Resources.Icon_spaulder_blank);
                 }
-                this.spaulder.Refresh();
             }
             else if ("w-icecape".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.iceCape.Image = global::LMRItemTracker.Properties.Resources.Icon_icecape;
+                    setImage(iceCape, global::LMRItemTracker.Properties.Resources.Icon_icecape);
                 }
                 else
                 {
-                    this.iceCape.Image = global::LMRItemTracker.Properties.Resources.Icon_icecape_blank;
+                    setImage(iceCape, global::LMRItemTracker.Properties.Resources.Icon_icecape_blank);
                 }
-                this.iceCape.Refresh();
             }
             else if ("w-talisman".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.talisman.Image = global::LMRItemTracker.Properties.Resources.Icon_talisman;
+                    setImage(talisman, global::LMRItemTracker.Properties.Resources.Icon_talisman);
                 }
                 else
                 {
-                    this.talisman.Image = global::LMRItemTracker.Properties.Resources.Icon_talisman_blank;
+                    setImage(talisman, global::LMRItemTracker.Properties.Resources.Icon_talisman_blank);
                 }
-                this.talisman.Refresh();
             }
             else if ("w-diary".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.diary.Image = global::LMRItemTracker.Properties.Resources.Icon_diary;
+                    setImage(diary, global::LMRItemTracker.Properties.Resources.Icon_diary);
                 }
                 else
                 {
-                    this.diary.Image = global::LMRItemTracker.Properties.Resources.Icon_diary_blank;
+                    setImage(diary, global::LMRItemTracker.Properties.Resources.Icon_diary_blank);
                 }
-                this.diary.Refresh();
             }
             else if ("w-mulanatalisman".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.mulanaTalisman.Image = global::LMRItemTracker.Properties.Resources.Icon_mulanatalisman;
+                    setImage(mulanaTalisman, global::LMRItemTracker.Properties.Resources.Icon_mulanatalisman);
                 }
                 else
                 {
-                    this.mulanaTalisman.Image = global::LMRItemTracker.Properties.Resources.Icon_mulanatalisman_blank;
+                    setImage(mulanaTalisman, global::LMRItemTracker.Properties.Resources.Icon_mulanatalisman_blank);
                 }
-                this.mulanaTalisman.Refresh();
             }
             else if ("w-dimension-key".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.dimensionalKey.Image = global::LMRItemTracker.Properties.Resources.Icon_dimensionalkey;
+                    setImage(dimensionalKey, global::LMRItemTracker.Properties.Resources.Icon_dimensionalkey);
                 }
                 else
                 {
-                    this.dimensionalKey.Image = global::LMRItemTracker.Properties.Resources.Icon_dimensionalkey_blank;
+                    setImage(dimensionalKey, global::LMRItemTracker.Properties.Resources.Icon_dimensionalkey_blank);
                 }
-                this.dimensionalKey.Refresh();
-            }
-            else if ("w-bomb".Equals(itemName))
-            {
-                if (isAdd)
-                {
-                    this.bomb.Image = global::LMRItemTracker.Properties.Resources.Icon_bomb;
-                }
-                else
-                {
-                    this.bomb.Image = global::LMRItemTracker.Properties.Resources.Icon_bomb_blank;
-                }
-                this.bomb.Refresh();
             }
             else if ("w-djed".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.mantra.Image = global::LMRItemTracker.Properties.Resources.Icon_djedpillar_small;
-
+                    setImage(mantra, global::LMRItemTracker.Properties.Resources.Icon_djedpillar_small);
                 }
                 else
                 {
-                    this.mantra.Image = null;
+                    setImage(mantra, null);
                 }
-                this.mantra.Refresh();
             }
             else if ("w-cog".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.cogOfTheSoul.Image = global::LMRItemTracker.Properties.Resources.Icon_cogofthesoul;
-
+                    setImage(cogOfTheSoul, global::LMRItemTracker.Properties.Resources.Icon_cogofthesoul);
                 }
                 else
                 {
-                    this.cogOfTheSoul.Image = global::LMRItemTracker.Properties.Resources.Icon_cogofthesoul_blank;
+                    setImage(cogOfTheSoul, global::LMRItemTracker.Properties.Resources.Icon_cogofthesoul_blank);
                 }
-                this.cogOfTheSoul.Refresh();
-            }
-            else if ("w-cog".Equals(itemName))
-            {
-                if (isAdd)
-                {
-                    this.cogOfTheSoul.Image = global::LMRItemTracker.Properties.Resources.Icon_cogofthesoul;
-
-                }
-                else
-                {
-                    this.cogOfTheSoul.Image = global::LMRItemTracker.Properties.Resources.Icon_cogofthesoul_blank;
-                }
-                this.cogOfTheSoul.Refresh();
             }
             else if ("w-dragonbone".Equals(itemName))
             {
+                updateCount(skullWallCount, isAdd, 4);
                 if (isAdd)
                 {
-                    this.dragonBone.Image = global::LMRItemTracker.Properties.Resources.Icon_dragonbone;
-                    this.skullWallCount.Text = (Int32.Parse(this.skullWallCount.Text.Substring(0, this.skullWallCount.Text.IndexOf('/'))) + 1) + "/4";
+                    setImage(dragonBone, global::LMRItemTracker.Properties.Resources.Icon_dragonbone);
                 }
                 else
                 {
-                    this.dragonBone.Image = global::LMRItemTracker.Properties.Resources.Icon_dragonbone_blank;
-                    this.skullWallCount.Text = Math.Max(0, Int32.Parse(this.skullWallCount.Text.Substring(0, this.skullWallCount.Text.IndexOf('/'))) - 1) + "/4";
+                    setImage(dragonBone, global::LMRItemTracker.Properties.Resources.Icon_dragonbone_blank);
                 }
-                this.dragonBone.Refresh();
-                this.skullWallCount.Refresh();
             }
             else if ("w-cskull".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.crystalSkull.Image = global::LMRItemTracker.Properties.Resources.Icon_crystalskull;
+                    setImage(crystalSkull, global::LMRItemTracker.Properties.Resources.Icon_crystalskull);
                 }
                 else
                 {
-                    this.crystalSkull.Image = global::LMRItemTracker.Properties.Resources.Icon_crystalskull_blank;
+                    setImage(crystalSkull, global::LMRItemTracker.Properties.Resources.Icon_crystalskull_blank);
                 }
-                this.crystalSkull.Refresh();
             }
             else if ("w-endless-key".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.keyOfEternity.Image = global::LMRItemTracker.Properties.Resources.Icon_keyofeternity;
+                    setImage(keyOfEternity, global::LMRItemTracker.Properties.Resources.Icon_keyofeternity);
                 }
                 else
                 {
-                    this.keyOfEternity.Image = global::LMRItemTracker.Properties.Resources.Icon_keyofeternity_blank;
+                    setImage(keyOfEternity, global::LMRItemTracker.Properties.Resources.Icon_keyofeternity_blank);
                 }
-                this.keyOfEternity.Refresh();
             }
             else if ("w-isispendant".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.isisPendant.Image = global::LMRItemTracker.Properties.Resources.Icon_isispendant;
+                    setImage(isisPendant, global::LMRItemTracker.Properties.Resources.Icon_isispendant);
                 }
                 else
                 {
-                    this.isisPendant.Image = global::LMRItemTracker.Properties.Resources.Icon_isispendant_blank;
+                    setImage(isisPendant, global::LMRItemTracker.Properties.Resources.Icon_isispendant_blank);
                 }
-                this.isisPendant.Refresh();
             }
             else if ("w-helmet".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.helmet.Image = global::LMRItemTracker.Properties.Resources.Icon_helmet;
+                    setImage(helmet, global::LMRItemTracker.Properties.Resources.Icon_helmet);
                 }
                 else
                 {
-                    this.helmet.Image = global::LMRItemTracker.Properties.Resources.Icon_helmet_blank;
+                    setImage(helmet, global::LMRItemTracker.Properties.Resources.Icon_helmet_blank);
                 }
-                this.helmet.Refresh();
             }
             else if ("w-grapple".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.grappleClaw.Image = global::LMRItemTracker.Properties.Resources.Icon_grappleclaw;
-
+                    setImage(grappleClaw, global::LMRItemTracker.Properties.Resources.Icon_grappleclaw);
                 }
                 else
                 {
-                    this.grappleClaw.Image = global::LMRItemTracker.Properties.Resources.Icon_grappleclaw_blank;
+                    setImage(grappleClaw, global::LMRItemTracker.Properties.Resources.Icon_grappleclaw_blank);
                 }
-                this.grappleClaw.Refresh();
             }
             else if ("w-mirror".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.bronzeMirror.Image = global::LMRItemTracker.Properties.Resources.Icon_bronzemirror;
-
+                    setImage(bronzeMirror, global::LMRItemTracker.Properties.Resources.Icon_bronzemirror);
                 }
                 else
                 {
-                    this.bronzeMirror.Image = global::LMRItemTracker.Properties.Resources.Icon_bronzemirror_blank;
+                    setImage(bronzeMirror, global::LMRItemTracker.Properties.Resources.Icon_bronzemirror_blank);
                 }
-                this.bronzeMirror.Refresh();
             }
             else if ("w-ring".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.ring.Image = global::LMRItemTracker.Properties.Resources.Icon_ring;
-
+                    setImage(ring, global::LMRItemTracker.Properties.Resources.Icon_ring);
                 }
                 else
                 {
-                    this.ring.Image = global::LMRItemTracker.Properties.Resources.Icon_ring_blank;
+                    setImage(ring, global::LMRItemTracker.Properties.Resources.Icon_ring_blank);
                 }
-                this.ring.Refresh();
             }
             else if ("w-plane".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.planeModel.Image = global::LMRItemTracker.Properties.Resources.Icon_planemodel;
-
+                    setImage(planeModel, global::LMRItemTracker.Properties.Resources.Icon_planemodel);
                 }
                 else
                 {
-                    this.planeModel.Image = global::LMRItemTracker.Properties.Resources.Icon_planemodel_blank;
+                    setImage(planeModel, global::LMRItemTracker.Properties.Resources.Icon_planemodel_blank);
                 }
-                this.planeModel.Refresh();
             }
             else if ("w-ocarina".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.ocarina.Image = global::LMRItemTracker.Properties.Resources.Icon_philosophersocarina;
-
+                    setImage(ocarina, global::LMRItemTracker.Properties.Resources.Icon_philosophersocarina);
                 }
                 else
                 {
-                    this.ocarina.Image = global::LMRItemTracker.Properties.Resources.Icon_philosophersocarina_blank;
+                    setImage(ocarina, global::LMRItemTracker.Properties.Resources.Icon_philosophersocarina_blank);
                 }
-                this.ocarina.Refresh();
             }
             else if ("w-feather".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.feather.Image = global::LMRItemTracker.Properties.Resources.Icon_feather;
-
+                    setImage(feather, global::LMRItemTracker.Properties.Resources.Icon_feather);
                 }
                 else
                 {
-                    this.feather.Image = global::LMRItemTracker.Properties.Resources.Icon_feather_blank;
+                    setImage(feather, global::LMRItemTracker.Properties.Resources.Icon_feather_blank);
                 }
-                this.feather.Refresh();
             }
             else if ("w-hermes".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.hermesBoots.Image = global::LMRItemTracker.Properties.Resources.Icon_hermesboots;
-
+                    setImage(hermesBoots, global::LMRItemTracker.Properties.Resources.Icon_hermesboots);
                 }
                 else
                 {
-                    this.hermesBoots.Image = global::LMRItemTracker.Properties.Resources.Icon_hermesboots_blank;
+                    setImage(hermesBoots, global::LMRItemTracker.Properties.Resources.Icon_hermesboots_blank);
                 }
-                this.hermesBoots.Refresh();
             }
             else if ("w-fruit".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.fruitOfEden.Image = global::LMRItemTracker.Properties.Resources.Icon_fruitofeden;
-
+                    setImage(fruitOfEden, global::LMRItemTracker.Properties.Resources.Icon_fruitofeden);
                 }
                 else
                 {
-                    this.fruitOfEden.Image = global::LMRItemTracker.Properties.Resources.Icon_fruitofeden_blank;
+                    setImage(fruitOfEden, global::LMRItemTracker.Properties.Resources.Icon_fruitofeden_blank);
                 }
-                this.fruitOfEden.Refresh();
             }
             else if ("w-twin-statue".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.twinStatue.Image = global::LMRItemTracker.Properties.Resources.Icon_twinstatue;
-
+                    setImage(twinStatue, global::LMRItemTracker.Properties.Resources.Icon_twinstatue);
                 }
                 else
                 {
-                    this.twinStatue.Image = global::LMRItemTracker.Properties.Resources.Icon_twinstatue_blank;
+                    setImage(twinStatue, global::LMRItemTracker.Properties.Resources.Icon_twinstatue_blank);
                 }
-                this.fruitOfEden.Refresh();
             }
             else if ("w-treasures".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.treasures.Image = global::LMRItemTracker.Properties.Resources.Icon_treasures;
+                    setImage(treasures, global::LMRItemTracker.Properties.Resources.Icon_treasures);
                 }
                 else
                 {
-                    this.treasures.Image = global::LMRItemTracker.Properties.Resources.Icon_treasures_blank;
+                    setImage(treasures, global::LMRItemTracker.Properties.Resources.Icon_treasures_blank);
                 }
-                this.treasures.Refresh();
             }
             else if ("w-pochettekey".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.pochetteKey.Image = global::LMRItemTracker.Properties.Resources.Icon_pochettekey;
-
+                    setImage(pochetteKey, global::LMRItemTracker.Properties.Resources.Icon_pochettekey);
                 }
                 else
                 {
-                    this.pochetteKey.Image = global::LMRItemTracker.Properties.Resources.Icon_pochettekey_blank;
+                    setImage(pochetteKey, global::LMRItemTracker.Properties.Resources.Icon_pochettekey_blank);
                 }
-                this.pochetteKey.Refresh();
-            }
-            else if ("w-vessel".Equals(itemName))
-            {
-                this.vesselNotFound.Visible = !isAdd;
-                this.vesselNotFound.Refresh();
-            }
-            else if ("w-lamp".Equals(itemName))
-            {
-                this.lampOfTimeNotFound.Visible = !isAdd;
-                this.lampOfTimeNotFound.Refresh();
             }
             else if ("w-msx2".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.msx2.Image = global::LMRItemTracker.Properties.Resources.Icon_msx2;
-
+                    setImage(msx2, global::LMRItemTracker.Properties.Resources.Icon_msx2);
                 }
                 else
                 {
-                    this.msx2.Image = global::LMRItemTracker.Properties.Resources.Icon_msx2_blank;
+                    setImage(msx2, global::LMRItemTracker.Properties.Resources.Icon_msx2_blank);
                 }
-                this.msx2.Refresh();
             }
             else if ("w-medicine".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.vessel.Image = global::LMRItemTracker.Properties.Resources.Icon_medicineofthemind;
+                    setImage(vessel, global::LMRItemTracker.Properties.Resources.Icon_medicineofthemind);
                 }
                 else
                 {
-                    this.vessel.Image = global::LMRItemTracker.Properties.Resources.Icon_vessel;
+                    setImage(vessel, global::LMRItemTracker.Properties.Resources.Icon_vessel); // todo: what if we don't have vessel?
                 }
-                this.vessel.Refresh();
             }
-            else if ("w-mantra".Equals(itemName))
+        }
+
+        private void toggleMainWeapon(string itemName, bool isAdd)
+        {
+            if ("w-main-chain".Equals(itemName))
+            {
+                toggleImage(chainWhip, isAdd);
+            }
+            else if ("w-main-flail".Equals(itemName))
+            {
+                toggleImage(flailWhip, isAdd);
+            }
+            else if ("w-main-axe".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.mantra.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_mantra;
-
+                    setImage(axe, global::LMRItemTracker.Properties.Resources.Icon_axe);
                 }
                 else
                 {
-                    this.mantra.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_mantra_blank;
+                    setImage(axe, global::LMRItemTracker.Properties.Resources.Icon_axe_blank);
                 }
-                this.mantra.Refresh();
             }
-            else if ("w-torude".Equals(itemName))
+            else if ("w-main-knife".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.torude.Image = global::LMRItemTracker.Properties.Resources.Icon_torude;
-
+                    setImage(knife, global::LMRItemTracker.Properties.Resources.Icon_knife);
                 }
                 else
                 {
-                    this.torude.Image = global::LMRItemTracker.Properties.Resources.Icon_torude_blank;
+                    setImage(knife, global::LMRItemTracker.Properties.Resources.Icon_knife_blank);
                 }
-                this.torude.Refresh();
             }
-            else if ("w-mekuri".Equals(itemName))
+            else if ("w-main-katana".Equals(itemName))
+            {
+                if (isAdd)
+                {
+                    setImage(katana, global::LMRItemTracker.Properties.Resources.Icon_katana);
+                }
+                else
+                {
+                    setImage(katana, global::LMRItemTracker.Properties.Resources.Icon_katana_blank);
+                }
+            }
+            else if ("w-main-keysword".Equals(itemName))
+            {
+                this.keySwordCollected = isAdd;
+                if (isAdd)
+                {
+                    if (this.mantrasRecited)
+                    {
+                        setImage(keySword, global::LMRItemTracker.Properties.Resources.Icon_keysword_awakened);
+                    }
+                    else
+                    {
+                        setImage(keySword, global::LMRItemTracker.Properties.Resources.Icon_keysword);
+                    }
+                }
+                else
+                {
+                    setImage(keySword, global::LMRItemTracker.Properties.Resources.Icon_keysword_blank);
+                }
+            }
+        }
+
+        private void toggleSubWeapon(string itemName, bool isAdd)
+        {
+            if ("w-sub-shuriken".Equals(itemName))
+            {
+                if (isAdd)
+                {
+                    setImage(shuriken, global::LMRItemTracker.Properties.Resources.Icon_shuriken);
+                }
+                else
+                {
+                    setImage(shuriken, global::LMRItemTracker.Properties.Resources.Icon_shuriken_blank);
+                }
+            }
+            else if ("w-sub-rshuriken".Equals(itemName))
+            {
+                if (isAdd)
+                {
+                    setImage(rollingShuriken, global::LMRItemTracker.Properties.Resources.Icon_rollingshuriken);
+                }
+                else
+                {
+                    setImage(rollingShuriken, global::LMRItemTracker.Properties.Resources.Icon_rollingshuriken_blank);
+                }
+            }
+            else if ("w-sub-caltrops".Equals(itemName))
+            {
+                if (isAdd)
+                {
+                    setImage(caltrops, global::LMRItemTracker.Properties.Resources.Icon_caltrops);
+                }
+                else
+                {
+                    setImage(caltrops, global::LMRItemTracker.Properties.Resources.Icon_caltrops_blank);
+                }
+            }
+            else if ("w-sub-spear".Equals(itemName))
+            {
+                if (isAdd)
+                {
+                    setImage(earthSpear, global::LMRItemTracker.Properties.Resources.Icon_earthspear);
+                }
+                else
+                {
+                    setImage(earthSpear, global::LMRItemTracker.Properties.Resources.Icon_earthspear_blank);
+                }
+            }
+            else if ("w-sub-flare".Equals(itemName))
+            {
+                if (isAdd)
+                {
+                    setImage(flareGun, global::LMRItemTracker.Properties.Resources.Icon_flaregun);
+                }
+                else
+                {
+                    setImage(flareGun, global::LMRItemTracker.Properties.Resources.Icon_flaregun_blank);
+                }
+            }
+            else if ("w-sub-bomb".Equals(itemName))
+            {
+                if (isAdd)
+                {
+                    setImage(bomb, global::LMRItemTracker.Properties.Resources.Icon_bomb);
+                }
+                else
+                {
+                    setImage(bomb, global::LMRItemTracker.Properties.Resources.Icon_bomb_blank);
+                }
+            }
+            else if ("w-sub-chakram".Equals(itemName))
+            {
+                if (isAdd)
+                {
+                    setImage(chakram, global::LMRItemTracker.Properties.Resources.Icon_chakram);
+                }
+                else
+                {
+                    setImage(chakram, global::LMRItemTracker.Properties.Resources.Icon_chakram_blank);
+                }
+            }
+            else if ("w-sub-pistol".Equals(itemName))
+            {
+                if (isAdd)
+                {
+                    setImage(pistol, global::LMRItemTracker.Properties.Resources.Icon_pistol);
+                }
+                else
+                {
+                    setImage(pistol, global::LMRItemTracker.Properties.Resources.Icon_pistol_blank);
+                }
+            }
+        }
+
+        private void toggleSeal(string itemName, bool isAdd)
+        {
+            if ("w-seal1".Equals(itemName))
+            {
+                if (isAdd)
+                {
+                    setImage(originSeal, global::LMRItemTracker.Properties.Resources.Icon_originseal);
+                }
+                else
+                {
+                    setImage(originSeal, global::LMRItemTracker.Properties.Resources.Icon_originseal_blank);
+                }
+            }
+            else if ("w-seal2".Equals(itemName))
+            {
+                if (isAdd)
+                {
+                    setImage(birthSeal, global::LMRItemTracker.Properties.Resources.Icon_birthseal);
+                }
+                else
+                {
+                    setImage(birthSeal, global::LMRItemTracker.Properties.Resources.Icon_birthseal_blank);
+                }
+            }
+            else if ("w-seal3".Equals(itemName))
+            {
+                if (isAdd)
+                {
+                    setImage(lifeSeal, global::LMRItemTracker.Properties.Resources.Icon_lifeseal);
+                }
+                else
+                {
+                    setImage(lifeSeal, global::LMRItemTracker.Properties.Resources.Icon_lifeseal_blank);
+                }
+            }
+            else if ("w-seal4".Equals(itemName))
+            {
+                if (isAdd)
+                {
+                    setImage(deathSeal, global::LMRItemTracker.Properties.Resources.Icon_deathseal);
+                }
+                else
+                {
+                    setImage(deathSeal, global::LMRItemTracker.Properties.Resources.Icon_deathseal_blank);
+                }
+            }
+        }
+
+        private void toggleSoftware(string itemName, bool isAdd)
+        {
+            if ("w-soft-reader".Equals(itemName))
+            {
+                if (isAdd)
+                {
+                    setImage(reader, global::LMRItemTracker.Properties.Resources.Icon_reader);
+                }
+                else
+                {
+                    setImage(reader, global::LMRItemTracker.Properties.Resources.Icon_reader_blank);
+                }
+            }
+            else if("w-soft-mantra".Equals(itemName))
+            {
+                if (isAdd)
+                {
+                    setBackgroundImage(mantra, global::LMRItemTracker.Properties.Resources.Icon_mantra);
+                }
+                else
+                {
+                    setBackgroundImage(mantra, global::LMRItemTracker.Properties.Resources.Icon_mantra_blank);
+                }
+            }
+            else if ("w-soft-torude".Equals(itemName))
+            {
+                if (isAdd)
+                {
+                    setImage(torude, global::LMRItemTracker.Properties.Resources.Icon_torude);
+                }
+                else
+                {
+                    setImage(torude, global::LMRItemTracker.Properties.Resources.Icon_torude_blank);
+                }
+            }
+            else if ("w-soft-mekuri".Equals(itemName))
             {
                 if (isAdd)
                 {
                     this.mekuriCollected = true;
                     if (this.miracleCollected)
                     {
-                        this.keyFairy.Image = global::LMRItemTracker.Properties.Resources.Icon_keyfairy;
+                        setImage(keyFairy, global::LMRItemTracker.Properties.Resources.Icon_keyfairy);
                     }
                 }
                 else
                 {
                     this.mekuriCollected = false;
-                    this.keyFairy.Image = global::LMRItemTracker.Properties.Resources.Icon_keyfairy_blank;
+                    setImage(keyFairy, global::LMRItemTracker.Properties.Resources.Icon_keyfairy_blank);
                 }
-                this.keyFairy.Refresh();
             }
-            else if ("w-miracle".Equals(itemName))
+            else if ("w-soft-miracle".Equals(itemName))
             {
                 if (isAdd)
                 {
                     this.miracleCollected = true;
                     if (this.mekuriCollected)
                     {
-                        this.keyFairy.Image = global::LMRItemTracker.Properties.Resources.Icon_keyfairy;
+                        setImage(keyFairy, global::LMRItemTracker.Properties.Resources.Icon_keyfairy);
                     }
                 }
                 else
                 {
                     this.miracleCollected = false;
-                    this.keyFairy.Image = global::LMRItemTracker.Properties.Resources.Icon_keyfairy_blank;
+                    setImage(keyFairy, global::LMRItemTracker.Properties.Resources.Icon_keyfairy_blank);
                 }
-                this.keyFairy.Refresh();
             }
-            else if ("w-mirai".Equals(itemName))
+            else if ("w-soft-mirai".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.mirai.Image = global::LMRItemTracker.Properties.Resources.Icon_mirai;
-
+                    setImage(mirai, global::LMRItemTracker.Properties.Resources.Icon_mirai);
                 }
                 else
                 {
-                    this.mirai.Image = global::LMRItemTracker.Properties.Resources.Icon_mirai_blank;
+                    setImage(mirai, global::LMRItemTracker.Properties.Resources.Icon_mirai_blank);
                 }
-                this.mirai.Refresh();
             }
-            else if ("w-yagomap".Equals(itemName) || "w-yagostr".Equals(itemName))
+            else if ("w-soft-yagomap".Equals(itemName) || "w-soft-yagostr".Equals(itemName))
             {
-                if (isAdd)
-                {
-                    this.skullWallCount.Text = (Int32.Parse(this.skullWallCount.Text.Substring(0, this.skullWallCount.Text.IndexOf('/'))) + 1) + "/4";
-                }
-                else
-                {
-                    this.skullWallCount.Text = Math.Max(0, Int32.Parse(this.skullWallCount.Text.Substring(0, this.skullWallCount.Text.IndexOf('/'))) - 1) + "/4";
-                }
-                skullWallCount.Refresh();
-            }
-            else if ("w-seal1".Equals(itemName))
-            {
-                if (isAdd)
-                {
-                    this.originSeal.Image = global::LMRItemTracker.Properties.Resources.Icon_originseal;
-
-                }
-                else
-                {
-                    this.originSeal.Image = global::LMRItemTracker.Properties.Resources.Icon_originseal_blank;
-                }
-                this.originSeal.Refresh();
-            }
-            else if ("w-seal2".Equals(itemName))
-            {
-                if (isAdd)
-                {
-                    this.birthSeal.Image = global::LMRItemTracker.Properties.Resources.Icon_birthseal;
-
-                }
-                else
-                {
-                    this.birthSeal.Image = global::LMRItemTracker.Properties.Resources.Icon_birthseal_blank;
-                }
-                this.birthSeal.Refresh();
-            }
-            else if ("w-seal3".Equals(itemName))
-            {
-                if (isAdd)
-                {
-                    this.lifeSeal.Image = global::LMRItemTracker.Properties.Resources.Icon_lifeseal;
-
-                }
-                else
-                {
-                    this.lifeSeal.Image = global::LMRItemTracker.Properties.Resources.Icon_lifeseal_blank;
-                }
-                this.lifeSeal.Refresh();
-            }
-            else if ("w-seal4".Equals(itemName))
-            {
-                if (isAdd)
-                {
-                    this.deathSeal.Image = global::LMRItemTracker.Properties.Resources.Icon_deathseal;
-
-                }
-                else
-                {
-                    this.deathSeal.Image = global::LMRItemTracker.Properties.Resources.Icon_deathseal_blank;
-                }
-                this.deathSeal.Refresh();
+                updateCount(skullWallCount, isAdd, 4);
             }
         }
 
-        internal void updateShield(string displayname, Boolean isAdd)
+        internal void updateShield(string displayname, bool isAdd)
         {
             if ("shield-buckler".Equals(displayname))
             {
                 if (isAdd)
                 {
-                    this.buckler.Image = global::LMRItemTracker.Properties.Resources.Icon_buckler;
+                    setImage(buckler, global::LMRItemTracker.Properties.Resources.Icon_buckler);
                 }
                 else
                 {
-                    this.buckler.Image = global::LMRItemTracker.Properties.Resources.Icon_buckler_blank;
+                    setImage(buckler, global::LMRItemTracker.Properties.Resources.Icon_buckler_blank);
                 }
-                this.buckler.Refresh();
             }
             else if ("shield-silver".Equals(displayname))
             {
-                this.silverShield.Visible = (bool)isAdd;
-                this.silverShield.Refresh();
+                toggleImage(silverShield, isAdd);
             }
             else if ("shield-fake".Equals(displayname))
             {
-                this.fakeSilverShield.Visible = (bool)isAdd;
-                this.fakeSilverShield.Refresh();
+                toggleImage(fakeSilverShield, isAdd);
             }
             else if ("shield-angel".Equals(displayname))
             {
-                this.angelShield.Visible = (bool)isAdd;
-                this.angelShield.Refresh();
+                toggleImage(angelShield, isAdd);
             }
         }
 
@@ -877,39 +875,34 @@ namespace LMRItemTracker
             {
                 if (isAdd)
                 {
-                    this.lampOfTime.Image = global::LMRItemTracker.Properties.Resources.Icon_lampoftime;
+                    setImage(lampOfTime, global::LMRItemTracker.Properties.Resources.Icon_lampoftime);
                 }
             }
             else if ("invus-lamp-unlit".Equals(displayname))
             {
                 if (isAdd)
                 {
-                    this.lampOfTime.Image = global::LMRItemTracker.Properties.Resources.Icon_lampoftime_unlit;
+                    setImage(lampOfTime, global::LMRItemTracker.Properties.Resources.Icon_lampoftime_unlit);
                 }
             }
-            this.lampOfTime.Refresh();
         }
 
         internal void updateTranslationTablets(byte cur)
         {
-            this.translationTablets.Text = cur + "/3";
-            this.translationTablets.Refresh();
+            translationTablets.Invoke(new Action(() =>
+            {
+                translationTablets.Text = cur + "/3";
+                translationTablets.Refresh();
+            }));
         }
 
         public void updateAnkhJewels(ushort cur)
         {
-//            short existingCount = (ushort)Int32.Parse(this.ankhJewelCount.Text);
-
-            this.ankhJewelCount.Text = "" + cur;
-            this.ankhJewelCount.Refresh();
-//            if(cur > 0)
-//            {
-//                this.ankhJewels.Image = global::LMRItemTracker.Properties.Resources.Icon_ankhjewel;
-//            }
-//            else
-//            {
-//                this.ankhJewels.Image = global::LMRItemTracker.Properties.Resources.Icon_ankhjewel_blank;
-//            }
+            ankhJewelCount.Invoke(new Action(() =>
+            {
+                ankhJewelCount.Text = "" + cur;
+                ankhJewelCount.Refresh();
+            }));
         }
 
         public void toggleBoss(string itemName, Boolean isAdd)
@@ -918,240 +911,217 @@ namespace LMRItemTracker
             {
                 if (isAdd)
                 {
-                    this.amphisbaena.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_amphisbaena;
+                    setImage(amphisbaena, global::LMRItemTracker.Properties.Resources.Boss_amphisbaena);
                 }
                 else
                 {
-                    this.amphisbaena.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_amphisbaena_blank;
+                    setImage(amphisbaena, global::LMRItemTracker.Properties.Resources.Boss_amphisbaena_blank);
                 }
-                this.amphisbaena.Refresh();
             }
             else if ("boss-sakit".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.sakit.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_sakit;
+                    setImage(sakit, global::LMRItemTracker.Properties.Resources.Boss_sakit);
                 }
                 else
                 {
-                    this.sakit.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_sakit_blank;
+                    setImage(sakit, global::LMRItemTracker.Properties.Resources.Boss_sakit_blank);
                 }
-                this.sakit.Refresh();
             }
             else if ("boss-ellmac".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.ellmac.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_ellmac;
+                    setImage(ellmac, global::LMRItemTracker.Properties.Resources.Boss_ellmac);
                 }
                 else
                 {
-                    this.ellmac.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_ellmac_blank;
+                    setImage(ellmac, global::LMRItemTracker.Properties.Resources.Boss_ellmac_blank);
                 }
-                this.ellmac.Refresh();
             }
             else if ("boss-bahamut".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.bahamut.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_bahamut;
+                    setImage(bahamut, global::LMRItemTracker.Properties.Resources.Boss_bahamut);
                 }
                 else
                 {
-                    this.bahamut.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_bahamut_blank;
+                    setImage(bahamut, global::LMRItemTracker.Properties.Resources.Boss_bahamut_blank);
                 }
-                this.bahamut.Refresh();
             }
             else if ("boss-viy".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.viy.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_viy;
+                    setImage(viy, global::LMRItemTracker.Properties.Resources.Boss_viy);
                 }
                 else
                 {
-                    this.viy.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_viy_blank;
+                    setImage(viy, global::LMRItemTracker.Properties.Resources.Boss_viy_blank);
                 }
-                this.viy.Refresh();
             }
             else if ("boss-palenque".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.palenque.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_palenque;
+                    setImage(palenque, global::LMRItemTracker.Properties.Resources.Boss_palenque);
                 }
                 else
                 {
-                    this.palenque.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_palenque_blank;
+                    setImage(palenque, global::LMRItemTracker.Properties.Resources.Boss_palenque_blank);
                 }
-                this.palenque.Refresh();
             }
             else if ("boss-baphomet".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.baphomet.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_baphomet;
+                    setImage(baphomet, global::LMRItemTracker.Properties.Resources.Boss_baphomet);
                 }
                 else
                 {
-                    this.baphomet.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_baphomet_blank;
+                    setImage(baphomet, global::LMRItemTracker.Properties.Resources.Boss_baphomet_blank);
                 }
-                this.baphomet.Refresh();
             }
             else if ("boss-tiamat".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.tiamat.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_tiamat;
+                    setImage(tiamat, global::LMRItemTracker.Properties.Resources.Boss_tiamat);
                 }
                 else
                 {
-                    this.tiamat.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_tiamat_blank;
+                    setImage(tiamat, global::LMRItemTracker.Properties.Resources.Boss_tiamat_blank);
                 }
-                this.tiamat.Refresh();
             }
         }
 
         public void toggleMap(string itemName, Boolean isAdd)
         {
-            if (isAdd)
+            updateCount(mapCount, isAdd, 18);
+            if ("w-map-shrine".Equals(itemName))
             {
-                this.mapCount.Text = (Int32.Parse(this.mapCount.Text.Substring(0, this.mapCount.Text.IndexOf('/'))) + 1) + "/18";
-                if ("w-map-shrine".Equals(itemName))
+                updateCount(skullWallCount, isAdd, 4);
+                if (isAdd)
                 {
-                    this.maps.Image = global::LMRItemTracker.Properties.Resources.Icon_dragonbone_small;
-                    this.maps.Refresh();
-                    this.skullWallCount.Text = (Int32.Parse(this.skullWallCount.Text.Substring(0, this.skullWallCount.Text.IndexOf('/'))) + 1) + "/4";
-                    this.skullWallCount.Refresh();
+                    setImage(maps, global::LMRItemTracker.Properties.Resources.Icon_dragonbone_small);
+                }
+                else
+                {
+                    setImage(maps, null);
                 }
             }
-            else
-            {
-                this.mapCount.Text = Math.Max(0, Int32.Parse(this.mapCount.Text.Substring(0, this.mapCount.Text.IndexOf('/'))) - 1) + "/18";
-                if ("w-map-shrine".Equals(itemName))
-                {
-                    this.maps.Image = null;
-                    this.maps.Refresh();
-                    this.skullWallCount.Text = Math.Max(0, Int32.Parse(this.skullWallCount.Text.Substring(0, this.skullWallCount.Text.IndexOf('/'))) - 1) + "/4";
-                    this.skullWallCount.Refresh();
-                }
-            }
-            this.mapCount.Refresh();
         }
 
         public void toggleMantra(string itemName, bool isAdd)
         {
             if ("mantra-keysword".Equals(itemName))
             {
-                if(isAdd)
+                if (isAdd)
                 {
                     this.mantrasRecited = true;
                     if (this.keySwordCollected)
                     {
-                        this.keySword.Image = global::LMRItemTracker.Properties.Resources.Icon_keysword_awakened;
-                        this.keySword.Refresh();
+                        setImage(keySword, global::LMRItemTracker.Properties.Resources.Icon_keysword_awakened);
                     }
                 }
                 else
                 {
                     this.mantrasRecited = false;
+                    if (this.keySwordCollected)
+                    {
+                        setImage(keySword, global::LMRItemTracker.Properties.Resources.Icon_keysword);
+                    }
                 }
             }
             else if ("mantra-amphisbaena".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.amphisbaena.Image = global::LMRItemTracker.Properties.Resources.Icon_djedpillar;
+                    setImage(amphisbaena, global::LMRItemTracker.Properties.Resources.Icon_djedpillar);
                 }
                 else
                 {
-                    this.amphisbaena.Image = null;
+                    setImage(amphisbaena, null);
                 }
-                this.amphisbaena.Refresh();
             }
             else if ("mantra-sakit".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.sakit.Image = global::LMRItemTracker.Properties.Resources.Icon_djedpillar;
+                    setImage(sakit, global::LMRItemTracker.Properties.Resources.Icon_djedpillar);
                 }
                 else
                 {
-                    this.sakit.Image = null;
+                    setImage(sakit, null);
                 }
-                this.sakit.Refresh();
             }
             else if ("mantra-ellmac".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.ellmac.Image = global::LMRItemTracker.Properties.Resources.Icon_djedpillar;
+                    setImage(ellmac, global::LMRItemTracker.Properties.Resources.Icon_djedpillar);
                 }
                 else
                 {
-                    this.ellmac.Image = null;
+                    setImage(ellmac, null);
                 }
-                this.ellmac.Refresh();
             }
             else if ("mantra-bahamut".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.bahamut.Image = global::LMRItemTracker.Properties.Resources.Icon_djedpillar;
+                    setImage(bahamut, global::LMRItemTracker.Properties.Resources.Icon_djedpillar);
                 }
                 else
                 {
-                    this.bahamut.Image = null;
+                    setImage(bahamut, null);
                 }
-                this.bahamut.Refresh();
             }
             else if ("mantra-viy".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.viy.Image = global::LMRItemTracker.Properties.Resources.Icon_djedpillar;
+                    setImage(viy, global::LMRItemTracker.Properties.Resources.Icon_djedpillar);
                 }
                 else
                 {
-                    this.viy.Image = null;
+                    setImage(viy, null);
                 }
-                this.viy.Refresh();
             }
             else if ("mantra-palenque".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.palenque.Image = global::LMRItemTracker.Properties.Resources.Icon_djedpillar;
+                    setImage(palenque, global::LMRItemTracker.Properties.Resources.Icon_djedpillar);
                 }
                 else
                 {
-                    this.palenque.Image = null;
+                    setImage(palenque, null);
                 }
-                this.palenque.Refresh();
             }
             else if ("mantra-baphomet".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.baphomet.Image = global::LMRItemTracker.Properties.Resources.Icon_djedpillar;
+                    setImage(baphomet, global::LMRItemTracker.Properties.Resources.Icon_djedpillar);
                 }
                 else
                 {
-                    this.baphomet.Image = null;
+                    setImage(baphomet, null);
                 }
-                this.baphomet.Refresh();
             }
             else if ("mantra-tiamat".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    this.tiamat.Image = global::LMRItemTracker.Properties.Resources.Icon_djedpillar;
+                    setImage(tiamat, global::LMRItemTracker.Properties.Resources.Icon_djedpillar);
                 }
                 else
                 {
-                    this.tiamat.Image = null;
+                    setImage(tiamat, null);
                 }
-                this.tiamat.Refresh();
             }
         }
 
@@ -1185,6 +1155,77 @@ namespace LMRItemTracker
                 this.translationTablets.ForeColor = textColorDialog.Color;
                 this.skullWallCount.ForeColor = textColorDialog.Color;
             }
+        }
+
+        private void toggleImage(PictureBox pictureBox, bool visible)
+        {
+            pictureBox.Invoke(new Action(() =>
+            {
+                if (pictureBox.Visible != visible)
+                {
+                    pictureBox.Visible = visible;
+                    pictureBox.Refresh();
+                }
+            }));
+        }
+
+        private void setImage(PictureBox pictureBox, System.Drawing.Image image)
+        {
+            pictureBox.Invoke(new Action(() =>
+            {
+                pictureBox.Image = image;
+                pictureBox.Refresh();
+            }));
+        }
+
+        private void setBackgroundImage(PictureBox pictureBox, System.Drawing.Image image)
+        {
+            pictureBox.Invoke(new Action(() =>
+            {
+                pictureBox.BackgroundImage = image;
+                pictureBox.Refresh();
+            }));
+        }
+
+        private void updateCount(Label label, bool isAdd, int max)
+        {
+            label.Invoke(new Action(() =>
+            {
+                int existingCount = Int32.Parse(label.Text.Substring(0, label.Text.IndexOf('/')));
+                if (isAdd)
+                {
+                    if (existingCount < max)
+                    {
+                        label.Text = (existingCount + 1) + "/" + max;
+                        label.Refresh();
+                    }
+                }
+                else
+                {
+                    if (existingCount > 0)
+                    {
+                        label.Text = (existingCount - 1) + "/" + max;
+                        label.Refresh();
+                    }
+                }
+            }));
+        }
+
+        private void setAngelShieldIndex(object sender, EventArgs e)
+        {
+            shields.Controls.SetChildIndex(angelShield, 0);
+        }
+        private void setSilverShieldIndex(object sender, EventArgs e)
+        {
+            shields.Controls.SetChildIndex(silverShield, 1);
+        }
+        private void setFakeSilverShieldIndex(object sender, EventArgs e)
+        {
+            shields.Controls.SetChildIndex(fakeSilverShield, 2);
+        }
+        private void setBucklerIndex(object sender, EventArgs e)
+        {
+            shields.Controls.SetChildIndex(buckler, 3);
         }
     }
 }
