@@ -727,18 +727,6 @@ namespace LMRItemTracker
                 }
                 this.torude.Refresh();
             }
-            //            else if ("w-capstar".Equals(itemName))
-            //            {
-            //                if (isAdd)
-            //                {
-            //                    this.capstar.Image = global::LMRItemTracker.Properties.Resources.Icon_capstar;
-            //                }
-            //                else
-            //                {
-            //                    this.capstar.Image = global::LMRItemTracker.Properties.Resources.Icon_capstar_blank;
-            //                }
-            //                this.capstar.Refresh();
-            //            }
             else if ("w-mekuri".Equals(itemName))
             {
                 if (isAdd)

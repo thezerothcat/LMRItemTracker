@@ -103,7 +103,6 @@ namespace LMRItemTracker
         {
             DateTime now = DateTime.MinValue;
             LaMulanaRemake remake = new LaMulanaRemake();
-            System.IO.FileInfo rxmlfi1 = null, rxmlfi2;
 
             MemoryWatcherList.MemoryWatcherDataChangedEventHandler changerhandler =
                 (MemoryWatcher w) => changed(w.Current, w.Old, w.Name, laMulanaItemTrackerForm);
@@ -165,9 +164,11 @@ namespace LMRItemTracker
                         warnedaboutaccess = true;
                     }
                 }
-                catch (ArgumentNullException) { }
+                catch (Exception ex)
+                {
+                    System.Console.WriteLine(ex.StackTrace);
+                }
             }
-
         }
     }
 }
