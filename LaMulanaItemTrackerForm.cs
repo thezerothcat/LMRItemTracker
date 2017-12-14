@@ -910,94 +910,94 @@ namespace LMRItemTracker
             }));
         }
 
-        public void toggleBoss(string itemName, Boolean isAdd)
+        public void toggleBoss(string itemName, bool isAdd)
         {
             if ("boss-amphisbaena".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    setImage(amphisbaena, global::LMRItemTracker.Properties.Resources.Boss_amphisbaena);
+                    setBackgroundImage(amphisbaena, global::LMRItemTracker.Properties.Resources.Boss_amphisbaena);
                 }
                 else
                 {
-                    setImage(amphisbaena, global::LMRItemTracker.Properties.Resources.Boss_amphisbaena_blank);
+                    setBackgroundImage(amphisbaena, global::LMRItemTracker.Properties.Resources.Boss_amphisbaena_blank);
                 }
             }
             else if ("boss-sakit".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    setImage(sakit, global::LMRItemTracker.Properties.Resources.Boss_sakit);
+                    setBackgroundImage(sakit, global::LMRItemTracker.Properties.Resources.Boss_sakit);
                 }
                 else
                 {
-                    setImage(sakit, global::LMRItemTracker.Properties.Resources.Boss_sakit_blank);
+                    setBackgroundImage(sakit, global::LMRItemTracker.Properties.Resources.Boss_sakit_blank);
                 }
             }
             else if ("boss-ellmac".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    setImage(ellmac, global::LMRItemTracker.Properties.Resources.Boss_ellmac);
+                    setBackgroundImage(ellmac, global::LMRItemTracker.Properties.Resources.Boss_ellmac);
                 }
                 else
                 {
-                    setImage(ellmac, global::LMRItemTracker.Properties.Resources.Boss_ellmac_blank);
+                    setBackgroundImage(ellmac, global::LMRItemTracker.Properties.Resources.Boss_ellmac_blank);
                 }
             }
             else if ("boss-bahamut".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    setImage(bahamut, global::LMRItemTracker.Properties.Resources.Boss_bahamut);
+                    setBackgroundImage(bahamut, global::LMRItemTracker.Properties.Resources.Boss_bahamut);
                 }
                 else
                 {
-                    setImage(bahamut, global::LMRItemTracker.Properties.Resources.Boss_bahamut_blank);
+                    setBackgroundImage(bahamut, global::LMRItemTracker.Properties.Resources.Boss_bahamut_blank);
                 }
             }
             else if ("boss-viy".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    setImage(viy, global::LMRItemTracker.Properties.Resources.Boss_viy);
+                    setBackgroundImage(viy, global::LMRItemTracker.Properties.Resources.Boss_viy);
                 }
                 else
                 {
-                    setImage(viy, global::LMRItemTracker.Properties.Resources.Boss_viy_blank);
+                    setBackgroundImage(viy, global::LMRItemTracker.Properties.Resources.Boss_viy_blank);
                 }
             }
             else if ("boss-palenque".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    setImage(palenque, global::LMRItemTracker.Properties.Resources.Boss_palenque);
+                    setBackgroundImage(palenque, global::LMRItemTracker.Properties.Resources.Boss_palenque);
                 }
                 else
                 {
-                    setImage(palenque, global::LMRItemTracker.Properties.Resources.Boss_palenque_blank);
+                    setBackgroundImage(palenque, global::LMRItemTracker.Properties.Resources.Boss_palenque_blank);
                 }
             }
             else if ("boss-baphomet".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    setImage(baphomet, global::LMRItemTracker.Properties.Resources.Boss_baphomet);
+                    setBackgroundImage(baphomet, global::LMRItemTracker.Properties.Resources.Boss_baphomet);
                 }
                 else
                 {
-                    setImage(baphomet, global::LMRItemTracker.Properties.Resources.Boss_baphomet_blank);
+                    setBackgroundImage(baphomet, global::LMRItemTracker.Properties.Resources.Boss_baphomet_blank);
                 }
             }
             else if ("boss-tiamat".Equals(itemName))
             {
                 if (isAdd)
                 {
-                    setImage(tiamat, global::LMRItemTracker.Properties.Resources.Boss_tiamat);
+                    setBackgroundImage(tiamat, global::LMRItemTracker.Properties.Resources.Boss_tiamat);
                 }
                 else
                 {
-                    setImage(tiamat, global::LMRItemTracker.Properties.Resources.Boss_tiamat_blank);
+                    setBackgroundImage(tiamat, global::LMRItemTracker.Properties.Resources.Boss_tiamat_blank);
                 }
             }
         }

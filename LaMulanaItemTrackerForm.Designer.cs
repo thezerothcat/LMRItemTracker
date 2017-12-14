@@ -661,7 +661,6 @@ namespace LMRItemTracker
             // 
             // vesselNotFound
             // 
-            this.vesselNotFound.BackColor = System.Drawing.SystemColors.Control;
             this.vesselNotFound.Image = global::LMRItemTracker.Properties.Resources.Icon_vessel_blank;
             this.vesselNotFound.Location = new System.Drawing.Point(92, 452);
             this.vesselNotFound.Name = "vesselNotFound";
@@ -900,7 +899,6 @@ namespace LMRItemTracker
             // 
             // vessel
             // 
-            this.vessel.BackColor = System.Drawing.SystemColors.Control;
             this.vessel.Image = global::LMRItemTracker.Properties.Resources.Icon_vessel;
             this.vessel.Location = new System.Drawing.Point(92, 452);
             this.vessel.Name = "vessel";
@@ -910,7 +908,6 @@ namespace LMRItemTracker
             // 
             // keySword
             // 
-            this.keySword.BackColor = System.Drawing.SystemColors.Control;
             this.keySword.Image = global::LMRItemTracker.Properties.Resources.Icon_keysword_blank;
             this.keySword.Location = new System.Drawing.Point(132, 452);
             this.keySword.Name = "keySword";
