@@ -48,3 +48,4 @@ D:\IdeaProjects\LMRItemTracker\LMRItemTracker\obj\Debug\LMRItemTracker.csproj.Ge
 D:\IdeaProjects\LMRItemTracker\LMRItemTracker\obj\Debug\LMRItemTracker.csproj.CoreCompileInputs.cache
 D:\IdeaProjects\LMRItemTracker\LMRItemTracker\obj\Debug\LMRItemTracker.exe
 D:\IdeaProjects\LMRItemTracker\LMRItemTracker\obj\Debug\LMRItemTracker.pdb
+D:\IdeaProjects\LMRItemTracker\LMRItemTracker\obj\Debug\LMRItemTracker.csprojResolveAssemblyReference.cache

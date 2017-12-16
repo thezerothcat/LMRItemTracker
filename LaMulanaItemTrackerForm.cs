@@ -1218,7 +1218,7 @@ namespace LMRItemTracker
 
         private void setFlailWhipIndex(object sender, EventArgs e)
         {
-            whips.Controls.SetChildIndex(chainWhip, 0);
+            whips.Controls.SetChildIndex(flailWhip, 0);
         }
         private void setChainWhipIndex(object sender, EventArgs e)
         {
