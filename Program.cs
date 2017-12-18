@@ -85,15 +85,29 @@ namespace LMRItemTracker
             }
             else if (displayname.StartsWith("mantra-"))
             {
-                laMulanaItemTrackerForm.toggleMantra(displayname, (byte)cur >= (byte)4);
+                laMulanaItemTrackerForm.toggleMantra(displayname, (byte)cur >= 4);
             }
             else if (displayname.StartsWith("w-map-"))
             {
-                laMulanaItemTrackerForm.toggleMap(displayname, (byte)cur >= (byte)2);
+                if((byte)old < 2 && (byte)cur >= 2)
+                {
+                    laMulanaItemTrackerForm.toggleMap(displayname, true);
+                }
+                else if((byte)old >= 2 && (byte)cur < 2)
+                {
+                    laMulanaItemTrackerForm.toggleMap(displayname, false);
+                }
             }
             else if (displayname.StartsWith("w-"))
             {
-                laMulanaItemTrackerForm.toggleItem(displayname, (byte)cur >= (byte)2);
+                if ((byte)old < 2 && (byte)cur >= 2)
+                {
+                    laMulanaItemTrackerForm.toggleItem(displayname, true);
+                }
+                else if ((byte)old >= 2 && (byte)cur < 2)
+                {
+                    laMulanaItemTrackerForm.toggleItem(displayname, false);
+                }
             }
         }
 
