@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMRItemTracker", "LMRItemTracker.csproj", "{68CA971C-51F9-480D-ADED-EBD7D31C9CCE}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		EyeOfTruth.Shared\EyeOfTruth.Shared.projitems*{68ca971c-51f9-480d-aded-ebd7d31c9cce}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68CA971C-51F9-480D-ADED-EBD7D31C9CCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68CA971C-51F9-480D-ADED-EBD7D31C9CCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68CA971C-51F9-480D-ADED-EBD7D31C9CCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68CA971C-51F9-480D-ADED-EBD7D31C9CCE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
