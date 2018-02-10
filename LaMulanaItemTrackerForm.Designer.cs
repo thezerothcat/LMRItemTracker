@@ -917,6 +917,7 @@ namespace LMRItemTracker
             this.mantra.Location = new System.Drawing.Point(52, 452);
             this.mantra.Name = "mantra";
             this.mantra.Size = new System.Drawing.Size(40, 40);
+            this.mantra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.mantra.TabIndex = 31;
             this.mantra.TabStop = false;
             // 
@@ -971,6 +972,7 @@ namespace LMRItemTracker
             this.maps.Location = new System.Drawing.Point(212, 452);
             this.maps.Name = "maps";
             this.maps.Size = new System.Drawing.Size(40, 40);
+            this.maps.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.maps.TabIndex = 24;
             this.maps.TabStop = false;
             // 
