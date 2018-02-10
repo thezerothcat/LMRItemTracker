@@ -12,6 +12,7 @@ namespace LMRItemTracker
         public LaMulanaItemTrackerForm()
         {
             InitializeComponent();
+            ScaleImages(this);
             this.mantrasRecited = false;
             this.keySwordCollected = false;
             this.miracleCollected = false;
@@ -22,6 +23,19 @@ namespace LMRItemTracker
             this.chainWhip.VisibleChanged += new System.EventHandler(this.setChainWhipIndex);
             this.flailWhip.VisibleChanged += new System.EventHandler(this.setFlailWhipIndex);
             InitializeBackgroundWorker();
+        }
+
+        private void ScaleImages(Control parent)
+        {
+            foreach (Control c in parent.Controls)
+            {
+                if (c is PictureBox p)
+                {
+                    p.BackgroundImageLayout = ImageLayout.Zoom;
+                    p.SizeMode = PictureBoxSizeMode.Zoom;
+                }
+                ScaleImages(c);
+            }
         }
 
         private void InitializeBackgroundWorker()

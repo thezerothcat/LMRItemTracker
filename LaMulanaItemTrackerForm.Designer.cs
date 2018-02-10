@@ -680,7 +680,6 @@ namespace LMRItemTracker
             // deathSeal
             // 
             this.deathSeal.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_deathseal_blank;
-            this.deathSeal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.deathSeal.Location = new System.Drawing.Point(132, 252);
             this.deathSeal.Name = "deathSeal";
             this.deathSeal.Size = new System.Drawing.Size(40, 40);
@@ -690,7 +689,6 @@ namespace LMRItemTracker
             // lifeSeal
             // 
             this.lifeSeal.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_lifeseal_blank;
-            this.lifeSeal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.lifeSeal.Location = new System.Drawing.Point(92, 252);
             this.lifeSeal.Name = "lifeSeal";
             this.lifeSeal.Size = new System.Drawing.Size(40, 40);
@@ -700,7 +698,6 @@ namespace LMRItemTracker
             // birthSeal
             // 
             this.birthSeal.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_birthseal_blank;
-            this.birthSeal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.birthSeal.Location = new System.Drawing.Point(52, 252);
             this.birthSeal.Name = "birthSeal";
             this.birthSeal.Size = new System.Drawing.Size(40, 40);
@@ -710,7 +707,6 @@ namespace LMRItemTracker
             // originSeal
             // 
             this.originSeal.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_originseal_blank;
-            this.originSeal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.originSeal.Location = new System.Drawing.Point(12, 252);
             this.originSeal.Name = "originSeal";
             this.originSeal.Size = new System.Drawing.Size(40, 40);
@@ -921,7 +917,6 @@ namespace LMRItemTracker
             this.mantra.Location = new System.Drawing.Point(52, 452);
             this.mantra.Name = "mantra";
             this.mantra.Size = new System.Drawing.Size(40, 40);
-            this.mantra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.mantra.TabIndex = 31;
             this.mantra.TabStop = false;
             // 
@@ -976,95 +971,78 @@ namespace LMRItemTracker
             this.maps.Location = new System.Drawing.Point(212, 452);
             this.maps.Name = "maps";
             this.maps.Size = new System.Drawing.Size(40, 40);
-            this.maps.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.maps.TabIndex = 24;
             this.maps.TabStop = false;
             // 
             // viy
             // 
             this.viy.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_viy_blank;
-            this.viy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.viy.Location = new System.Drawing.Point(154, 512);
             this.viy.Name = "viy";
             this.viy.Size = new System.Drawing.Size(34, 34);
-            this.viy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.viy.TabIndex = 22;
             this.viy.TabStop = false;
             // 
             // palenque
             // 
             this.palenque.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_palenque_blank;
-            this.palenque.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.palenque.Location = new System.Drawing.Point(190, 512);
             this.palenque.Name = "palenque";
             this.palenque.Size = new System.Drawing.Size(34, 34);
-            this.palenque.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.palenque.TabIndex = 21;
             this.palenque.TabStop = false;
             // 
             // baphomet
             // 
             this.baphomet.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_baphomet_blank;
-            this.baphomet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.baphomet.Location = new System.Drawing.Point(226, 512);
             this.baphomet.Name = "baphomet";
             this.baphomet.Size = new System.Drawing.Size(34, 34);
-            this.baphomet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.baphomet.TabIndex = 20;
             this.baphomet.TabStop = false;
             // 
             // tiamat
             // 
             this.tiamat.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_tiamat_blank;
-            this.tiamat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tiamat.Location = new System.Drawing.Point(262, 512);
             this.tiamat.Name = "tiamat";
             this.tiamat.Size = new System.Drawing.Size(34, 34);
-            this.tiamat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.tiamat.TabIndex = 19;
             this.tiamat.TabStop = false;
             // 
             // bahamut
             // 
             this.bahamut.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_bahamut_blank;
-            this.bahamut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bahamut.Location = new System.Drawing.Point(118, 512);
             this.bahamut.Name = "bahamut";
             this.bahamut.Size = new System.Drawing.Size(34, 34);
-            this.bahamut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bahamut.TabIndex = 18;
             this.bahamut.TabStop = false;
             // 
             // ellmac
             // 
             this.ellmac.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_ellmac_blank;
-            this.ellmac.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ellmac.Location = new System.Drawing.Point(82, 512);
             this.ellmac.Name = "ellmac";
             this.ellmac.Size = new System.Drawing.Size(34, 34);
-            this.ellmac.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ellmac.TabIndex = 17;
             this.ellmac.TabStop = false;
             // 
             // amphisbaena
             // 
             this.amphisbaena.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_amphisbaena_blank;
-            this.amphisbaena.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.amphisbaena.Location = new System.Drawing.Point(10, 512);
             this.amphisbaena.Name = "amphisbaena";
             this.amphisbaena.Size = new System.Drawing.Size(34, 34);
-            this.amphisbaena.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.amphisbaena.TabIndex = 13;
             this.amphisbaena.TabStop = false;
             // 
             // sakit
             // 
             this.sakit.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_sakit_blank;
-            this.sakit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.sakit.Location = new System.Drawing.Point(46, 512);
             this.sakit.Name = "sakit";
             this.sakit.Size = new System.Drawing.Size(34, 34);
-            this.sakit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.sakit.TabIndex = 8;
             this.sakit.TabStop = false;
             // 
