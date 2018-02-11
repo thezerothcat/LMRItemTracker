@@ -3,9 +3,10 @@
 ## Features
 
 * Tracks progress for randomized playthroughs
-* Ability to change background color by double-clicking the background
-* Ability to change text color by double-clicking text
 * Includes some information not available in the pause menu, such as which mantras you've recited and whether or not you have the map for Shrine of the Mother
+* Ability to change background color and text color, either by double-clicking the background/text or using the menu option.
+* Ability to reorganize item layout (with some limitations).
+* Ability to save settings.
 
 ## Installation
 Download the zipfile from the latest build at <https://github.com/thezerothcat/LMRItemTracker/releases>, unzip, and run the executable.

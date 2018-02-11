@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Reflection;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace LMRItemTracker
 {
@@ -17,11 +18,18 @@ namespace LMRItemTracker
             this.keySwordCollected = false;
             this.miracleCollected = false;
             this.mekuriCollected = false;
+
             this.buckler.VisibleChanged += new System.EventHandler(this.setBucklerIndex);
             this.silverShield.VisibleChanged += new System.EventHandler(this.setSilverShieldIndex);
             this.angelShield.VisibleChanged += new System.EventHandler(this.setAngelShieldIndex);
             this.chainWhip.VisibleChanged += new System.EventHandler(this.setChainWhipIndex);
             this.flailWhip.VisibleChanged += new System.EventHandler(this.setFlailWhipIndex);
+
+            updateFormColor();
+            updateTextColor();
+            InitializePossibleItems();
+            InitializeFormPanels();
+            InitializeMenuOptions();
             InitializeBackgroundWorker();
         }
 
@@ -42,6 +50,161 @@ namespace LMRItemTracker
         {
             flagListener = new BackgroundWorker();
             flagListener.DoWork += new DoWorkEventHandler(flagListener_DoWork);
+        }
+
+        private void InitializePossibleItems()
+        {
+            this.allItems = new List<String>(70);
+            this.allItems.Add("Anchor");
+            this.allItems.Add("Ankh Jewels");
+            this.allItems.Add("Axe");
+            this.allItems.Add("Birth Seal");
+            this.allItems.Add("Bomb");
+            this.allItems.Add("Book of the Dead");
+            this.allItems.Add("Bracelet");
+            this.allItems.Add("Bronze Mirror");
+            this.allItems.Add("Caltrops");
+            this.allItems.Add("Chakram");
+            this.allItems.Add("Cog of the Soul");
+            this.allItems.Add("Crucifix");
+            this.allItems.Add("Crystal Skull");
+            this.allItems.Add("Death Seal");
+            this.allItems.Add("Diary");
+            this.allItems.Add("Dimensional Key");
+            this.allItems.Add("Dragon Bone");
+            this.allItems.Add("Earth Spear");
+            this.allItems.Add("Eye of Truth");
+            this.allItems.Add("Fairy Clothes");
+            this.allItems.Add("Feather");
+            this.allItems.Add("Flare Gun");
+            this.allItems.Add("Fruit of Eden");
+            this.allItems.Add("Gauntlet");
+            this.allItems.Add("Glove");
+            this.allItems.Add("Glyph Reader");
+            this.allItems.Add("Grapple Claw");
+            this.allItems.Add("Hand Scanner");
+            this.allItems.Add("Helmet");
+            this.allItems.Add("Hermes Boots");
+            this.allItems.Add("Holy Grail");
+            this.allItems.Add("Ice Cape");
+            this.allItems.Add("Isis' Pendant");
+            this.allItems.Add("Katana");
+            this.allItems.Add("Key Fairy Combo");
+            this.allItems.Add("Key of Eternity");
+            this.allItems.Add("Key Sword");
+            this.allItems.Add("Knife");
+            this.allItems.Add("Lamp of Time");
+            this.allItems.Add("Life Seal");
+            this.allItems.Add("Magatama Jewel");
+            this.allItems.Add("Mantra/Djed Pillar");
+            this.allItems.Add("Maps");
+            this.allItems.Add("Mini Doll");
+            this.allItems.Add("mirai.exe");
+            this.allItems.Add("Mobile Super X2");
+            this.allItems.Add("Mulana Talisman");
+            this.allItems.Add("Origin Seal");
+            this.allItems.Add("Pepper");
+            this.allItems.Add("Perfume");
+            this.allItems.Add("Philosopher's Ocarina");
+            this.allItems.Add("Pistol");
+            this.allItems.Add("Plane Model");
+            this.allItems.Add("Pochette Key");
+            this.allItems.Add("Ring");
+            this.allItems.Add("Rolling Shuriken");
+            this.allItems.Add("Scalesphere");
+            this.allItems.Add("Scriptures");
+            this.allItems.Add("Serpent Staff");
+            this.allItems.Add("Shield");
+            this.allItems.Add("Shrine Wall Removal");
+            this.allItems.Add("Shuriken");
+            this.allItems.Add("Spaulder");
+            this.allItems.Add("Talisman");
+            this.allItems.Add("torude.exe");
+            this.allItems.Add("Treasures");
+            this.allItems.Add("Twin Statue");
+            this.allItems.Add("Vessel/Medicine");
+            this.allItems.Add("Whip");
+            this.allItems.Add("Woman Statue");
+        }
+
+        private void InitializeFormPanels()
+        {
+            foreach (String item in this.allItems)
+            {
+                Control control = GetControl(item);
+                if (control != null)
+                {
+                    control.Parent = null;
+                }
+            }
+
+            List<String> itemsInPanel = new List<String>(Properties.Settings.Default.Panel1Contents.Split(','));
+            foreach(String item in itemsInPanel)
+            {
+                Control control = GetControl(item);
+                if(control != null)
+                {
+                    flowLayoutPanel1.Controls.Add(control);
+                    control.Margin = new Padding(0);
+                }
+            }
+
+            itemsInPanel = new List<String>(Properties.Settings.Default.Panel2Contents.Split(','));
+            foreach (String item in itemsInPanel)
+            {
+                Control control = GetControl(item);
+                if (control != null)
+                {
+                    flowLayoutPanel2.Controls.Add(control);
+                    control.Margin = new Padding(0);
+                }
+            }
+
+            itemsInPanel = new List<String>(Properties.Settings.Default.Panel3Contents.Split(','));
+            foreach (String item in itemsInPanel)
+            {
+                Control control = GetControl(item);
+                if (control != null)
+                {
+                    flowLayoutPanel3.Controls.Add(control);
+                    control.Margin = new Padding(0);
+                }
+            }
+
+            itemsInPanel = new List<String>(Properties.Settings.Default.Panel4Contents.Split(','));
+            foreach (String item in itemsInPanel)
+            {
+                Control control = GetControl(item);
+                if (control != null)
+                {
+                    flowLayoutPanel4.Controls.Add(control);
+                    control.Margin = new Padding(0);
+                }
+            }
+
+            itemsInPanel = new List<String>(Properties.Settings.Default.Panel5Contents.Split(','));
+            foreach (String item in itemsInPanel)
+            {
+                Control control = GetControl(item);
+                if (control != null)
+                {
+                    flowLayoutPanel5.Controls.Add(control);
+                    control.Margin = new Padding(0);
+                }
+            }
+        }
+
+        private void InitializeMenuOptions()
+        {
+            foreach (String item in this.allItems)
+            {
+                addItemPanel1ToolStripMenuItem.DropDownItems.Add(CreateMenuItem(item, new System.EventHandler(this.addItemToPanel1)));
+                addItemPanel2ToolStripMenuItem.DropDownItems.Add(CreateMenuItem(item, new System.EventHandler(this.addItemToPanel2)));
+                addItemPanel3ToolStripMenuItem.DropDownItems.Add(CreateMenuItem(item, new System.EventHandler(this.addItemToPanel3)));
+                addItemPanel4ToolStripMenuItem.DropDownItems.Add(CreateMenuItem(item, new System.EventHandler(this.addItemToPanel4)));
+                addItemPanel5ToolStripMenuItem.DropDownItems.Add(CreateMenuItem(item, new System.EventHandler(this.addItemToPanel5)));
+                removeItemToolStripMenuItem.DropDownItems.Add(CreateMenuItem(item, new System.EventHandler(this.removeItemFromPanel)));
+            }
         }
 
         private void flagListener_DoWork(object sender, DoWorkEventArgs e)
@@ -1146,6 +1309,13 @@ namespace LMRItemTracker
 
         private void LaMulanaItemTrackerForm_Load(object sender, EventArgs e)
         {
+            if(Properties.Settings.Default.UpgradeRequired)
+            {
+                Properties.Settings.Default.Upgrade();
+                Properties.Settings.Default.UpgradeRequired = false;
+                Properties.Settings.Default.Save();
+            }
+
             try
             {
                 this._assembly = Assembly.GetExecutingAssembly();
@@ -1162,18 +1332,503 @@ namespace LMRItemTracker
         private void LaMulanaItemTrackerForm_DoubleClick(object sender, EventArgs e)
         {
             if (formColorDialog.ShowDialog() == DialogResult.OK)
-                this.BackColor = formColorDialog.Color;
+            {
+                Properties.Settings.Default.BackgroundColor = formColorDialog.Color;
+                updateFormColor();
+            }
         }
 
         private void textDoubleClick(object sender, EventArgs e)
         {
             if (textColorDialog.ShowDialog() == DialogResult.OK)
             {
-                this.mapCount.ForeColor = textColorDialog.Color;
-                this.ankhJewelCount.ForeColor = textColorDialog.Color;
-                this.translationTablets.ForeColor = textColorDialog.Color;
-                this.skullWallCount.ForeColor = textColorDialog.Color;
+                Properties.Settings.Default.TextColor = textColorDialog.Color;
+                updateTextColor();
             }
+        }
+
+        private void addItemToPanel1(object sender, EventArgs e)
+        {
+            if(sender is ToolStripMenuItem)
+            {
+                String itemName = ((ToolStripMenuItem)sender).Text;
+                Control control = GetControl(itemName);
+                if(control == null)
+                {
+                    MessageBox.Show("Problem adding " + itemName + " to panel");
+                }
+                else
+                {
+                    flowLayoutPanel1.Controls.Add(control);
+                    control.Margin = new Padding(0);
+
+                    Properties.Settings.Default.Panel1Contents = rebuildPanelContents(Properties.Settings.Default.Panel1Contents, itemName, true);
+
+                    Properties.Settings.Default.Panel2Contents = rebuildPanelContents(Properties.Settings.Default.Panel2Contents, itemName, false);
+                    Properties.Settings.Default.Panel3Contents = rebuildPanelContents(Properties.Settings.Default.Panel3Contents, itemName, false);
+                    Properties.Settings.Default.Panel4Contents = rebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, false);
+                    Properties.Settings.Default.Panel5Contents = rebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, false);
+                }
+            }
+        }
+
+        private void addItemToPanel2(object sender, EventArgs e)
+        {
+            if (sender is ToolStripMenuItem)
+            {
+                String itemName = ((ToolStripMenuItem)sender).Text;
+                Control control = GetControl(itemName);
+                if (control == null)
+                {
+                    MessageBox.Show("Problem adding " + itemName + " to panel");
+                }
+                else
+                {
+                    flowLayoutPanel2.Controls.Add(control);
+                    control.Margin = new Padding(0);
+
+                    Properties.Settings.Default.Panel2Contents = rebuildPanelContents(Properties.Settings.Default.Panel2Contents, itemName, true);
+
+                    Properties.Settings.Default.Panel1Contents = rebuildPanelContents(Properties.Settings.Default.Panel1Contents, itemName, false);
+                    Properties.Settings.Default.Panel3Contents = rebuildPanelContents(Properties.Settings.Default.Panel3Contents, itemName, false);
+                    Properties.Settings.Default.Panel4Contents = rebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, false);
+                    Properties.Settings.Default.Panel5Contents = rebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, false);
+                }
+            }
+        }
+
+        private void addItemToPanel3(object sender, EventArgs e)
+        {
+            if (sender is ToolStripMenuItem)
+            {
+                String itemName = ((ToolStripMenuItem)sender).Text;
+                Control control = GetControl(itemName);
+                if (control == null)
+                {
+                    MessageBox.Show("Problem adding " + itemName + " to panel");
+                }
+                else
+                {
+                    flowLayoutPanel3.Controls.Add(control);
+                    control.Margin = new Padding(0);
+
+                    Properties.Settings.Default.Panel3Contents = rebuildPanelContents(Properties.Settings.Default.Panel3Contents, itemName, true);
+
+                    Properties.Settings.Default.Panel1Contents = rebuildPanelContents(Properties.Settings.Default.Panel1Contents, itemName, false);
+                    Properties.Settings.Default.Panel2Contents = rebuildPanelContents(Properties.Settings.Default.Panel2Contents, itemName, false);
+                    Properties.Settings.Default.Panel4Contents = rebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, false);
+                    Properties.Settings.Default.Panel5Contents = rebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, false);
+                }
+            }
+        }
+
+        private void addItemToPanel4(object sender, EventArgs e)
+        {
+            if (sender is ToolStripMenuItem)
+            {
+                String itemName = ((ToolStripMenuItem)sender).Text;
+                Control control = GetControl(itemName);
+                if (control == null)
+                {
+                    MessageBox.Show("Problem adding " + itemName + " to panel");
+                }
+                else
+                {
+                    flowLayoutPanel4.Controls.Add(control);
+                    control.Margin = new Padding(0);
+
+                    Properties.Settings.Default.Panel4Contents = rebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, true);
+
+                    Properties.Settings.Default.Panel1Contents = rebuildPanelContents(Properties.Settings.Default.Panel1Contents, itemName, false);
+                    Properties.Settings.Default.Panel2Contents = rebuildPanelContents(Properties.Settings.Default.Panel2Contents, itemName, false);
+                    Properties.Settings.Default.Panel3Contents = rebuildPanelContents(Properties.Settings.Default.Panel3Contents, itemName, false);
+                    Properties.Settings.Default.Panel5Contents = rebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, false);
+                }
+            }
+        }
+
+        private void addItemToPanel5(object sender, EventArgs e)
+        {
+            if (sender is ToolStripMenuItem)
+            {
+                String itemName = ((ToolStripMenuItem)sender).Text;
+                Control control = GetControl(itemName);
+                if (control == null)
+                {
+                    MessageBox.Show("Problem adding " + itemName + " to panel");
+                }
+                else
+                {
+                    flowLayoutPanel5.Controls.Add(control);
+                    control.Margin = new Padding(0);
+
+                    Properties.Settings.Default.Panel5Contents = rebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, true);
+
+                    Properties.Settings.Default.Panel1Contents = rebuildPanelContents(Properties.Settings.Default.Panel1Contents, itemName, false);
+                    Properties.Settings.Default.Panel2Contents = rebuildPanelContents(Properties.Settings.Default.Panel2Contents, itemName, false);
+                    Properties.Settings.Default.Panel3Contents = rebuildPanelContents(Properties.Settings.Default.Panel3Contents, itemName, false);
+                    Properties.Settings.Default.Panel4Contents = rebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, false);
+                }
+            }
+        }
+
+        private void removeItemFromPanel(object sender, EventArgs e)
+        {
+            if (sender is ToolStripMenuItem)
+            {
+                String itemName = ((ToolStripMenuItem)sender).Text;
+                Control control = GetControl(itemName);
+                if (control == null)
+                {
+                    MessageBox.Show("Problem removing " + itemName + " from panel");
+                }
+                else
+                {
+                    control.Parent = null;
+                    Properties.Settings.Default.Panel1Contents = rebuildPanelContents(Properties.Settings.Default.Panel1Contents, itemName, false);
+                    Properties.Settings.Default.Panel2Contents = rebuildPanelContents(Properties.Settings.Default.Panel2Contents, itemName, false);
+                    Properties.Settings.Default.Panel3Contents = rebuildPanelContents(Properties.Settings.Default.Panel3Contents, itemName, false);
+                    Properties.Settings.Default.Panel4Contents = rebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, false);
+                    Properties.Settings.Default.Panel5Contents = rebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, false);
+                }
+            }
+        }
+
+        public Control GetControl(String itemName)
+        {
+            if ("Hermes Boots".Equals(itemName))
+            {
+                return hermesBoots;
+            }
+            if ("Grapple Claw".Equals(itemName))
+            {
+                return grappleClaw;
+            }
+            if ("Feather".Equals(itemName))
+            {
+                return feather;
+            }
+            if ("Hand Scanner".Equals(itemName))
+            {
+                return scanner;
+            }
+            if ("Holy Grail".Equals(itemName))
+            {
+                return grail;
+            }
+            if ("mirai.exe".Equals(itemName))
+            {
+                return mirai;
+            }
+            if ("Bronze Mirror".Equals(itemName))
+            {
+                return bronzeMirror;
+            }
+            if ("Fruit of Eden".Equals(itemName))
+            {
+                return fruitOfEden;
+            }
+            if ("Twin Statue".Equals(itemName))
+            {
+                return twinStatue;
+            }
+            if ("Key of Eternity".Equals(itemName))
+            {
+                return keyOfEternity;
+            }
+            if ("Helmet".Equals(itemName))
+            {
+                return helmet;
+            }
+            if ("Plane Model".Equals(itemName))
+            {
+                return planeModel;
+            }
+            if ("Crystal Skull".Equals(itemName))
+            {
+                return crystalSkull;
+            }
+            if ("Dimensional Key".Equals(itemName))
+            {
+                return dimensionalKey;
+            }
+            if ("Pochette Key".Equals(itemName))
+            {
+                return pochetteKey;
+            }
+            if ("Ice Cape".Equals(itemName))
+            {
+                return iceCape;
+            }
+            if ("Scalesphere".Equals(itemName))
+            {
+                return scalesphere;
+            }
+            if ("Cog of the Soul".Equals(itemName))
+            {
+                return cogOfTheSoul;
+            }
+            if ("Dragon Bone".Equals(itemName))
+            {
+                return dragonBone;
+            }
+            if ("Serpent Staff".Equals(itemName))
+            {
+                return serpentStaff;
+            }
+            if ("Mulana Talisman".Equals(itemName))
+            {
+                return mulanaTalisman;
+            }
+            if ("Pepper".Equals(itemName))
+            {
+                return pepper;
+            }
+            if ("Talisman".Equals(itemName))
+            {
+                return talisman;
+            }
+            if ("Diary".Equals(itemName))
+            {
+                return diary;
+            }
+            if ("Mini Doll".Equals(itemName))
+            {
+                return miniDoll;
+            }
+            if ("Treasures".Equals(itemName))
+            {
+                return treasures;
+            }
+            if ("Anchor".Equals(itemName))
+            {
+                return anchor;
+            }
+            if ("Isis' Pendant".Equals(itemName))
+            {
+                return isisPendant;
+            }
+            if ("Eye of Truth".Equals(itemName))
+            {
+                return eyeOfTruth;
+            }
+            if ("Magatama Jewel".Equals(itemName))
+            {
+                return magatamaJewel;
+            }
+            if ("torude.exe".Equals(itemName))
+            {
+                return torude;
+            }
+            if ("Origin Seal".Equals(itemName))
+            {
+                return originSeal;
+            }
+            if ("Birth Seal".Equals(itemName))
+            {
+                return birthSeal;
+            }
+            if ("Life Seal".Equals(itemName))
+            {
+                return lifeSeal;
+            }
+            if ("Death Seal".Equals(itemName))
+            {
+                return deathSeal;
+            }
+            if ("Book of the Dead".Equals(itemName))
+            {
+                return bookOfTheDead;
+            }
+            if ("Ring".Equals(itemName))
+            {
+                return ring;
+            }
+            if ("Fairy Clothes".Equals(itemName))
+            {
+                return fairyClothes;
+            }
+            if ("Mobile Super X2".Equals(itemName))
+            {
+                return msx2;
+            }
+            if ("Scriptures".Equals(itemName))
+            {
+                return scriptures;
+            }
+            if ("Crucifix".Equals(itemName))
+            {
+                return crucifix;
+            }
+            if ("Perfume".Equals(itemName))
+            {
+                return perfume;
+            }
+            if ("Bracelet".Equals(itemName))
+            {
+                return bracelet;
+            }
+            if ("Glove".Equals(itemName))
+            {
+                return glove;
+            }
+            if ("Spaulder".Equals(itemName))
+            {
+                return spaulder;
+            }
+            if ("Knife".Equals(itemName))
+            {
+                return knife;
+            }
+            if ("Axe".Equals(itemName))
+            {
+                return axe;
+            }
+            if ("Katana".Equals(itemName))
+            {
+                return katana;
+            }
+            if ("Gauntlet".Equals(itemName))
+            {
+                return gauntlet;
+            }
+            if ("Shuriken".Equals(itemName))
+            {
+                return shuriken;
+            }
+            if ("Rolling Shuriken".Equals(itemName))
+            {
+                return rollingShuriken;
+            }
+            if ("Caltrops".Equals(itemName))
+            {
+                return caltrops;
+            }
+            if ("Flare Gun".Equals(itemName))
+            {
+                return flareGun;
+            }
+            if ("Chakram".Equals(itemName))
+            {
+                return chakram;
+            }
+            if ("Earth Spear".Equals(itemName))
+            {
+                return earthSpear;
+            }
+            if ("Bomb".Equals(itemName))
+            {
+                return bomb;
+            }
+            if ("Philosopher's Ocarina".Equals(itemName))
+            {
+                return ocarina;
+            }
+
+            if ("Glyph Reader".Equals(itemName))
+            {
+                return readerPanel;
+            }
+            if ("Woman Statue".Equals(itemName))
+            {
+                return womanPanel;
+            }
+            if ("Key Fairy Combo".Equals(itemName))
+            {
+                return keyFairy;
+            }
+            if ("Shrine Wall Removal".Equals(itemName))
+            {
+                return shrinePanel;
+            }
+            if ("Whip".Equals(itemName))
+            {
+                return whipsPanel;
+            }
+            if ("Shield".Equals(itemName))
+            {
+                return shieldsPanel;
+            }
+            if ("Mantra/Djed Pillar".Equals(itemName))
+            {
+                return mantra;
+            }
+            if ("Vessel/Medicine".Equals(itemName))
+            {
+                return vesselPanel;
+            }
+            if ("Key Sword".Equals(itemName))
+            {
+                return keySword;
+            }
+            if ("Lamp of Time".Equals(itemName))
+            {
+                return lampOfTimePanel;
+            }
+            if ("Maps".Equals(itemName))
+            {
+                return mapsPanel;
+            }
+            if ("Ankh Jewels".Equals(itemName))
+            {
+                return ankhJewelPanel;
+            }
+            return null;
+        }
+
+        private ToolStripMenuItem CreateMenuItem(String itemName, EventHandler eventHandler)
+        {
+            ToolStripMenuItem menuItem = new ToolStripMenuItem();
+            menuItem.Text = itemName;
+            if (eventHandler != null)
+            {
+                menuItem.Click += eventHandler;
+            }
+            return menuItem;
+        }
+
+        private String rebuildPanelContents(String currentSettingString, String itemName, Boolean add)
+        {
+            List<String> itemsInPanel = new List<String>(currentSettingString.Split(','));
+            itemsInPanel.Remove(itemName); // In case it's already there (re-adding will move an item to the end)
+            if (add)
+            {
+                itemsInPanel.Add(itemName);
+            }
+            return String.Join(",", itemsInPanel);
+        }
+
+        private void updateFormColor()
+        {
+            this.BackColor = Properties.Settings.Default.BackgroundColor;
+        }
+
+        private void updateTextColor()
+        {
+            this.mapCount.ForeColor = Properties.Settings.Default.TextColor;
+            this.ankhJewelCount.ForeColor = Properties.Settings.Default.TextColor;
+            this.translationTablets.ForeColor = Properties.Settings.Default.TextColor;
+            this.skullWallCount.ForeColor = Properties.Settings.Default.TextColor;
+        }
+
+        private void saveSettings(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Save();
+        }
+
+        private void restoreDefaultSettings(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Panel1Contents = "Hermes Boots,Grapple Claw,Feather,Hand Scanner,Glyph Reader,Holy Grail,mirai.exe";
+            Properties.Settings.Default.Panel2Contents = "Bronze Mirror,Fruit of Eden,Twin Statue,Key of Eternity,Helmet,Plane Model,Crystal Skull,Dimensional Key,Pochette Key,Ice Cape,Scalesphere,Cog of the Soul,Dragon Bone,Serpent Staff,Mulana Talisman,Woman Statue,Pepper,Talisman,Diary,Mini Doll,Treasures,Anchor,Key Fairy Combo,Isis' Pendant,Eye of Truth,Magatama Jewel,torude.exe,Shrine Wall Removal";
+            Properties.Settings.Default.Panel3Contents = "Origin Seal,Birth Seal,Life Seal,Death Seal,Book of the Dead,Ring,Fairy Clothes,Mobile Super X2,Scriptures,Crucifix,Perfume,Glove,Bracelet,Spaulder";
+            Properties.Settings.Default.Panel4Contents = "Whip,Knife,Axe,Katana,Shield,Gauntlet,Pistol,Shuriken,Rolling Shuriken,Caltrops,Flare Gun,Chakram,Earth Spear,Bomb";
+            Properties.Settings.Default.Panel5Contents = "Philosopher's Ocarina,Mantra/Djed Pillar,Vessel/Medicine,Key Sword,Lamp of Time,Maps,Ankh Jewels";
+            Properties.Settings.Default.BackgroundColor = System.Drawing.SystemColors.Control;
+            Properties.Settings.Default.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(200)))));
+
+            updateFormColor();
+            updateTextColor();
+            InitializeFormPanels();
         }
 
         private void toggleImage(PictureBox pictureBox, bool visible)
@@ -1232,28 +1887,38 @@ namespace LMRItemTracker
 
         private void setFlailWhipIndex(object sender, EventArgs e)
         {
-            whips.Controls.SetChildIndex(flailWhip, 0);
+            whipsPanel.Controls.SetChildIndex(flailWhip, 0);
         }
         private void setChainWhipIndex(object sender, EventArgs e)
         {
-            whips.Controls.SetChildIndex(chainWhip, 1);
+            whipsPanel.Controls.SetChildIndex(chainWhip, 1);
         }
 
         private void setAngelShieldIndex(object sender, EventArgs e)
         {
-            shields.Controls.SetChildIndex(angelShield, 0);
+            shieldsPanel.Controls.SetChildIndex(angelShield, 0);
         }
         private void setSilverShieldIndex(object sender, EventArgs e)
         {
-            shields.Controls.SetChildIndex(silverShield, 1);
+            shieldsPanel.Controls.SetChildIndex(silverShield, 1);
         }
         private void setFakeSilverShieldIndex(object sender, EventArgs e)
         {
-            shields.Controls.SetChildIndex(fakeSilverShield, 2);
+            shieldsPanel.Controls.SetChildIndex(fakeSilverShield, 2);
         }
         private void setBucklerIndex(object sender, EventArgs e)
         {
-            shields.Controls.SetChildIndex(buckler, 3);
+            shieldsPanel.Controls.SetChildIndex(buckler, 3);
+        }
+
+        private void addElementToPanel(Panel panel, Control elementToAdd)
+        {
+            panel.Controls.Add(elementToAdd);
+            elementToAdd.Margin = new Padding(0);
+            if(elementToAdd.Height > 40)
+            {
+                panel.Height = elementToAdd.Height;
+            }
         }
     }
 }
