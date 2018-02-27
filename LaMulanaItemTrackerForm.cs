@@ -25,6 +25,7 @@ namespace LMRItemTracker
             this.chainWhip.VisibleChanged += new System.EventHandler(this.setChainWhipIndex);
             this.flailWhip.VisibleChanged += new System.EventHandler(this.setFlailWhipIndex);
 
+            updateFormSize();
             updateFormColor();
             updateTextColor();
             InitializePossibleItems();
@@ -1720,6 +1721,10 @@ namespace LMRItemTracker
             {
                 return bomb;
             }
+            if ("Pistol".Equals(itemName))
+            {
+                return pistol;
+            }
             if ("Philosopher's Ocarina".Equals(itemName))
             {
                 return ocarina;
@@ -1798,6 +1803,12 @@ namespace LMRItemTracker
             return String.Join(",", itemsInPanel);
         }
 
+        private void updateFormSize()
+        {
+            this.Width = Properties.Settings.Default.FormWidth;
+            this.Height = Properties.Settings.Default.FormHeight;
+        }
+
         private void updateFormColor()
         {
             this.BackColor = Properties.Settings.Default.BackgroundColor;
@@ -1813,6 +1824,8 @@ namespace LMRItemTracker
 
         private void saveSettings(object sender, EventArgs e)
         {
+            Properties.Settings.Default.FormWidth = this.Width;
+            Properties.Settings.Default.FormHeight = this.Height;
             Properties.Settings.Default.Save();
         }
 
@@ -1825,7 +1838,10 @@ namespace LMRItemTracker
             Properties.Settings.Default.Panel5Contents = "Philosopher's Ocarina,Mantra/Djed Pillar,Vessel/Medicine,Key Sword,Lamp of Time,Maps,Ankh Jewels";
             Properties.Settings.Default.BackgroundColor = System.Drawing.SystemColors.Control;
             Properties.Settings.Default.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(200)))));
+            Properties.Settings.Default.FormWidth = 320;
+            Properties.Settings.Default.FormHeight = 605;
 
+            updateFormSize();
             updateFormColor();
             updateTextColor();
             InitializeFormPanels();

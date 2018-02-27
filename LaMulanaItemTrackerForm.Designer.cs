@@ -54,13 +54,18 @@ namespace LMRItemTracker
             this.menu = new System.Windows.Forms.MenuStrip();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.restoreDefaultsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeBackgroundColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeTextColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.layoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addItemPanel1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addItemPanel2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addItemPanel3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addItemPanel4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addItemPanel5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.hermesBoots = new System.Windows.Forms.PictureBox();
             this.grappleClaw = new System.Windows.Forms.PictureBox();
@@ -154,12 +159,6 @@ namespace LMRItemTracker
             this.mapsPanel = new System.Windows.Forms.Panel();
             this.ankhJewelPanel = new System.Windows.Forms.Panel();
             this.bossPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.addItemPanel1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addItemPanel3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addItemPanel2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addItemPanel4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addItemPanel5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.restoreDefaultsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.shieldsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buckler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.angelShield)).BeginInit();
@@ -436,8 +435,7 @@ namespace LMRItemTracker
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingsToolStripMenuItem,
             this.colorsToolStripMenuItem,
-            this.layoutToolStripMenuItem,
-            this.toolStripMenuItem3});
+            this.layoutToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(304, 24);
@@ -456,9 +454,16 @@ namespace LMRItemTracker
             // saveSettingsToolStripMenuItem
             // 
             this.saveSettingsToolStripMenuItem.Name = "saveSettingsToolStripMenuItem";
-            this.saveSettingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveSettingsToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.saveSettingsToolStripMenuItem.Text = "Save Settings";
             this.saveSettingsToolStripMenuItem.Click += new System.EventHandler(this.saveSettings);
+            // 
+            // restoreDefaultsToolStripMenuItem
+            // 
+            this.restoreDefaultsToolStripMenuItem.Name = "restoreDefaultsToolStripMenuItem";
+            this.restoreDefaultsToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.restoreDefaultsToolStripMenuItem.Text = "Restore Defaults";
+            this.restoreDefaultsToolStripMenuItem.Click += new System.EventHandler(this.restoreDefaultSettings);
             // 
             // colorsToolStripMenuItem
             // 
@@ -501,19 +506,44 @@ namespace LMRItemTracker
             this.addItemPanel4ToolStripMenuItem,
             this.addItemPanel5ToolStripMenuItem});
             this.addItemToolStripMenuItem.Name = "addItemToolStripMenuItem";
-            this.addItemToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addItemToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.addItemToolStripMenuItem.Text = "Add Item";
+            // 
+            // addItemPanel1ToolStripMenuItem
+            // 
+            this.addItemPanel1ToolStripMenuItem.Name = "addItemPanel1ToolStripMenuItem";
+            this.addItemPanel1ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.addItemPanel1ToolStripMenuItem.Text = "Panel 1";
+            // 
+            // addItemPanel2ToolStripMenuItem
+            // 
+            this.addItemPanel2ToolStripMenuItem.Name = "addItemPanel2ToolStripMenuItem";
+            this.addItemPanel2ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.addItemPanel2ToolStripMenuItem.Text = "Panel 2";
+            // 
+            // addItemPanel3ToolStripMenuItem
+            // 
+            this.addItemPanel3ToolStripMenuItem.Name = "addItemPanel3ToolStripMenuItem";
+            this.addItemPanel3ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.addItemPanel3ToolStripMenuItem.Text = "Panel 3";
+            // 
+            // addItemPanel4ToolStripMenuItem
+            // 
+            this.addItemPanel4ToolStripMenuItem.Name = "addItemPanel4ToolStripMenuItem";
+            this.addItemPanel4ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.addItemPanel4ToolStripMenuItem.Text = "Panel 4";
+            // 
+            // addItemPanel5ToolStripMenuItem
+            // 
+            this.addItemPanel5ToolStripMenuItem.Name = "addItemPanel5ToolStripMenuItem";
+            this.addItemPanel5ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.addItemPanel5ToolStripMenuItem.Text = "Panel 5";
             // 
             // removeItemToolStripMenuItem
             // 
             this.removeItemToolStripMenuItem.Name = "removeItemToolStripMenuItem";
-            this.removeItemToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.removeItemToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.removeItemToolStripMenuItem.Text = "Remove Item";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(12, 20);
             // 
             // flowLayoutPanel1
             // 
@@ -1550,43 +1580,6 @@ namespace LMRItemTracker
             this.bossPanel.TabIndex = 112;
             this.bossPanel.DoubleClick += new System.EventHandler(this.LaMulanaItemTrackerForm_DoubleClick);
             // 
-            // addItemPanel1ToolStripMenuItem
-            // 
-            this.addItemPanel1ToolStripMenuItem.Name = "addItemPanel1ToolStripMenuItem";
-            this.addItemPanel1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.addItemPanel1ToolStripMenuItem.Text = "Panel 1";
-            // 
-            // addItemPanel3ToolStripMenuItem
-            // 
-            this.addItemPanel3ToolStripMenuItem.Name = "addItemPanel3ToolStripMenuItem";
-            this.addItemPanel3ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.addItemPanel3ToolStripMenuItem.Text = "Panel 3";
-            // 
-            // addItemPanel2ToolStripMenuItem
-            // 
-            this.addItemPanel2ToolStripMenuItem.Name = "addItemPanel2ToolStripMenuItem";
-            this.addItemPanel2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.addItemPanel2ToolStripMenuItem.Text = "Panel 2";
-            // 
-            // addItemPanel4ToolStripMenuItem
-            // 
-            this.addItemPanel4ToolStripMenuItem.Name = "addItemPanel4ToolStripMenuItem";
-            this.addItemPanel4ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.addItemPanel4ToolStripMenuItem.Text = "Panel 4";
-            // 
-            // addItemPanel5ToolStripMenuItem
-            // 
-            this.addItemPanel5ToolStripMenuItem.Name = "addItemPanel5ToolStripMenuItem";
-            this.addItemPanel5ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.addItemPanel5ToolStripMenuItem.Text = "Panel 5";
-            // 
-            // restoreDefaultsToolStripMenuItem
-            // 
-            this.restoreDefaultsToolStripMenuItem.Name = "restoreDefaultsToolStripMenuItem";
-            this.restoreDefaultsToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.restoreDefaultsToolStripMenuItem.Text = "Restore Defaults";
-            this.restoreDefaultsToolStripMenuItem.Click += new System.EventHandler(this.restoreDefaultSettings);
-            // 
             // LaMulanaItemTrackerForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1847,7 +1840,6 @@ namespace LMRItemTracker
         private ToolStripMenuItem removeItemToolStripMenuItem;
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem toolStripMenuItem2;
-        private ToolStripMenuItem toolStripMenuItem3;
         private ToolStripMenuItem addItemPanel1ToolStripMenuItem;
         private ToolStripMenuItem addItemPanel2ToolStripMenuItem;
         private ToolStripMenuItem addItemPanel3ToolStripMenuItem;
