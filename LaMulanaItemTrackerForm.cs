@@ -1533,11 +1533,11 @@ namespace LMRItemTracker
             {
                 return global::LMRItemTracker.Properties.Resources.Icon_ankhjewel;
             }
-            else if ("w-orb-".Equals(flagName))
+            else if (flagName.StartsWith("w-orb-"))
             {
                 return global::LMRItemTracker.Properties.Resources.Icon_sacredorb;
             }
-            else if ("w-map-".Equals(flagName))
+            else if (flagName.StartsWith("w-map-"))
             {
                 return global::LMRItemTracker.Properties.Resources.Icon_map;
             }
