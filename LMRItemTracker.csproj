@@ -629,6 +629,51 @@
   <ItemGroup>
     <None Include="Resources\Icon_shuriken_blank.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_sacredorb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_bunemon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_bounce.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_deathv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_lamulana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_move.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_randc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_bunplus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_guild.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_emusic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_beolamu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_waterproofcase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_heatproofcase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_shellhorn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_xmailer.png" />
+  </ItemGroup>
   <Import Project="EyeOfTruth.Shared\EyeOfTruth.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

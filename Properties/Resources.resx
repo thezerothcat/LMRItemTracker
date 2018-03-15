@@ -646,4 +646,49 @@
   <data name="Icon_shuriken_blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_shuriken_blank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Icon_beolamu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_beolamu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_bounce" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_bounce.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_bunemon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_bunemon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_bunplus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_bunplus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_deathv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_deathv.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_emusic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_emusic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_guild" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_guild.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_heatproofcase" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_heatproofcase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_lamulana" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_lamulana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_move" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_move.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_randc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_randc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_sacredorb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_sacredorb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_shellhorn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_shellhorn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_waterproofcase" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_waterproofcase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_xmailer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_xmailer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

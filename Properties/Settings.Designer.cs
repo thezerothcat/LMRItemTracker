@@ -136,13 +136,25 @@ namespace LMRItemTracker.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("605")]
+        [global::System.Configuration.DefaultSettingValueAttribute("662")]
         public int FormHeight {
             get {
                 return ((int)(this["FormHeight"]));
             }
             set {
                 this["FormHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ShowLastItem {
+            get {
+                return ((bool)(this["ShowLastItem"]));
+            }
+            set {
+                this["ShowLastItem"] = value;
             }
         }
     }

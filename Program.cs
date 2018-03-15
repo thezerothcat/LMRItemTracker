@@ -70,10 +70,21 @@ namespace LMRItemTracker
             }
             else if (displayname.StartsWith("shield-"))
             {
+                bool isAdd = false;
                 if(cur is ushort)
-                    laMulanaItemTrackerForm.updateShield(displayname, (ushort)cur > (ushort)0);
+                {
+                    isAdd = (ushort)cur > (ushort)0;
+                }
                 else if(cur is short)
-                    laMulanaItemTrackerForm.updateShield(displayname, (short)cur > (short)0);
+                {
+                    isAdd = (short)cur > (short)0;
+                }
+
+                laMulanaItemTrackerForm.updateShield(displayname, isAdd);
+                if (isAdd)
+                {
+                    laMulanaItemTrackerForm.updateLastItem(displayname);
+                }
             }
             else if (displayname.StartsWith("invus-lamp"))
             {
@@ -92,6 +103,7 @@ namespace LMRItemTracker
                 if((byte)old < 2 && (byte)cur >= 2)
                 {
                     laMulanaItemTrackerForm.toggleMap(displayname, true);
+                    laMulanaItemTrackerForm.updateLastItem(displayname);
                 }
                 else if((byte)old >= 2 && (byte)cur < 2)
                 {
@@ -103,6 +115,7 @@ namespace LMRItemTracker
                 if ((byte)old < 2 && (byte)cur >= 2)
                 {
                     laMulanaItemTrackerForm.toggleItem(displayname, true);
+                    laMulanaItemTrackerForm.updateLastItem(displayname);
                 }
                 else if ((byte)old >= 2 && (byte)cur < 2)
                 {
@@ -115,7 +128,6 @@ namespace LMRItemTracker
 
         public static object DoStuff(LMRItemTracker.LaMulanaItemTrackerForm laMulanaItemTrackerForm, Stream namesXml)
         {
-            DateTime now = DateTime.MinValue;
             LaMulanaRemake remake = new LaMulanaRemake();
 
             MemoryWatcherList.MemoryWatcherDataChangedEventHandler changerhandler =
@@ -125,13 +137,14 @@ namespace LMRItemTracker
             byte[] rbytes_old = new byte[0x1000], rbytes_new;
             byte[] rwords_old = new byte[510], rwords_new;
             remakenames = loadnames(namesXml);
+            int startupCounter = 1;
 
             while (true)
             {
                 Thread.Sleep(5);
+
                 try
                 {
-                    now = DateTime.UtcNow;
                     if (remake.Attach())
                     {
                         // I knew that using the MemoryWatchers for over 4000 variables would be slow but god damn it's slow
@@ -140,13 +153,29 @@ namespace LMRItemTracker
                         remake.vars.UpdateAll(remake.proc);
                         rbytes_new = remake.readbytes();
                         rwords_new = remake.readwords();
+                        if (rbytes_new[824] == 0)
+                        {
+                            // Player is dead or hasn't started a game.
+                            laMulanaItemTrackerForm.setGameStarted(false);
+                        }
+                        else if(rbytes_new[824] > 0 && rbytes_old[824] == 0)
+                        {
+                            // Starting up
+                            startupCounter = 1;
+                        }
+
+                        if(startupCounter == 20)
+                        {
+                            laMulanaItemTrackerForm.setGameStarted(true);
+                        }
+
                         for (int i = 100; i < 0x1000; i++)
                             if (rbytes_new[i] != rbytes_old[i])
                                 try
                                 {
                                     changed(rbytes_new[i], rbytes_old[i], String.Format("byte-{0:x3}", i), laMulanaItemTrackerForm);
                                 }
-                                catch(Exception ex)
+                                catch (Exception ex)
                                 {
                                     System.Console.WriteLine(ex.StackTrace);
                                 }
@@ -166,6 +195,10 @@ namespace LMRItemTracker
                         }
                         rbytes_old = rbytes_new;
                         rwords_old = rwords_new;
+                        if (startupCounter < 100)
+                        {
+                            ++startupCounter;
+                        }
                     }
                 }
                 catch (Win32Exception e)
