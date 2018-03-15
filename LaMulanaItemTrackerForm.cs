@@ -1214,7 +1214,7 @@ namespace LMRItemTracker
 
         public void toggleMap(string flagName, Boolean isAdd)
         {
-            updateCount(mapCount, isAdd, 18);
+            updateCount(mapCount, isAdd, 17);
             if ("w-map-shrine".Equals(flagName))
             {
                 updateCount(skullWallCount, isAdd, 4);
