@@ -1091,21 +1091,41 @@ namespace LMRItemTracker
         {
             if(this.gameStarted)
             {
-                lastItem.Invoke(new Action(() =>
+                lastItemPanel.Invoke(new Action(() =>
                 {
                     System.Drawing.Bitmap lastItemImage = getFoundImage(flagName);
-                    if(lastItemImage != null)
+                    if (lastItemImage != null)
                     {
-                        lastItem.Image = lastItemImage;
-                        if ("w-map-shrine".Equals(flagName))
+                        System.Drawing.Image lastItemImageTemp = lastItem2.Image;
+                        if (lastItemImageTemp != null)
                         {
-                            lastItem.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_map;
+                            lastItem3.Image = lastItemImageTemp;
+                            lastItem3.BackgroundImage = lastItem2.BackgroundImage;
+                            lastItem2.Image = lastItem1.Image;
+                            lastItem2.BackgroundImage = lastItem1.BackgroundImage;
                         }
                         else
                         {
-                            lastItem.BackgroundImage = null;
+                            lastItemImageTemp = lastItem1.Image;
+                            if (lastItemImageTemp != null)
+                            {
+                                lastItem2.Image = lastItemImageTemp;
+                                lastItem2.BackgroundImage = lastItem1.BackgroundImage;
+                            }
                         }
-                        lastItem.Refresh();
+
+                        lastItem1.Image = lastItemImage;
+                        if ("w-map-shrine".Equals(flagName))
+                        {
+                            lastItem1.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_map;
+                        }
+                        else
+                        {
+                            lastItem1.BackgroundImage = null;
+                        }
+                        lastItem1.Refresh();
+                        lastItem2.Refresh();
+                        lastItem3.Refresh();
                     }
                 }));
             }
@@ -1347,6 +1367,12 @@ namespace LMRItemTracker
                 Properties.Settings.Default.Upgrade();
                 Properties.Settings.Default.UpgradeRequired = false;
                 Properties.Settings.Default.Save();
+
+                updateFormSize();
+                updateFormColor();
+                updateTextColor();
+                updateLastItem();
+                InitializeFormPanels();
             }
 
             try
@@ -2619,11 +2645,34 @@ namespace LMRItemTracker
 
         private void clearLastItem(object sender, EventArgs e)
         {
-            lastItem.Invoke(new Action(() =>
+            lastItem1.Invoke(new Action(() =>
             {
-                lastItem.Image = null;
-                lastItem.BackgroundImage = null;
-                lastItem.Refresh();
+                lastItem1.Image = null;
+                lastItem1.BackgroundImage = null;
+                lastItem2.Image = null;
+                lastItem2.BackgroundImage = null;
+                lastItem3.Image = null;
+                lastItem3.BackgroundImage = null;
+
+                lastItem1.Refresh();
+                lastItem2.Refresh();
+                lastItem3.Refresh();
+            }));
+        }
+
+        private void changeLanguage(object sender, EventArgs e)
+        {
+            lastItemLabel.Invoke(new Action(() =>
+            {
+                if(lastItemLabel.Text.Equals("Recent Items:"))
+                {
+                    lastItemLabel.Text = "最近:";
+                }
+                else
+                {
+                    lastItemLabel.Text = "Recent Items:";
+                }
+                lastItemLabel.Refresh();
             }));
         }
     }
