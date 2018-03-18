@@ -81,9 +81,12 @@ namespace LMRItemTracker
                 }
 
                 laMulanaItemTrackerForm.updateShield(displayname, isAdd);
-                if (isAdd)
+            }
+            else if (displayname.StartsWith("recent-"))
+            {
+                if ((byte)old < 2 && (byte)cur >= 2)
                 {
-                    laMulanaItemTrackerForm.updateLastItem(displayname);
+                    laMulanaItemTrackerForm.UpdateLastItem("shield-" + displayname.Split('-')[1]);
                 }
             }
             else if (displayname.StartsWith("invus-lamp"))
@@ -103,7 +106,7 @@ namespace LMRItemTracker
                 if((byte)old < 2 && (byte)cur >= 2)
                 {
                     laMulanaItemTrackerForm.toggleMap(displayname, true);
-                    laMulanaItemTrackerForm.updateLastItem(displayname);
+                    laMulanaItemTrackerForm.UpdateLastItem(displayname);
                 }
                 else if((byte)old >= 2 && (byte)cur < 2)
                 {
@@ -115,7 +118,7 @@ namespace LMRItemTracker
                 if ((byte)old < 2 && (byte)cur >= 2)
                 {
                     laMulanaItemTrackerForm.toggleItem(displayname, true);
-                    laMulanaItemTrackerForm.updateLastItem(displayname);
+                    laMulanaItemTrackerForm.UpdateLastItem(displayname);
                 }
                 else if ((byte)old >= 2 && (byte)cur < 2)
                 {
@@ -195,7 +198,7 @@ namespace LMRItemTracker
                         }
                         rbytes_old = rbytes_new;
                         rwords_old = rwords_new;
-                        if (startupCounter < 100)
+                        if (startupCounter < 20)
                         {
                             ++startupCounter;
                         }

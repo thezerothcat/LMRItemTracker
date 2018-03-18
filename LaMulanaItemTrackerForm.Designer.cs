@@ -65,7 +65,8 @@ namespace LMRItemTracker
             this.addItemPanel4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addItemPanel5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toggleLastItemDisplayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alwaysOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showLastItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearLastItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.hermesBoots = new System.Windows.Forms.PictureBox();
@@ -153,6 +154,8 @@ namespace LMRItemTracker
             this.lastItemPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.lastItemLabel = new System.Windows.Forms.Label();
             this.lastItem1 = new System.Windows.Forms.PictureBox();
+            this.lastItem2 = new System.Windows.Forms.PictureBox();
+            this.lastItem3 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.womanPanel = new System.Windows.Forms.Panel();
             this.shrinePanel = new System.Windows.Forms.Panel();
@@ -165,8 +168,6 @@ namespace LMRItemTracker
             this.mapCount = new System.Windows.Forms.Label();
             this.ankhJewelPanel = new System.Windows.Forms.Panel();
             this.bossPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.lastItem2 = new System.Windows.Forms.PictureBox();
-            this.lastItem3 = new System.Windows.Forms.PictureBox();
             this.shieldsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buckler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.angelShield)).BeginInit();
@@ -262,6 +263,8 @@ namespace LMRItemTracker
             this.lastItemWrapperPanel.SuspendLayout();
             this.lastItemPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lastItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lastItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lastItem3)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
             this.womanPanel.SuspendLayout();
             this.shrinePanel.SuspendLayout();
@@ -273,8 +276,6 @@ namespace LMRItemTracker
             this.mapsPanel.SuspendLayout();
             this.ankhJewelPanel.SuspendLayout();
             this.bossPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lastItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lastItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // textColorDialog
@@ -493,7 +494,8 @@ namespace LMRItemTracker
             this.layoutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addItemToolStripMenuItem,
             this.removeItemToolStripMenuItem,
-            this.toggleLastItemDisplayToolStripMenuItem,
+            this.alwaysOnTopToolStripMenuItem,
+            this.showLastItemToolStripMenuItem,
             this.clearLastItemToolStripMenuItem});
             this.layoutToolStripMenuItem.Name = "layoutToolStripMenuItem";
             this.layoutToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
@@ -508,7 +510,7 @@ namespace LMRItemTracker
             this.addItemPanel4ToolStripMenuItem,
             this.addItemPanel5ToolStripMenuItem});
             this.addItemToolStripMenuItem.Name = "addItemToolStripMenuItem";
-            this.addItemToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.addItemToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.addItemToolStripMenuItem.Text = "Add Item";
             // 
             // addItemPanel1ToolStripMenuItem
@@ -544,21 +546,28 @@ namespace LMRItemTracker
             // removeItemToolStripMenuItem
             // 
             this.removeItemToolStripMenuItem.Name = "removeItemToolStripMenuItem";
-            this.removeItemToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.removeItemToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.removeItemToolStripMenuItem.Text = "Remove Item";
             // 
-            // toggleLastItemDisplayToolStripMenuItem
+            // alwaysOnTopToolStripMenuItem
             // 
-            this.toggleLastItemDisplayToolStripMenuItem.Name = "toggleLastItemDisplayToolStripMenuItem";
-            this.toggleLastItemDisplayToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.toggleLastItemDisplayToolStripMenuItem.Text = "Toggle Last Item Display";
-            this.toggleLastItemDisplayToolStripMenuItem.Click += new System.EventHandler(this.toggleLastItemDisplay);
+            this.alwaysOnTopToolStripMenuItem.Name = "alwaysOnTopToolStripMenuItem";
+            this.alwaysOnTopToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.alwaysOnTopToolStripMenuItem.Text = "Always on Top";
+            this.alwaysOnTopToolStripMenuItem.Click += new System.EventHandler(this.toggleTopMost);
+            // 
+            // showLastItemToolStripMenuItem
+            // 
+            this.showLastItemToolStripMenuItem.Name = "showLastItemToolStripMenuItem";
+            this.showLastItemToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.showLastItemToolStripMenuItem.Text = "Show Recent Items";
+            this.showLastItemToolStripMenuItem.Click += new System.EventHandler(this.toggleShowLastItem);
             // 
             // clearLastItemToolStripMenuItem
             // 
             this.clearLastItemToolStripMenuItem.Name = "clearLastItemToolStripMenuItem";
-            this.clearLastItemToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.clearLastItemToolStripMenuItem.Text = "Clear Last Item";
+            this.clearLastItemToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.clearLastItemToolStripMenuItem.Text = "Clear Recent Items";
             this.clearLastItemToolStripMenuItem.Click += new System.EventHandler(this.clearLastItem);
             // 
             // flowLayoutPanel1
@@ -1452,6 +1461,24 @@ namespace LMRItemTracker
             this.lastItem1.TabIndex = 114;
             this.lastItem1.TabStop = false;
             // 
+            // lastItem2
+            // 
+            this.lastItem2.Location = new System.Drawing.Point(139, 0);
+            this.lastItem2.Margin = new System.Windows.Forms.Padding(0);
+            this.lastItem2.Name = "lastItem2";
+            this.lastItem2.Size = new System.Drawing.Size(40, 40);
+            this.lastItem2.TabIndex = 116;
+            this.lastItem2.TabStop = false;
+            // 
+            // lastItem3
+            // 
+            this.lastItem3.Location = new System.Drawing.Point(179, 0);
+            this.lastItem3.Margin = new System.Windows.Forms.Padding(0);
+            this.lastItem3.Name = "lastItem3";
+            this.lastItem3.Size = new System.Drawing.Size(40, 40);
+            this.lastItem3.TabIndex = 117;
+            this.lastItem3.TabStop = false;
+            // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.AutoSize = true;
@@ -1657,24 +1684,6 @@ namespace LMRItemTracker
             this.bossPanel.TabIndex = 112;
             this.bossPanel.DoubleClick += new System.EventHandler(this.LaMulanaItemTrackerForm_DoubleClick);
             // 
-            // lastItem2
-            // 
-            this.lastItem2.Location = new System.Drawing.Point(139, 0);
-            this.lastItem2.Margin = new System.Windows.Forms.Padding(0);
-            this.lastItem2.Name = "lastItem2";
-            this.lastItem2.Size = new System.Drawing.Size(40, 40);
-            this.lastItem2.TabIndex = 116;
-            this.lastItem2.TabStop = false;
-            // 
-            // lastItem3
-            // 
-            this.lastItem3.Location = new System.Drawing.Point(179, 0);
-            this.lastItem3.Margin = new System.Windows.Forms.Padding(0);
-            this.lastItem3.Name = "lastItem3";
-            this.lastItem3.Size = new System.Drawing.Size(40, 40);
-            this.lastItem3.TabIndex = 117;
-            this.lastItem3.TabStop = false;
-            // 
             // LaMulanaItemTrackerForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1684,6 +1693,7 @@ namespace LMRItemTracker
             this.HelpButton = true;
             this.Name = "LaMulanaItemTrackerForm";
             this.Text = "Item Tracker";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.LaMulanaItemTrackerForm_Load);
             this.DoubleClick += new System.EventHandler(this.LaMulanaItemTrackerForm_DoubleClick);
             this.shieldsPanel.ResumeLayout(false);
@@ -1785,6 +1795,8 @@ namespace LMRItemTracker
             this.lastItemPanel.ResumeLayout(false);
             this.lastItemPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lastItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lastItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lastItem3)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.womanPanel.ResumeLayout(false);
             this.shrinePanel.ResumeLayout(false);
@@ -1796,8 +1808,6 @@ namespace LMRItemTracker
             this.mapsPanel.ResumeLayout(false);
             this.ankhJewelPanel.ResumeLayout(false);
             this.bossPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.lastItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lastItem3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1948,11 +1958,12 @@ namespace LMRItemTracker
         private FlowLayoutPanel lastItemPanel;
         private PictureBox lastItem1;
         private Label lastItemLabel;
-        private ToolStripMenuItem toggleLastItemDisplayToolStripMenuItem;
+        private ToolStripMenuItem showLastItemToolStripMenuItem;
         private FlowLayoutPanel lastItemWrapperPanel;
         private ToolStripMenuItem clearLastItemToolStripMenuItem;
         private Label mapCount;
         private PictureBox lastItem2;
         private PictureBox lastItem3;
+        private ToolStripMenuItem alwaysOnTopToolStripMenuItem;
     }
 }

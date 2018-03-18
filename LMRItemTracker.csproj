@@ -52,6 +52,7 @@
     </StartupObject>
   </PropertyGroup>
   <PropertyGroup />
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="LiveSplit.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

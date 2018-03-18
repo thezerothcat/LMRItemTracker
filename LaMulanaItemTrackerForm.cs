@@ -26,10 +26,11 @@ namespace LMRItemTracker
             this.chainWhip.VisibleChanged += new System.EventHandler(this.setChainWhipIndex);
             this.flailWhip.VisibleChanged += new System.EventHandler(this.setFlailWhipIndex);
 
+            updateAlwaysOnTop();
             updateFormSize();
             updateFormColor();
             updateTextColor();
-            updateLastItem();
+            updateShowLastItem();
             InitializePossibleItems();
             InitializeFormPanels();
             InitializeMenuOptions();
@@ -1087,7 +1088,7 @@ namespace LMRItemTracker
             this.gameStarted = gameStarted;
         }
 
-        internal void updateLastItem(string flagName)
+        internal void UpdateLastItem(string flagName)
         {
             if(this.gameStarted)
             {
@@ -1371,7 +1372,7 @@ namespace LMRItemTracker
                 updateFormSize();
                 updateFormColor();
                 updateTextColor();
-                updateLastItem();
+                updateShowLastItem();
                 InitializeFormPanels();
             }
 
@@ -1562,6 +1563,10 @@ namespace LMRItemTracker
             else if (flagName.StartsWith("w-orb-"))
             {
                 return global::LMRItemTracker.Properties.Resources.Icon_sacredorb;
+            }
+            else if ("w-map-shrine".Equals(flagName))
+            {
+                return global::LMRItemTracker.Properties.Resources.Icon_dragonbone_small;
             }
             else if (flagName.StartsWith("w-map-"))
             {
@@ -1922,10 +1927,6 @@ namespace LMRItemTracker
             else if ("w-lamp".Equals(flagName))
             {
                 return global::LMRItemTracker.Properties.Resources.Icon_lampoftime;
-            }
-            else if ("w-map-shrine".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_dragonbone_small;
             }
             return null;
         }
@@ -2501,7 +2502,7 @@ namespace LMRItemTracker
             this.Height = Properties.Settings.Default.FormHeight;
         }
 
-        private void updateLastItem()
+        private void updateShowLastItem()
         {
             if(Properties.Settings.Default.ShowLastItem)
             {
@@ -2514,6 +2515,13 @@ namespace LMRItemTracker
             {
                 lastItemPanel.Parent = null;
             }
+            showLastItemToolStripMenuItem.Checked = Properties.Settings.Default.ShowLastItem;
+        }
+
+        private void updateAlwaysOnTop()
+        {
+            this.TopMost = Properties.Settings.Default.AlwaysOnTop;
+            alwaysOnTopToolStripMenuItem.Checked = Properties.Settings.Default.AlwaysOnTop;
         }
 
         private void updateFormColor()
@@ -2549,11 +2557,13 @@ namespace LMRItemTracker
             Properties.Settings.Default.FormWidth = 320;
             Properties.Settings.Default.FormHeight = 662;
             Properties.Settings.Default.ShowLastItem = true;
+            Properties.Settings.Default.AlwaysOnTop = true;
 
+            updateAlwaysOnTop();
             updateFormSize();
             updateFormColor();
             updateTextColor();
-            updateLastItem();
+            updateShowLastItem();
             InitializeFormPanels();
         }
 
@@ -2637,10 +2647,10 @@ namespace LMRItemTracker
             shieldsPanel.Controls.SetChildIndex(buckler, 3);
         }
 
-        private void toggleLastItemDisplay(object sender, EventArgs e)
+        private void toggleShowLastItem(object sender, EventArgs e)
         {
             Properties.Settings.Default.ShowLastItem = !Properties.Settings.Default.ShowLastItem;
-            updateLastItem();
+            updateShowLastItem();
         }
 
         private void clearLastItem(object sender, EventArgs e)
@@ -2674,6 +2684,12 @@ namespace LMRItemTracker
                 }
                 lastItemLabel.Refresh();
             }));
+        }
+
+        private void toggleTopMost(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.AlwaysOnTop = !Properties.Settings.Default.AlwaysOnTop;
+            updateAlwaysOnTop();
         }
     }
 }

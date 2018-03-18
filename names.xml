@@ -179,7 +179,11 @@
 	<item id="word-010" value="shield-buckler" />
     <item id="word-011" value="shield-silver" />
     <item id="word-012" value="shield-angel" />
-    <item id="word-013" value="ankh-jewels" />
+	<item id="byte-a8c" value="recent-buckler" />
+	<item id="byte-08c" value="recent-silver" />
+	<item id="byte-08d" value="recent-angel" />
+	<item id="byte-a90" value="recent-fake" />
+	<item id="word-013" value="ankh-jewels" />
     <item id="word-019" value="invus-lamp-lit" />
     <item id="word-046" value="maps" />
     <item id="word-047" value="invtr-treasures" />
