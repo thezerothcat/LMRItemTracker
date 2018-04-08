@@ -1275,7 +1275,7 @@ namespace LMRItemTracker
             {
                 if (isAdd)
                 {
-                    setImage(amphisbaena, global::LMRItemTracker.Properties.Resources.Icon_djedpillar);
+                    setImage(amphisbaena, global::LMRItemTracker.Properties.Resources.Boss_sealed);
                 }
                 else
                 {
@@ -1286,7 +1286,7 @@ namespace LMRItemTracker
             {
                 if (isAdd)
                 {
-                    setImage(sakit, global::LMRItemTracker.Properties.Resources.Icon_djedpillar);
+                    setImage(sakit, global::LMRItemTracker.Properties.Resources.Boss_sealed);
                 }
                 else
                 {
@@ -1297,7 +1297,7 @@ namespace LMRItemTracker
             {
                 if (isAdd)
                 {
-                    setImage(ellmac, global::LMRItemTracker.Properties.Resources.Icon_djedpillar);
+                    setImage(ellmac, global::LMRItemTracker.Properties.Resources.Boss_sealed);
                 }
                 else
                 {
@@ -1308,7 +1308,7 @@ namespace LMRItemTracker
             {
                 if (isAdd)
                 {
-                    setImage(bahamut, global::LMRItemTracker.Properties.Resources.Icon_djedpillar);
+                    setImage(bahamut, global::LMRItemTracker.Properties.Resources.Boss_sealed);
                 }
                 else
                 {
@@ -1319,7 +1319,7 @@ namespace LMRItemTracker
             {
                 if (isAdd)
                 {
-                    setImage(viy, global::LMRItemTracker.Properties.Resources.Icon_djedpillar);
+                    setImage(viy, global::LMRItemTracker.Properties.Resources.Boss_sealed);
                 }
                 else
                 {
@@ -1330,7 +1330,7 @@ namespace LMRItemTracker
             {
                 if (isAdd)
                 {
-                    setImage(palenque, global::LMRItemTracker.Properties.Resources.Icon_djedpillar);
+                    setImage(palenque, global::LMRItemTracker.Properties.Resources.Boss_sealed);
                 }
                 else
                 {
@@ -1341,7 +1341,7 @@ namespace LMRItemTracker
             {
                 if (isAdd)
                 {
-                    setImage(baphomet, global::LMRItemTracker.Properties.Resources.Icon_djedpillar);
+                    setImage(baphomet, global::LMRItemTracker.Properties.Resources.Boss_sealed);
                 }
                 else
                 {
@@ -1352,7 +1352,7 @@ namespace LMRItemTracker
             {
                 if (isAdd)
                 {
-                    setImage(tiamat, global::LMRItemTracker.Properties.Resources.Icon_djedpillar);
+                    setImage(tiamat, global::LMRItemTracker.Properties.Resources.Boss_sealed);
                 }
                 else
                 {
