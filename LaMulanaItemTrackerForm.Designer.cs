@@ -286,7 +286,7 @@ namespace LMRItemTracker
             // ankhJewelCount
             // 
             this.ankhJewelCount.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ankhJewelCount.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ankhJewelCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.ankhJewelCount.Location = new System.Drawing.Point(0, 40);
             this.ankhJewelCount.Name = "ankhJewelCount";
             this.ankhJewelCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -299,7 +299,7 @@ namespace LMRItemTracker
             // translationTablets
             // 
             this.translationTablets.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.translationTablets.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.translationTablets.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.translationTablets.Location = new System.Drawing.Point(0, 40);
             this.translationTablets.Name = "translationTablets";
             this.translationTablets.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -317,7 +317,7 @@ namespace LMRItemTracker
             // skullWallCount
             // 
             this.skullWallCount.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.skullWallCount.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skullWallCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.skullWallCount.Location = new System.Drawing.Point(0, 40);
             this.skullWallCount.Name = "skullWallCount";
             this.skullWallCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1441,7 +1441,7 @@ namespace LMRItemTracker
             // 
             this.lastItemLabel.AutoSize = true;
             this.lastItemLabel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lastItemLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastItemLabel.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lastItemLabel.Location = new System.Drawing.Point(0, 0);
             this.lastItemLabel.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.lastItemLabel.Name = "lastItemLabel";
@@ -1643,7 +1643,7 @@ namespace LMRItemTracker
             // mapCount
             // 
             this.mapCount.Cursor = System.Windows.Forms.Cursors.Default;
-            this.mapCount.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mapCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.mapCount.Location = new System.Drawing.Point(-6, 40);
             this.mapCount.Name = "mapCount";
             this.mapCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
