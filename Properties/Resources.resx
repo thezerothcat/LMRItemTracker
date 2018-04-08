@@ -118,54 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Boss_amphisbaena" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Boss_amphisbaena.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Boss_amphisbaena_blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Boss_amphisbaena_blank.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Boss_bahamut" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Boss_bahamut.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Boss_bahamut_blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Boss_bahamut_blank.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Boss_baphomet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Boss_baphomet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Boss_baphomet_blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Boss_baphomet_blank.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Boss_ellmac" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Boss_ellmac.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Boss_ellmac_blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Boss_ellmac_blank.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Boss_palenque" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Boss_palenque.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Boss_palenque_blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Boss_palenque_blank.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Boss_sakit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Boss_sakit.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Boss_sakit_blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Boss_sakit_blank.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Boss_tiamat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Boss_tiamat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Boss_tiamat_blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Boss_tiamat_blank.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Boss_viy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Boss_viy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Boss_viy_blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Boss_viy_blank.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Icon_ankhjewel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_ankhjewel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -690,5 +642,56 @@
   </data>
   <data name="Icon_xmailer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_xmailer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boss_amphisbaena" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boss_amphisbaena.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boss_amphisbaena_blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boss_amphisbaena_blank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boss_bahamut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boss_bahamut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boss_bahamut_blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boss_bahamut_blank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boss_baphomet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boss_baphomet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boss_baphomet_blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boss_baphomet_blank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boss_ellmac" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boss_ellmac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boss_ellmac_blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boss_ellmac_blank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boss_palenque" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boss_palenque.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boss_palenque_blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boss_palenque_blank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boss_sakit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boss_sakit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boss_sakit_blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boss_sakit_blank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boss_sealed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boss_sealed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boss_tiamat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boss_tiamat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boss_tiamat_blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boss_tiamat_blank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boss_viy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boss_viy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boss_viy_blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boss_viy_blank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

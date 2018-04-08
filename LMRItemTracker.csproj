@@ -111,54 +111,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Boss_amphisbaena.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Boss_amphisbaena_blank.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Boss_bahamut.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Boss_bahamut_blank.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Boss_baphomet.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Boss_baphomet_blank.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Boss_ellmac.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Boss_ellmac_blank.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Boss_palenque.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Boss_palenque_blank.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Boss_sakit.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Boss_sakit_blank.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Boss_tiamat.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Boss_tiamat_blank.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Boss_viy.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Boss_viy_blank.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Icon_ankhjewel.png" />
   </ItemGroup>
   <ItemGroup>
@@ -674,6 +626,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Icon_xmailer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss_amphisbaena.png" />
+    <None Include="Resources\Boss_amphisbaena_blank.png" />
+    <None Include="Resources\Boss_bahamut.png" />
+    <None Include="Resources\Boss_bahamut_blank.png" />
+    <None Include="Resources\Boss_baphomet.png" />
+    <None Include="Resources\Boss_baphomet_blank.png" />
+    <None Include="Resources\Boss_ellmac.png" />
+    <None Include="Resources\Boss_ellmac_blank.png" />
+    <None Include="Resources\Boss_palenque.png" />
+    <None Include="Resources\Boss_palenque_blank.png" />
+    <None Include="Resources\Boss_sakit.png" />
+    <None Include="Resources\Boss_sakit_blank.png" />
+    <None Include="Resources\Boss_sealed.png" />
+    <None Include="Resources\Boss_tiamat.png" />
+    <None Include="Resources\Boss_tiamat_blank.png" />
+    <None Include="Resources\Boss_viy.png" />
+    <None Include="Resources\Boss_viy_blank.png" />
   </ItemGroup>
   <Import Project="EyeOfTruth.Shared\EyeOfTruth.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
