@@ -60,10 +60,6 @@ namespace LMRItemTracker
             {
                 laMulanaItemTrackerForm.toggleBoss(displayname, (byte)cur >= (byte)3);
             }
-            else if(displayname.Equals("ankh-jewels"))
-            {
-                laMulanaItemTrackerForm.updateAnkhJewels((ushort)cur);
-            }
             else if (displayname.Equals("rosetta-count"))
             {
                 laMulanaItemTrackerForm.updateTranslationTablets((byte)cur);
@@ -113,6 +109,36 @@ namespace LMRItemTracker
                     laMulanaItemTrackerForm.toggleMap(displayname, false);
                 }
             }
+            else if (displayname.Equals("whip"))
+            {
+                // For some reason, this is getting read as ushort even though it's actually signed.
+                if ((ushort)cur == 65535)
+                {
+                    laMulanaItemTrackerForm.toggleWhip(false);
+                }
+                else
+                {
+                    laMulanaItemTrackerForm.toggleWhip(true);
+                }
+            }
+            else if (displayname.Equals("ankh-jewels") || displayname.StartsWith("ammo-"))
+            {
+                int ammoCount = 0;
+                if (cur is ushort)
+                {
+                    ammoCount = (ushort)cur;
+                }
+                else if (cur is short)
+                {
+                    ammoCount = (short)cur;
+                }
+
+                laMulanaItemTrackerForm.setAmmoCount(displayname, ammoCount);
+            }
+            else if (displayname.Equals("invtr-grailfull") || displayname.Equals("invtr-grailbr"))
+            {
+                laMulanaItemTrackerForm.toggleGrail(displayname, (ushort)cur >= 1);
+            }
             else if (displayname.StartsWith("w-"))
             {
                 if ((byte)old < 2 && (byte)cur >= 2)
@@ -160,14 +186,10 @@ namespace LMRItemTracker
                         {
                             // Player is dead or hasn't started a game.
                             laMulanaItemTrackerForm.setGameStarted(false);
-                        }
-                        else if(rbytes_new[824] > 0 && rbytes_old[824] == 0)
-                        {
-                            // Starting up
                             startupCounter = 1;
                         }
 
-                        if(startupCounter == 20)
+                        if(startupCounter == 5)
                         {
                             laMulanaItemTrackerForm.setGameStarted(true);
                         }
@@ -198,7 +220,7 @@ namespace LMRItemTracker
                         }
                         rbytes_old = rbytes_new;
                         rwords_old = rwords_new;
-                        if (startupCounter < 20)
+                        if (startupCounter < 5)
                         {
                             ++startupCounter;
                         }
