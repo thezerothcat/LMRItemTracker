@@ -113,14 +113,13 @@
     <item id="byte-0ec" value="w-soft-beolamu" />
     <item id="byte-0ee" value="w-soft-randc" />
     <item id="byte-0ef" value="w-soft-capstar" />
-	<item id="byte-0f0" value="w-soft-move" />
-	<item id="byte-0f1" value="w-soft-mekuri" />
+    <item id="byte-0f0" value="w-soft-move" />
+    <item id="byte-0f1" value="w-soft-mekuri" />
     <item id="byte-0f2" value="w-soft-bounce" />
     <item id="byte-0f3" value="w-soft-miracle" />
     <item id="byte-0f4" value="w-soft-mirai" />
     <item id="byte-0f5" value="w-soft-lamulana" />
-	<item id="byte-14f" value="w-soft-deathv" />
-	<item id="byte-0f6" value="boss-amphisbaena" />
+    <item id="byte-0f6" value="boss-amphisbaena" />
     <item id="byte-0f7" value="boss-sakit" />
     <item id="byte-0f8" value="boss-ellmac" />
     <item id="byte-0f9" value="boss-bahamut" />
@@ -145,7 +144,7 @@
     <item id="byte-12a" value="mantra-baphomet" comments="4=recited" />
     <item id="byte-12b" value="mantra-tiamat" comments="4=recited" />
     <item id="byte-124" value="mantra-keysword" comments="4=keysword empowered?" />
-	<item id="byte-2e6" value="w-msx2" comment="definitely set when you buy it but goes 2 then 1, I don't even" />
+    <item id="byte-2e6" value="w-msx2" comment="definitely set when you buy it but goes 2 then 1, I don't even" />
     <item id="byte-2e5" value="rosetta-count" />
     <item id="byte-2ea" value="learnt-lamulanese" comments="1" />
 	<item id="byte-338" value="game-started" />
@@ -177,7 +176,6 @@
     <item id="byte-aa1" value="w-map-aa1" />
     <item id="byte-aa2" value="w-map-aa2" />
     <item id="byte-aa3" value="w-map-aa3" />
-	<item id="word-000" value="whip" />
 	<item id="word-010" value="shield-buckler" />
     <item id="word-011" value="shield-silver" />
     <item id="word-012" value="shield-angel" />

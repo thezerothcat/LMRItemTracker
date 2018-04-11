@@ -108,7 +108,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -646,63 +645,6 @@
     <None Include="Resources\Boss_tiamat_blank.png" />
     <None Include="Resources\Boss_viy.png" />
     <None Include="Resources\Boss_viy_blank.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon_blank.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon_whip_blank.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon_swimsuit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon_swimsuit_blank.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon_bunemon_blank.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon_bunplus_blank.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon_beolamu_blank.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon_xmailer_blank.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon_emusic_blank.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon_guild_blank.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon_randc_blank.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon_bounce_blank.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon_deathv_blank.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon_lamulana_blank.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon_move_blank.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon_heatproofcase_blank.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon_shellhorn_blank.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon_waterproofcase_blank.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon_holygrail2.png" />
   </ItemGroup>
   <Import Project="EyeOfTruth.Shared\EyeOfTruth.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
