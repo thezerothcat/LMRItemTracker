@@ -169,5 +169,29 @@ namespace LMRItemTracker.Properties {
                 this["AlwaysOnTop"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("shaded")]
+        public string BackgroundMode {
+            get {
+                return ((string)(this["BackgroundMode"]));
+            }
+            set {
+                this["BackgroundMode"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ShowAmmoCount {
+            get {
+                return ((bool)(this["ShowAmmoCount"]));
+            }
+            set {
+                this["ShowAmmoCount"] = value;
+            }
+        }
     }
 }
