@@ -32,40 +32,40 @@
     <item id="byte-09a" value="w-cog" />
     <item id="byte-09b" value="w-lamp" />
     <item id="byte-09c" value="w-pochettekey" />
-    <item id="byte-a8d" value="w-dragonbone" comments="custom" />
-    <item id="byte-09e" value="w-cskull" />
+	<item id="word-01b" value="inv-w-dragonbone" />
+	<item id="byte-09e" value="w-cskull" />
     <item id="byte-09f" value="w-vessel" />
-    <item id="byte-a8e" value="w-pepper" />
-    <item id="byte-0a1" value="w-woman" />
+	<item id="word-01e" value="inv-w-pepper" />
+	<item id="byte-0a1" value="w-woman" />
     <item id="byte-0a2" value="w-endless-key" />
     <item id="byte-0a3" value="w-serpent" />
     <item id="byte-0a4" value="w-talisman" />
-    <item id="byte-0a5" value="w-water-case" />
-    <item id="byte-0a6" value="w-heat-case" />
-    <item id="byte-0a7" value="w-shell-horn" />
+	<item id="word-024" value="inv-w-water-case" />
+	<item id="word-025" value="inv-w-heat-case" />
+	<item id="byte-0a7" value="w-shell-horn" />
     <item id="byte-0a8" value="w-glove" />
     <item id="byte-0a9" value="w-grail" />
     <item id="byte-0aa" value="w-isispendant" />
     <item id="byte-0ab" value="w-crucifix" />
-    <item id="byte-0ac" value="w-helmet" />
-    <item id="byte-0ad" value="w-grapple" />
+	<item id="word-02b" value="inv-w-helmet" />
+	<item id="byte-0ad" value="w-grapple" />
     <item id="byte-0ae" value="w-mirror" />
     <item id="byte-0af" value="w-eye-truth" />
-    <item id="byte-0b0" value="w-ring" />
-    <item id="byte-0b1" value="w-scale" />
+	<item id="word-02f" value="inv-w-ring" />
+	<item id="byte-0b1" value="w-scale" />
     <item id="byte-0b2" value="w-gauntlet" />
-    <item id="byte-a92" value="w-anchor" />
+	<item id="word-032" value="inv-w-anchor" />
     <item id="byte-0b4" value="w-plane" />
     <item id="byte-0b5" value="w-ocarina" />
     <item id="byte-0b6" value="w-feather" />
-    <item id="byte-a8f" value="w-book" />	
-    <item id="byte-0b8" value="w-clothes" />
-    <item id="byte-0b9" value="w-scriptures" />
-    <item id="byte-0ba" value="w-hermes" />
-    <item id="byte-0bb" value="w-fruit" />
+	<item id="word-036" value="inv-w-book" />
+	<item id="byte-0b8" value="w-clothes" />
+	<item id="word-038" value="inv-w-scriptures" />
+	<item id="word-039" value="inv-w-hermes" />
+	<item id="byte-0bb" value="w-fruit" />
     <item id="byte-0bc" value="w-twin-statue" />
-    <item id="byte-0bd" value="w-bracelet" />
-    <item id="byte-0be" value="w-perfume" />
+	<item id="word-03c" value="inv-w-bracelet" />
+	<item id="byte-0be" value="w-perfume" />
     <item id="byte-0bf" value="w-spaulder" />
     <item id="byte-0c0" value="w-dimension-key" />
     <item id="byte-0c1" value="w-icecape" />
@@ -100,26 +100,26 @@
     <item id="byte-0df" value="w-map-ruins" />
     <item id="byte-0e0" value="w-map-birth" />
     <item id="byte-0e1" value="w-map-dimensional" />
-    <item id="byte-0e2" value="w-soft-reader" />
-    <item id="byte-0e3" value="w-soft-xmailer" />
-    <item id="byte-0e4" value="w-soft-yagomap" />
-    <item id="byte-0e5" value="w-soft-yagostr" />
-    <item id="byte-0e6" value="w-soft-bunemon" />
-    <item id="byte-0e7" value="w-soft-bunplus" />
-    <item id="byte-0e8" value="w-soft-torude" />
-    <item id="byte-a91" value="w-soft-guild" />
-    <item id="byte-0ea" value="w-soft-mantra" />
-    <item id="byte-0eb" value="w-soft-emusic" />
-    <item id="byte-0ec" value="w-soft-beolamu" />
-    <item id="byte-0ee" value="w-soft-randc" />
-    <item id="byte-0ef" value="w-soft-capstar" />
-	<item id="byte-0f0" value="w-soft-move" />
-	<item id="byte-0f1" value="w-soft-mekuri" />
-    <item id="byte-0f2" value="w-soft-bounce" />
-    <item id="byte-0f3" value="w-soft-miracle" />
-    <item id="byte-0f4" value="w-soft-mirai" />
-    <item id="byte-0f5" value="w-soft-lamulana" />
-	<item id="byte-14f" value="w-soft-deathv" />
+	<item id="word-057" value="inv-w-soft-yagomap" />
+	<item id="word-058" value="inv-w-soft-yagostr" />
+	<item id="word-055" value="inv-w-soft-reader" />
+	<item id="word-056" value="inv-w-soft-xmailer" />
+	<item id="word-059" value="inv-w-soft-bunemon" />
+	<item id="word-05a" value="inv-w-soft-bunplus" />
+	<item id="word-05b" value="inv-w-soft-torude" />
+	<item id="word-05c" value="inv-w-soft-guild" />
+	<item id="word-05d" value="inv-w-soft-mantra" />
+	<item id="word-05e" value="inv-w-soft-emusic" />
+	<item id="word-05f" value="inv-w-soft-beolamu" />
+	<item id="word-060" value="inv-w-soft-deathv" />
+	<item id="word-061" value="inv-w-soft-randc" />
+	<item id="word-062" value="inv-w-soft-capstar" />
+	<item id="word-063" value="inv-w-soft-move" />
+	<item id="word-064" value="inv-w-soft-mekuri" />
+	<item id="word-065" value="inv-w-soft-bounce" />
+	<item id="word-066" value="inv-w-soft-miracle" />
+	<item id="word-067" value="inv-w-soft-mirai" />
+	<item id="word-068" value="inv-w-soft-lamulana" />
 	<item id="byte-0f6" value="boss-amphisbaena" />
     <item id="byte-0f7" value="boss-sakit" />
     <item id="byte-0f8" value="boss-ellmac" />
@@ -131,10 +131,12 @@
     <item id="byte-102" value="guardian-kills" comments="counter" />
     <item id="byte-103" value="w-treasures" />
     <item id="byte-104" value="w-diary" />
-    <item id="byte-105" value="w-mulanatalisman" />
-    <item id="byte-106" value="w-forbidden" comments="2" />
-    <item id="byte-108" value="w-medicine" comments="2" />
-    <item id="byte-10b" value="w-maternity" />
+	<item id="word-049" value="inv-w-mulanatalisman" />
+	<item id="byte-106" value="w-forbidden" comments="2" />
+	<item id="byte-108" value="w-medicine-yellow" comments="2" />
+	<item id="byte-109" value="w-medicine-green" comments="2" />
+	<item id="byte-10a" value="w-medicine-red" comments="2" />
+	<item id="byte-10b" value="w-maternity" />
     <item id="byte-118" value="fairypointsactive" comment="fairy points work and healing fairy in credits" />
     <item id="byte-aea" value="mantra-amphisbaena" comments="2=recited?" />
     <item id="byte-125" value="mantra-sakit" comments="4=recited" />
@@ -145,8 +147,8 @@
     <item id="byte-12a" value="mantra-baphomet" comments="4=recited" />
     <item id="byte-12b" value="mantra-tiamat" comments="4=recited" />
     <item id="byte-124" value="mantra-keysword" comments="4=keysword empowered?" />
-	<item id="byte-2e6" value="w-msx2" comment="definitely set when you buy it but goes 2 then 1, I don't even" />
-    <item id="byte-2e5" value="rosetta-count" />
+	<item id="word-04c" value="inv-w-msx2" />
+	<item id="byte-2e5" value="rosetta-count" />
     <item id="byte-2ea" value="learnt-lamulanese" comments="1" />
 	<item id="byte-338" value="game-started" />
 	<item id="byte-354" value="orb-count" />

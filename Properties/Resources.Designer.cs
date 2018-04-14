@@ -1423,6 +1423,26 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_medicineofthemind_green {
+            get {
+                object obj = ResourceManager.GetObject("Icon_medicineofthemind_green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_medicineofthemind_red {
+            get {
+                object obj = ResourceManager.GetObject("Icon_medicineofthemind_red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_mekuri {
             get {
                 object obj = ResourceManager.GetObject("Icon_mekuri", resourceCulture);
@@ -1896,6 +1916,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_silvershield {
             get {
                 object obj = ResourceManager.GetObject("Icon_silvershield", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_silvershield2 {
+            get {
+                object obj = ResourceManager.GetObject("Icon_silvershield2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

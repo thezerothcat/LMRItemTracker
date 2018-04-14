@@ -368,9 +368,6 @@
     <None Include="Resources\Icon_pochettekey_blank.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\keyfairy.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Icon_keyfairy.png" />
   </ItemGroup>
   <ItemGroup>
@@ -703,6 +700,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Icon_holygrail2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_silvershield2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_medicineofthemind_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_medicineofthemind_red.png" />
   </ItemGroup>
   <Import Project="EyeOfTruth.Shared\EyeOfTruth.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
