@@ -170,8 +170,7 @@ namespace LMRItemTracker
 
             while (true)
             {
-                Thread.Sleep(5);
-
+                DateTime sleeptarget = DateTime.UtcNow.AddMilliseconds(100);
                 try
                 {
                     if (remake.Attach())
@@ -189,7 +188,7 @@ namespace LMRItemTracker
                             startupCounter = 1;
                         }
 
-                        if(startupCounter == 5)
+                        if(startupCounter == 2)
                         {
                             laMulanaItemTrackerForm.setGameStarted(true);
                         }
@@ -220,7 +219,7 @@ namespace LMRItemTracker
                         }
                         rbytes_old = rbytes_new;
                         rwords_old = rwords_new;
-                        if (startupCounter < 5)
+                        if (startupCounter < 2)
                         {
                             ++startupCounter;
                         }
@@ -240,6 +239,10 @@ namespace LMRItemTracker
                 {
                     System.Console.WriteLine(ex.StackTrace);
                 }
+
+                TimeSpan sleeptime = sleeptarget - DateTime.UtcNow;
+                if (sleeptime > TimeSpan.Zero)
+                    Thread.Sleep(sleeptime);
             }
         }
     }
