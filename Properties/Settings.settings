@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="Panel1Contents" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Hermes Boots,Grapple Claw,Feather,Hand Scanner,Glyph Reader,Holy Grail,mirai.exe</Value>
+      <Value Profile="(Default)">Hermes' Boots,Grapple Claw,Feather,Hand Scanner,reader.exe,Holy Grail,mirai.exe</Value>
     </Setting>
     <Setting Name="Panel2Contents" Type="System.String" Scope="User">
       <Value Profile="(Default)">Bronze Mirror,Fruit of Eden,Twin Statue,Key of Eternity,Helmet,Plane Model,Crystal Skull,Dimensional Key,Pochette Key,Ice Cape,Scalesphere,Cog of the Soul,Dragon Bone,Serpent Staff,Mulana Talisman,Woman Statue,Pepper,Talisman,Diary,Mini Doll,Treasures,Anchor,Key Fairy Combo,Isis' Pendant,Eye of Truth,Magatama Jewel,torude.exe,Shrine Wall Removal</Value>
@@ -27,10 +27,10 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="FormWidth" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">320</Value>
+      <Value Profile="(Default)">356</Value>
     </Setting>
     <Setting Name="FormHeight" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">662</Value>
+      <Value Profile="(Default)">822</Value>
     </Setting>
     <Setting Name="ShowLastItem" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
@@ -46,6 +46,12 @@
     </Setting>
     <Setting Name="Panel6Contents" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ShowDeathCount" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="DeathCount" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
   </Settings>
 </SettingsFile>

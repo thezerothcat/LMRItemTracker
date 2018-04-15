@@ -39,7 +39,7 @@ namespace LMRItemTracker
 
         static void changed(object cur, object old, string name, LMRItemTracker.LaMulanaItemTrackerForm laMulanaItemTrackerForm)
         {
-            if (!name.StartsWith("byte-") && !name.StartsWith("word-"))
+            if (!name.StartsWith("byte-") && !name.StartsWith("word-") && !"flags-1".Equals(name))
                 return;
 
             string displayname;
@@ -56,7 +56,14 @@ namespace LMRItemTracker
                 format = ":x8";
             System.Console.WriteLine("{0} {1,15} := {2" + format + "} to {3" + format + "}", name, displayname, old, cur);
 
-            if(displayname.StartsWith("boss-"))
+            if (displayname.Equals("death-tracker"))
+            {
+                if (((uint)old & 0x1000000) == 0 && (((uint)cur & 0x1000000) == 16777216))
+                {
+                    laMulanaItemTrackerForm.updateDeathCount(true);
+                }
+            }
+            else if (displayname.StartsWith("boss-"))
             {
                 laMulanaItemTrackerForm.toggleBoss(displayname, (byte)cur >= (byte)3);
             }
@@ -121,7 +128,7 @@ namespace LMRItemTracker
                     laMulanaItemTrackerForm.toggleWhip(true);
                 }
             }
-            else if (displayname.Equals("ankh-jewels") || displayname.StartsWith("ammo-"))
+            else if (displayname.StartsWith("ammo-"))
             {
                 int ammoCount = 0;
                 if (cur is ushort)
@@ -135,9 +142,43 @@ namespace LMRItemTracker
 
                 laMulanaItemTrackerForm.setAmmoCount(displayname, ammoCount);
             }
+            else if(displayname.Equals("ankh-jewels"))
+            {
+                int ammoCount = 0;
+                bool isAdd = false;
+                if (cur is ushort)
+                {
+                    ammoCount = (ushort)cur;
+                    isAdd = ammoCount > (ushort)old;
+                }
+                else if (cur is short)
+                {
+                    ammoCount = (short)cur;
+                    isAdd = ammoCount > (short)old;
+                }
+
+                laMulanaItemTrackerForm.setAmmoCount(displayname, ammoCount);
+                if(isAdd)
+                {
+                    laMulanaItemTrackerForm.UpdateLastItem(displayname);
+                }
+            }
             else if (displayname.Equals("invtr-grailfull") || displayname.Equals("invtr-grailbr"))
             {
                 laMulanaItemTrackerForm.toggleGrail(displayname, (ushort)cur >= 1);
+            }
+            else if (displayname.StartsWith("inv-"))
+            {
+                string updatedName = displayname.Replace("inv-", "");
+                if ((ushort)cur >= 1)
+                {
+                    laMulanaItemTrackerForm.toggleItem(updatedName, true);
+                    laMulanaItemTrackerForm.UpdateLastItem(updatedName);
+                }
+                else
+                {
+                    laMulanaItemTrackerForm.toggleItem(updatedName, false);
+                }
             }
             else if (displayname.StartsWith("w-"))
             {
@@ -167,10 +208,20 @@ namespace LMRItemTracker
             byte[] rwords_old = new byte[510], rwords_new;
             remakenames = loadnames(namesXml);
             int startupCounter = 1;
+            laMulanaItemTrackerForm.setGameStarted(false);
 
             while (true)
             {
-                DateTime sleeptarget = DateTime.UtcNow.AddMilliseconds(100);
+                DateTime sleeptarget;
+                if (startupCounter == 2)
+                {
+                    sleeptarget = DateTime.UtcNow.AddMilliseconds(5);
+                }
+                else
+                {
+                    sleeptarget = DateTime.UtcNow.AddMilliseconds(100);
+                }
+
                 try
                 {
                     if (remake.Attach())
@@ -181,14 +232,20 @@ namespace LMRItemTracker
                         remake.vars.UpdateAll(remake.proc);
                         rbytes_new = remake.readbytes();
                         rwords_new = remake.readwords();
+                        if(rwords_new == null)
+                        {
+                            continue;
+                        }
+
                         if (rbytes_new[824] == 0)
                         {
                             // Player is dead or hasn't started a game.
                             laMulanaItemTrackerForm.setGameStarted(false);
+                            sleeptarget = DateTime.UtcNow.AddMilliseconds(20);
                             startupCounter = 1;
                         }
 
-                        if(startupCounter == 2)
+                        if (startupCounter == 3)
                         {
                             laMulanaItemTrackerForm.setGameStarted(true);
                         }
@@ -219,7 +276,7 @@ namespace LMRItemTracker
                         }
                         rbytes_old = rbytes_new;
                         rwords_old = rwords_new;
-                        if (startupCounter < 2)
+                        if (startupCounter < 3 && rbytes_new[824] != 0)
                         {
                             ++startupCounter;
                         }

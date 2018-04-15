@@ -72,6 +72,8 @@ namespace LMRItemTracker
             this.hideImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alwaysOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showAmmoCountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showDeathCountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearDeathCountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showLastItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearLastItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -87,12 +89,15 @@ namespace LMRItemTracker
             this.grail = new System.Windows.Forms.PictureBox();
             this.mirai = new System.Windows.Forms.PictureBox();
             this.mainPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.lastItemWrapperPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.overviewPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.lastItemPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.lastItemLabel = new System.Windows.Forms.Label();
             this.lastItem1 = new System.Windows.Forms.PictureBox();
             this.lastItem2 = new System.Windows.Forms.PictureBox();
             this.lastItem3 = new System.Windows.Forms.PictureBox();
+            this.deathPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.deathLabel = new System.Windows.Forms.Label();
+            this.deathCount = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.bronzeMirror = new System.Windows.Forms.PictureBox();
             this.fruitOfEden = new System.Windows.Forms.PictureBox();
@@ -239,11 +244,12 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.grail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mirai)).BeginInit();
             this.mainPanel.SuspendLayout();
-            this.lastItemWrapperPanel.SuspendLayout();
+            this.overviewPanel.SuspendLayout();
             this.lastItemPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lastItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lastItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lastItem3)).BeginInit();
+            this.deathPanel.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bronzeMirror)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fruitOfEden)).BeginInit();
@@ -520,7 +526,7 @@ namespace LMRItemTracker
             this.layoutToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(304, 24);
+            this.menu.Size = new System.Drawing.Size(340, 24);
             this.menu.TabIndex = 109;
             this.menu.Text = "Settings";
             // 
@@ -578,6 +584,8 @@ namespace LMRItemTracker
             this.uncollectedItemsToolStripMenuItem,
             this.alwaysOnTopToolStripMenuItem,
             this.showAmmoCountToolStripMenuItem,
+            this.showDeathCountToolStripMenuItem,
+            this.clearDeathCountToolStripMenuItem,
             this.showLastItemToolStripMenuItem,
             this.clearLastItemToolStripMenuItem});
             this.layoutToolStripMenuItem.Name = "layoutToolStripMenuItem";
@@ -684,6 +692,20 @@ namespace LMRItemTracker
             this.showAmmoCountToolStripMenuItem.Text = "Show Ammo Count";
             this.showAmmoCountToolStripMenuItem.Click += new System.EventHandler(this.toggleAmmoCount);
             // 
+            // showDeathCountToolStripMenuItem
+            // 
+            this.showDeathCountToolStripMenuItem.Name = "showDeathCountToolStripMenuItem";
+            this.showDeathCountToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.showDeathCountToolStripMenuItem.Text = "Show Death Count";
+            this.showDeathCountToolStripMenuItem.Click += new System.EventHandler(this.toggleDeathCount);
+            // 
+            // clearDeathCountToolStripMenuItem
+            // 
+            this.clearDeathCountToolStripMenuItem.Name = "clearDeathCountToolStripMenuItem";
+            this.clearDeathCountToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.clearDeathCountToolStripMenuItem.Text = "Clear Death Count";
+            this.clearDeathCountToolStripMenuItem.Click += new System.EventHandler(this.resetDeathCount);
+            // 
             // showLastItemToolStripMenuItem
             // 
             this.showLastItemToolStripMenuItem.Name = "showLastItemToolStripMenuItem";
@@ -713,7 +735,7 @@ namespace LMRItemTracker
             this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 66);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(280, 56);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(280, 40);
             this.flowLayoutPanel1.TabIndex = 110;
             this.flowLayoutPanel1.DoubleClick += new System.EventHandler(this.LaMulanaItemTrackerForm_DoubleClick);
             // 
@@ -764,7 +786,7 @@ namespace LMRItemTracker
             this.readerPanel.Location = new System.Drawing.Point(160, 0);
             this.readerPanel.Margin = new System.Windows.Forms.Padding(0);
             this.readerPanel.Name = "readerPanel";
-            this.readerPanel.Size = new System.Drawing.Size(40, 56);
+            this.readerPanel.Size = new System.Drawing.Size(40, 40);
             this.readerPanel.TabIndex = 111;
             // 
             // reader
@@ -837,7 +859,7 @@ namespace LMRItemTracker
             // 
             this.mainPanel.AutoSize = true;
             this.mainPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.mainPanel.Controls.Add(this.lastItemWrapperPanel);
+            this.mainPanel.Controls.Add(this.overviewPanel);
             this.mainPanel.Controls.Add(this.flowLayoutPanel1);
             this.mainPanel.Controls.Add(this.flowLayoutPanel2);
             this.mainPanel.Controls.Add(this.flowLayoutPanel3);
@@ -850,19 +872,22 @@ namespace LMRItemTracker
             this.mainPanel.Margin = new System.Windows.Forms.Padding(0);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Padding = new System.Windows.Forms.Padding(10);
-            this.mainPanel.Size = new System.Drawing.Size(304, 766);
+            this.mainPanel.Size = new System.Drawing.Size(340, 710);
             this.mainPanel.TabIndex = 111;
             this.mainPanel.DoubleClick += new System.EventHandler(this.LaMulanaItemTrackerForm_DoubleClick);
             // 
-            // lastItemWrapperPanel
+            // overviewPanel
             // 
-            this.lastItemWrapperPanel.AutoSize = true;
-            this.lastItemWrapperPanel.Controls.Add(this.lastItemPanel);
-            this.lastItemWrapperPanel.Location = new System.Drawing.Point(10, 10);
-            this.lastItemWrapperPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.lastItemWrapperPanel.Name = "lastItemWrapperPanel";
-            this.lastItemWrapperPanel.Size = new System.Drawing.Size(219, 56);
-            this.lastItemWrapperPanel.TabIndex = 119;
+            this.overviewPanel.AutoSize = true;
+            this.overviewPanel.Controls.Add(this.lastItemPanel);
+            this.overviewPanel.Controls.Add(this.deathPanel);
+            this.mainPanel.SetFlowBreak(this.overviewPanel, true);
+            this.overviewPanel.Location = new System.Drawing.Point(10, 10);
+            this.overviewPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.overviewPanel.Name = "overviewPanel";
+            this.overviewPanel.Size = new System.Drawing.Size(303, 56);
+            this.overviewPanel.TabIndex = 119;
+            this.overviewPanel.WrapContents = false;
             // 
             // lastItemPanel
             // 
@@ -871,7 +896,7 @@ namespace LMRItemTracker
             this.lastItemPanel.Controls.Add(this.lastItem1);
             this.lastItemPanel.Controls.Add(this.lastItem2);
             this.lastItemPanel.Controls.Add(this.lastItem3);
-            this.lastItemWrapperPanel.SetFlowBreak(this.lastItemPanel, true);
+            this.overviewPanel.SetFlowBreak(this.lastItemPanel, true);
             this.lastItemPanel.Location = new System.Drawing.Point(0, 0);
             this.lastItemPanel.Margin = new System.Windows.Forms.Padding(0, 0, 0, 16);
             this.lastItemPanel.Name = "lastItemPanel";
@@ -920,6 +945,46 @@ namespace LMRItemTracker
             this.lastItem3.TabIndex = 117;
             this.lastItem3.TabStop = false;
             // 
+            // deathPanel
+            // 
+            this.deathPanel.AutoSize = true;
+            this.deathPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.deathPanel.Controls.Add(this.deathLabel);
+            this.deathPanel.Controls.Add(this.deathCount);
+            this.deathPanel.Location = new System.Drawing.Point(227, 0);
+            this.deathPanel.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.deathPanel.Name = "deathPanel";
+            this.deathPanel.Size = new System.Drawing.Size(76, 40);
+            this.deathPanel.TabIndex = 119;
+            this.deathPanel.WrapContents = false;
+            this.deathPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.deathCount_MouseClick);
+            // 
+            // deathLabel
+            // 
+            this.deathLabel.AutoSize = true;
+            this.deathLabel.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.deathLabel.Location = new System.Drawing.Point(3, 0);
+            this.deathLabel.MinimumSize = new System.Drawing.Size(0, 40);
+            this.deathLabel.Name = "deathLabel";
+            this.deathLabel.Size = new System.Drawing.Size(49, 40);
+            this.deathLabel.TabIndex = 0;
+            this.deathLabel.Text = "Death:";
+            this.deathLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.deathLabel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.deathCount_MouseClick);
+            // 
+            // deathCount
+            // 
+            this.deathCount.AutoSize = true;
+            this.deathCount.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.deathCount.Location = new System.Drawing.Point(58, 0);
+            this.deathCount.MinimumSize = new System.Drawing.Size(0, 40);
+            this.deathCount.Name = "deathCount";
+            this.deathCount.Size = new System.Drawing.Size(15, 40);
+            this.deathCount.TabIndex = 1;
+            this.deathCount.Text = "0";
+            this.deathCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.deathCount.MouseClick += new System.Windows.Forms.MouseEventHandler(this.deathCount_MouseClick);
+            // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.AutoSize = true;
@@ -953,10 +1018,10 @@ namespace LMRItemTracker
             this.flowLayoutPanel2.Controls.Add(this.torude);
             this.flowLayoutPanel2.Controls.Add(this.shrinePanel);
             this.mainPanel.SetFlowBreak(this.flowLayoutPanel2, true);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(10, 130);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(10, 114);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(280, 176);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(320, 176);
             this.flowLayoutPanel2.TabIndex = 112;
             this.flowLayoutPanel2.DoubleClick += new System.EventHandler(this.LaMulanaItemTrackerForm_DoubleClick);
             // 
@@ -1033,7 +1098,7 @@ namespace LMRItemTracker
             // dimensionalKey
             // 
             this.dimensionalKey.Image = global::LMRItemTracker.Properties.Resources.Icon_dimensionalkey_blank;
-            this.dimensionalKey.Location = new System.Drawing.Point(0, 40);
+            this.dimensionalKey.Location = new System.Drawing.Point(280, 0);
             this.dimensionalKey.Margin = new System.Windows.Forms.Padding(0);
             this.dimensionalKey.Name = "dimensionalKey";
             this.dimensionalKey.Size = new System.Drawing.Size(40, 40);
@@ -1043,7 +1108,7 @@ namespace LMRItemTracker
             // pochetteKey
             // 
             this.pochetteKey.Image = global::LMRItemTracker.Properties.Resources.Icon_pochettekey_blank;
-            this.pochetteKey.Location = new System.Drawing.Point(40, 40);
+            this.pochetteKey.Location = new System.Drawing.Point(0, 40);
             this.pochetteKey.Margin = new System.Windows.Forms.Padding(0);
             this.pochetteKey.Name = "pochetteKey";
             this.pochetteKey.Size = new System.Drawing.Size(40, 40);
@@ -1053,7 +1118,7 @@ namespace LMRItemTracker
             // iceCape
             // 
             this.iceCape.Image = global::LMRItemTracker.Properties.Resources.Icon_icecape_blank;
-            this.iceCape.Location = new System.Drawing.Point(80, 40);
+            this.iceCape.Location = new System.Drawing.Point(40, 40);
             this.iceCape.Margin = new System.Windows.Forms.Padding(0);
             this.iceCape.Name = "iceCape";
             this.iceCape.Size = new System.Drawing.Size(40, 40);
@@ -1063,7 +1128,7 @@ namespace LMRItemTracker
             // scalesphere
             // 
             this.scalesphere.Image = global::LMRItemTracker.Properties.Resources.Icon_scalesphere_blank;
-            this.scalesphere.Location = new System.Drawing.Point(120, 40);
+            this.scalesphere.Location = new System.Drawing.Point(80, 40);
             this.scalesphere.Margin = new System.Windows.Forms.Padding(0);
             this.scalesphere.Name = "scalesphere";
             this.scalesphere.Size = new System.Drawing.Size(40, 40);
@@ -1073,7 +1138,7 @@ namespace LMRItemTracker
             // cogOfTheSoul
             // 
             this.cogOfTheSoul.Image = global::LMRItemTracker.Properties.Resources.Icon_cogofthesoul_blank;
-            this.cogOfTheSoul.Location = new System.Drawing.Point(160, 40);
+            this.cogOfTheSoul.Location = new System.Drawing.Point(120, 40);
             this.cogOfTheSoul.Margin = new System.Windows.Forms.Padding(0);
             this.cogOfTheSoul.Name = "cogOfTheSoul";
             this.cogOfTheSoul.Size = new System.Drawing.Size(40, 40);
@@ -1083,7 +1148,7 @@ namespace LMRItemTracker
             // dragonBone
             // 
             this.dragonBone.Image = global::LMRItemTracker.Properties.Resources.Icon_dragonbone_blank;
-            this.dragonBone.Location = new System.Drawing.Point(200, 40);
+            this.dragonBone.Location = new System.Drawing.Point(160, 40);
             this.dragonBone.Margin = new System.Windows.Forms.Padding(0);
             this.dragonBone.Name = "dragonBone";
             this.dragonBone.Size = new System.Drawing.Size(40, 40);
@@ -1093,7 +1158,7 @@ namespace LMRItemTracker
             // serpentStaff
             // 
             this.serpentStaff.Image = global::LMRItemTracker.Properties.Resources.Icon_serpentstaff_blank;
-            this.serpentStaff.Location = new System.Drawing.Point(240, 40);
+            this.serpentStaff.Location = new System.Drawing.Point(200, 40);
             this.serpentStaff.Margin = new System.Windows.Forms.Padding(0);
             this.serpentStaff.Name = "serpentStaff";
             this.serpentStaff.Size = new System.Drawing.Size(40, 40);
@@ -1103,7 +1168,7 @@ namespace LMRItemTracker
             // mulanaTalisman
             // 
             this.mulanaTalisman.Image = global::LMRItemTracker.Properties.Resources.Icon_mulanatalisman_blank;
-            this.mulanaTalisman.Location = new System.Drawing.Point(0, 80);
+            this.mulanaTalisman.Location = new System.Drawing.Point(240, 40);
             this.mulanaTalisman.Margin = new System.Windows.Forms.Padding(0);
             this.mulanaTalisman.Name = "mulanaTalisman";
             this.mulanaTalisman.Size = new System.Drawing.Size(40, 40);
@@ -1114,7 +1179,7 @@ namespace LMRItemTracker
             // 
             this.womanPanel.Controls.Add(this.maternityStatue);
             this.womanPanel.Controls.Add(this.womanStatue);
-            this.womanPanel.Location = new System.Drawing.Point(40, 80);
+            this.womanPanel.Location = new System.Drawing.Point(280, 40);
             this.womanPanel.Margin = new System.Windows.Forms.Padding(0);
             this.womanPanel.Name = "womanPanel";
             this.womanPanel.Size = new System.Drawing.Size(40, 40);
@@ -1129,7 +1194,6 @@ namespace LMRItemTracker
             this.maternityStatue.Size = new System.Drawing.Size(40, 40);
             this.maternityStatue.TabIndex = 106;
             this.maternityStatue.TabStop = false;
-            this.maternityStatue.Visible = false;
             // 
             // womanStatue
             // 
@@ -1144,7 +1208,7 @@ namespace LMRItemTracker
             // pepper
             // 
             this.pepper.Image = global::LMRItemTracker.Properties.Resources.Icon_pepper_blank;
-            this.pepper.Location = new System.Drawing.Point(80, 80);
+            this.pepper.Location = new System.Drawing.Point(0, 80);
             this.pepper.Margin = new System.Windows.Forms.Padding(0);
             this.pepper.Name = "pepper";
             this.pepper.Size = new System.Drawing.Size(40, 40);
@@ -1154,7 +1218,7 @@ namespace LMRItemTracker
             // talisman
             // 
             this.talisman.Image = global::LMRItemTracker.Properties.Resources.Icon_talisman_blank;
-            this.talisman.Location = new System.Drawing.Point(120, 80);
+            this.talisman.Location = new System.Drawing.Point(40, 80);
             this.talisman.Margin = new System.Windows.Forms.Padding(0);
             this.talisman.Name = "talisman";
             this.talisman.Size = new System.Drawing.Size(40, 40);
@@ -1164,7 +1228,7 @@ namespace LMRItemTracker
             // diary
             // 
             this.diary.Image = global::LMRItemTracker.Properties.Resources.Icon_diary_blank;
-            this.diary.Location = new System.Drawing.Point(160, 80);
+            this.diary.Location = new System.Drawing.Point(80, 80);
             this.diary.Margin = new System.Windows.Forms.Padding(0);
             this.diary.Name = "diary";
             this.diary.Size = new System.Drawing.Size(40, 40);
@@ -1174,7 +1238,7 @@ namespace LMRItemTracker
             // miniDoll
             // 
             this.miniDoll.Image = global::LMRItemTracker.Properties.Resources.Icon_minidoll_blank;
-            this.miniDoll.Location = new System.Drawing.Point(200, 80);
+            this.miniDoll.Location = new System.Drawing.Point(120, 80);
             this.miniDoll.Margin = new System.Windows.Forms.Padding(0);
             this.miniDoll.Name = "miniDoll";
             this.miniDoll.Size = new System.Drawing.Size(40, 40);
@@ -1184,7 +1248,7 @@ namespace LMRItemTracker
             // treasures
             // 
             this.treasures.Image = global::LMRItemTracker.Properties.Resources.Icon_treasures_blank;
-            this.treasures.Location = new System.Drawing.Point(240, 80);
+            this.treasures.Location = new System.Drawing.Point(160, 80);
             this.treasures.Margin = new System.Windows.Forms.Padding(0);
             this.treasures.Name = "treasures";
             this.treasures.Size = new System.Drawing.Size(40, 40);
@@ -1194,7 +1258,7 @@ namespace LMRItemTracker
             // anchor
             // 
             this.anchor.Image = global::LMRItemTracker.Properties.Resources.Icon_anchor_blank;
-            this.anchor.Location = new System.Drawing.Point(0, 120);
+            this.anchor.Location = new System.Drawing.Point(200, 80);
             this.anchor.Margin = new System.Windows.Forms.Padding(0);
             this.anchor.Name = "anchor";
             this.anchor.Size = new System.Drawing.Size(40, 40);
@@ -1204,7 +1268,7 @@ namespace LMRItemTracker
             // keyFairy
             // 
             this.keyFairy.Image = global::LMRItemTracker.Properties.Resources.Icon_keyfairy_blank;
-            this.keyFairy.Location = new System.Drawing.Point(40, 120);
+            this.keyFairy.Location = new System.Drawing.Point(240, 80);
             this.keyFairy.Margin = new System.Windows.Forms.Padding(0);
             this.keyFairy.Name = "keyFairy";
             this.keyFairy.Size = new System.Drawing.Size(40, 40);
@@ -1214,7 +1278,7 @@ namespace LMRItemTracker
             // isisPendant
             // 
             this.isisPendant.Image = global::LMRItemTracker.Properties.Resources.Icon_isispendant_blank;
-            this.isisPendant.Location = new System.Drawing.Point(80, 120);
+            this.isisPendant.Location = new System.Drawing.Point(280, 80);
             this.isisPendant.Margin = new System.Windows.Forms.Padding(0);
             this.isisPendant.Name = "isisPendant";
             this.isisPendant.Size = new System.Drawing.Size(40, 40);
@@ -1224,7 +1288,7 @@ namespace LMRItemTracker
             // eyeOfTruth
             // 
             this.eyeOfTruth.Image = global::LMRItemTracker.Properties.Resources.Icon_eyeoftruth_blank;
-            this.eyeOfTruth.Location = new System.Drawing.Point(120, 120);
+            this.eyeOfTruth.Location = new System.Drawing.Point(0, 120);
             this.eyeOfTruth.Margin = new System.Windows.Forms.Padding(0);
             this.eyeOfTruth.Name = "eyeOfTruth";
             this.eyeOfTruth.Size = new System.Drawing.Size(40, 40);
@@ -1234,7 +1298,7 @@ namespace LMRItemTracker
             // magatamaJewel
             // 
             this.magatamaJewel.Image = global::LMRItemTracker.Properties.Resources.Icon_magatamajewel_blank;
-            this.magatamaJewel.Location = new System.Drawing.Point(160, 120);
+            this.magatamaJewel.Location = new System.Drawing.Point(40, 120);
             this.magatamaJewel.Margin = new System.Windows.Forms.Padding(0);
             this.magatamaJewel.Name = "magatamaJewel";
             this.magatamaJewel.Size = new System.Drawing.Size(40, 40);
@@ -1244,7 +1308,7 @@ namespace LMRItemTracker
             // torude
             // 
             this.torude.Image = global::LMRItemTracker.Properties.Resources.Icon_torude_blank;
-            this.torude.Location = new System.Drawing.Point(200, 120);
+            this.torude.Location = new System.Drawing.Point(80, 120);
             this.torude.Margin = new System.Windows.Forms.Padding(0);
             this.torude.Name = "torude";
             this.torude.Size = new System.Drawing.Size(40, 40);
@@ -1255,7 +1319,7 @@ namespace LMRItemTracker
             // 
             this.shrinePanel.Controls.Add(this.skullWall);
             this.shrinePanel.Controls.Add(this.skullWallCount);
-            this.shrinePanel.Location = new System.Drawing.Point(240, 120);
+            this.shrinePanel.Location = new System.Drawing.Point(120, 120);
             this.shrinePanel.Margin = new System.Windows.Forms.Padding(0);
             this.shrinePanel.Name = "shrinePanel";
             this.shrinePanel.Size = new System.Drawing.Size(40, 56);
@@ -1291,10 +1355,10 @@ namespace LMRItemTracker
             this.flowLayoutPanel3.Controls.Add(this.bracelet);
             this.flowLayoutPanel3.Controls.Add(this.spaulder);
             this.mainPanel.SetFlowBreak(this.flowLayoutPanel3, true);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(10, 314);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(10, 298);
             this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(280, 80);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(320, 80);
             this.flowLayoutPanel3.TabIndex = 117;
             this.flowLayoutPanel3.DoubleClick += new System.EventHandler(this.LaMulanaItemTrackerForm_DoubleClick);
             // 
@@ -1371,7 +1435,7 @@ namespace LMRItemTracker
             // msx2
             // 
             this.msx2.Image = global::LMRItemTracker.Properties.Resources.Icon_msx2_blank;
-            this.msx2.Location = new System.Drawing.Point(0, 40);
+            this.msx2.Location = new System.Drawing.Point(280, 0);
             this.msx2.Margin = new System.Windows.Forms.Padding(0);
             this.msx2.Name = "msx2";
             this.msx2.Size = new System.Drawing.Size(40, 40);
@@ -1381,7 +1445,7 @@ namespace LMRItemTracker
             // scriptures
             // 
             this.scriptures.Image = global::LMRItemTracker.Properties.Resources.Icon_scriptures_blank;
-            this.scriptures.Location = new System.Drawing.Point(40, 40);
+            this.scriptures.Location = new System.Drawing.Point(0, 40);
             this.scriptures.Margin = new System.Windows.Forms.Padding(0);
             this.scriptures.Name = "scriptures";
             this.scriptures.Size = new System.Drawing.Size(40, 40);
@@ -1391,7 +1455,7 @@ namespace LMRItemTracker
             // crucifix
             // 
             this.crucifix.Image = global::LMRItemTracker.Properties.Resources.Icon_crucifix_blank;
-            this.crucifix.Location = new System.Drawing.Point(80, 40);
+            this.crucifix.Location = new System.Drawing.Point(40, 40);
             this.crucifix.Margin = new System.Windows.Forms.Padding(0);
             this.crucifix.Name = "crucifix";
             this.crucifix.Size = new System.Drawing.Size(40, 40);
@@ -1401,7 +1465,7 @@ namespace LMRItemTracker
             // perfume
             // 
             this.perfume.Image = global::LMRItemTracker.Properties.Resources.Icon_perfume_blank;
-            this.perfume.Location = new System.Drawing.Point(120, 40);
+            this.perfume.Location = new System.Drawing.Point(80, 40);
             this.perfume.Margin = new System.Windows.Forms.Padding(0);
             this.perfume.Name = "perfume";
             this.perfume.Size = new System.Drawing.Size(40, 40);
@@ -1411,7 +1475,7 @@ namespace LMRItemTracker
             // glove
             // 
             this.glove.Image = global::LMRItemTracker.Properties.Resources.Icon_glove_blank;
-            this.glove.Location = new System.Drawing.Point(160, 40);
+            this.glove.Location = new System.Drawing.Point(120, 40);
             this.glove.Margin = new System.Windows.Forms.Padding(0);
             this.glove.Name = "glove";
             this.glove.Size = new System.Drawing.Size(40, 40);
@@ -1421,7 +1485,7 @@ namespace LMRItemTracker
             // bracelet
             // 
             this.bracelet.Image = global::LMRItemTracker.Properties.Resources.Icon_bracelet_blank;
-            this.bracelet.Location = new System.Drawing.Point(200, 40);
+            this.bracelet.Location = new System.Drawing.Point(160, 40);
             this.bracelet.Margin = new System.Windows.Forms.Padding(0);
             this.bracelet.Name = "bracelet";
             this.bracelet.Size = new System.Drawing.Size(40, 40);
@@ -1431,7 +1495,7 @@ namespace LMRItemTracker
             // spaulder
             // 
             this.spaulder.Image = global::LMRItemTracker.Properties.Resources.Icon_spaulder_blank;
-            this.spaulder.Location = new System.Drawing.Point(240, 40);
+            this.spaulder.Location = new System.Drawing.Point(200, 40);
             this.spaulder.Margin = new System.Windows.Forms.Padding(0);
             this.spaulder.Name = "spaulder";
             this.spaulder.Size = new System.Drawing.Size(40, 40);
@@ -1457,10 +1521,10 @@ namespace LMRItemTracker
             this.flowLayoutPanel4.Controls.Add(this.earthSpearPanel);
             this.flowLayoutPanel4.Controls.Add(this.bombPanel);
             this.mainPanel.SetFlowBreak(this.flowLayoutPanel4, true);
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(10, 402);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(10, 386);
             this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(280, 80);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(320, 80);
             this.flowLayoutPanel4.TabIndex = 115;
             this.flowLayoutPanel4.DoubleClick += new System.EventHandler(this.LaMulanaItemTrackerForm_DoubleClick);
             // 
@@ -1541,7 +1605,7 @@ namespace LMRItemTracker
             // 
             this.shurikenPanel.Controls.Add(this.shurikenAmmoCount);
             this.shurikenPanel.Controls.Add(this.shuriken);
-            this.shurikenPanel.Location = new System.Drawing.Point(0, 40);
+            this.shurikenPanel.Location = new System.Drawing.Point(280, 0);
             this.shurikenPanel.Margin = new System.Windows.Forms.Padding(0);
             this.shurikenPanel.Name = "shurikenPanel";
             this.shurikenPanel.Size = new System.Drawing.Size(40, 40);
@@ -1574,7 +1638,7 @@ namespace LMRItemTracker
             // 
             this.rollingShurikenPanel.Controls.Add(this.rollingShurikenAmmoCount);
             this.rollingShurikenPanel.Controls.Add(this.rollingShuriken);
-            this.rollingShurikenPanel.Location = new System.Drawing.Point(40, 40);
+            this.rollingShurikenPanel.Location = new System.Drawing.Point(0, 40);
             this.rollingShurikenPanel.Margin = new System.Windows.Forms.Padding(0);
             this.rollingShurikenPanel.Name = "rollingShurikenPanel";
             this.rollingShurikenPanel.Size = new System.Drawing.Size(40, 40);
@@ -1607,7 +1671,7 @@ namespace LMRItemTracker
             // 
             this.caltropsPanel.Controls.Add(this.caltropsAmmoCount);
             this.caltropsPanel.Controls.Add(this.caltrops);
-            this.caltropsPanel.Location = new System.Drawing.Point(80, 40);
+            this.caltropsPanel.Location = new System.Drawing.Point(40, 40);
             this.caltropsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.caltropsPanel.Name = "caltropsPanel";
             this.caltropsPanel.Size = new System.Drawing.Size(40, 40);
@@ -1640,7 +1704,7 @@ namespace LMRItemTracker
             // 
             this.flareGunPanel.Controls.Add(this.flareGunAmmoCount);
             this.flareGunPanel.Controls.Add(this.flareGun);
-            this.flareGunPanel.Location = new System.Drawing.Point(120, 40);
+            this.flareGunPanel.Location = new System.Drawing.Point(80, 40);
             this.flareGunPanel.Margin = new System.Windows.Forms.Padding(0);
             this.flareGunPanel.Name = "flareGunPanel";
             this.flareGunPanel.Size = new System.Drawing.Size(40, 40);
@@ -1673,7 +1737,7 @@ namespace LMRItemTracker
             // 
             this.chakramPanel.Controls.Add(this.chakramAmmoCount);
             this.chakramPanel.Controls.Add(this.chakram);
-            this.chakramPanel.Location = new System.Drawing.Point(160, 40);
+            this.chakramPanel.Location = new System.Drawing.Point(120, 40);
             this.chakramPanel.Margin = new System.Windows.Forms.Padding(0);
             this.chakramPanel.Name = "chakramPanel";
             this.chakramPanel.Size = new System.Drawing.Size(40, 40);
@@ -1706,7 +1770,7 @@ namespace LMRItemTracker
             // 
             this.earthSpearPanel.Controls.Add(this.earthSpearAmmoCount);
             this.earthSpearPanel.Controls.Add(this.earthSpear);
-            this.earthSpearPanel.Location = new System.Drawing.Point(200, 40);
+            this.earthSpearPanel.Location = new System.Drawing.Point(160, 40);
             this.earthSpearPanel.Margin = new System.Windows.Forms.Padding(0);
             this.earthSpearPanel.Name = "earthSpearPanel";
             this.earthSpearPanel.Size = new System.Drawing.Size(40, 40);
@@ -1739,7 +1803,7 @@ namespace LMRItemTracker
             // 
             this.bombPanel.Controls.Add(this.bombAmmoCount);
             this.bombPanel.Controls.Add(this.bomb);
-            this.bombPanel.Location = new System.Drawing.Point(240, 40);
+            this.bombPanel.Location = new System.Drawing.Point(200, 40);
             this.bombPanel.Margin = new System.Windows.Forms.Padding(0);
             this.bombPanel.Name = "bombPanel";
             this.bombPanel.Size = new System.Drawing.Size(40, 40);
@@ -1780,7 +1844,7 @@ namespace LMRItemTracker
             this.flowLayoutPanel5.Controls.Add(this.mapsPanel);
             this.flowLayoutPanel5.Controls.Add(this.ankhJewelPanel);
             this.mainPanel.SetFlowBreak(this.flowLayoutPanel5, true);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(10, 490);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(10, 474);
             this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
             this.flowLayoutPanel5.Size = new System.Drawing.Size(280, 56);
@@ -1960,10 +2024,10 @@ namespace LMRItemTracker
             this.flowLayoutPanel6.Controls.Add(this.miracle);
             this.flowLayoutPanel6.Controls.Add(this.lamulana);
             this.mainPanel.SetFlowBreak(this.flowLayoutPanel6, true);
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(10, 554);
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(10, 538);
             this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(280, 160);
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(320, 120);
             this.flowLayoutPanel6.TabIndex = 120;
             // 
             // shellHorn
@@ -2039,7 +2103,7 @@ namespace LMRItemTracker
             // yagomap
             // 
             this.yagomap.Image = global::LMRItemTracker.Properties.Resources.Icon_yagomap_blank;
-            this.yagomap.Location = new System.Drawing.Point(0, 40);
+            this.yagomap.Location = new System.Drawing.Point(280, 0);
             this.yagomap.Margin = new System.Windows.Forms.Padding(0);
             this.yagomap.Name = "yagomap";
             this.yagomap.Size = new System.Drawing.Size(40, 40);
@@ -2049,7 +2113,7 @@ namespace LMRItemTracker
             // yagostr
             // 
             this.yagostr.Image = global::LMRItemTracker.Properties.Resources.Icon_yagostr_blank;
-            this.yagostr.Location = new System.Drawing.Point(40, 40);
+            this.yagostr.Location = new System.Drawing.Point(0, 40);
             this.yagostr.Margin = new System.Windows.Forms.Padding(0);
             this.yagostr.Name = "yagostr";
             this.yagostr.Size = new System.Drawing.Size(40, 40);
@@ -2059,7 +2123,7 @@ namespace LMRItemTracker
             // bunemon
             // 
             this.bunemon.Image = global::LMRItemTracker.Properties.Resources.Icon_bunemon_blank;
-            this.bunemon.Location = new System.Drawing.Point(80, 40);
+            this.bunemon.Location = new System.Drawing.Point(40, 40);
             this.bunemon.Margin = new System.Windows.Forms.Padding(0);
             this.bunemon.Name = "bunemon";
             this.bunemon.Size = new System.Drawing.Size(40, 40);
@@ -2069,7 +2133,7 @@ namespace LMRItemTracker
             // bunplus
             // 
             this.bunplus.Image = global::LMRItemTracker.Properties.Resources.Icon_bunplus_blank;
-            this.bunplus.Location = new System.Drawing.Point(120, 40);
+            this.bunplus.Location = new System.Drawing.Point(80, 40);
             this.bunplus.Margin = new System.Windows.Forms.Padding(0);
             this.bunplus.Name = "bunplus";
             this.bunplus.Size = new System.Drawing.Size(40, 40);
@@ -2079,7 +2143,7 @@ namespace LMRItemTracker
             // guild
             // 
             this.guild.Image = global::LMRItemTracker.Properties.Resources.Icon_guild_blank;
-            this.guild.Location = new System.Drawing.Point(160, 40);
+            this.guild.Location = new System.Drawing.Point(120, 40);
             this.guild.Margin = new System.Windows.Forms.Padding(0);
             this.guild.Name = "guild";
             this.guild.Size = new System.Drawing.Size(40, 40);
@@ -2089,7 +2153,7 @@ namespace LMRItemTracker
             // beolamu
             // 
             this.beolamu.Image = global::LMRItemTracker.Properties.Resources.Icon_beolamu_blank;
-            this.beolamu.Location = new System.Drawing.Point(200, 40);
+            this.beolamu.Location = new System.Drawing.Point(160, 40);
             this.beolamu.Margin = new System.Windows.Forms.Padding(0);
             this.beolamu.Name = "beolamu";
             this.beolamu.Size = new System.Drawing.Size(40, 40);
@@ -2099,7 +2163,7 @@ namespace LMRItemTracker
             // emusic
             // 
             this.emusic.Image = global::LMRItemTracker.Properties.Resources.Icon_emusic_blank;
-            this.emusic.Location = new System.Drawing.Point(240, 40);
+            this.emusic.Location = new System.Drawing.Point(200, 40);
             this.emusic.Margin = new System.Windows.Forms.Padding(0);
             this.emusic.Name = "emusic";
             this.emusic.Size = new System.Drawing.Size(40, 40);
@@ -2109,7 +2173,7 @@ namespace LMRItemTracker
             // randc
             // 
             this.randc.Image = global::LMRItemTracker.Properties.Resources.Icon_randc_blank;
-            this.randc.Location = new System.Drawing.Point(0, 80);
+            this.randc.Location = new System.Drawing.Point(240, 40);
             this.randc.Margin = new System.Windows.Forms.Padding(0);
             this.randc.Name = "randc";
             this.randc.Size = new System.Drawing.Size(40, 40);
@@ -2119,7 +2183,7 @@ namespace LMRItemTracker
             // capstar
             // 
             this.capstar.Image = global::LMRItemTracker.Properties.Resources.Icon_capstar_blank;
-            this.capstar.Location = new System.Drawing.Point(40, 80);
+            this.capstar.Location = new System.Drawing.Point(280, 40);
             this.capstar.Margin = new System.Windows.Forms.Padding(0);
             this.capstar.Name = "capstar";
             this.capstar.Size = new System.Drawing.Size(40, 40);
@@ -2129,7 +2193,7 @@ namespace LMRItemTracker
             // deathv
             // 
             this.deathv.Image = global::LMRItemTracker.Properties.Resources.Icon_deathv_blank;
-            this.deathv.Location = new System.Drawing.Point(80, 80);
+            this.deathv.Location = new System.Drawing.Point(0, 80);
             this.deathv.Margin = new System.Windows.Forms.Padding(0);
             this.deathv.Name = "deathv";
             this.deathv.Size = new System.Drawing.Size(40, 40);
@@ -2139,7 +2203,7 @@ namespace LMRItemTracker
             // move
             // 
             this.move.Image = global::LMRItemTracker.Properties.Resources.Icon_move_blank;
-            this.move.Location = new System.Drawing.Point(120, 80);
+            this.move.Location = new System.Drawing.Point(40, 80);
             this.move.Margin = new System.Windows.Forms.Padding(0);
             this.move.Name = "move";
             this.move.Size = new System.Drawing.Size(40, 40);
@@ -2149,7 +2213,7 @@ namespace LMRItemTracker
             // mekuri
             // 
             this.mekuri.Image = global::LMRItemTracker.Properties.Resources.Icon_mekuri_blank;
-            this.mekuri.Location = new System.Drawing.Point(160, 80);
+            this.mekuri.Location = new System.Drawing.Point(80, 80);
             this.mekuri.Margin = new System.Windows.Forms.Padding(0);
             this.mekuri.Name = "mekuri";
             this.mekuri.Size = new System.Drawing.Size(40, 40);
@@ -2159,7 +2223,7 @@ namespace LMRItemTracker
             // bounce
             // 
             this.bounce.Image = global::LMRItemTracker.Properties.Resources.Icon_bounce_blank;
-            this.bounce.Location = new System.Drawing.Point(200, 80);
+            this.bounce.Location = new System.Drawing.Point(120, 80);
             this.bounce.Margin = new System.Windows.Forms.Padding(0);
             this.bounce.Name = "bounce";
             this.bounce.Size = new System.Drawing.Size(40, 40);
@@ -2169,7 +2233,7 @@ namespace LMRItemTracker
             // miracle
             // 
             this.miracle.Image = global::LMRItemTracker.Properties.Resources.Icon_miracle_blank;
-            this.miracle.Location = new System.Drawing.Point(240, 80);
+            this.miracle.Location = new System.Drawing.Point(160, 80);
             this.miracle.Margin = new System.Windows.Forms.Padding(0);
             this.miracle.Name = "miracle";
             this.miracle.Size = new System.Drawing.Size(40, 40);
@@ -2179,7 +2243,7 @@ namespace LMRItemTracker
             // lamulana
             // 
             this.lamulana.Image = global::LMRItemTracker.Properties.Resources.Icon_lamulana_blank;
-            this.lamulana.Location = new System.Drawing.Point(0, 120);
+            this.lamulana.Location = new System.Drawing.Point(200, 80);
             this.lamulana.Margin = new System.Windows.Forms.Padding(0);
             this.lamulana.Name = "lamulana";
             this.lamulana.Size = new System.Drawing.Size(40, 40);
@@ -2199,7 +2263,7 @@ namespace LMRItemTracker
             this.bossPanel.Controls.Add(this.baphomet);
             this.bossPanel.Controls.Add(this.tiamat);
             this.mainPanel.SetFlowBreak(this.bossPanel, true);
-            this.bossPanel.Location = new System.Drawing.Point(10, 722);
+            this.bossPanel.Location = new System.Drawing.Point(10, 666);
             this.bossPanel.Margin = new System.Windows.Forms.Padding(0);
             this.bossPanel.MaximumSize = new System.Drawing.Size(280, 0);
             this.bossPanel.Name = "bossPanel";
@@ -2290,13 +2354,14 @@ namespace LMRItemTracker
             // LaMulanaItemTrackerForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(304, 791);
+            this.ClientSize = new System.Drawing.Size(340, 783);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.menu);
             this.HelpButton = true;
             this.Name = "LaMulanaItemTrackerForm";
             this.Text = "Item Tracker";
             this.TopMost = true;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formClosing);
             this.Load += new System.EventHandler(this.LaMulanaItemTrackerForm_Load);
             this.DoubleClick += new System.EventHandler(this.LaMulanaItemTrackerForm_DoubleClick);
             this.shieldsPanel.ResumeLayout(false);
@@ -2324,13 +2389,15 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.mirai)).EndInit();
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
-            this.lastItemWrapperPanel.ResumeLayout(false);
-            this.lastItemWrapperPanel.PerformLayout();
+            this.overviewPanel.ResumeLayout(false);
+            this.overviewPanel.PerformLayout();
             this.lastItemPanel.ResumeLayout(false);
             this.lastItemPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lastItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lastItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lastItem3)).EndInit();
+            this.deathPanel.ResumeLayout(false);
+            this.deathPanel.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bronzeMirror)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fruitOfEden)).EndInit();
@@ -2485,6 +2552,7 @@ namespace LMRItemTracker
         private bool angelShieldCollected;
 
         private List<String> allItems;
+        private SettingsBackup settingsBackup;
 
         [STAThread]
         static void Main(string[] args)
@@ -2604,7 +2672,7 @@ namespace LMRItemTracker
         private PictureBox lastItem1;
         private Label lastItemLabel;
         private ToolStripMenuItem showLastItemToolStripMenuItem;
-        private FlowLayoutPanel lastItemWrapperPanel;
+        private FlowLayoutPanel overviewPanel;
         private ToolStripMenuItem clearLastItemToolStripMenuItem;
         private Label mapCount;
         private PictureBox lastItem2;
@@ -2659,5 +2727,10 @@ namespace LMRItemTracker
         private PictureBox lamulana;
         private FlowLayoutPanel flowLayoutPanel6;
         private ToolStripMenuItem addItemPanel6ToolStripMenuItem;
+        private ToolStripMenuItem showDeathCountToolStripMenuItem;
+        private FlowLayoutPanel deathPanel;
+        private Label deathLabel;
+        private Label deathCount;
+        private ToolStripMenuItem clearDeathCountToolStripMenuItem;
     }
 }

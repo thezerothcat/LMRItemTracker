@@ -9,14 +9,14 @@
     <item id="byte-080" value="w-main-keysword" />
     <item id="byte-081" value="w-main-axe" />
     <item id="byte-082" value="w-main-katana" />
-    <item id="byte-083" value="w-sub-shuriken" />
-    <item id="byte-084" value="w-sub-rshuriken" />
-    <item id="byte-085" value="w-sub-spear" />
-    <item id="byte-086" value="w-sub-flare" />
-    <item id="byte-087" value="w-sub-bomb" />
-    <item id="byte-088" value="w-sub-chakram" />
-    <item id="byte-089" value="w-sub-caltrops" />
-    <item id="byte-08a" value="w-sub-pistol" />
+	<item id="word-008" value="inv-w-sub-shuriken" />
+	<item id="word-009" value="inv-w-sub-rshuriken" />
+	<item id="word-00a" value="inv-w-sub-spear" />
+	<item id="word-00b" value="inv-w-sub-flare" />
+	<item id="word-00c" value="inv-w-sub-bomb" />
+	<item id="word-00d" value="inv-w-sub-chakram" />
+	<item id="word-00e" value="inv-w-sub-caltrops" />
+	<item id="word-00f" value="inv-w-sub-pistol" />
     <item id="byte-08e" value="w-jewel-guidance" />
     <item id="byte-08f" value="w-jewel-maus" />
     <item id="byte-090" value="w-jewel-sun" />
@@ -25,55 +25,56 @@
     <item id="byte-093" value="w-jewel-birth" />
     <item id="byte-094" value="w-jewel-twins" />
     <item id="byte-095" value="w-jewel-dimension" />
-    <item id="byte-096" value="w-scanner" />
-    <item id="byte-097" value="w-djed" />
-    <item id="byte-098" value="w-doll" />
-    <item id="byte-099" value="w-magatama" />
-    <item id="byte-09a" value="w-cog" />
+	<item id="word-014" value="inv-w-scanner" />
+	<item id="word-015" value="inv-w-djed" />
+	<item id="word-016" value="inv-w-doll" />
+	<item id="word-017" value="inv-w-magatama" />
+	<item id="word-018" value="inv-w-cog" />
     <item id="byte-09b" value="w-lamp" />
-    <item id="byte-09c" value="w-pochettekey" />
+	<item id="word-01a" value="inv-w-pochettekey" />
 	<item id="word-01b" value="inv-w-dragonbone" />
-	<item id="byte-09e" value="w-cskull" />
-    <item id="byte-09f" value="w-vessel" />
+	<item id="word-01c" value="inv-w-cskull" />
+	<item id="byte-09f" value="w-vessel" />
 	<item id="word-01e" value="inv-w-pepper" />
-	<item id="byte-0a1" value="w-woman" />
-    <item id="byte-0a2" value="w-endless-key" />
-    <item id="byte-0a3" value="w-serpent" />
-    <item id="byte-0a4" value="w-talisman" />
+	<item id="word-01f" value="inv-w-woman" />
+	<item id="word-020" value="inv-w-endless-key" />
+	<item id="word-021" value="inv-w-serpent" />
+	<item id="word-022" value="invus-talisman" />
+	<item id="byte-0a4" value="w-talisman" />
 	<item id="word-024" value="inv-w-water-case" />
 	<item id="word-025" value="inv-w-heat-case" />
-	<item id="byte-0a7" value="w-shell-horn" />
-    <item id="byte-0a8" value="w-glove" />
+	<item id="word-026" value="inv-w-shell-horn" />
+	<item id="word-027" value="inv-w-glove" />
     <item id="byte-0a9" value="w-grail" />
-    <item id="byte-0aa" value="w-isispendant" />
-    <item id="byte-0ab" value="w-crucifix" />
+	<item id="word-029" value="inv-w-isispendant" />
+	<item id="word-02a" value="inv-w-crucifix" />
 	<item id="word-02b" value="inv-w-helmet" />
-	<item id="byte-0ad" value="w-grapple" />
-    <item id="byte-0ae" value="w-mirror" />
-    <item id="byte-0af" value="w-eye-truth" />
+	<item id="word-02c" value="inv-w-grapple" />
+	<item id="word-02d" value="inv-w-mirror" />
+	<item id="word-02e" value="inv-w-eye-truth" />
 	<item id="word-02f" value="inv-w-ring" />
-	<item id="byte-0b1" value="w-scale" />
-    <item id="byte-0b2" value="w-gauntlet" />
+	<item id="word-030" value="inv-w-scale" />
+	<item id="word-031" value="inv-w-gauntlet" />
 	<item id="word-032" value="inv-w-anchor" />
-    <item id="byte-0b4" value="w-plane" />
-    <item id="byte-0b5" value="w-ocarina" />
-    <item id="byte-0b6" value="w-feather" />
+	<item id="word-033" value="inv-w-plane" />
+	<item id="word-034" value="inv-w-ocarina" />
+	<item id="word-035" value="inv-w-feather" />
 	<item id="word-036" value="inv-w-book" />
-	<item id="byte-0b8" value="w-clothes" />
+	<item id="word-037" value="inv-w-clothes" />
 	<item id="word-038" value="inv-w-scriptures" />
 	<item id="word-039" value="inv-w-hermes" />
-	<item id="byte-0bb" value="w-fruit" />
-    <item id="byte-0bc" value="w-twin-statue" />
+	<item id="word-03a" value="inv-w-fruit" />
+	<item id="word-03b" value="inv-w-twin-statue" />
 	<item id="word-03c" value="inv-w-bracelet" />
-	<item id="byte-0be" value="w-perfume" />
-    <item id="byte-0bf" value="w-spaulder" />
-    <item id="byte-0c0" value="w-dimension-key" />
-    <item id="byte-0c1" value="w-icecape" />
-    <item id="byte-0c2" value="w-seal1" />
-    <item id="byte-0c3" value="w-seal2" />  
-    <item id="byte-0c4" value="w-seal3" />  
-    <item id="byte-0c5" value="w-seal4" />
-    <item id="byte-0c7" value="w-orb-guidance" />
+	<item id="word-03d" value="inv-w-perfume" />
+	<item id="word-03e" value="inv-w-spaulder" />
+	<item id="word-03f" value="inv-w-dimension-key" />
+	<item id="word-040" value="inv-w-icecape" />
+	<item id="word-041" value="inv-w-seal1" />
+	<item id="word-042" value="inv-w-seal2" />
+	<item id="word-043" value="inv-w-seal3" />
+	<item id="word-044" value="inv-w-seal4" />
+	<item id="byte-0c7" value="w-orb-guidance" />
     <item id="byte-0c8" value="w-orb-surface" />
     <item id="byte-0c9" value="w-orb-maus" />
     <item id="byte-0ca" value="w-orb-sun" />
@@ -128,16 +129,16 @@
     <item id="byte-0fb" value="boss-palenque" />
     <item id="byte-0fc" value="boss-baphomet" />
     <item id="byte-0fd" value="boss-tiamat" />
-    <item id="byte-102" value="guardian-kills" comments="counter" />
     <item id="byte-103" value="w-treasures" />
     <item id="byte-104" value="w-diary" />
 	<item id="word-049" value="inv-w-mulanatalisman" />
-	<item id="byte-106" value="w-forbidden" comments="2" />
+	<item id="word-04a" value="inv-w-forbidden" />
+	<item id="word-04c" value="inv-w-msx2" />
 	<item id="byte-108" value="w-medicine-yellow" comments="2" />
 	<item id="byte-109" value="w-medicine-green" comments="2" />
 	<item id="byte-10a" value="w-medicine-red" comments="2" />
-	<item id="byte-10b" value="w-maternity" />
-    <item id="byte-118" value="fairypointsactive" comment="fairy points work and healing fairy in credits" />
+	<item id="word-051" value="inv-w-maternity" />
+	<item id="byte-118" value="fairypointsactive" comment="fairy points work and healing fairy in credits" />
     <item id="byte-aea" value="mantra-amphisbaena" comments="2=recited?" />
     <item id="byte-125" value="mantra-sakit" comments="4=recited" />
     <item id="byte-126" value="mantra-ellmac" comments="4=recited" />
@@ -147,7 +148,6 @@
     <item id="byte-12a" value="mantra-baphomet" comments="4=recited" />
     <item id="byte-12b" value="mantra-tiamat" comments="4=recited" />
     <item id="byte-124" value="mantra-keysword" comments="4=keysword empowered?" />
-	<item id="word-04c" value="inv-w-msx2" />
 	<item id="byte-2e5" value="rosetta-count" />
     <item id="byte-2ea" value="learnt-lamulanese" comments="1" />
 	<item id="byte-338" value="game-started" />
@@ -162,7 +162,6 @@
     <item id="byte-35c" value="orb-shrine-f" />
     <item id="byte-35d" value="orb-ruin" />
     <item id="byte-35e" value="orb-dimension" />
-    <item id="byte-aec" value="xelpud-talisman" comments="?" />
     <item id="byte-a94" value="w-map-a94" />
     <item id="byte-a95" value="w-map-a95" />
     <item id="byte-a96" value="w-map-a96" />
@@ -192,8 +191,6 @@
     <item id="word-046" value="maps" />
     <item id="word-047" value="invtr-treasures" />
     <item id="word-048" value="invus-diary" />
-    <item id="word-049" value="invus-lamulana" />
-    <item id="word-04a" value="inv-forbidden" />
     <item id="word-04b" value="shield-fake" />
     <item id="word-050" value="invus-lamp-unlit" />
     <item id="word-052" value="invtr-grailbr" />
@@ -210,4 +207,6 @@
     <item id="word-072" value="ammo-clip" />
     <item id="word-073" value="ammo-mystery-73" />
     <item id="word-074" value="ammo-bullet" />
+	<item id="flags-1" value="death-tracker" />
+	<item id="byte-27b" value="flail-puzzle" />
 </items>

@@ -25,7 +25,7 @@ namespace LMRItemTracker.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Hermes Boots,Grapple Claw,Feather,Hand Scanner,Glyph Reader,Holy Grail,mirai.exe")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Hermes\' Boots,Grapple Claw,Feather,Hand Scanner,reader.exe,Holy Grail,mirai.exe")]
         public string Panel1Contents {
             get {
                 return ((string)(this["Panel1Contents"]));
@@ -124,7 +124,7 @@ namespace LMRItemTracker.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("320")]
+        [global::System.Configuration.DefaultSettingValueAttribute("356")]
         public int FormWidth {
             get {
                 return ((int)(this["FormWidth"]));
@@ -136,7 +136,7 @@ namespace LMRItemTracker.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("662")]
+        [global::System.Configuration.DefaultSettingValueAttribute("822")]
         public int FormHeight {
             get {
                 return ((int)(this["FormHeight"]));
@@ -203,6 +203,30 @@ namespace LMRItemTracker.Properties {
             }
             set {
                 this["Panel6Contents"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ShowDeathCount {
+            get {
+                return ((bool)(this["ShowDeathCount"]));
+            }
+            set {
+                this["ShowDeathCount"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int DeathCount {
+            get {
+                return ((int)(this["DeathCount"]));
+            }
+            set {
+                this["DeathCount"] = value;
             }
         }
     }

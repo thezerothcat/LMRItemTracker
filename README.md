@@ -6,6 +6,7 @@
 * Includes some information not available in the pause menu, such as which mantras you've recited and whether or not you have the map for Shrine of the Mother
 * Ability to change background color and text color, either by double-clicking the background/text or using the menu option.
 * Ability to reorganize item layout (with some limitations).
+* Death tracker (beta) which automatically saves across sessions and can be manually adjusted by left or right clicking.
 * Ability to save settings.
 
 ## Installation
