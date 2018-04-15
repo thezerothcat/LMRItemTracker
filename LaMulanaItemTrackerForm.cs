@@ -388,7 +388,19 @@ namespace LMRItemTracker
             // to the Result property of the DoWorkEventArgs
             // object. This is will be available to the 
             // RunWorkerCompleted eventhandler.
-            e.Result = LMRItemTracker.Program.DoStuff(this, this._xmlStream);
+            try
+            {
+                e.Result = LMRItemTracker.Program.DoStuff(this, this._xmlStream);
+            }
+            catch (Exception ex)
+            {
+                ShowMessage("Unexpected error: " + ex.Message);
+            }
+        }
+
+        public void ShowMessage(string message)
+        {
+            MessageBox.Show(message);
         }
 
         private String getItemName(String flagName)
@@ -1684,6 +1696,14 @@ namespace LMRItemTracker
             {
                 Properties.Settings.Default.Upgrade();
                 Properties.Settings.Default.UpgradeRequired = false;
+
+                // Upgrade settings from 1.0.11 where item names were different.
+                Properties.Settings.Default.Panel1Contents = Properties.Settings.Default.Panel1Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe");
+                Properties.Settings.Default.Panel2Contents = Properties.Settings.Default.Panel2Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe");
+                Properties.Settings.Default.Panel3Contents = Properties.Settings.Default.Panel3Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe");
+                Properties.Settings.Default.Panel4Contents = Properties.Settings.Default.Panel4Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe");
+                Properties.Settings.Default.Panel5Contents = Properties.Settings.Default.Panel5Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe");
+                Properties.Settings.Default.Panel6Contents = Properties.Settings.Default.Panel6Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe");
                 Properties.Settings.Default.Save();
 
                 updateAlwaysOnTop();
@@ -1701,6 +1721,7 @@ namespace LMRItemTracker
                 {
                     readerPanel.Size = new System.Drawing.Size(40, 40);
                 }
+
 
                 InitializeFormPanels();
             }
