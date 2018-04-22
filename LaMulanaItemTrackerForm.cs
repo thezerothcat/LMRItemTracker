@@ -330,24 +330,15 @@ namespace LMRItemTracker
 
                 if ("Vessel/Medicine".Equals(item))
                 {
-                    if (!"shaded".Equals(Properties.Settings.Default.BackgroundMode))
-                    {
-                        vesselPanel.Controls.Remove(vessel);
-                    }
+                    vesselPanel.Controls.Remove(vessel);
                 }
                 if ("Lamp of Time".Equals(item))
                 {
-                    if (!"shaded".Equals(Properties.Settings.Default.BackgroundMode))
-                    {
-                        lampOfTimePanel.Controls.Remove(lampOfTime);
-                    }
+                    lampOfTimePanel.Controls.Remove(lampOfTime);
                 }
                 if ("Woman Statue".Equals(item))
                 {
-                    if (!"shaded".Equals(Properties.Settings.Default.BackgroundMode))
-                    {
-                        womanPanel.Controls.Remove(maternityStatue);
-                    }
+                    womanPanel.Controls.Remove(maternityStatue);
                 }
                 if ("Shield".Equals(item))
                 {
@@ -1706,6 +1697,9 @@ namespace LMRItemTracker
                 Properties.Settings.Default.Panel6Contents = Properties.Settings.Default.Panel6Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe");
                 Properties.Settings.Default.Save();
 
+                // Fix the backup so we won't lose the upgraded settings on form close.
+                settingsBackup = new SettingsBackup();
+
                 updateAlwaysOnTop();
                 updateFormSize();
                 updateFormColor();
@@ -2986,6 +2980,10 @@ namespace LMRItemTracker
                 return global::LMRItemTracker.Properties.Resources.Icon_reader_blank;
             }
             else if ("w-soft-mantra".Equals(flagName))
+            {
+                return global::LMRItemTracker.Properties.Resources.Icon_mantra_blank;
+            }
+            else if("w-soft-mantra-combo".Equals(flagName))
             {
                 return global::LMRItemTracker.Properties.Resources.Icon_mantra_blank;
             }
