@@ -447,18 +447,16 @@ namespace LMRItemTracker
             this.angelShield.Size = new System.Drawing.Size(40, 40);
             this.angelShield.TabIndex = 102;
             this.angelShield.TabStop = false;
-            this.angelShield.Visible = false;
             // 
             // fakeSilverShield
             // 
             this.fakeSilverShield.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fakeSilverShield.Image = global::LMRItemTracker.Properties.Resources.Icon_silvershield;
+            this.fakeSilverShield.Image = global::LMRItemTracker.Properties.Resources.Icon_silvershield2;
             this.fakeSilverShield.Location = new System.Drawing.Point(0, 0);
             this.fakeSilverShield.Name = "fakeSilverShield";
             this.fakeSilverShield.Size = new System.Drawing.Size(40, 40);
             this.fakeSilverShield.TabIndex = 101;
             this.fakeSilverShield.TabStop = false;
-            this.fakeSilverShield.Visible = false;
             // 
             // silverShield
             // 
@@ -470,7 +468,6 @@ namespace LMRItemTracker
             this.silverShield.Size = new System.Drawing.Size(40, 40);
             this.silverShield.TabIndex = 103;
             this.silverShield.TabStop = false;
-            this.silverShield.Visible = false;
             // 
             // whipsPanel
             // 
