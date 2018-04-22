@@ -343,16 +343,6 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Icon_blank {
-            get {
-                object obj = ResourceManager.GetObject("Icon_blank", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Icon_bomb {
             get {
                 object obj = ResourceManager.GetObject("Icon_bomb", resourceCulture);
