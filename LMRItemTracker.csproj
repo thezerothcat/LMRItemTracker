@@ -70,6 +70,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PistolPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ItemTextPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KeyFairyTrackerBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="LaMulanaItemTrackerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +100,21 @@
     </Compile>
     <Compile Include="Settings.cs" />
     <Compile Include="SettingsBackup.cs" />
+    <Compile Include="MultiStateTrackerBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KeySwordTrackerBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TrackerBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiCountTrackerLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TrackerLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -646,9 +670,6 @@
     <None Include="Resources\Boss_viy_blank.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Icon_blank.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Icon_whip_blank.png" />
   </ItemGroup>
   <ItemGroup>
@@ -710,6 +731,219 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Icon_medicineofthemind_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_shuriken_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_axe_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_flaregun_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_katana_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_knife_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_pistol_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_rollingshuriken_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_whip_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_caltrops_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_chakram_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_earthspear_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_bomb_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_birthseal_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_deathseal_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_lifeseal_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_originseal_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_anchor_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_ankhjewel_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_beolamu_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_bookofthedead_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_bracelet_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_bronzemirror_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_buckler_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_cogofthesoul_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_crucifix_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_crystalskull_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_diary_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_dimensionalkey_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_djedpillar_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_dragonbone_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_eyeoftruth_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_fairyclothes_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_feather_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_fruitofeden_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_gauntlet_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_glove_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_grappleclaw_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_handscanner_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_heatproofcase_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_helmet_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_hermesboots_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_holygrail_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_icecape_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_isispendant_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_keyofeternity_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_keysword_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_lampoftime_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_magatamajewel_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_minidoll_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_msx2_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_mulanatalisman_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_pepper_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_perfume_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_philosophersocarina_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_planemodel_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_pochettekey_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_ring_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_scalesphere_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_scriptures_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_serpentstaff_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_shellhorn_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_software_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_spaulder_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_swimsuit_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_talisman_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_treasures_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_twinstatue_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_vessel_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_waterproofcase_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_womanstatue_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_keyfairy_solid.png" />
   </ItemGroup>
   <Import Project="EyeOfTruth.Shared\EyeOfTruth.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

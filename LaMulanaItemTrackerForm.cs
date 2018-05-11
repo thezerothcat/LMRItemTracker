@@ -8,40 +8,14 @@ namespace LMRItemTracker
 {
     public partial class LaMulanaItemTrackerForm : Form
     {
+        public static bool DialogOpen { get; set; }
         private BackgroundWorker flagListener;
 
         public LaMulanaItemTrackerForm()
         {
             InitializeComponent();
-            ScaleImages(this);
-            this.mantrasRecited = false;
-            this.keySwordCollected = false;
-            this.miracleCollected = false;
-            this.mekuriCollected = false;
+
             this.gameStarted = false;
-
-            this.settingsBackup = new SettingsBackup();
-
-            updateAlwaysOnTop();
-            updateFormSize();
-            updateFormColor();
-            updateTextColor();
-            updateShowLastItem();
-            updateShowDeathCount();
-            updateBackgroundMode();
-            if("shaded".Equals(Properties.Settings.Default.BackgroundMode))
-            {
-                readerPanel.Size = new System.Drawing.Size(40, 56);
-            }
-            else
-            {
-                readerPanel.Size = new System.Drawing.Size(40, 40);
-            }
-            updateShowAmmoCount();
-            InitializePossibleItems();
-            InitializeFormPanels();
-            InitializeMenuOptions();
-            InitializeBackgroundWorker();
         }
 
         private void ScaleImages(Control parent)
@@ -167,10 +141,34 @@ namespace LMRItemTracker
                 Control control = GetControl(item);
                 if (control != null)
                 {
-                    SetStartingImage(item);
+                    if (control is TrackerBox)
+                    {
+                        ((TrackerBox)control).ToggleState(false);
+                    }
+                    else if (control is ItemTextPanel)
+                    {
+                        ((ItemTextPanel)control).ToggleState(false);
+                    }
+                    else if (control is PistolPanel)
+                    {
+                        ((PistolPanel)control).ToggleState(false);
+                    }
+                    else if (control is KeySwordTrackerBox)
+                    {
+                        ((KeySwordTrackerBox)control).ToggleState(false, true);
+                    }
+                    else if (control is KeyFairyTrackerBox)
+                    {
+                        ((KeyFairyTrackerBox)control).ToggleState(false, true);
+                    }
+                    else if (control is MultiStateTrackerBox)
+                    {
+                        ((MultiStateTrackerBox)control).ToggleState(false, 0);
+                    }
                     control.Parent = null;
                 }
             }
+            whip.ToggleState(true, 2);
 
             List<String> itemsInPanel = new List<String>(Properties.Settings.Default.Panel1Contents.Split(','));
             for(int index = 0; index < itemsInPanel.Count; index++)
@@ -290,83 +288,17 @@ namespace LMRItemTracker
             }
         }
 
-        private void SetStartingImage(String item)
-        {
-            PictureBox blankImage = GetBlankImagePictureBox(item);
-            if (blankImage != null)
-            {
-                if ("Mantra/Djed Pillar".Equals(item))
-                {
-                    blankImage.BackgroundImage = getBlankImage(getFlagName(item));
-                    blankImage.Image = null;
-                    Control control = GetControl(item);
-                    if (control != null && Properties.Settings.Default.BackgroundMode.Equals("hide"))
-                    {
-                        control.Visible = false;
-                    }
-                }
-                else if ("Whip".Equals(item))
-                {
-                    whipsPanel.Controls.Add(whip);
-                    whipsPanel.Controls.Remove(chainWhip);
-                    whipsPanel.Controls.Remove(flailWhip);
-
-                    whipCollected = true;
-                    chainWhipCollected = false;
-
-                    blankImage.BackgroundImage = null;
-                    blankImage.Image = getFoundImage(getFlagName(item));
-                }
-                else
-                {
-                    blankImage.BackgroundImage = null;
-                    blankImage.Image = getBlankImage(getFlagName(item));
-                    Control control = GetControl(item);
-                    if (control != null && Properties.Settings.Default.BackgroundMode.Equals("hide"))
-                    {
-                        control.Visible = false;
-                    }
-                }
-
-                if ("Vessel/Medicine".Equals(item))
-                {
-                    vesselPanel.Controls.Remove(vessel);
-                }
-                if ("Lamp of Time".Equals(item))
-                {
-                    lampOfTimePanel.Controls.Remove(lampOfTime);
-                }
-                if ("Woman Statue".Equals(item))
-                {
-                    womanPanel.Controls.Remove(maternityStatue);
-                }
-                if ("Shield".Equals(item))
-                {
-                    bucklerCollected = false;
-                    fakeShieldCollected = false;
-                    silverShieldCollected = false;
-
-                    if (!"shaded".Equals(Properties.Settings.Default.BackgroundMode))
-                    {
-                        shieldsPanel.Controls.Remove(buckler);
-                    }
-                    shieldsPanel.Controls.Remove(fakeSilverShield);
-                    shieldsPanel.Controls.Remove(silverShield);
-                    shieldsPanel.Controls.Remove(angelShield);
-                }
-            }
-        }
         private void InitializeMenuOptions()
         {
             foreach (String item in this.allItems)
             {
-                addItemPanel1ToolStripMenuItem.DropDownItems.Add(CreateMenuItem(item, new System.EventHandler(this.addItemToPanel1)));
-                addItemPanel2ToolStripMenuItem.DropDownItems.Add(CreateMenuItem(item, new System.EventHandler(this.addItemToPanel2)));
-                addItemPanel3ToolStripMenuItem.DropDownItems.Add(CreateMenuItem(item, new System.EventHandler(this.addItemToPanel3)));
-                addItemPanel4ToolStripMenuItem.DropDownItems.Add(CreateMenuItem(item, new System.EventHandler(this.addItemToPanel4)));
-                addItemPanel5ToolStripMenuItem.DropDownItems.Add(CreateMenuItem(item, new System.EventHandler(this.addItemToPanel5)));
-                addItemPanel6ToolStripMenuItem.DropDownItems.Add(CreateMenuItem(item, new System.EventHandler(this.addItemToPanel6)));
-                removeItemToolStripMenuItem.DropDownItems.Add(CreateMenuItem(item, new System.EventHandler(this.removeItemFromPanel)));
+                addItemPanel1ToolStripMenuItem.DropDownItems.Add(CreateMenuItem(item, new System.EventHandler(this.AddItemToPanel1)));
+                addItemPanel2ToolStripMenuItem.DropDownItems.Add(CreateMenuItem(item, new System.EventHandler(this.AddItemToPanel2)));
+                addItemPanel3ToolStripMenuItem.DropDownItems.Add(CreateMenuItem(item, new System.EventHandler(this.AddItemToPanel3)));
+                addItemPanel4ToolStripMenuItem.DropDownItems.Add(CreateMenuItem(item, new System.EventHandler(this.AddItemToPanel4)));
+                addItemPanel5ToolStripMenuItem.DropDownItems.Add(CreateMenuItem(item, new System.EventHandler(this.AddItemToPanel5)));
+                addItemPanel6ToolStripMenuItem.DropDownItems.Add(CreateMenuItem(item, new System.EventHandler(this.AddItemToPanel6)));
+                removeItemToolStripMenuItem.DropDownItems.Add(CreateMenuItem(item, new System.EventHandler(this.RemoveItemFromPanel)));
             }
         }
 
@@ -739,7 +671,7 @@ namespace LMRItemTracker
         {
             if ("w-scanner".Equals(flagName) || "w-doll".Equals(flagName) || "w-magatama".Equals(flagName)
                 || "w-cog".Equals(flagName) || "w-pochettekey".Equals(flagName) || "w-cskull".Equals(flagName)
-                || "w-pepper".Equals(flagName) || "w-woman".Equals(flagName) || "w-endless-key".Equals(flagName)
+                || "w-pepper".Equals(flagName) || "w-endless-key".Equals(flagName)
                 || "w-serpent".Equals(flagName) || "w-talisman".Equals(flagName) || "w-diary".Equals(flagName)
                 || "w-mulanatalisman".Equals(flagName))
             {
@@ -747,7 +679,7 @@ namespace LMRItemTracker
                 SetImage(flagName, isAdd);
             }
             else if ("w-msx2".Equals(flagName) || "w-heat-case".Equals(flagName) || "w-water-case".Equals(flagName)
-                || "w-shell-horn".Equals(flagName) || "w-glove".Equals(flagName) || "w-grail".Equals(flagName)
+                || "w-shell-horn".Equals(flagName) || "w-glove".Equals(flagName)
                 || "w-isispendant".Equals(flagName) || "w-crucifix".Equals(flagName) || "w-helmet".Equals(flagName)
                 || "w-grapple".Equals(flagName) || "w-mirror".Equals(flagName) || "w-eye-truth".Equals(flagName)
                 || "w-ring".Equals(flagName) || "w-scale".Equals(flagName) || "w-gauntlet".Equals(flagName)
@@ -761,47 +693,25 @@ namespace LMRItemTracker
                 // Non-usable items with no special image handling
                 SetImage(flagName, isAdd);
             }
+            else if("w-grail".Equals(flagName))
+            {
+                holyGrail.ToggleState(isAdd, 2);
+            }
+            else if ("w-woman".Equals(flagName))
+            {
+                womanStatue.ToggleState(isAdd, 1);
+            }
             else if ("w-main-chain".Equals(flagName))
             {
-                if (isAdd && Properties.Settings.Default.BackgroundMode.Equals("hide"))
-                {
-                    toggleVisibility(whipsPanel, true);
-                }
-                chainWhipCollected = isAdd;
-                updateWhips();
+                whip.ToggleState(isAdd, 1);
             }
             else if ("w-main-flail".Equals(flagName))
             {
-                if (isAdd && Properties.Settings.Default.BackgroundMode.Equals("hide"))
-                {
-                    toggleVisibility(whipsPanel, true);
-                }
-                flailWhipCollected = isAdd;
-                updateWhips();
+                whip.ToggleState(isAdd, 0);
             }
             else if ("w-main-keysword".Equals(flagName))
             {
-                this.keySwordCollected = isAdd;
-                if (Properties.Settings.Default.BackgroundMode.Equals("hide"))
-                {
-                    toggleVisibility(GetControl("Key Sword"), isAdd);
-                }
-
-                if (isAdd)
-                {
-                    if (this.mantrasRecited)
-                    {
-                        SetImage(keySword, global::LMRItemTracker.Properties.Resources.Icon_keysword_awakened);
-                    }
-                    else
-                    {
-                        SetImage(keySword, global::LMRItemTracker.Properties.Resources.Icon_keysword);
-                    }
-                }
-                else
-                {
-                    SetImage(keySword, getBlankImage("w-main-keysword"));
-                }
+                keySword.ToggleState(isAdd, true);
             }
             else if (flagName.StartsWith("w-main-"))
             {
@@ -814,92 +724,26 @@ namespace LMRItemTracker
             else if ("w-soft-mantra".Equals(flagName))
             {
                 SetImage(flagName, isAdd);
-
-                if (isAdd)
-                {
-                    SetBackgroundImage(mantra, getFoundImage(flagName));
-                }
-                else
-                {
-                    SetBackgroundImage(mantra, getBlankImage("w-soft-mantra-combo"));
-                }
-
-                if (Properties.Settings.Default.BackgroundMode.Equals("hide"))
-                {
-                    bool showMantraPillarCombo = mantra.Image != null || mantra.BackgroundImage != null;
-                    toggleVisibility(mantra, showMantraPillarCombo);
-                }
+                mantra.ToggleState(isAdd);
             }
             else if (flagName.StartsWith("w-soft-"))
             {
                 SetImage(flagName, isAdd);
                 if ("w-soft-mekuri".Equals(flagName))
                 {
-                    if (isAdd)
-                    {
-                        this.mekuriCollected = true;
-                        if (this.miracleCollected)
-                        {
-                            SetImage(keyFairy, global::LMRItemTracker.Properties.Resources.Icon_keyfairy);
-                        }
-                    }
-                    else
-                    {
-                        this.mekuriCollected = false;
-                        SetImage(keyFairy, global::LMRItemTracker.Properties.Resources.Icon_keyfairy_blank);
-                    }
+                    keyFairy.ToggleState(isAdd, false);
                 }
                 else if ("w-soft-miracle".Equals(flagName))
                 {
-                    if (isAdd)
-                    {
-                        this.miracleCollected = true;
-                        if (this.mekuriCollected)
-                        {
-                            SetImage(keyFairy, global::LMRItemTracker.Properties.Resources.Icon_keyfairy);
-                        }
-                    }
-                    else
-                    {
-                        this.miracleCollected = false;
-                        SetImage(keyFairy, global::LMRItemTracker.Properties.Resources.Icon_keyfairy_blank);
-                    }
-                }
-                else if("w-soft-reader".Equals(flagName))
-                {
-                    if(!"shaded".Equals(Properties.Settings.Default.BackgroundMode))
-                    {
-                        if (isAdd)
-                        {
-                            readerPanel.Invoke(new Action(() =>
-                            {
-                                readerPanel.Size = new System.Drawing.Size(40, 56);
-                            }));
-                        }
-                        else
-                        {
-                            readerPanel.Invoke(new Action(() =>
-                            {
-                                readerPanel.Size = new System.Drawing.Size(40, 40);
-                            }));
-                        }
-                    }
+                    keyFairy.ToggleState(isAdd, true);
                 }
                 else if ("w-soft-yagomap".Equals(flagName))
                 {
-                    UpdateCount(skullWallCount, isAdd, 4);
+                    shrinePanel.UpdateCount(isAdd);
                 }
                 else if ("w-soft-yagostr".Equals(flagName))
                 {
-                    UpdateCount(skullWallCount, isAdd, 4);
-                    if (isAdd)
-                    {
-                        SetImage(yagostr, getFoundImage(flagName));
-                    }
-                    else
-                    {
-                        SetImage(yagomap, getBlankImage(flagName));
-                    }
+                    shrinePanel.UpdateCount(isAdd);
                 }
             }
             else if ("w-seal1".Equals(flagName) || "w-seal2".Equals(flagName) || "w-seal3".Equals(flagName) || "w-seal4".Equals(flagName))
@@ -908,86 +752,37 @@ namespace LMRItemTracker
             }
             else if ("w-maternity".Equals(flagName))
             {
-                if (isAdd && Properties.Settings.Default.BackgroundMode.Equals("hide"))
-                {
-                    toggleVisibility(womanPanel, true);
-                }
-                //toggleVisibility(maternityStatue, isAdd);
-                UpdatePanelControls(womanPanel, maternityStatue, womanStatue, isAdd);
+                womanStatue.ToggleState(isAdd, 0);
             }
             else if ("w-vessel".Equals(flagName))
             {
-                if (isAdd && Properties.Settings.Default.BackgroundMode.Equals("hide"))
-                {
-                    toggleVisibility(vesselPanel, true);
-                }
-
-                UpdatePanelControls(vesselPanel, vessel, vesselNotFound, isAdd);
+                vessel.ToggleState(isAdd, 3);
             }
             else if ("w-lamp".Equals(flagName))
             {
-                if (isAdd && Properties.Settings.Default.BackgroundMode.Equals("hide"))
-                {
-                    toggleVisibility(lampOfTimePanel, isAdd);
-                }
-
-                UpdatePanelControls(lampOfTimePanel, lampOfTime, lampOfTimeNotFound, isAdd);
+                lampOfTime.ToggleState(isAdd, 1);
             }
             else if ("w-djed".Equals(flagName))
             {
                 SetImage(flagName, isAdd);
-                if (isAdd)
-                {
-                    SetImage(mantra, global::LMRItemTracker.Properties.Resources.Icon_djedpillar_small);
-                }
-                else
-                {
-                    SetImage(mantra, null);
-                }
-
-                if (Properties.Settings.Default.BackgroundMode.Equals("hide"))
-                {
-                    bool showMantraPillarCombo = mantra.Image != null || mantra.BackgroundImage != null;
-                    toggleVisibility(mantra, showMantraPillarCombo);
-                }
+                mantra.ToggleForeState(isAdd);
             }
             else if ("w-dragonbone".Equals(flagName))
             {
-                UpdateCount(skullWallCount, isAdd, 4);
+                shrinePanel.UpdateCount(isAdd);
                 SetImage(flagName, isAdd);
             }
             else if ("w-medicine-yellow".Equals(flagName))
             {
-                if (isAdd)
-                {
-                    SetImage(vessel, global::LMRItemTracker.Properties.Resources.Icon_medicineofthemind);
-                }
-                else
-                {
-                    SetImage(vessel, global::LMRItemTracker.Properties.Resources.Icon_vessel); // todo: what if we don't have vessel?
-                }
-            }
-            else if ("w-medicine-green".Equals(flagName))
-            {
-                if (isAdd)
-                {
-                    SetImage(vessel, global::LMRItemTracker.Properties.Resources.Icon_medicineofthemind_green);
-                }
-                else
-                {
-                    SetImage(vessel, global::LMRItemTracker.Properties.Resources.Icon_vessel); // todo: what if we don't have vessel?
-                }
+                vessel.ToggleState(isAdd, 2);
             }
             else if ("w-medicine-red".Equals(flagName))
             {
-                if (isAdd)
-                {
-                    SetImage(vessel, global::LMRItemTracker.Properties.Resources.Icon_medicineofthemind_red);
-                }
-                else
-                {
-                    SetImage(vessel, global::LMRItemTracker.Properties.Resources.Icon_vessel); // todo: what if we don't have vessel?
-                }
+                vessel.ToggleState(isAdd, 1);
+            }
+            else if ("w-medicine-green".Equals(flagName))
+            {
+                vessel.ToggleState(isAdd, 0);
             }
         }
 
@@ -1016,71 +811,47 @@ namespace LMRItemTracker
             SetImage(flagName, isAdd);
             if ("w-sub-shuriken".Equals(flagName))
             {
-                if (Properties.Settings.Default.ShowAmmoCount)
-                {
-                    UpdateTextVisibility(shurikenPanel, isAdd);
-                }
+                shurikenPanel.ToggleState(isAdd);
             }
             else if ("w-sub-rshuriken".Equals(flagName))
             {
-                if (Properties.Settings.Default.ShowAmmoCount)
-                {
-                    UpdateTextVisibility(rollingShurikenPanel, isAdd);
-                }
+                rollingShurikenPanel.ToggleState(isAdd);
             }
             else if ("w-sub-caltrops".Equals(flagName))
             {
-                if (Properties.Settings.Default.ShowAmmoCount)
-                {
-                    UpdateTextVisibility(caltropsPanel, isAdd);
-                }
+                caltropsPanel.ToggleState(isAdd);
             }
             else if ("w-sub-spear".Equals(flagName))
             {
-                if (Properties.Settings.Default.ShowAmmoCount)
-                {
-                    UpdateTextVisibility(earthSpearPanel, isAdd);
-                }
+                earthSpearPanel.ToggleState(isAdd);
             }
             else if ("w-sub-flare".Equals(flagName))
             {
-                if (Properties.Settings.Default.ShowAmmoCount)
-                {
-                    UpdateTextVisibility(flareGunPanel, isAdd);
-                }
+                flareGunPanel.ToggleState(isAdd);
             }
             else if ("w-sub-bomb".Equals(flagName))
             {
-                if (Properties.Settings.Default.ShowAmmoCount)
-                {
-                    UpdateTextVisibility(bombPanel, isAdd);
-                }
+                bombPanel.ToggleState(isAdd);
             }
             else if ("w-sub-chakram".Equals(flagName))
             {
-                if (Properties.Settings.Default.ShowAmmoCount)
-                {
-                    UpdateTextVisibility(chakramPanel, isAdd);
-                }
+                chakramPanel.ToggleState(isAdd);
             }
             else if ("w-sub-pistol".Equals(flagName))
             {
-                if (Properties.Settings.Default.ShowAmmoCount)
-                {
-                    UpdateTextVisibility(pistolPanel, isAdd);
-                }
+                pistolPanel.ToggleState(isAdd);
             }
         }
 
-        public void toggleGrail(string flagName, bool isAdd)
+        public void ToggleGrail(string flagName, bool isAdd)
         {
             if ("invtr-grailfull".Equals(flagName))
             {
-                toggleVisibility(grailFull, isAdd);
+                holyGrail.ToggleState(isAdd, 1);
             }
             else if ("invtr-grailbr".Equals(flagName))
             {
-                toggleVisibility(grailBroken, isAdd);
+                holyGrail.ToggleState(isAdd, 0);
             }
         }
 
@@ -1088,167 +859,51 @@ namespace LMRItemTracker
         {
             if ("shield-buckler".Equals(flagName))
             {
-                if (isAdd && Properties.Settings.Default.BackgroundMode.Equals("hide"))
-                {
-                    toggleVisibility(shieldsPanel, true);
-                }
-                bucklerCollected = isAdd;
-                SetImage(flagName, isAdd);
-                updateShields();
+                shield.ToggleState(isAdd, 3);
             }
             else if ("shield-silver".Equals(flagName))
             {
-                if (isAdd && Properties.Settings.Default.BackgroundMode.Equals("hide"))
-                {
-                    toggleVisibility(shieldsPanel, true);
-                }
-                silverShieldCollected = isAdd;
-                updateShields();
+                shield.ToggleState(isAdd, 1);
             }
             else if ("shield-fake".Equals(flagName))
             {
-                if (isAdd && Properties.Settings.Default.BackgroundMode.Equals("hide"))
-                {
-                    toggleVisibility(shieldsPanel, true);
-                }
-                fakeShieldCollected = isAdd;
-                updateShields();
+                shield.ToggleState(isAdd, 2);
             }
             else if ("shield-angel".Equals(flagName))
             {
-                if (isAdd && Properties.Settings.Default.BackgroundMode.Equals("hide"))
-                {
-                    toggleVisibility(shieldsPanel, true);
-                }
-                angelShieldCollected = isAdd;
-                updateShields();
+                shield.ToggleState(isAdd, 0);
             }
         }
 
-        private void updateWhips()
-        {
-            whipsPanel.Invoke(new Action(() =>
-            {
-                if (flailWhipCollected)
-                {
-                    whipsPanel.Controls.Add(flailWhip);
-                }
-                else
-                {
-                    whipsPanel.Controls.Remove(flailWhip);
-                }
-                if (chainWhipCollected)
-                {
-                    whipsPanel.Controls.Add(chainWhip);
-                }
-                else
-                {
-                    whipsPanel.Controls.Remove(chainWhip);
-                }
-                if (whipCollected)
-                {
-                    whipsPanel.Controls.Add(whip);
-                }
-                else
-                {
-                    whipsPanel.Controls.Remove(whip);
-                }
-                whipsPanel.Refresh();
-            }));
-        }
-
-        private void updateShields()
-        {
-            shieldsPanel.Invoke(new Action(() =>
-            {
-                if (angelShieldCollected)
-                {
-                    shieldsPanel.Controls.Add(angelShield);
-                }
-                else
-                {
-                    shieldsPanel.Controls.Remove(angelShield);
-                }
-                if (silverShieldCollected)
-                {
-                    shieldsPanel.Controls.Add(silverShield);
-                }
-                else
-                {
-                    shieldsPanel.Controls.Remove(silverShield);
-                }
-                if (fakeShieldCollected)
-                {
-                    shieldsPanel.Controls.Add(fakeSilverShield);
-                }
-                else
-                {
-                    shieldsPanel.Controls.Remove(fakeSilverShield);
-                }
-                if (bucklerCollected)
-                {
-                    shieldsPanel.Controls.Add(buckler);
-                }
-                else if(!angelShieldCollected && !silverShieldCollected && !fakeShieldCollected && "shaded".Equals(Properties.Settings.Default.BackgroundMode))
-                {
-                    shieldsPanel.Controls.Add(buckler);
-                }
-                else
-                {
-                    shieldsPanel.Controls.Remove(buckler);
-                }
-                shieldsPanel.Refresh();
-            }));
-        }
-
-        internal void updateLampOfTime(string displayname, bool isAdd)
+        internal void UpdateLampOfTime(string displayname, bool isAdd)
         {
             if ("invus-lamp-lit".Equals(displayname))
             {
-                if (isAdd)
-                {
-                    SetImage(lampOfTime, global::LMRItemTracker.Properties.Resources.Icon_lampoftime);
-                }
-            }
-            else if ("invus-lamp-unlit".Equals(displayname))
-            {
-                if (isAdd)
-                {
-                    SetImage(lampOfTime, global::LMRItemTracker.Properties.Resources.Icon_lampoftime_unlit);
-                }
+                lampOfTime.ToggleState(isAdd, 0);
             }
         }
 
-        internal void updateTranslationTablets(byte cur)
+        internal void UpdateTranslationTablets(byte cur)
         {
-            translationTablets.Invoke(new Action(() =>
+            if(cur == 3)
             {
-                if(cur == 3)
-                {
-                    translationTablets.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-                    translationTablets.Text = "100%";
-                }
-                else
-                {
-                    translationTablets.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-                    if (cur == 2)
-                    {
-                        translationTablets.Text = "60%";
-                    }
-                    else if (cur == 1)
-                    {
-                        translationTablets.Text = "20%";
-                    }
-                    else if (cur == 0)
-                    {
-                        translationTablets.Text = "0%";
-                    }
-                }
-                translationTablets.Refresh();
-            }));
+                readerPanel.UpdateCount(100);
+            }
+            else if (cur == 2)
+            {
+                readerPanel.UpdateCount(60);
+            }
+            else if (cur == 1)
+            {
+                readerPanel.UpdateCount(20);
+            }
+            else if (cur == 0)
+            {
+                readerPanel.UpdateCount(0);
+            }
         }
 
-        public void setGameStarted(bool gameStarted)
+        public void SetGameStarted(bool gameStarted)
         {
             this.gameStarted = gameStarted;
         }
@@ -1301,374 +956,139 @@ namespace LMRItemTracker
         {
             if ("boss-amphisbaena".Equals(itemName))
             {
-                if (isAdd)
-                {
-                    SetBackgroundImage(amphisbaena, global::LMRItemTracker.Properties.Resources.Boss_amphisbaena);
-                }
-                else
-                {
-                    if (Properties.Settings.Default.BackgroundMode.Equals("blank"))
-                    {
-                        SetBackgroundImage(amphisbaena, null);
-                    }
-                    else
-                    {
-                        SetBackgroundImage(amphisbaena, global::LMRItemTracker.Properties.Resources.Boss_amphisbaena_blank);
-                    }
-                }
-
-                if (Properties.Settings.Default.BackgroundMode.Equals("hide"))
-                {
-                    toggleVisibility(amphisbaena, isAdd);
-                }
+                amphisbaena.ToggleState(isAdd);
             }
             else if ("boss-sakit".Equals(itemName))
             {
-                if (isAdd)
-                {
-                    SetBackgroundImage(sakit, global::LMRItemTracker.Properties.Resources.Boss_sakit);
-                }
-                else
-                {
-                    if (Properties.Settings.Default.BackgroundMode.Equals("blank"))
-                    {
-                        SetBackgroundImage(sakit, null);
-                    }
-                    else
-                    {
-                        SetBackgroundImage(sakit, global::LMRItemTracker.Properties.Resources.Boss_sakit_blank);
-                    }
-                }
-
-                if (Properties.Settings.Default.BackgroundMode.Equals("hide"))
-                {
-                    toggleVisibility(sakit, isAdd);
-                }
+                sakit.ToggleState(isAdd);
             }
             else if ("boss-ellmac".Equals(itemName))
             {
-                if (isAdd)
-                {
-                    SetBackgroundImage(ellmac, global::LMRItemTracker.Properties.Resources.Boss_ellmac);
-                }
-                else
-                {
-                    if (Properties.Settings.Default.BackgroundMode.Equals("blank"))
-                    {
-                        SetBackgroundImage(ellmac, null);
-                    }
-                    else
-                    {
-                        SetBackgroundImage(ellmac, global::LMRItemTracker.Properties.Resources.Boss_ellmac_blank);
-                    }
-                }
-
-                if (Properties.Settings.Default.BackgroundMode.Equals("hide"))
-                {
-                    toggleVisibility(ellmac, isAdd);
-                }
+                ellmac.ToggleState(isAdd);
             }
             else if ("boss-bahamut".Equals(itemName))
             {
-                if (isAdd)
-                {
-                    SetBackgroundImage(bahamut, global::LMRItemTracker.Properties.Resources.Boss_bahamut);
-                }
-                else
-                {
-                    if (Properties.Settings.Default.BackgroundMode.Equals("blank"))
-                    {
-                        SetBackgroundImage(bahamut, null);
-                    }
-                    else
-                    {
-                        SetBackgroundImage(bahamut, global::LMRItemTracker.Properties.Resources.Boss_bahamut_blank);
-                    }
-                }
-
-                if (Properties.Settings.Default.BackgroundMode.Equals("hide"))
-                {
-                    toggleVisibility(bahamut, isAdd);
-                }
+                bahamut.ToggleState(isAdd);
             }
             else if ("boss-viy".Equals(itemName))
             {
-                if (isAdd)
-                {
-                    SetBackgroundImage(viy, global::LMRItemTracker.Properties.Resources.Boss_viy);
-                }
-                else
-                {
-                    if (Properties.Settings.Default.BackgroundMode.Equals("blank"))
-                    {
-                        SetBackgroundImage(viy, null);
-                    }
-                    else
-                    {
-                        SetBackgroundImage(viy, global::LMRItemTracker.Properties.Resources.Boss_viy_blank);
-                    }
-                }
-
-                if (Properties.Settings.Default.BackgroundMode.Equals("hide"))
-                {
-                    toggleVisibility(viy, isAdd);
-                }
+                viy.ToggleState(isAdd);
             }
             else if ("boss-palenque".Equals(itemName))
             {
-                if (isAdd)
-                {
-                    SetBackgroundImage(palenque, global::LMRItemTracker.Properties.Resources.Boss_palenque);
-                }
-                else
-                {
-                    if (Properties.Settings.Default.BackgroundMode.Equals("blank"))
-                    {
-                        SetBackgroundImage(palenque, null);
-                    }
-                    else
-                    {
-                        SetBackgroundImage(palenque, global::LMRItemTracker.Properties.Resources.Boss_palenque_blank);
-                    }
-                }
-
-                if (Properties.Settings.Default.BackgroundMode.Equals("hide"))
-                {
-                    toggleVisibility(palenque, isAdd);
-                }
+                palenque.ToggleState(isAdd);
             }
             else if ("boss-baphomet".Equals(itemName))
             {
-                if (isAdd)
-                {
-                    SetBackgroundImage(baphomet, global::LMRItemTracker.Properties.Resources.Boss_baphomet);
-                }
-                else
-                {
-                    if (Properties.Settings.Default.BackgroundMode.Equals("blank"))
-                    {
-                        SetBackgroundImage(baphomet, null);
-                    }
-                    else
-                    {
-                        SetBackgroundImage(baphomet, global::LMRItemTracker.Properties.Resources.Boss_baphomet_blank);
-                    }
-                }
-
-                if (Properties.Settings.Default.BackgroundMode.Equals("hide"))
-                {
-                    toggleVisibility(baphomet, isAdd);
-                }
+                baphomet.ToggleState(isAdd);
             }
             else if ("boss-tiamat".Equals(itemName))
             {
-                if (isAdd)
-                {
-                    SetBackgroundImage(tiamat, global::LMRItemTracker.Properties.Resources.Boss_tiamat);
-                }
-                else
-                {
-                    if (Properties.Settings.Default.BackgroundMode.Equals("blank"))
-                    {
-                        SetBackgroundImage(tiamat, null);
-                    }
-                    else
-                    {
-                        SetBackgroundImage(tiamat, global::LMRItemTracker.Properties.Resources.Boss_tiamat_blank);
-                    }
-                }
-
-                if (Properties.Settings.Default.BackgroundMode.Equals("hide"))
-                {
-                    toggleVisibility(tiamat, isAdd);
-                }
+                tiamat.ToggleState(isAdd);
             }
         }
 
-        public void toggleWhip(Boolean isAdd)
+        public void ToggleWhip(Boolean isAdd)
         {
-            SetImage("whip", isAdd);
+            whip.ToggleState(isAdd, 2);
         }
 
-        public void toggleMap(string flagName, Boolean isAdd)
+        public void ToggleMap(string flagName, Boolean isAdd)
         {
-            UpdateCount(mapCount, isAdd, 17);
+            mapsPanel.UpdateCount(isAdd);
             if ("w-map-shrine".Equals(flagName))
             {
-                UpdateCount(skullWallCount, isAdd, 4);
-                if (isAdd)
-                {
-                    SetImage(maps, getFoundImage(flagName));
-                }
-                else
-                {
-                    SetImage(maps, null);
-                }
+                shrinePanel.UpdateCount(isAdd);
+                maps.ToggleForeState(isAdd);
             }
         }
 
-        public void toggleMantra(string flagName, bool isAdd)
+        public void ToggleMantra(string flagName, bool isAdd)
         {
             if ("mantra-keysword".Equals(flagName))
             {
-                if (isAdd)
-                {
-                    this.mantrasRecited = true;
-                    if (this.keySwordCollected)
-                    {
-                        SetImage(keySword, global::LMRItemTracker.Properties.Resources.Icon_keysword_awakened);
-                    }
-                }
-                else
-                {
-                    this.mantrasRecited = false;
-                    if (this.keySwordCollected)
-                    {
-                        SetImage(keySword, global::LMRItemTracker.Properties.Resources.Icon_keysword);
-                    }
-                }
+                keySword.ToggleState(isAdd, false);
             }
             else if ("mantra-amphisbaena".Equals(flagName))
             {
-                if (isAdd)
-                {
-                    SetImage(amphisbaena, global::LMRItemTracker.Properties.Resources.Boss_sealed);
-                }
-                else
-                {
-                    SetImage(amphisbaena, null);
-                }
+                amphisbaena.ToggleForeState(isAdd);
             }
             else if ("mantra-sakit".Equals(flagName))
             {
-                if (isAdd)
-                {
-                    SetImage(sakit, global::LMRItemTracker.Properties.Resources.Boss_sealed);
-                }
-                else
-                {
-                    SetImage(sakit, null);
-                }
+                sakit.ToggleForeState(isAdd);
             }
             else if ("mantra-ellmac".Equals(flagName))
             {
-                if (isAdd)
-                {
-                    SetImage(ellmac, global::LMRItemTracker.Properties.Resources.Boss_sealed);
-                }
-                else
-                {
-                    SetImage(ellmac, null);
-                }
+                ellmac.ToggleForeState(isAdd);
             }
             else if ("mantra-bahamut".Equals(flagName))
             {
-                if (isAdd)
-                {
-                    SetImage(bahamut, global::LMRItemTracker.Properties.Resources.Boss_sealed);
-                }
-                else
-                {
-                    SetImage(bahamut, null);
-                }
+                bahamut.ToggleForeState(isAdd);
             }
             else if ("mantra-viy".Equals(flagName))
             {
-                if (isAdd)
-                {
-                    SetImage(viy, global::LMRItemTracker.Properties.Resources.Boss_sealed);
-                }
-                else
-                {
-                    SetImage(viy, null);
-                }
+                viy.ToggleForeState(isAdd);
             }
             else if ("mantra-palenque".Equals(flagName))
             {
-                if (isAdd)
-                {
-                    SetImage(palenque, global::LMRItemTracker.Properties.Resources.Boss_sealed);
-                }
-                else
-                {
-                    SetImage(palenque, null);
-                }
+                palenque.ToggleForeState(isAdd);
             }
             else if ("mantra-baphomet".Equals(flagName))
             {
-                if (isAdd)
-                {
-                    SetImage(baphomet, global::LMRItemTracker.Properties.Resources.Boss_sealed);
-                }
-                else
-                {
-                    SetImage(baphomet, null);
-                }
+                baphomet.ToggleForeState(isAdd);
             }
             else if ("mantra-tiamat".Equals(flagName))
             {
-                if (isAdd)
-                {
-                    SetImage(tiamat, global::LMRItemTracker.Properties.Resources.Boss_sealed);
-                }
-                else
-                {
-                    SetImage(tiamat, null);
-                }
+                tiamat.ToggleForeState(isAdd);
             }
         }
 
-        public void setAmmoCount(string flagName, int newCount)
+        public void SetAmmoCount(string flagName, int newCount)
         {
-            if("ammo-shuriken".Equals(flagName))
+            if ("ammo-shuriken".Equals(flagName))
             {
-                UpdateCount(shurikenAmmoCount, newCount, 150);
+                shurikenPanel.UpdateCount(newCount);
             }
             else if ("ammo-roll-shuriken".Equals(flagName))
             {
-                UpdateCount(rollingShurikenAmmoCount, newCount, 100);
+                rollingShurikenPanel.UpdateCount(newCount);
             }
             else if ("ammo-spear".Equals(flagName))
             {
-                UpdateCount(earthSpearAmmoCount, newCount, 80);
+                earthSpearPanel.UpdateCount(newCount);
             }
             else if ("ammo-flare".Equals(flagName))
             {
-                UpdateCount(flareGunAmmoCount, newCount, 80);
+                flareGunPanel.UpdateCount(newCount);
             }
             else if ("ammo-bomb".Equals(flagName))
             {
-                UpdateCount(bombAmmoCount, newCount, 30);
+                bombPanel.UpdateCount(newCount);
             }
             else if ("ammo-chakram".Equals(flagName))
             {
-                UpdateCount(chakramAmmoCount, newCount, 10);
+                chakramPanel.UpdateCount(newCount);
             }
             else if ("ammo-caltrop".Equals(flagName))
             {
-                UpdateCount(caltropsAmmoCount, newCount, 80);
+                caltropsPanel.UpdateCount(newCount);
             }
             else if ("ammo-clip".Equals(flagName))
             {
-                updatePistolAmmoCount(pistolAmmoCount, true, newCount);
+                pistolPanel.UpdateCount(newCount, true);
             }
             else if ("ammo-bullet".Equals(flagName))
             {
-                updatePistolAmmoCount(pistolAmmoCount, false, newCount);
+                pistolPanel.UpdateCount(newCount, false);
             }
             else if ("ankh-jewels".Equals(flagName))
             {
-                bool isAdd = newCount != 0;
-                SetImage(flagName, isAdd);
-                if (Properties.Settings.Default.ShowAmmoCount)
-                {
-                    UpdateTextVisibility(ankhJewelPanel, isAdd);
-                }
-                UpdateCount(ankhJewelCount, newCount, 8);
+                ankhJewelPanel.Item.Collected = newCount != 0;
+                ankhJewelPanel.UpdateCount(newCount);
             }
         }
 
-        public void updateDeathCount(bool isAdd)
+        public void UpdateDeathCount(bool isAdd)
         {
             if (isAdd)
             {
@@ -1696,29 +1116,23 @@ namespace LMRItemTracker
                 Properties.Settings.Default.Panel5Contents = Properties.Settings.Default.Panel5Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe");
                 Properties.Settings.Default.Panel6Contents = Properties.Settings.Default.Panel6Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe");
                 Properties.Settings.Default.Save();
-
-                // Fix the backup so we won't lose the upgraded settings on form close.
-                settingsBackup = new SettingsBackup();
-
-                updateAlwaysOnTop();
-                updateFormSize();
-                updateFormColor();
-                updateTextColor();
-                updateShowLastItem();
-                updateShowDeathCount();
-                updateShowAmmoCount();
-                if ("shaded".Equals(Properties.Settings.Default.BackgroundMode))
-                {
-                    readerPanel.Size = new System.Drawing.Size(40, 56);
-                }
-                else
-                {
-                    readerPanel.Size = new System.Drawing.Size(40, 40);
-                }
-
-
-                InitializeFormPanels();
             }
+            ScaleImages(this);
+
+            InitializePossibleItems();
+            InitializeMenuOptions();
+
+            // Create settings backup so we won't lose the upgraded settings on form close.
+            settingsBackup = new SettingsBackup();
+
+            updateAlwaysOnTop();
+            updateFormSize();
+            UpdateFormColor();
+            UpdateTextColor();
+            updateBackgroundMode();
+            updateShowLastItem();
+            updateShowDeathCount();
+            InitializeFormPanels();
 
             try
             {
@@ -1730,28 +1144,70 @@ namespace LMRItemTracker
                 MessageBox.Show("Error accessing resources!");
             }
 
+            InitializeBackgroundWorker();
             flagListener.RunWorkerAsync();
         }
 
-        private void LaMulanaItemTrackerForm_DoubleClick(object sender, EventArgs e)
+        private void SelectFormColor(object sender, EventArgs e)
         {
+            DialogOpen = true;
             if (formColorDialog.ShowDialog() == DialogResult.OK)
             {
                 Properties.Settings.Default.BackgroundColor = formColorDialog.Color;
-                updateFormColor();
+                UpdateFormColor();
             }
+            DialogOpen = false;
+            Redraw();
         }
 
-        private void textDoubleClick(object sender, EventArgs e)
+        private void SelectTextColor(object sender, EventArgs e)
         {
+            DialogOpen = true;
             if (textColorDialog.ShowDialog() == DialogResult.OK)
             {
                 Properties.Settings.Default.TextColor = textColorDialog.Color;
-                updateTextColor();
+                UpdateTextColor();
             }
+            DialogOpen = false;
+            Redraw();
         }
 
-        private void addItemToPanel1(object sender, EventArgs e)
+        private void SelectItemColor(object sender, EventArgs e)
+        {
+            DialogOpen = true;
+            if (itemColorDialog.ShowDialog() == DialogResult.OK)
+            {
+                Properties.Settings.Default.ItemColor = itemColorDialog.Color;
+                if("solid".Equals(Properties.Settings.Default.BackgroundMode))
+                {
+                    foreach (String item in this.allItems)
+                    {
+                        Control control = GetControl(item);
+                        if (control != null)
+                        {
+                            if (control is TrackerBox)
+                            {
+                                if(control.InvokeRequired)
+                                {
+                                    control.Invoke(new Action(() =>
+                                    {
+                                        control.Refresh();
+                                    }));
+                                }
+                                else
+                                {
+                                    control.Refresh();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            DialogOpen = false;
+            Redraw();
+        }
+
+        private void AddItemToPanel1(object sender, EventArgs e)
         {
             if (sender is ToolStripMenuItem)
             {
@@ -1775,11 +1231,13 @@ namespace LMRItemTracker
                     Properties.Settings.Default.Panel4Contents = rebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, false);
                     Properties.Settings.Default.Panel5Contents = rebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, false);
                     Properties.Settings.Default.Panel6Contents = rebuildPanelContents(Properties.Settings.Default.Panel6Contents, itemName, false);
+
+                    Redraw();
                 }
             }
         }
 
-        private void addItemToPanel2(object sender, EventArgs e)
+        private void AddItemToPanel2(object sender, EventArgs e)
         {
             if (sender is ToolStripMenuItem)
             {
@@ -1803,11 +1261,13 @@ namespace LMRItemTracker
                     Properties.Settings.Default.Panel4Contents = rebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, false);
                     Properties.Settings.Default.Panel5Contents = rebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, false);
                     Properties.Settings.Default.Panel6Contents = rebuildPanelContents(Properties.Settings.Default.Panel6Contents, itemName, false);
+
+                    Redraw();
                 }
             }
         }
 
-        private void addItemToPanel3(object sender, EventArgs e)
+        private void AddItemToPanel3(object sender, EventArgs e)
         {
             if (sender is ToolStripMenuItem)
             {
@@ -1831,11 +1291,13 @@ namespace LMRItemTracker
                     Properties.Settings.Default.Panel4Contents = rebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, false);
                     Properties.Settings.Default.Panel5Contents = rebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, false);
                     Properties.Settings.Default.Panel6Contents = rebuildPanelContents(Properties.Settings.Default.Panel6Contents, itemName, false);
+
+                    Redraw();
                 }
             }
         }
 
-        private void addItemToPanel4(object sender, EventArgs e)
+        private void AddItemToPanel4(object sender, EventArgs e)
         {
             if (sender is ToolStripMenuItem)
             {
@@ -1859,11 +1321,13 @@ namespace LMRItemTracker
                     Properties.Settings.Default.Panel3Contents = rebuildPanelContents(Properties.Settings.Default.Panel3Contents, itemName, false);
                     Properties.Settings.Default.Panel5Contents = rebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, false);
                     Properties.Settings.Default.Panel6Contents = rebuildPanelContents(Properties.Settings.Default.Panel6Contents, itemName, false);
+
+                    Redraw();
                 }
             }
         }
 
-        private void addItemToPanel5(object sender, EventArgs e)
+        private void AddItemToPanel5(object sender, EventArgs e)
         {
             if (sender is ToolStripMenuItem)
             {
@@ -1887,11 +1351,13 @@ namespace LMRItemTracker
                     Properties.Settings.Default.Panel3Contents = rebuildPanelContents(Properties.Settings.Default.Panel3Contents, itemName, false);
                     Properties.Settings.Default.Panel4Contents = rebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, false);
                     Properties.Settings.Default.Panel6Contents = rebuildPanelContents(Properties.Settings.Default.Panel6Contents, itemName, false);
+
+                    Redraw();
                 }
             }
         }
 
-        private void addItemToPanel6(object sender, EventArgs e)
+        private void AddItemToPanel6(object sender, EventArgs e)
         {
             if (sender is ToolStripMenuItem)
             {
@@ -1915,11 +1381,13 @@ namespace LMRItemTracker
                     Properties.Settings.Default.Panel3Contents = rebuildPanelContents(Properties.Settings.Default.Panel3Contents, itemName, false);
                     Properties.Settings.Default.Panel4Contents = rebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, false);
                     Properties.Settings.Default.Panel5Contents = rebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, false);
+
+                    Redraw();
                 }
             }
         }
 
-        private void removeItemFromPanel(object sender, EventArgs e)
+        private void RemoveItemFromPanel(object sender, EventArgs e)
         {
             if (sender is ToolStripMenuItem)
             {
@@ -1950,6 +1418,8 @@ namespace LMRItemTracker
                     Properties.Settings.Default.Panel4Contents = rebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, false);
                     Properties.Settings.Default.Panel5Contents = rebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, false);
                     Properties.Settings.Default.Panel6Contents = rebuildPanelContents(Properties.Settings.Default.Panel6Contents, itemName, false);
+
+                    Redraw();
                 }
             }
         }
@@ -2720,376 +2190,6 @@ namespace LMRItemTracker
             return null;
         }
 
-        private System.Drawing.Bitmap getBlankImage(string flagName)
-        {
-            if (!Properties.Settings.Default.BackgroundMode.Equals("shaded"))
-            {
-                if ("w-soft-mantra-combo".Equals(flagName))
-                {
-                    return null;
-                }
-                return null;
-            }
-
-            if ("ankh-jewels".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_ankhjewel_blank;
-            }
-            if ("w-scanner".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_handscanner_blank;
-            }
-            else if ("w-grail".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_holygrail_blank;
-            }
-            else if ("w-doll".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_minidoll_blank;
-            }
-            else if ("w-magatama".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_magatamajewel_blank;
-            }
-            else if ("w-pepper".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_pepper_blank;
-            }
-            else if ("w-woman".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_womanstatue_blank;
-            }
-            else if ("w-serpent".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_serpentstaff_blank;
-            }
-            else if ("w-glove".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_glove_blank;
-            }
-            else if ("w-crucifix".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_crucifix_blank;
-            }
-            else if ("w-eye-truth".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_eyeoftruth_blank;
-            }
-            else if ("w-scale".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_scalesphere_blank;
-            }
-            else if ("w-gauntlet".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_gauntlet_blank;
-            }
-            else if ("w-anchor".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_anchor_blank;
-            }
-            else if ("w-book".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_bookofthedead_blank;
-            }
-            else if ("w-clothes".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_fairyclothes_blank;
-            }
-            else if ("w-scriptures".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_scriptures_blank;
-            }
-            else if ("w-bracelet".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_bracelet_blank;
-            }
-            else if ("w-perfume".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_perfume_blank;
-            }
-            else if ("w-spaulder".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_spaulder_blank;
-            }
-            else if ("w-icecape".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_icecape_blank;
-            }
-            else if ("w-talisman".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_talisman_blank;
-            }
-            else if ("w-diary".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_diary_blank;
-            }
-            else if ("w-mulanatalisman".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_mulanatalisman_blank;
-            }
-            else if ("w-dimension-key".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_dimensionalkey_blank;
-            }
-            else if ("w-djed".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_djedpillar_blank;
-            }
-            else if ("w-cog".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_cogofthesoul_blank;
-            }
-            else if ("w-dragonbone".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_dragonbone_blank;
-            }
-            else if ("w-cskull".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_crystalskull_blank;
-            }
-            else if ("w-endless-key".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_keyofeternity_blank;
-            }
-            else if ("w-isispendant".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_isispendant_blank;
-            }
-            else if ("w-helmet".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_helmet_blank;
-            }
-            else if ("w-grapple".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_grappleclaw_blank;
-            }
-            else if ("w-mirror".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_bronzemirror_blank;
-            }
-            else if ("w-ring".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_ring_blank;
-            }
-            else if ("w-plane".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_planemodel_blank;
-            }
-            else if ("w-ocarina".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_philosophersocarina_blank;
-            }
-            else if ("w-feather".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_feather_blank;
-            }
-            else if ("w-hermes".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_hermesboots_blank;
-            }
-            else if ("w-fruit".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_fruitofeden_blank;
-            }
-            else if ("w-twin-statue".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_twinstatue_blank;
-            }
-            else if ("w-treasures".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_treasures_blank;
-            }
-            else if ("w-pochettekey".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_pochettekey_blank;
-            }
-            else if ("w-msx2".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_msx2_blank;
-            }
-            else if ("w-lamp".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_lampoftime_blank;
-            }
-            else if ("w-main-axe".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_axe_blank;
-            }
-            else if ("w-main-keysword".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_keysword_blank;
-            }
-            else if ("w-main-knife".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_knife_blank;
-            }
-            else if ("w-main-katana".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_katana_blank;
-            }
-            else if ("w-sub-shuriken".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_shuriken_blank;
-            }
-            else if ("w-sub-rshuriken".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_rollingshuriken_blank;
-            }
-            else if ("w-sub-caltrops".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_caltrops_blank;
-            }
-            else if ("w-sub-spear".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_earthspear_blank;
-            }
-            else if ("w-sub-flare".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_flaregun_blank;
-            }
-            else if ("w-sub-bomb".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_bomb_blank;
-            }
-            else if ("w-sub-chakram".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_chakram_blank;
-            }
-            else if ("w-sub-pistol".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_pistol_blank;
-            }
-            else if ("w-seal1".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_originseal_blank;
-            }
-            else if ("w-seal2".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_birthseal_blank;
-            }
-            else if ("w-seal3".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_lifeseal_blank;
-            }
-            else if ("w-seal4".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_deathseal_blank;
-            }
-            else if ("w-soft-reader".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_reader_blank;
-            }
-            else if ("w-soft-mantra".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_mantra_blank;
-            }
-            else if("w-soft-mantra-combo".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_mantra_blank;
-            }
-            else if ("w-soft-torude".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_torude_blank;
-            }
-            else if ("w-soft-mirai".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_mirai_blank;
-            }
-            else if ("w-soft-miracle".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_miracle_blank;
-            }
-            else if ("w-soft-yagomap".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_yagomap_blank;
-            }
-            else if ("w-soft-yagostr".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_yagostr_blank;
-            }
-            else if ("w-soft-xmailer".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_xmailer_blank;
-            }
-            else if ("w-soft-bunemon".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_bunemon_blank;
-            }
-            else if ("w-soft-bunplus".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_bunplus_blank;
-            }
-            else if ("w-soft-guild".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_guild_blank;
-            }
-            else if ("w-soft-emusic".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_emusic_blank;
-            }
-            else if ("w-soft-beolamu".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_beolamu_blank;
-            }
-            else if ("w-soft-randc".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_randc_blank;
-            }
-            else if ("w-soft-mekuri".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_mekuri_blank;
-            }
-            else if ("w-soft-deathv".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_deathv_blank;
-            }
-            else if ("w-soft-capstar".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_capstar_blank;
-            }
-            else if ("w-soft-move".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_move_blank;
-            }
-            else if ("w-soft-bounce".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_bounce_blank;
-            }
-            else if ("w-soft-lamulana".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_lamulana_blank;
-            }
-            else if ("shield-buckler".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_buckler_blank;
-            }
-            else if ("w-forbidden".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_swimsuit_blank;
-            }
-            else if ("whip".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_whip_blank;
-            }
-            else if ("w-vessel".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_vessel_blank;
-            }
-            else if ("w-shell-horn".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_shellhorn_blank;
-            }
-            else if ("w-heat-case".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_heatproofcase_blank;
-            }
-            else if ("w-water-case".Equals(flagName))
-            {
-                return global::LMRItemTracker.Properties.Resources.Icon_waterproofcase_blank;
-            }
-            return null;
-        }
-
         public Control GetControl(String itemName)
         {
             if ("Hermes' Boots".Equals(itemName))
@@ -3382,7 +2482,7 @@ namespace LMRItemTracker
             }
             if ("Woman Statue".Equals(itemName))
             {
-                return womanPanel;
+                return womanStatue;
             }
             if ("Key Fairy Combo".Equals(itemName))
             {
@@ -3394,15 +2494,15 @@ namespace LMRItemTracker
             }
             if ("Holy Grail".Equals(itemName))
             {
-                return grailPanel;
+                return holyGrail;
             }
             if ("Whip".Equals(itemName))
             {
-                return whipsPanel;
+                return whip;
             }
             if ("Shield".Equals(itemName))
             {
-                return shieldsPanel;
+                return shield;
             }
             if ("Shuriken".Equals(itemName))
             {
@@ -3438,7 +2538,7 @@ namespace LMRItemTracker
             }
             if ("Buckler".Equals(itemName))
             {
-                return shieldsPanel;
+                return shield;
             }
             if ("Mantra/Djed Pillar".Equals(itemName))
             {
@@ -3446,7 +2546,7 @@ namespace LMRItemTracker
             }
             if ("Vessel/Medicine".Equals(itemName))
             {
-                return vesselPanel;
+                return vessel;
             }
             if ("Key Sword".Equals(itemName))
             {
@@ -3454,7 +2554,7 @@ namespace LMRItemTracker
             }
             if ("Lamp of Time".Equals(itemName))
             {
-                return lampOfTimePanel;
+                return lampOfTime;
             }
             if ("Maps".Equals(itemName))
             {
@@ -3463,384 +2563,6 @@ namespace LMRItemTracker
             if ("Ankh Jewels".Equals(itemName))
             {
                 return ankhJewelPanel;
-            }
-            return null;
-        }
-
-        public PictureBox GetFoundImagePictureBox(String itemName)
-        {
-            if ("Lamp of Time".Equals(itemName))
-            {
-                return lampOfTime;
-            }
-            if ("Vessel/Medicine".Equals(itemName))
-            {
-                return vessel;
-            }
-            return GetBlankImagePictureBox(itemName);
-        }
-
-        public PictureBox GetBlankImagePictureBox(String itemName)
-        {
-            if ("Whip".Equals(itemName))
-            {
-                return whip;
-            }
-            if ("Knife".Equals(itemName))
-            {
-                return knife;
-            }
-            if ("Key Sword".Equals(itemName))
-            {
-                return keySword;
-            }
-            if ("Axe".Equals(itemName))
-            {
-                return axe;
-            }
-            if ("Katana".Equals(itemName))
-            {
-                return katana;
-            }
-            if ("Shuriken".Equals(itemName))
-            {
-                return shuriken;
-            }
-            if ("Rolling Shuriken".Equals(itemName))
-            {
-                return rollingShuriken;
-            }
-            if ("Earth Spear".Equals(itemName))
-            {
-                return earthSpear;
-            }
-            if ("Flare Gun".Equals(itemName))
-            {
-                return flareGun;
-            }
-            if ("Bomb".Equals(itemName))
-            {
-                return bomb;
-            }
-            if ("Chakram".Equals(itemName))
-            {
-                return chakram;
-            }
-            if ("Caltrops".Equals(itemName))
-            {
-                return caltrops;
-            }
-            if ("Pistol".Equals(itemName))
-            {
-                return pistol;
-            }
-            if ("Buckler".Equals(itemName))
-            {
-                return buckler;
-            }
-            if ("Shield".Equals(itemName))
-            {
-                return buckler;
-            }
-            if ("Ankh Jewels".Equals(itemName))
-            {
-                return ankhJewels;
-            }
-            if ("Hand Scanner".Equals(itemName))
-            {
-                return scanner;
-            }
-            if ("Djed Pillar".Equals(itemName))
-            {
-                return djedPillar;
-            }
-            if ("Mini Doll".Equals(itemName))
-            {
-                return miniDoll;
-            }
-            if ("Magatama Jewel".Equals(itemName))
-            {
-                return magatamaJewel;
-            }
-            if ("Cog of the Soul".Equals(itemName))
-            {
-                return cogOfTheSoul;
-            }
-            if ("Lamp of Time".Equals(itemName))
-            {
-                return lampOfTimeNotFound;
-            }
-            if ("Pochette Key".Equals(itemName))
-            {
-                return pochetteKey;
-            }
-            if ("Dragon Bone".Equals(itemName))
-            {
-                return dragonBone;
-            }
-            if ("Crystal Skull".Equals(itemName))
-            {
-                return crystalSkull;
-            }
-            if ("Vessel/Medicine".Equals(itemName))
-            {
-                return vesselNotFound;
-            }
-            if ("Pepper".Equals(itemName))
-            {
-                return pepper;
-            }
-            if ("Woman Statue".Equals(itemName))
-            {
-                return womanStatue;
-            }
-            if ("Key of Eternity".Equals(itemName))
-            {
-                return keyOfEternity;
-            }
-            if ("Serpent Staff".Equals(itemName))
-            {
-                return serpentStaff;
-            }
-            if ("Talisman".Equals(itemName))
-            {
-                return talisman;
-            }
-            if ("Diary".Equals(itemName))
-            {
-                return diary;
-            }
-            if ("Mulana Talisman".Equals(itemName))
-            {
-                return mulanaTalisman;
-            }
-            if ("Mobile Super X2".Equals(itemName))
-            {
-                return msx2;
-            }
-            if ("Waterproof Case".Equals(itemName))
-            {
-                return waterproofCase;
-            }
-            if ("Heatproof Case".Equals(itemName))
-            {
-                return heatproofCase;
-            }
-            if ("Shell Horn".Equals(itemName))
-            {
-                return shellHorn;
-            }
-            if ("Glove".Equals(itemName))
-            {
-                return glove;
-            }
-            if ("Holy Grail".Equals(itemName))
-            {
-                return grail;
-            }
-            if ("Isis' Pendant".Equals(itemName))
-            {
-                return isisPendant;
-            }
-            if ("Crucifix".Equals(itemName))
-            {
-                return crucifix;
-            }
-            if ("Helmet".Equals(itemName))
-            {
-                return helmet;
-            }
-            if ("Grapple Claw".Equals(itemName))
-            {
-                return grappleClaw;
-            }
-            if ("Bronze Mirror".Equals(itemName))
-            {
-                return bronzeMirror;
-            }
-            if ("Eye of Truth".Equals(itemName))
-            {
-                return eyeOfTruth;
-            }
-            if ("Ring".Equals(itemName))
-            {
-                return ring;
-            }
-            if ("Scalesphere".Equals(itemName))
-            {
-                return scalesphere;
-            }
-            if ("Gauntlet".Equals(itemName))
-            {
-                return gauntlet;
-            }
-            if ("Treasures".Equals(itemName))
-            {
-                return treasures;
-            }
-            if ("Anchor".Equals(itemName))
-            {
-                return anchor;
-            }
-            if ("Plane Model".Equals(itemName))
-            {
-                return planeModel;
-            }
-            if ("Philosopher's Ocarina".Equals(itemName))
-            {
-                return ocarina;
-            }
-            if ("Feather".Equals(itemName))
-            {
-                return feather;
-            }
-            if ("Book of the Dead".Equals(itemName))
-            {
-                return bookOfTheDead;
-            }
-            if ("Fairy Clothes".Equals(itemName))
-            {
-                return fairyClothes;
-            }
-            if ("Scriptures".Equals(itemName))
-            {
-                return scriptures;
-            }
-            if ("Hermes' Boots".Equals(itemName))
-            {
-                return hermesBoots;
-            }
-            if ("Fruit of Eden".Equals(itemName))
-            {
-                return fruitOfEden;
-            }
-            if ("Twin Statue".Equals(itemName))
-            {
-                return twinStatue;
-            }
-            if ("Bracelet".Equals(itemName))
-            {
-                return bracelet;
-            }
-            if ("Perfume".Equals(itemName))
-            {
-                return perfume;
-            }
-            if ("Spaulder".Equals(itemName))
-            {
-                return spaulder;
-            }
-            if ("Dimensional Key".Equals(itemName))
-            {
-                return dimensionalKey;
-            }
-            if ("Ice Cape".Equals(itemName))
-            {
-                return iceCape;
-            }
-            if ("Origin Seal".Equals(itemName))
-            {
-                return originSeal;
-            }
-            if ("Birth Seal".Equals(itemName))
-            {
-                return birthSeal;
-            }
-            if ("Life Seal".Equals(itemName))
-            {
-                return lifeSeal;
-            }
-            if ("Death Seal".Equals(itemName))
-            {
-                return deathSeal;
-            }
-            if ("reader.exe".Equals(itemName))
-            {
-                return reader;
-            }
-            if ("xmailer.exe".Equals(itemName))
-            {
-                return xmailer;
-            }
-            if ("yagomap.exe".Equals(itemName))
-            {
-                return yagomap;
-            }
-            if ("yagostr.exe".Equals(itemName))
-            {
-                return yagostr;
-            }
-            if ("bunemon.exe".Equals(itemName))
-            {
-                return bunemon;
-            }
-            if ("bunplus.com".Equals(itemName))
-            {
-                return bunplus;
-            }
-            if ("torude.exe".Equals(itemName))
-            {
-                return torude;
-            }
-            if ("guild.exe".Equals(itemName))
-            {
-                return guild;
-            }
-            if ("mantra.exe".Equals(itemName))
-            {
-                return mantraSingle;
-            }
-            if ("emusic.exe".Equals(itemName))
-            {
-                return emusic;
-            }
-            if ("beolamu.exe".Equals(itemName))
-            {
-                return beolamu;
-            }
-            if ("deathv.exe".Equals(itemName))
-            {
-                return deathv;
-            }
-            if ("randc.exe".Equals(itemName))
-            {
-                return randc;
-            }
-            if ("capstar.exe".Equals(itemName))
-            {
-                return capstar;
-            }
-            if ("move.exe".Equals(itemName))
-            {
-                return move;
-            }
-            if ("mekuri.exe".Equals(itemName))
-            {
-                return mekuri;
-            }
-            if ("bounce.exe".Equals(itemName))
-            {
-                return bounce;
-            }
-            if ("miracle.exe".Equals(itemName))
-            {
-                return miracle;
-            }
-            if ("mirai.exe".Equals(itemName))
-            {
-                return mirai;
-            }
-            if ("lamulana.exe".Equals(itemName))
-            {
-                return lamulana;
-            }
-            if ("Provocative Bathing Suit".Equals(itemName))
-            {
-                return swimsuit;
-            }
-            if ("Mantra/Djed Pillar".Equals(itemName))
-            {
-                return mantra;
             }
             return null;
         }
@@ -3878,18 +2600,28 @@ namespace LMRItemTracker
             if (Properties.Settings.Default.BackgroundMode.Equals("shaded"))
             {
                 shadedImageToolStripMenuItem.Checked = true;
+                solidImageToolStripMenuItem.Checked = false;
+                noImageToolStripMenuItem.Checked = false;
+                hideImageToolStripMenuItem.Checked = false;
+            }
+            else if (Properties.Settings.Default.BackgroundMode.Equals("solid"))
+            {
+                shadedImageToolStripMenuItem.Checked = false;
+                solidImageToolStripMenuItem.Checked = true;
                 noImageToolStripMenuItem.Checked = false;
                 hideImageToolStripMenuItem.Checked = false;
             }
             else if (Properties.Settings.Default.BackgroundMode.Equals("blank"))
             {
                 shadedImageToolStripMenuItem.Checked = false;
+                solidImageToolStripMenuItem.Checked = false;
                 noImageToolStripMenuItem.Checked = true;
                 hideImageToolStripMenuItem.Checked = false;
             }
             else
             {
                 shadedImageToolStripMenuItem.Checked = false;
+                solidImageToolStripMenuItem.Checked = false;
                 noImageToolStripMenuItem.Checked = false;
                 hideImageToolStripMenuItem.Checked = true;
             }
@@ -3917,17 +2649,16 @@ namespace LMRItemTracker
             alwaysOnTopToolStripMenuItem.Checked = Properties.Settings.Default.AlwaysOnTop;
         }
 
-        private void updateShowAmmoCount()
+        private void UpdateShowAmmoCount()
         {
-            shurikenPanel.Size = GetAmmoPanelSize(shurikenAmmoCount.Text);
-            rollingShurikenPanel.Size = GetAmmoPanelSize(rollingShurikenAmmoCount.Text);
-            caltropsPanel.Size = GetAmmoPanelSize(caltropsAmmoCount.Text);
-            flareGunPanel.Size = GetAmmoPanelSize(flareGunAmmoCount.Text);
-            chakramPanel.Size = GetAmmoPanelSize(chakramAmmoCount.Text);
-            earthSpearPanel.Size = GetAmmoPanelSize(earthSpearAmmoCount.Text);
-            bombPanel.Size = GetAmmoPanelSize(bombAmmoCount.Text);
-            pistolPanel.Size = GetAmmoPanelSize(pistolAmmoCount.Text);
-            ankhJewelPanel.Size = GetAmmoPanelSize(ankhJewelCount.Text);
+            shurikenPanel.Redraw();
+            rollingShurikenPanel.Redraw();
+            caltropsPanel.Redraw();
+            flareGunPanel.Redraw();
+            chakramPanel.Redraw();
+            earthSpearPanel.Redraw();
+            bombPanel.Redraw();
+            pistolPanel.Redraw();
 
             showAmmoCountToolStripMenuItem.Checked = Properties.Settings.Default.ShowAmmoCount;
         }
@@ -3939,39 +2670,30 @@ namespace LMRItemTracker
             deathPanel.Visible = Properties.Settings.Default.ShowDeathCount;
         }
 
-        private System.Drawing.Size GetAmmoPanelSize(String panelCountText)
-        {
-            if (!Properties.Settings.Default.ShowAmmoCount && !panelCountText.Contains("%"))
-                return new System.Drawing.Size(40, 40);
-            else if ("shaded".Equals(Properties.Settings.Default.BackgroundMode))
-                return new System.Drawing.Size(40, 56);
-            else if ("0".Equals(panelCountText) || "0:0".Equals(panelCountText) || "0%".Equals(panelCountText))
-                return new System.Drawing.Size(40, 40);
-            return new System.Drawing.Size(40, 56);
-        }
-
-        private void updateFormColor()
+        private void UpdateFormColor()
         {
             this.BackColor = Properties.Settings.Default.BackgroundColor;
         }
 
-        private void updateTextColor()
+        private void UpdateTextColor()
         {
-            this.mapCount.ForeColor = Properties.Settings.Default.TextColor;
-            this.ankhJewelCount.ForeColor = Properties.Settings.Default.TextColor;
-            this.translationTablets.ForeColor = Properties.Settings.Default.TextColor;
-            this.skullWallCount.ForeColor = Properties.Settings.Default.TextColor;
-            this.lastItemLabel.ForeColor = Properties.Settings.Default.TextColor;
-            this.deathLabel.ForeColor = Properties.Settings.Default.TextColor;
-            this.deathCount.ForeColor = Properties.Settings.Default.TextColor;
-            this.shurikenAmmoCount.ForeColor = Properties.Settings.Default.TextColor;
-            this.rollingShurikenAmmoCount.ForeColor = Properties.Settings.Default.TextColor;
-            this.caltropsAmmoCount.ForeColor = Properties.Settings.Default.TextColor;
-            this.flareGunAmmoCount.ForeColor = Properties.Settings.Default.TextColor;
-            this.chakramAmmoCount.ForeColor = Properties.Settings.Default.TextColor;
-            this.earthSpearAmmoCount.ForeColor = Properties.Settings.Default.TextColor;
-            this.bombAmmoCount.ForeColor = Properties.Settings.Default.TextColor;
-            this.pistolAmmoCount.ForeColor = Properties.Settings.Default.TextColor;
+            lastItemLabel.ForeColor = Properties.Settings.Default.TextColor;
+            deathLabel.ForeColor = Properties.Settings.Default.TextColor;
+            deathCount.ForeColor = Properties.Settings.Default.TextColor;
+
+            mapCount.UpdateTextColor();
+            ankhJewelCount.UpdateTextColor();
+            translationTablets.UpdateTextColor();
+            shurikenAmmoCount.UpdateTextColor();
+            rollingShurikenAmmoCount.UpdateTextColor();
+            caltropsAmmoCount.UpdateTextColor();
+            flareGunAmmoCount.UpdateTextColor();
+            chakramAmmoCount.UpdateTextColor();
+            earthSpearAmmoCount.UpdateTextColor();
+            bombAmmoCount.UpdateTextColor();
+            pistolAmmoCount.UpdateTextColor();
+
+            skullWallCount.UpdateTextColor();
         }
 
         private void saveSettings(object sender, EventArgs e)
@@ -4001,13 +2723,12 @@ namespace LMRItemTracker
             Properties.Settings.Default.DeathCount = 0;
 
             updateAlwaysOnTop();
-            updateShowAmmoCount();
             updateFormSize();
-            updateFormColor();
-            updateTextColor();
+            UpdateFormColor();
+            UpdateTextColor();
             updateShowLastItem();
             InitializeFormPanels();
-            this.Refresh();
+            Refresh();
         }
 
         private void toggleVisibility(Control control, bool visible)
@@ -4055,18 +2776,15 @@ namespace LMRItemTracker
         private void SetImage(String flagName, bool isAdd)
         {
             String itemName = getItemName(flagName);
-            if (Properties.Settings.Default.BackgroundMode.Equals("hide"))
-            {
-                toggleVisibility(GetControl(itemName), isAdd);
-            }
+            Control control = GetControl(itemName);
 
-            if (isAdd)
+            if (control is TrackerBox)
             {
-                SetImage(GetFoundImagePictureBox(itemName), getFoundImage(flagName));
+                ((TrackerBox)control).ToggleState(isAdd);
             }
-            else
+            else if (control is ItemTextPanel)
             {
-                SetImage(GetBlankImagePictureBox(getItemName(flagName)), getBlankImage(flagName));
+                ((ItemTextPanel)control).ToggleState(isAdd);
             }
         }
 
@@ -4087,36 +2805,6 @@ namespace LMRItemTracker
             }
         }
 
-        private void UpdateTextVisibility(Control panel, bool showText)
-        {
-            if (panel.InvokeRequired)
-            {
-                panel.Invoke(new Action(() =>
-                {
-                    if (showText)
-                    {
-                        panel.Size = new System.Drawing.Size(40, 56);
-                    }
-                    else if (!"shaded".Equals(Properties.Settings.Default.BackgroundMode))
-                    {
-                        panel.Size = new System.Drawing.Size(40, 40);
-                    }
-                }));
-            }
-            else
-            {
-                // In case this isn't an active form control right now.
-                if (showText)
-                {
-                    panel.Size = new System.Drawing.Size(40, 56);
-                }
-                else if (!"shaded".Equals(Properties.Settings.Default.BackgroundMode))
-                {
-                    panel.Size = new System.Drawing.Size(40, 40);
-                }
-            }
-        }
-
         private void SetBackgroundImage(PictureBox pictureBox, System.Drawing.Image image)
         {
             if (pictureBox.InvokeRequired)
@@ -4130,52 +2818,6 @@ namespace LMRItemTracker
             else
             {
                 pictureBox.BackgroundImage = image;
-            }
-        }
-
-        private void UpdateCount(Label label, bool isAdd, int max)
-        {
-            if (label.InvokeRequired)
-            {
-                label.Invoke(new Action(() =>
-                {
-                    int existingCount = Int32.Parse(label.Text.Substring(0, label.Text.IndexOf('/')));
-                    if (isAdd)
-                    {
-                        if (existingCount < max)
-                        {
-                            label.Text = (existingCount + 1) + "/" + max;
-                            label.Refresh();
-                        }
-                    }
-                    else
-                    {
-                        if (existingCount > 0)
-                        {
-                            label.Text = (existingCount - 1) + "/" + max;
-                            label.Refresh();
-                        }
-                    }
-                }));
-            }
-            else
-            {
-                // In case this is not a current component
-                int existingCount = Int32.Parse(label.Text.Substring(0, label.Text.IndexOf('/')));
-                if (isAdd)
-                {
-                    if (existingCount < max)
-                    {
-                        label.Text = (existingCount + 1) + "/" + max;
-                    }
-                }
-                else
-                {
-                    if (existingCount > 0)
-                    {
-                        label.Text = (existingCount - 1) + "/" + max;
-                    }
-                }
             }
         }
 
@@ -4198,7 +2840,7 @@ namespace LMRItemTracker
             }
         }
 
-        private void updatePistolAmmoCount(Label label, bool clip, int newCount)
+        private void UpdatePistolAmmoCount(Label label, bool clip, int newCount)
         {
             if (clip)
             {
@@ -4288,7 +2930,8 @@ namespace LMRItemTracker
         private void toggleAmmoCount(object sender, EventArgs e)
         {
             Properties.Settings.Default.ShowAmmoCount = !Properties.Settings.Default.ShowAmmoCount;
-            updateShowAmmoCount();
+            UpdateShowAmmoCount();
+            Refresh();
         }
 
         private void toggleDeathCount(object sender, EventArgs e)
@@ -4302,7 +2945,7 @@ namespace LMRItemTracker
             Properties.Settings.Default.BackgroundMode = "hide";
             Properties.Settings.Default.Save();
             updateBackgroundMode();
-            MessageBox.Show("Your settings have been saved. Please restart to allow them to take effect.");
+            Redraw();
         }
 
         private void setBlankUncollected(object sender, EventArgs e)
@@ -4310,7 +2953,7 @@ namespace LMRItemTracker
             Properties.Settings.Default.BackgroundMode = "blank";
             Properties.Settings.Default.Save();
             updateBackgroundMode();
-            MessageBox.Show("Your settings have been saved. Please restart to allow them to take effect.");
+            Redraw();
         }
 
         private void setShadedUncollected(object sender, EventArgs e)
@@ -4318,7 +2961,56 @@ namespace LMRItemTracker
             Properties.Settings.Default.BackgroundMode = "shaded";
             Properties.Settings.Default.Save();
             updateBackgroundMode();
-            MessageBox.Show("Your settings have been saved. Please restart to allow them to take effect.");
+            Redraw();
+        }
+
+        private void setSolidUncollected(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.BackgroundMode = "solid";
+            Properties.Settings.Default.Save();
+            updateBackgroundMode();
+            Redraw();
+        }
+
+        private void Redraw()
+        {
+            RedrawPanel(flowLayoutPanel1);
+            RedrawPanel(flowLayoutPanel2);
+            RedrawPanel(flowLayoutPanel3);
+            RedrawPanel(flowLayoutPanel4);
+            RedrawPanel(flowLayoutPanel5);
+            RedrawPanel(flowLayoutPanel6);
+        }
+
+        private void RedrawPanel(FlowLayoutPanel flowLayoutPanel)
+        {
+            foreach (Control control in flowLayoutPanel.Controls)
+            {
+                if (control is TrackerBox)
+                {
+                    ((TrackerBox)control).Redraw();
+                }
+                else if (control is ItemTextPanel)
+                {
+                    ((ItemTextPanel)control).Redraw();
+                }
+                else if (control is PistolPanel)
+                {
+                    ((PistolPanel)control).Redraw();
+                }
+                else if (control is KeySwordTrackerBox)
+                {
+                    ((KeySwordTrackerBox)control).Redraw();
+                }
+                else if (control is KeyFairyTrackerBox)
+                {
+                    ((KeyFairyTrackerBox)control).Redraw();
+                }
+                else if (control is MultiStateTrackerBox)
+                {
+                    ((MultiStateTrackerBox)control).Redraw();
+                }
+            }
         }
 
         private void resetDeathCount(object sender, EventArgs e)
@@ -4332,11 +3024,11 @@ namespace LMRItemTracker
             MouseEventArgs me = (MouseEventArgs)e;
             if (me.Button == System.Windows.Forms.MouseButtons.Left)
             {
-                updateDeathCount(true);
+                UpdateDeathCount(true);
             }
             else if (me.Button == System.Windows.Forms.MouseButtons.Right)
             {
-                updateDeathCount(false);
+                UpdateDeathCount(false);
             }
         }
 

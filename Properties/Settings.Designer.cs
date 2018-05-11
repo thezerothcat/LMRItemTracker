@@ -229,5 +229,17 @@ namespace LMRItemTracker.Properties {
                 this["DeathCount"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Black")]
+        public global::System.Drawing.Color ItemColor {
+            get {
+                return ((global::System.Drawing.Color)(this["ItemColor"]));
+            }
+            set {
+                this["ItemColor"] = value;
+            }
+        }
     }
 }

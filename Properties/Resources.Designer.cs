@@ -253,6 +253,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_anchor_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_anchor_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_angelshield {
             get {
                 object obj = ResourceManager.GetObject("Icon_angelshield", resourceCulture);
@@ -283,6 +293,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_ankhjewel_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_ankhjewel_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_axe {
             get {
                 object obj = ResourceManager.GetObject("Icon_axe", resourceCulture);
@@ -296,6 +316,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_axe_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_axe_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_axe_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_axe_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,6 +353,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_beolamu_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_beolamu_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_birthseal {
             get {
                 object obj = ResourceManager.GetObject("Icon_birthseal", resourceCulture);
@@ -336,6 +376,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_birthseal_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_birthseal_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_birthseal_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_birthseal_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -363,6 +413,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_bomb_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_bomb_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_bookofthedead {
             get {
                 object obj = ResourceManager.GetObject("Icon_bookofthedead", resourceCulture);
@@ -376,6 +436,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_bookofthedead_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_bookofthedead_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_bookofthedead_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_bookofthedead_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -423,6 +493,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_bracelet_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_bracelet_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_bronzemirror {
             get {
                 object obj = ResourceManager.GetObject("Icon_bronzemirror", resourceCulture);
@@ -443,6 +523,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_bronzemirror_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_bronzemirror_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_buckler {
             get {
                 object obj = ResourceManager.GetObject("Icon_buckler", resourceCulture);
@@ -456,6 +546,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_buckler_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_buckler_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_buckler_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_buckler_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -523,6 +623,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_caltrops_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_caltrops_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_capstar {
             get {
                 object obj = ResourceManager.GetObject("Icon_capstar", resourceCulture);
@@ -573,6 +683,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_chakram_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_chakram_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_cogofthesoul {
             get {
                 object obj = ResourceManager.GetObject("Icon_cogofthesoul", resourceCulture);
@@ -586,6 +706,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_cogofthesoul_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_cogofthesoul_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_cogofthesoul_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_cogofthesoul_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -613,6 +743,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_crucifix_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_crucifix_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_crystalskull {
             get {
                 object obj = ResourceManager.GetObject("Icon_crystalskull", resourceCulture);
@@ -633,6 +773,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_crystalskull_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_crystalskull_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_deathseal {
             get {
                 object obj = ResourceManager.GetObject("Icon_deathseal", resourceCulture);
@@ -646,6 +796,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_deathseal_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_deathseal_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_deathseal_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_deathseal_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -693,6 +853,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_diary_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_diary_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_dimensionalkey {
             get {
                 object obj = ResourceManager.GetObject("Icon_dimensionalkey", resourceCulture);
@@ -706,6 +876,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_dimensionalkey_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_dimensionalkey_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_dimensionalkey_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_dimensionalkey_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -743,6 +923,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_djedpillar_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_djedpillar_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_dragonbone {
             get {
                 object obj = ResourceManager.GetObject("Icon_dragonbone", resourceCulture);
@@ -773,6 +963,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_dragonbone_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_dragonbone_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_earthspear {
             get {
                 object obj = ResourceManager.GetObject("Icon_earthspear", resourceCulture);
@@ -786,6 +986,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_earthspear_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_earthspear_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_earthspear_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_earthspear_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -833,6 +1043,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_eyeoftruth_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_eyeoftruth_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_fairyclothes {
             get {
                 object obj = ResourceManager.GetObject("Icon_fairyclothes", resourceCulture);
@@ -853,6 +1073,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_fairyclothes_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_fairyclothes_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_feather {
             get {
                 object obj = ResourceManager.GetObject("Icon_feather", resourceCulture);
@@ -866,6 +1096,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_feather_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_feather_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_feather_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_feather_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -903,6 +1143,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_flaregun_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_flaregun_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_fruitofeden {
             get {
                 object obj = ResourceManager.GetObject("Icon_fruitofeden", resourceCulture);
@@ -916,6 +1166,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_fruitofeden_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_fruitofeden_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_fruitofeden_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_fruitofeden_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -943,6 +1203,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_gauntlet_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_gauntlet_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_glove {
             get {
                 object obj = ResourceManager.GetObject("Icon_glove", resourceCulture);
@@ -963,6 +1233,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_glove_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_glove_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_grappleclaw {
             get {
                 object obj = ResourceManager.GetObject("Icon_grappleclaw", resourceCulture);
@@ -976,6 +1256,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_grappleclaw_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_grappleclaw_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_grappleclaw_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_grappleclaw_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1023,6 +1313,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_handscanner_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_handscanner_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_heatproofcase {
             get {
                 object obj = ResourceManager.GetObject("Icon_heatproofcase", resourceCulture);
@@ -1036,6 +1336,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_heatproofcase_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_heatproofcase_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_heatproofcase_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_heatproofcase_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1063,6 +1373,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_helmet_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_helmet_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_hermesboots {
             get {
                 object obj = ResourceManager.GetObject("Icon_hermesboots", resourceCulture);
@@ -1083,6 +1403,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_hermesboots_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_hermesboots_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_holygrail {
             get {
                 object obj = ResourceManager.GetObject("Icon_holygrail", resourceCulture);
@@ -1096,6 +1426,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_holygrail_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_holygrail_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_holygrail_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_holygrail_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1143,6 +1483,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_icecape_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_icecape_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_isispendant {
             get {
                 object obj = ResourceManager.GetObject("Icon_isispendant", resourceCulture);
@@ -1156,6 +1506,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_isispendant_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_isispendant_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_isispendant_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_isispendant_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1183,6 +1543,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_katana_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_katana_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_keyfairy {
             get {
                 object obj = ResourceManager.GetObject("Icon_keyfairy", resourceCulture);
@@ -1203,6 +1573,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_keyfairy_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_keyfairy_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_keyofeternity {
             get {
                 object obj = ResourceManager.GetObject("Icon_keyofeternity", resourceCulture);
@@ -1216,6 +1596,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_keyofeternity_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_keyofeternity_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_keyofeternity_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_keyofeternity_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1253,6 +1643,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_keysword_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_keysword_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_knife {
             get {
                 object obj = ResourceManager.GetObject("Icon_knife", resourceCulture);
@@ -1273,6 +1673,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_knife_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_knife_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_lampoftime {
             get {
                 object obj = ResourceManager.GetObject("Icon_lampoftime", resourceCulture);
@@ -1286,6 +1696,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_lampoftime_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_lampoftime_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_lampoftime_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_lampoftime_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1343,6 +1763,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_lifeseal_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_lifeseal_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_magatamajewel {
             get {
                 object obj = ResourceManager.GetObject("Icon_magatamajewel", resourceCulture);
@@ -1356,6 +1786,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_magatamajewel_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_magatamajewel_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_magatamajewel_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_magatamajewel_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1473,6 +1913,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_minidoll_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_minidoll_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_miracle {
             get {
                 object obj = ResourceManager.GetObject("Icon_miracle", resourceCulture);
@@ -1553,6 +2003,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_msx2_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_msx2_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_mulanatalisman {
             get {
                 object obj = ResourceManager.GetObject("Icon_mulanatalisman", resourceCulture);
@@ -1566,6 +2026,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_mulanatalisman_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_mulanatalisman_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_mulanatalisman_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_mulanatalisman_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1593,6 +2063,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_originseal_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_originseal_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_pepper {
             get {
                 object obj = ResourceManager.GetObject("Icon_pepper", resourceCulture);
@@ -1606,6 +2086,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_pepper_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_pepper_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_pepper_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_pepper_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1633,6 +2123,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_perfume_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_perfume_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_philosophersocarina {
             get {
                 object obj = ResourceManager.GetObject("Icon_philosophersocarina", resourceCulture);
@@ -1646,6 +2146,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_philosophersocarina_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_philosophersocarina_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_philosophersocarina_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_philosophersocarina_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1673,6 +2183,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_pistol_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_pistol_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_planemodel {
             get {
                 object obj = ResourceManager.GetObject("Icon_planemodel", resourceCulture);
@@ -1693,6 +2213,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_planemodel_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_planemodel_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_pochettekey {
             get {
                 object obj = ResourceManager.GetObject("Icon_pochettekey", resourceCulture);
@@ -1706,6 +2236,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_pochettekey_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_pochettekey_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_pochettekey_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_pochettekey_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1773,6 +2313,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_ring_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_ring_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_rollingshuriken {
             get {
                 object obj = ResourceManager.GetObject("Icon_rollingshuriken", resourceCulture);
@@ -1786,6 +2336,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_rollingshuriken_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_rollingshuriken_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_rollingshuriken_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_rollingshuriken_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1823,6 +2383,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_scalesphere_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_scalesphere_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_scriptures {
             get {
                 object obj = ResourceManager.GetObject("Icon_scriptures", resourceCulture);
@@ -1836,6 +2406,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_scriptures_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_scriptures_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_scriptures_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_scriptures_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1863,6 +2443,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_serpentstaff_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_serpentstaff_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_shellhorn {
             get {
                 object obj = ResourceManager.GetObject("Icon_shellhorn", resourceCulture);
@@ -1883,6 +2473,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_shellhorn_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_shellhorn_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_shuriken {
             get {
                 object obj = ResourceManager.GetObject("Icon_shuriken", resourceCulture);
@@ -1896,6 +2496,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_shuriken_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_shuriken_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_shuriken_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_shuriken_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1933,6 +2543,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_software_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_software_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_spaulder {
             get {
                 object obj = ResourceManager.GetObject("Icon_spaulder", resourceCulture);
@@ -1946,6 +2566,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_spaulder_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_spaulder_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_spaulder_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_spaulder_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1973,6 +2603,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_swimsuit_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_swimsuit_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_talisman {
             get {
                 object obj = ResourceManager.GetObject("Icon_talisman", resourceCulture);
@@ -1986,6 +2626,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_talisman_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_talisman_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_talisman_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_talisman_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2033,6 +2683,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_treasures_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_treasures_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_twinstatue {
             get {
                 object obj = ResourceManager.GetObject("Icon_twinstatue", resourceCulture);
@@ -2046,6 +2706,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_twinstatue_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_twinstatue_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_twinstatue_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_twinstatue_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2073,6 +2743,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_vessel_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_vessel_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_waterproofcase {
             get {
                 object obj = ResourceManager.GetObject("Icon_waterproofcase", resourceCulture);
@@ -2086,6 +2766,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_waterproofcase_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_waterproofcase_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_waterproofcase_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_waterproofcase_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2113,6 +2803,16 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_whip_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_whip_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_womanstatue {
             get {
                 object obj = ResourceManager.GetObject("Icon_womanstatue", resourceCulture);
@@ -2126,6 +2826,16 @@ namespace LMRItemTracker.Properties {
         internal static System.Drawing.Bitmap Icon_womanstatue_blank {
             get {
                 object obj = ResourceManager.GetObject("Icon_womanstatue_blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_womanstatue_solid {
+            get {
+                object obj = ResourceManager.GetObject("Icon_womanstatue_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

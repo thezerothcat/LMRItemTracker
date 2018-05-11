@@ -757,4 +757,217 @@
   <data name="Icon_medicineofthemind_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_medicineofthemind_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Icon_shuriken_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_shuriken_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_anchor_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_anchor_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_ankhjewel_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_ankhjewel_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_axe_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_axe_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_beolamu_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_beolamu_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_birthseal_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_birthseal_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_bomb_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_bomb_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_bookofthedead_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_bookofthedead_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_bracelet_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_bracelet_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_bronzemirror_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_bronzemirror_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_buckler_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_buckler_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_caltrops_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_caltrops_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_chakram_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_chakram_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_cogofthesoul_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_cogofthesoul_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_crucifix_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_crucifix_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_crystalskull_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_crystalskull_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_deathseal_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_deathseal_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_diary_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_diary_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_dimensionalkey_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_dimensionalkey_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_djedpillar_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_djedpillar_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_dragonbone_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_dragonbone_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_earthspear_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_earthspear_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_eyeoftruth_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_eyeoftruth_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_fairyclothes_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_fairyclothes_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_feather_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_feather_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_flaregun_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_flaregun_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_fruitofeden_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_fruitofeden_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_gauntlet_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_gauntlet_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_glove_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_glove_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_grappleclaw_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_grappleclaw_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_handscanner_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_handscanner_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_heatproofcase_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_heatproofcase_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_helmet_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_helmet_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_hermesboots_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_hermesboots_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_holygrail_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_holygrail_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_icecape_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_icecape_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_isispendant_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_isispendant_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_katana_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_katana_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_keyofeternity_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_keyofeternity_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_keysword_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_keysword_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_knife_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_knife_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_lampoftime_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_lampoftime_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_lifeseal_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_lifeseal_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_magatamajewel_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_magatamajewel_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_minidoll_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_minidoll_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_msx2_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_msx2_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_mulanatalisman_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_mulanatalisman_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_originseal_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_originseal_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_pepper_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_pepper_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_perfume_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_perfume_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_philosophersocarina_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_philosophersocarina_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_pistol_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_pistol_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_planemodel_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_planemodel_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_pochettekey_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_pochettekey_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_ring_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_ring_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_rollingshuriken_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_rollingshuriken_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_scalesphere_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_scalesphere_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_scriptures_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_scriptures_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_serpentstaff_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_serpentstaff_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_shellhorn_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_shellhorn_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_software_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_software_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_spaulder_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_spaulder_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_swimsuit_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_swimsuit_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_talisman_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_talisman_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_treasures_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_treasures_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_twinstatue_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_twinstatue_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_vessel_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_vessel_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_waterproofcase_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_waterproofcase_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_whip_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_whip_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_womanstatue_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_womanstatue_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_keyfairy_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_keyfairy_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

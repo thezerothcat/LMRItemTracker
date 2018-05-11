@@ -60,7 +60,7 @@ namespace LMRItemTracker
             {
                 if (((uint)old & 0x1000000) == 0 && (((uint)cur & 0x1000000) == 16777216))
                 {
-                    laMulanaItemTrackerForm.updateDeathCount(true);
+                    laMulanaItemTrackerForm.UpdateDeathCount(true);
                 }
             }
             else if (displayname.StartsWith("boss-"))
@@ -69,7 +69,7 @@ namespace LMRItemTracker
             }
             else if (displayname.Equals("rosetta-count"))
             {
-                laMulanaItemTrackerForm.updateTranslationTablets((byte)cur);
+                laMulanaItemTrackerForm.UpdateTranslationTablets((byte)cur);
             }
             else if (displayname.StartsWith("shield-"))
             {
@@ -94,26 +94,26 @@ namespace LMRItemTracker
             }
             else if (displayname.StartsWith("invus-lamp"))
             {
-                laMulanaItemTrackerForm.updateLampOfTime(displayname, (ushort)cur >= 1);
+                laMulanaItemTrackerForm.UpdateLampOfTime(displayname, (ushort)cur >= 1);
             }
             else if (displayname.Equals("mantra-amphisbaena"))
             {
-                laMulanaItemTrackerForm.toggleMantra(displayname, (byte)cur >= (byte)1);
+                laMulanaItemTrackerForm.ToggleMantra(displayname, (byte)cur >= (byte)1);
             }
             else if (displayname.StartsWith("mantra-"))
             {
-                laMulanaItemTrackerForm.toggleMantra(displayname, (byte)cur >= 4);
+                laMulanaItemTrackerForm.ToggleMantra(displayname, (byte)cur >= 4);
             }
             else if (displayname.StartsWith("w-map-"))
             {
                 if((byte)old < 2 && (byte)cur >= 2)
                 {
-                    laMulanaItemTrackerForm.toggleMap(displayname, true);
+                    laMulanaItemTrackerForm.ToggleMap(displayname, true);
                     laMulanaItemTrackerForm.UpdateLastItem(displayname);
                 }
                 else if((byte)old >= 2 && (byte)cur < 2)
                 {
-                    laMulanaItemTrackerForm.toggleMap(displayname, false);
+                    laMulanaItemTrackerForm.ToggleMap(displayname, false);
                 }
             }
             else if (displayname.Equals("whip"))
@@ -121,11 +121,11 @@ namespace LMRItemTracker
                 // For some reason, this is getting read as ushort even though it's actually signed.
                 if ((ushort)cur == 65535)
                 {
-                    laMulanaItemTrackerForm.toggleWhip(false);
+                    laMulanaItemTrackerForm.ToggleWhip(false);
                 }
                 else
                 {
-                    laMulanaItemTrackerForm.toggleWhip(true);
+                    laMulanaItemTrackerForm.ToggleWhip(true);
                 }
             }
             else if (displayname.StartsWith("ammo-"))
@@ -140,7 +140,7 @@ namespace LMRItemTracker
                     ammoCount = (short)cur;
                 }
 
-                laMulanaItemTrackerForm.setAmmoCount(displayname, ammoCount);
+                laMulanaItemTrackerForm.SetAmmoCount(displayname, ammoCount);
             }
             else if(displayname.Equals("ankh-jewels"))
             {
@@ -157,7 +157,7 @@ namespace LMRItemTracker
                     isAdd = ammoCount > (short)old;
                 }
 
-                laMulanaItemTrackerForm.setAmmoCount(displayname, ammoCount);
+                laMulanaItemTrackerForm.SetAmmoCount(displayname, ammoCount);
                 if(isAdd)
                 {
                     laMulanaItemTrackerForm.UpdateLastItem(displayname);
@@ -165,7 +165,7 @@ namespace LMRItemTracker
             }
             else if (displayname.Equals("invtr-grailfull") || displayname.Equals("invtr-grailbr"))
             {
-                laMulanaItemTrackerForm.toggleGrail(displayname, (ushort)cur >= 1);
+                laMulanaItemTrackerForm.ToggleGrail(displayname, (ushort)cur >= 1);
             }
             else if (displayname.StartsWith("inv-"))
             {
@@ -208,7 +208,7 @@ namespace LMRItemTracker
             byte[] rwords_old = new byte[510], rwords_new;
             remakenames = loadnames(namesXml);
             int startupCounter = 1;
-            laMulanaItemTrackerForm.setGameStarted(false);
+            laMulanaItemTrackerForm.SetGameStarted(false);
 
             while (true)
             {
@@ -240,14 +240,14 @@ namespace LMRItemTracker
                         if (rbytes_new[824] == 0)
                         {
                             // Player is dead or hasn't started a game.
-                            laMulanaItemTrackerForm.setGameStarted(false);
+                            laMulanaItemTrackerForm.SetGameStarted(false);
                             sleeptarget = DateTime.UtcNow.AddMilliseconds(20);
                             startupCounter = 1;
                         }
 
                         if (startupCounter == 3)
                         {
-                            laMulanaItemTrackerForm.setGameStarted(true);
+                            laMulanaItemTrackerForm.SetGameStarted(true);
                         }
 
                         for (int i = 100; i < 0x1000; i++)
