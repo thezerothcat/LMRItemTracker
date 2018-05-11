@@ -169,6 +169,8 @@ namespace LMRItemTracker
                 }
             }
             whip.ToggleState(true, 2);
+            shrinePanel.ToggleState(true);
+            mapsPanel.ToggleState(true);
 
             List<String> itemsInPanel = new List<String>(Properties.Settings.Default.Panel1Contents.Split(','));
             for(int index = 0; index < itemsInPanel.Count; index++)
@@ -270,21 +272,6 @@ namespace LMRItemTracker
             if (flowLayoutPanel6.Controls.Count < 1)
             {
                 flowLayoutPanel6.Visible = false;
-            }
-
-            if (Properties.Settings.Default.BackgroundMode.Equals("hide"))
-            {
-                foreach (Control control in bossPanel.Controls)
-                {
-                    control.Visible = false;
-                }
-            }
-            else if(Properties.Settings.Default.BackgroundMode.Equals("blank"))
-            {
-                foreach (Control control in bossPanel.Controls)
-                {
-                    SetBackgroundImage((PictureBox)control, null);
-                }
             }
         }
 
@@ -1122,16 +1109,13 @@ namespace LMRItemTracker
             InitializePossibleItems();
             InitializeMenuOptions();
 
-            // Create settings backup so we won't lose the upgraded settings on form close.
-            settingsBackup = new SettingsBackup();
-
-            updateAlwaysOnTop();
-            updateFormSize();
+            UpdateAlwaysOnTop();
+            UpdateFormSize();
             UpdateFormColor();
             UpdateTextColor();
-            updateBackgroundMode();
-            updateShowLastItem();
-            updateShowDeathCount();
+            UpdateBackgroundMode();
+            UpdateShowLastItem();
+            UpdateShowDeathCount();
             InitializeFormPanels();
 
             try
@@ -1224,13 +1208,13 @@ namespace LMRItemTracker
                     control.Margin = new Padding(0);
                     flowLayoutPanel1.Visible = true;
 
-                    Properties.Settings.Default.Panel1Contents = rebuildPanelContents(Properties.Settings.Default.Panel1Contents, itemName, true);
+                    Properties.Settings.Default.Panel1Contents = RebuildPanelContents(Properties.Settings.Default.Panel1Contents, itemName, true);
 
-                    Properties.Settings.Default.Panel2Contents = rebuildPanelContents(Properties.Settings.Default.Panel2Contents, itemName, false);
-                    Properties.Settings.Default.Panel3Contents = rebuildPanelContents(Properties.Settings.Default.Panel3Contents, itemName, false);
-                    Properties.Settings.Default.Panel4Contents = rebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, false);
-                    Properties.Settings.Default.Panel5Contents = rebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, false);
-                    Properties.Settings.Default.Panel6Contents = rebuildPanelContents(Properties.Settings.Default.Panel6Contents, itemName, false);
+                    Properties.Settings.Default.Panel2Contents = RebuildPanelContents(Properties.Settings.Default.Panel2Contents, itemName, false);
+                    Properties.Settings.Default.Panel3Contents = RebuildPanelContents(Properties.Settings.Default.Panel3Contents, itemName, false);
+                    Properties.Settings.Default.Panel4Contents = RebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, false);
+                    Properties.Settings.Default.Panel5Contents = RebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, false);
+                    Properties.Settings.Default.Panel6Contents = RebuildPanelContents(Properties.Settings.Default.Panel6Contents, itemName, false);
 
                     Redraw();
                 }
@@ -1254,13 +1238,13 @@ namespace LMRItemTracker
                     control.Margin = new Padding(0);
                     flowLayoutPanel2.Visible = true;
 
-                    Properties.Settings.Default.Panel2Contents = rebuildPanelContents(Properties.Settings.Default.Panel2Contents, itemName, true);
+                    Properties.Settings.Default.Panel2Contents = RebuildPanelContents(Properties.Settings.Default.Panel2Contents, itemName, true);
 
-                    Properties.Settings.Default.Panel1Contents = rebuildPanelContents(Properties.Settings.Default.Panel1Contents, itemName, false);
-                    Properties.Settings.Default.Panel3Contents = rebuildPanelContents(Properties.Settings.Default.Panel3Contents, itemName, false);
-                    Properties.Settings.Default.Panel4Contents = rebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, false);
-                    Properties.Settings.Default.Panel5Contents = rebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, false);
-                    Properties.Settings.Default.Panel6Contents = rebuildPanelContents(Properties.Settings.Default.Panel6Contents, itemName, false);
+                    Properties.Settings.Default.Panel1Contents = RebuildPanelContents(Properties.Settings.Default.Panel1Contents, itemName, false);
+                    Properties.Settings.Default.Panel3Contents = RebuildPanelContents(Properties.Settings.Default.Panel3Contents, itemName, false);
+                    Properties.Settings.Default.Panel4Contents = RebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, false);
+                    Properties.Settings.Default.Panel5Contents = RebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, false);
+                    Properties.Settings.Default.Panel6Contents = RebuildPanelContents(Properties.Settings.Default.Panel6Contents, itemName, false);
 
                     Redraw();
                 }
@@ -1284,13 +1268,13 @@ namespace LMRItemTracker
                     control.Margin = new Padding(0);
                     flowLayoutPanel3.Visible = true;
 
-                    Properties.Settings.Default.Panel3Contents = rebuildPanelContents(Properties.Settings.Default.Panel3Contents, itemName, true);
+                    Properties.Settings.Default.Panel3Contents = RebuildPanelContents(Properties.Settings.Default.Panel3Contents, itemName, true);
 
-                    Properties.Settings.Default.Panel1Contents = rebuildPanelContents(Properties.Settings.Default.Panel1Contents, itemName, false);
-                    Properties.Settings.Default.Panel2Contents = rebuildPanelContents(Properties.Settings.Default.Panel2Contents, itemName, false);
-                    Properties.Settings.Default.Panel4Contents = rebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, false);
-                    Properties.Settings.Default.Panel5Contents = rebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, false);
-                    Properties.Settings.Default.Panel6Contents = rebuildPanelContents(Properties.Settings.Default.Panel6Contents, itemName, false);
+                    Properties.Settings.Default.Panel1Contents = RebuildPanelContents(Properties.Settings.Default.Panel1Contents, itemName, false);
+                    Properties.Settings.Default.Panel2Contents = RebuildPanelContents(Properties.Settings.Default.Panel2Contents, itemName, false);
+                    Properties.Settings.Default.Panel4Contents = RebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, false);
+                    Properties.Settings.Default.Panel5Contents = RebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, false);
+                    Properties.Settings.Default.Panel6Contents = RebuildPanelContents(Properties.Settings.Default.Panel6Contents, itemName, false);
 
                     Redraw();
                 }
@@ -1314,13 +1298,13 @@ namespace LMRItemTracker
                     control.Margin = new Padding(0);
                     flowLayoutPanel4.Visible = true;
 
-                    Properties.Settings.Default.Panel4Contents = rebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, true);
+                    Properties.Settings.Default.Panel4Contents = RebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, true);
 
-                    Properties.Settings.Default.Panel1Contents = rebuildPanelContents(Properties.Settings.Default.Panel1Contents, itemName, false);
-                    Properties.Settings.Default.Panel2Contents = rebuildPanelContents(Properties.Settings.Default.Panel2Contents, itemName, false);
-                    Properties.Settings.Default.Panel3Contents = rebuildPanelContents(Properties.Settings.Default.Panel3Contents, itemName, false);
-                    Properties.Settings.Default.Panel5Contents = rebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, false);
-                    Properties.Settings.Default.Panel6Contents = rebuildPanelContents(Properties.Settings.Default.Panel6Contents, itemName, false);
+                    Properties.Settings.Default.Panel1Contents = RebuildPanelContents(Properties.Settings.Default.Panel1Contents, itemName, false);
+                    Properties.Settings.Default.Panel2Contents = RebuildPanelContents(Properties.Settings.Default.Panel2Contents, itemName, false);
+                    Properties.Settings.Default.Panel3Contents = RebuildPanelContents(Properties.Settings.Default.Panel3Contents, itemName, false);
+                    Properties.Settings.Default.Panel5Contents = RebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, false);
+                    Properties.Settings.Default.Panel6Contents = RebuildPanelContents(Properties.Settings.Default.Panel6Contents, itemName, false);
 
                     Redraw();
                 }
@@ -1344,13 +1328,13 @@ namespace LMRItemTracker
                     control.Margin = new Padding(0);
                     flowLayoutPanel5.Visible = true;
 
-                    Properties.Settings.Default.Panel5Contents = rebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, true);
+                    Properties.Settings.Default.Panel5Contents = RebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, true);
 
-                    Properties.Settings.Default.Panel1Contents = rebuildPanelContents(Properties.Settings.Default.Panel1Contents, itemName, false);
-                    Properties.Settings.Default.Panel2Contents = rebuildPanelContents(Properties.Settings.Default.Panel2Contents, itemName, false);
-                    Properties.Settings.Default.Panel3Contents = rebuildPanelContents(Properties.Settings.Default.Panel3Contents, itemName, false);
-                    Properties.Settings.Default.Panel4Contents = rebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, false);
-                    Properties.Settings.Default.Panel6Contents = rebuildPanelContents(Properties.Settings.Default.Panel6Contents, itemName, false);
+                    Properties.Settings.Default.Panel1Contents = RebuildPanelContents(Properties.Settings.Default.Panel1Contents, itemName, false);
+                    Properties.Settings.Default.Panel2Contents = RebuildPanelContents(Properties.Settings.Default.Panel2Contents, itemName, false);
+                    Properties.Settings.Default.Panel3Contents = RebuildPanelContents(Properties.Settings.Default.Panel3Contents, itemName, false);
+                    Properties.Settings.Default.Panel4Contents = RebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, false);
+                    Properties.Settings.Default.Panel6Contents = RebuildPanelContents(Properties.Settings.Default.Panel6Contents, itemName, false);
 
                     Redraw();
                 }
@@ -1374,13 +1358,13 @@ namespace LMRItemTracker
                     control.Margin = new Padding(0);
                     flowLayoutPanel6.Visible = true;
 
-                    Properties.Settings.Default.Panel6Contents = rebuildPanelContents(Properties.Settings.Default.Panel6Contents, itemName, true);
+                    Properties.Settings.Default.Panel6Contents = RebuildPanelContents(Properties.Settings.Default.Panel6Contents, itemName, true);
 
-                    Properties.Settings.Default.Panel1Contents = rebuildPanelContents(Properties.Settings.Default.Panel1Contents, itemName, false);
-                    Properties.Settings.Default.Panel2Contents = rebuildPanelContents(Properties.Settings.Default.Panel2Contents, itemName, false);
-                    Properties.Settings.Default.Panel3Contents = rebuildPanelContents(Properties.Settings.Default.Panel3Contents, itemName, false);
-                    Properties.Settings.Default.Panel4Contents = rebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, false);
-                    Properties.Settings.Default.Panel5Contents = rebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, false);
+                    Properties.Settings.Default.Panel1Contents = RebuildPanelContents(Properties.Settings.Default.Panel1Contents, itemName, false);
+                    Properties.Settings.Default.Panel2Contents = RebuildPanelContents(Properties.Settings.Default.Panel2Contents, itemName, false);
+                    Properties.Settings.Default.Panel3Contents = RebuildPanelContents(Properties.Settings.Default.Panel3Contents, itemName, false);
+                    Properties.Settings.Default.Panel4Contents = RebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, false);
+                    Properties.Settings.Default.Panel5Contents = RebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, false);
 
                     Redraw();
                 }
@@ -1412,12 +1396,12 @@ namespace LMRItemTracker
                             parent.Controls[index].TabIndex = index;
                         }
                     }
-                    Properties.Settings.Default.Panel1Contents = rebuildPanelContents(Properties.Settings.Default.Panel1Contents, itemName, false);
-                    Properties.Settings.Default.Panel2Contents = rebuildPanelContents(Properties.Settings.Default.Panel2Contents, itemName, false);
-                    Properties.Settings.Default.Panel3Contents = rebuildPanelContents(Properties.Settings.Default.Panel3Contents, itemName, false);
-                    Properties.Settings.Default.Panel4Contents = rebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, false);
-                    Properties.Settings.Default.Panel5Contents = rebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, false);
-                    Properties.Settings.Default.Panel6Contents = rebuildPanelContents(Properties.Settings.Default.Panel6Contents, itemName, false);
+                    Properties.Settings.Default.Panel1Contents = RebuildPanelContents(Properties.Settings.Default.Panel1Contents, itemName, false);
+                    Properties.Settings.Default.Panel2Contents = RebuildPanelContents(Properties.Settings.Default.Panel2Contents, itemName, false);
+                    Properties.Settings.Default.Panel3Contents = RebuildPanelContents(Properties.Settings.Default.Panel3Contents, itemName, false);
+                    Properties.Settings.Default.Panel4Contents = RebuildPanelContents(Properties.Settings.Default.Panel4Contents, itemName, false);
+                    Properties.Settings.Default.Panel5Contents = RebuildPanelContents(Properties.Settings.Default.Panel5Contents, itemName, false);
+                    Properties.Settings.Default.Panel6Contents = RebuildPanelContents(Properties.Settings.Default.Panel6Contents, itemName, false);
 
                     Redraw();
                 }
@@ -2578,7 +2562,7 @@ namespace LMRItemTracker
             return menuItem;
         }
 
-        private String rebuildPanelContents(String currentSettingString, String itemName, Boolean add)
+        private String RebuildPanelContents(String currentSettingString, String itemName, Boolean add)
         {
             List<String> itemsInPanel = new List<String>(currentSettingString.Split(','));
             itemsInPanel.Remove(itemName); // In case it's already there (re-adding will move an item to the end)
@@ -2589,13 +2573,13 @@ namespace LMRItemTracker
             return String.Join(",", itemsInPanel);
         }
 
-        private void updateFormSize()
+        private void UpdateFormSize()
         {
             this.Width = Properties.Settings.Default.FormWidth;
             this.Height = Properties.Settings.Default.FormHeight;
         }
 
-        private void updateBackgroundMode()
+        private void UpdateBackgroundMode()
         {
             if (Properties.Settings.Default.BackgroundMode.Equals("shaded"))
             {
@@ -2627,7 +2611,7 @@ namespace LMRItemTracker
             }
         }
 
-        private void updateShowLastItem()
+        private void UpdateShowLastItem()
         {
             if(Properties.Settings.Default.ShowLastItem)
             {
@@ -2643,9 +2627,9 @@ namespace LMRItemTracker
             showLastItemToolStripMenuItem.Checked = Properties.Settings.Default.ShowLastItem;
         }
 
-        private void updateAlwaysOnTop()
+        private void UpdateAlwaysOnTop()
         {
-            this.TopMost = Properties.Settings.Default.AlwaysOnTop;
+            TopMost = Properties.Settings.Default.AlwaysOnTop;
             alwaysOnTopToolStripMenuItem.Checked = Properties.Settings.Default.AlwaysOnTop;
         }
 
@@ -2663,7 +2647,7 @@ namespace LMRItemTracker
             showAmmoCountToolStripMenuItem.Checked = Properties.Settings.Default.ShowAmmoCount;
         }
 
-        private void updateShowDeathCount()
+        private void UpdateShowDeathCount()
         {
             showDeathCountToolStripMenuItem.Checked = Properties.Settings.Default.ShowDeathCount;
             UpdateCount(deathCount, Properties.Settings.Default.DeathCount, int.MaxValue);
@@ -2696,15 +2680,14 @@ namespace LMRItemTracker
             skullWallCount.UpdateTextColor();
         }
 
-        private void saveSettings(object sender, EventArgs e)
+        private void SaveSettings(object sender, EventArgs e)
         {
             Properties.Settings.Default.FormWidth = this.Width;
             Properties.Settings.Default.FormHeight = this.Height;
             Properties.Settings.Default.Save();
-            settingsBackup = new SettingsBackup();
         }
 
-        private void restoreDefaultSettings(object sender, EventArgs e)
+        private void RestoreDefaultSettings(object sender, EventArgs e)
         {
             Properties.Settings.Default.Panel1Contents = "Hermes' Boots,Grapple Claw,Feather,Hand Scanner,reader.exe,Holy Grail,mirai.exe";
             Properties.Settings.Default.Panel2Contents = "Bronze Mirror,Fruit of Eden,Twin Statue,Key of Eternity,Helmet,Plane Model,Crystal Skull,Dimensional Key,Pochette Key,Ice Cape,Scalesphere,Cog of the Soul,Dragon Bone,Serpent Staff,Mulana Talisman,Woman Statue,Pepper,Talisman,Diary,Mini Doll,Treasures,Anchor,Key Fairy Combo,Isis' Pendant,Eye of Truth,Magatama Jewel,torude.exe,Shrine Wall Removal";
@@ -2722,55 +2705,14 @@ namespace LMRItemTracker
             Properties.Settings.Default.ShowDeathCount = true;
             Properties.Settings.Default.DeathCount = 0;
 
-            updateAlwaysOnTop();
-            updateFormSize();
+            UpdateAlwaysOnTop();
+            UpdateFormSize();
             UpdateFormColor();
             UpdateTextColor();
-            updateShowLastItem();
+            UpdateShowLastItem();
             InitializeFormPanels();
+            Redraw();
             Refresh();
-        }
-
-        private void toggleVisibility(Control control, bool visible)
-        {
-            if (control != null)
-            {
-                if (control.InvokeRequired)
-                {
-                    control.Invoke(new Action(() =>
-                    {
-                        if (control.Visible != visible)
-                        {
-                            int controlIndex = control.TabIndex;
-                            control.Visible = visible;
-                            if (control.HasChildren)
-                            {
-                                foreach (Control child in control.Controls)
-                                {
-                                    control.Controls.SetChildIndex(child, child.TabIndex);
-                                }
-                            }
-                            control.Refresh();
-                        }
-                    }));
-                }
-                else
-                {
-                    if (control.Visible != visible)
-                    {
-                        // In case this isn't an active form control right now.
-                        int controlIndex = control.TabIndex;
-                        if (control.HasChildren)
-                        {
-                            foreach (Control child in control.Controls)
-                            {
-                                control.Controls.SetChildIndex(child, child.TabIndex);
-                            }
-                        }
-                        control.Visible = visible;
-                    }
-                }
-            }
         }
 
         private void SetImage(String flagName, bool isAdd)
@@ -2785,23 +2727,6 @@ namespace LMRItemTracker
             else if (control is ItemTextPanel)
             {
                 ((ItemTextPanel)control).ToggleState(isAdd);
-            }
-        }
-
-        private void SetImage(PictureBox pictureBox, System.Drawing.Image image)
-        {
-            if (pictureBox.InvokeRequired)
-            {
-                pictureBox.Invoke(new Action(() =>
-                {
-                    pictureBox.Image = image;
-                    pictureBox.Refresh();
-                }));
-            }
-            else
-            {
-                // In case this isn't an active form control right now.
-                pictureBox.Image = image;
             }
         }
 
@@ -2880,7 +2805,7 @@ namespace LMRItemTracker
         private void toggleShowLastItem(object sender, EventArgs e)
         {
             Properties.Settings.Default.ShowLastItem = !Properties.Settings.Default.ShowLastItem;
-            updateShowLastItem();
+            UpdateShowLastItem();
         }
 
         private void clearLastItem(object sender, EventArgs e)
@@ -2924,7 +2849,7 @@ namespace LMRItemTracker
         private void toggleTopMost(object sender, EventArgs e)
         {
             Properties.Settings.Default.AlwaysOnTop = !Properties.Settings.Default.AlwaysOnTop;
-            updateAlwaysOnTop();
+            UpdateAlwaysOnTop();
         }
 
         private void toggleAmmoCount(object sender, EventArgs e)
@@ -2937,14 +2862,14 @@ namespace LMRItemTracker
         private void toggleDeathCount(object sender, EventArgs e)
         {
             Properties.Settings.Default.ShowDeathCount = !Properties.Settings.Default.ShowDeathCount;
-            updateShowDeathCount();
+            UpdateShowDeathCount();
         }
 
         private void setHideUncollected(object sender, EventArgs e)
         {
             Properties.Settings.Default.BackgroundMode = "hide";
             Properties.Settings.Default.Save();
-            updateBackgroundMode();
+            UpdateBackgroundMode();
             Redraw();
         }
 
@@ -2952,7 +2877,7 @@ namespace LMRItemTracker
         {
             Properties.Settings.Default.BackgroundMode = "blank";
             Properties.Settings.Default.Save();
-            updateBackgroundMode();
+            UpdateBackgroundMode();
             Redraw();
         }
 
@@ -2960,7 +2885,7 @@ namespace LMRItemTracker
         {
             Properties.Settings.Default.BackgroundMode = "shaded";
             Properties.Settings.Default.Save();
-            updateBackgroundMode();
+            UpdateBackgroundMode();
             Redraw();
         }
 
@@ -2968,7 +2893,7 @@ namespace LMRItemTracker
         {
             Properties.Settings.Default.BackgroundMode = "solid";
             Properties.Settings.Default.Save();
-            updateBackgroundMode();
+            UpdateBackgroundMode();
             Redraw();
         }
 
@@ -3030,12 +2955,6 @@ namespace LMRItemTracker
             {
                 UpdateDeathCount(false);
             }
-        }
-
-        private void formClosing(object sender, FormClosingEventArgs e)
-        {
-            settingsBackup.RestoreSettings();
-            Properties.Settings.Default.Save();
         }
     }
 }

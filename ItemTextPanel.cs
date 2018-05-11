@@ -68,7 +68,7 @@
             else if (!"hide".Equals(Properties.Settings.Default.BackgroundMode))
             {
                 Size = AMMO_HEIGHT;
-                Label.Visible = !TreatAsAmmo;
+                Label.Visible = false;
             }
             else
             {

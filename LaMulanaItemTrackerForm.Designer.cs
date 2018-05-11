@@ -66,6 +66,15 @@ namespace LMRItemTracker
             this.showLastItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearLastItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.hermesBoots = new LMRItemTracker.TrackerBox();
+            this.grappleClaw = new LMRItemTracker.TrackerBox();
+            this.feather = new LMRItemTracker.TrackerBox();
+            this.scanner = new LMRItemTracker.TrackerBox();
+            this.readerPanel = new LMRItemTracker.ItemTextPanel();
+            this.reader = new LMRItemTracker.TrackerBox();
+            this.translationTablets = new LMRItemTracker.TrackerLabel();
+            this.holyGrail = new LMRItemTracker.MultiStateTrackerBox();
+            this.mirai = new LMRItemTracker.TrackerBox();
             this.mainPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.overviewPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.lastItemPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -77,21 +86,6 @@ namespace LMRItemTracker
             this.deathLabel = new System.Windows.Forms.Label();
             this.deathCount = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
-            this.bossPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.itemColorDialog = new System.Windows.Forms.ColorDialog();
-            this.hermesBoots = new LMRItemTracker.TrackerBox();
-            this.grappleClaw = new LMRItemTracker.TrackerBox();
-            this.feather = new LMRItemTracker.TrackerBox();
-            this.scanner = new LMRItemTracker.TrackerBox();
-            this.readerPanel = new LMRItemTracker.ItemTextPanel();
-            this.reader = new LMRItemTracker.TrackerBox();
-            this.translationTablets = new LMRItemTracker.TrackerLabel();
-            this.holyGrail = new LMRItemTracker.MultiStateTrackerBox();
-            this.mirai = new LMRItemTracker.TrackerBox();
             this.bronzeMirror = new LMRItemTracker.TrackerBox();
             this.fruitOfEden = new LMRItemTracker.TrackerBox();
             this.twinStatue = new LMRItemTracker.TrackerBox();
@@ -122,6 +116,7 @@ namespace LMRItemTracker
             this.shrinePanel = new LMRItemTracker.ItemTextPanel();
             this.skullWall = new LMRItemTracker.TrackerBox();
             this.skullWallCount = new LMRItemTracker.TrackerLabel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.originSeal = new LMRItemTracker.TrackerBox();
             this.birthSeal = new LMRItemTracker.TrackerBox();
             this.lifeSeal = new LMRItemTracker.TrackerBox();
@@ -136,6 +131,7 @@ namespace LMRItemTracker
             this.glove = new LMRItemTracker.TrackerBox();
             this.bracelet = new LMRItemTracker.TrackerBox();
             this.spaulder = new LMRItemTracker.TrackerBox();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.whip = new LMRItemTracker.MultiStateTrackerBox();
             this.knife = new LMRItemTracker.TrackerBox();
             this.axe = new LMRItemTracker.TrackerBox();
@@ -166,6 +162,7 @@ namespace LMRItemTracker
             this.bombPanel = new LMRItemTracker.ItemTextPanel();
             this.bombAmmoCount = new LMRItemTracker.TrackerLabel();
             this.bomb = new LMRItemTracker.TrackerBox();
+            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.ocarina = new LMRItemTracker.TrackerBox();
             this.mantra = new LMRItemTracker.TrackerBox();
             this.vessel = new LMRItemTracker.MultiStateTrackerBox();
@@ -177,6 +174,7 @@ namespace LMRItemTracker
             this.ankhJewelPanel = new LMRItemTracker.ItemTextPanel();
             this.ankhJewels = new LMRItemTracker.TrackerBox();
             this.ankhJewelCount = new LMRItemTracker.TrackerLabel();
+            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.shellHorn = new LMRItemTracker.TrackerBox();
             this.waterproofCase = new LMRItemTracker.TrackerBox();
             this.heatproofCase = new LMRItemTracker.TrackerBox();
@@ -199,6 +197,7 @@ namespace LMRItemTracker
             this.bounce = new LMRItemTracker.TrackerBox();
             this.miracle = new LMRItemTracker.TrackerBox();
             this.lamulana = new LMRItemTracker.TrackerBox();
+            this.bossPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.amphisbaena = new LMRItemTracker.TrackerBox();
             this.sakit = new LMRItemTracker.TrackerBox();
             this.ellmac = new LMRItemTracker.TrackerBox();
@@ -207,21 +206,9 @@ namespace LMRItemTracker
             this.palenque = new LMRItemTracker.TrackerBox();
             this.baphomet = new LMRItemTracker.TrackerBox();
             this.tiamat = new LMRItemTracker.TrackerBox();
+            this.itemColorDialog = new System.Windows.Forms.ColorDialog();
             this.menu.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.mainPanel.SuspendLayout();
-            this.overviewPanel.SuspendLayout();
-            this.lastItemPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lastItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lastItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lastItem3)).BeginInit();
-            this.deathPanel.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
-            this.flowLayoutPanel4.SuspendLayout();
-            this.flowLayoutPanel5.SuspendLayout();
-            this.flowLayoutPanel6.SuspendLayout();
-            this.bossPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hermesBoots)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grappleClaw)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.feather)).BeginInit();
@@ -230,6 +217,14 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.reader)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.holyGrail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mirai)).BeginInit();
+            this.mainPanel.SuspendLayout();
+            this.overviewPanel.SuspendLayout();
+            this.lastItemPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lastItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lastItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lastItem3)).BeginInit();
+            this.deathPanel.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bronzeMirror)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fruitOfEden)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.twinStatue)).BeginInit();
@@ -259,6 +254,7 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.torude)).BeginInit();
             this.shrinePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skullWall)).BeginInit();
+            this.flowLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.originSeal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.birthSeal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lifeSeal)).BeginInit();
@@ -273,6 +269,7 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.glove)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bracelet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spaulder)).BeginInit();
+            this.flowLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.whip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.knife)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axe)).BeginInit();
@@ -295,6 +292,7 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.earthSpear)).BeginInit();
             this.bombPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bomb)).BeginInit();
+            this.flowLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ocarina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mantra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vessel)).BeginInit();
@@ -304,6 +302,7 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.maps)).BeginInit();
             this.ankhJewelPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ankhJewels)).BeginInit();
+            this.flowLayoutPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shellHorn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.waterproofCase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.heatproofCase)).BeginInit();
@@ -326,6 +325,7 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.bounce)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.miracle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lamulana)).BeginInit();
+            this.bossPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.amphisbaena)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sakit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ellmac)).BeginInit();
@@ -372,14 +372,14 @@ namespace LMRItemTracker
             this.saveSettingsToolStripMenuItem.Name = "saveSettingsToolStripMenuItem";
             this.saveSettingsToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.saveSettingsToolStripMenuItem.Text = "Save Settings";
-            this.saveSettingsToolStripMenuItem.Click += new System.EventHandler(this.saveSettings);
+            this.saveSettingsToolStripMenuItem.Click += new System.EventHandler(this.SaveSettings);
             // 
             // restoreDefaultsToolStripMenuItem
             // 
             this.restoreDefaultsToolStripMenuItem.Name = "restoreDefaultsToolStripMenuItem";
             this.restoreDefaultsToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.restoreDefaultsToolStripMenuItem.Text = "Restore Defaults";
-            this.restoreDefaultsToolStripMenuItem.Click += new System.EventHandler(this.restoreDefaultSettings);
+            this.restoreDefaultsToolStripMenuItem.Click += new System.EventHandler(this.RestoreDefaultSettings);
             // 
             // colorsToolStripMenuItem
             // 
@@ -583,6 +583,153 @@ namespace LMRItemTracker
             this.flowLayoutPanel1.TabIndex = 110;
             this.flowLayoutPanel1.DoubleClick += new System.EventHandler(this.SelectFormColor);
             // 
+            // hermesBoots
+            // 
+            this.hermesBoots.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_hermesboots_blank;
+            this.hermesBoots.Collected = false;
+            this.hermesBoots.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_hermesboots;
+            this.hermesBoots.ForeCollected = false;
+            this.hermesBoots.ForeImage = null;
+            this.hermesBoots.Location = new System.Drawing.Point(0, 0);
+            this.hermesBoots.Margin = new System.Windows.Forms.Padding(0);
+            this.hermesBoots.Name = "hermesBoots";
+            this.hermesBoots.RedrawOnStateChange = true;
+            this.hermesBoots.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_hermesboots_blank;
+            this.hermesBoots.Size = new System.Drawing.Size(40, 40);
+            this.hermesBoots.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_hermesboots_solid;
+            this.hermesBoots.TabIndex = 44;
+            this.hermesBoots.TabStop = false;
+            // 
+            // grappleClaw
+            // 
+            this.grappleClaw.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_grappleclaw_blank;
+            this.grappleClaw.Collected = false;
+            this.grappleClaw.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_grappleclaw;
+            this.grappleClaw.ForeCollected = false;
+            this.grappleClaw.ForeImage = null;
+            this.grappleClaw.Location = new System.Drawing.Point(40, 0);
+            this.grappleClaw.Margin = new System.Windows.Forms.Padding(0);
+            this.grappleClaw.Name = "grappleClaw";
+            this.grappleClaw.RedrawOnStateChange = true;
+            this.grappleClaw.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_grappleclaw_blank;
+            this.grappleClaw.Size = new System.Drawing.Size(40, 40);
+            this.grappleClaw.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_grappleclaw_solid;
+            this.grappleClaw.TabIndex = 45;
+            this.grappleClaw.TabStop = false;
+            // 
+            // feather
+            // 
+            this.feather.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_feather_blank;
+            this.feather.Collected = false;
+            this.feather.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_feather;
+            this.feather.ForeCollected = false;
+            this.feather.ForeImage = null;
+            this.feather.Location = new System.Drawing.Point(80, 0);
+            this.feather.Margin = new System.Windows.Forms.Padding(0);
+            this.feather.Name = "feather";
+            this.feather.RedrawOnStateChange = true;
+            this.feather.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_feather_blank;
+            this.feather.Size = new System.Drawing.Size(40, 40);
+            this.feather.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_feather_solid;
+            this.feather.TabIndex = 46;
+            this.feather.TabStop = false;
+            // 
+            // scanner
+            // 
+            this.scanner.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_handscanner_blank;
+            this.scanner.Collected = false;
+            this.scanner.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_handscanner;
+            this.scanner.ForeCollected = false;
+            this.scanner.ForeImage = null;
+            this.scanner.Location = new System.Drawing.Point(120, 0);
+            this.scanner.Margin = new System.Windows.Forms.Padding(0);
+            this.scanner.Name = "scanner";
+            this.scanner.RedrawOnStateChange = true;
+            this.scanner.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_handscanner_blank;
+            this.scanner.Size = new System.Drawing.Size(40, 40);
+            this.scanner.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_handscanner_solid;
+            this.scanner.TabIndex = 1;
+            this.scanner.TabStop = false;
+            // 
+            // readerPanel
+            // 
+            this.readerPanel.Controls.Add(this.reader);
+            this.readerPanel.Controls.Add(this.translationTablets);
+            this.readerPanel.Item = this.reader;
+            this.readerPanel.Label = this.translationTablets;
+            this.readerPanel.Location = new System.Drawing.Point(160, 0);
+            this.readerPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.readerPanel.Name = "readerPanel";
+            this.readerPanel.Size = new System.Drawing.Size(40, 56);
+            this.readerPanel.TabIndex = 111;
+            this.readerPanel.TreatAsAmmo = false;
+            // 
+            // reader
+            // 
+            this.reader.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_reader_blank;
+            this.reader.Collected = false;
+            this.reader.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_reader;
+            this.reader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.reader.ForeCollected = false;
+            this.reader.ForeImage = null;
+            this.reader.Location = new System.Drawing.Point(0, 0);
+            this.reader.Name = "reader";
+            this.reader.RedrawOnStateChange = false;
+            this.reader.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_reader_blank;
+            this.reader.Size = new System.Drawing.Size(40, 40);
+            this.reader.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_software_solid;
+            this.reader.TabIndex = 2;
+            this.reader.TabStop = false;
+            // 
+            // translationTablets
+            // 
+            this.translationTablets.Count = 0;
+            this.translationTablets.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.translationTablets.FormatString = "{0}%";
+            this.translationTablets.Location = new System.Drawing.Point(0, 40);
+            this.translationTablets.Max = 100;
+            this.translationTablets.Name = "translationTablets";
+            this.translationTablets.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.translationTablets.Size = new System.Drawing.Size(40, 16);
+            this.translationTablets.TabIndex = 48;
+            this.translationTablets.Text = "0%";
+            this.translationTablets.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.translationTablets.TreatAsAmmo = false;
+            this.translationTablets.DoubleClick += new System.EventHandler(this.SelectTextColor);
+            // 
+            // holyGrail
+            // 
+            this.holyGrail.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_holygrail_blank;
+            this.holyGrail.CollectedImages = new System.Drawing.Bitmap[] {
+        global::LMRItemTracker.Properties.Resources.Icon_holygrail2,
+        global::LMRItemTracker.Properties.Resources.Icon_holygrail3,
+        global::LMRItemTracker.Properties.Resources.Icon_holygrail};
+            this.holyGrail.Location = new System.Drawing.Point(200, 0);
+            this.holyGrail.Margin = new System.Windows.Forms.Padding(0);
+            this.holyGrail.Name = "holyGrail";
+            this.holyGrail.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_holygrail_blank;
+            this.holyGrail.Size = new System.Drawing.Size(40, 40);
+            this.holyGrail.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_holygrail_solid;
+            this.holyGrail.TabIndex = 114;
+            this.holyGrail.TabStop = false;
+            // 
+            // mirai
+            // 
+            this.mirai.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_mirai_blank;
+            this.mirai.Collected = false;
+            this.mirai.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_mirai;
+            this.mirai.ForeCollected = false;
+            this.mirai.ForeImage = null;
+            this.mirai.Location = new System.Drawing.Point(240, 0);
+            this.mirai.Margin = new System.Windows.Forms.Padding(0);
+            this.mirai.Name = "mirai";
+            this.mirai.RedrawOnStateChange = true;
+            this.mirai.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_mirai_blank;
+            this.mirai.Size = new System.Drawing.Size(40, 40);
+            this.mirai.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_software_solid;
+            this.mirai.TabIndex = 115;
+            this.mirai.TabStop = false;
+            // 
             // mainPanel
             // 
             this.mainPanel.AutoSize = true;
@@ -752,282 +899,6 @@ namespace LMRItemTracker
             this.flowLayoutPanel2.Size = new System.Drawing.Size(320, 176);
             this.flowLayoutPanel2.TabIndex = 112;
             this.flowLayoutPanel2.DoubleClick += new System.EventHandler(this.SelectFormColor);
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.AutoSize = true;
-            this.flowLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel3.Controls.Add(this.originSeal);
-            this.flowLayoutPanel3.Controls.Add(this.birthSeal);
-            this.flowLayoutPanel3.Controls.Add(this.lifeSeal);
-            this.flowLayoutPanel3.Controls.Add(this.deathSeal);
-            this.flowLayoutPanel3.Controls.Add(this.bookOfTheDead);
-            this.flowLayoutPanel3.Controls.Add(this.ring);
-            this.flowLayoutPanel3.Controls.Add(this.fairyClothes);
-            this.flowLayoutPanel3.Controls.Add(this.msx2);
-            this.flowLayoutPanel3.Controls.Add(this.scriptures);
-            this.flowLayoutPanel3.Controls.Add(this.crucifix);
-            this.flowLayoutPanel3.Controls.Add(this.perfume);
-            this.flowLayoutPanel3.Controls.Add(this.glove);
-            this.flowLayoutPanel3.Controls.Add(this.bracelet);
-            this.flowLayoutPanel3.Controls.Add(this.spaulder);
-            this.mainPanel.SetFlowBreak(this.flowLayoutPanel3, true);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(10, 314);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(320, 80);
-            this.flowLayoutPanel3.TabIndex = 117;
-            this.flowLayoutPanel3.DoubleClick += new System.EventHandler(this.SelectFormColor);
-            // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.AutoSize = true;
-            this.flowLayoutPanel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel4.Controls.Add(this.whip);
-            this.flowLayoutPanel4.Controls.Add(this.knife);
-            this.flowLayoutPanel4.Controls.Add(this.axe);
-            this.flowLayoutPanel4.Controls.Add(this.katana);
-            this.flowLayoutPanel4.Controls.Add(this.shield);
-            this.flowLayoutPanel4.Controls.Add(this.gauntlet);
-            this.flowLayoutPanel4.Controls.Add(this.pistolPanel);
-            this.flowLayoutPanel4.Controls.Add(this.shurikenPanel);
-            this.flowLayoutPanel4.Controls.Add(this.rollingShurikenPanel);
-            this.flowLayoutPanel4.Controls.Add(this.caltropsPanel);
-            this.flowLayoutPanel4.Controls.Add(this.flareGunPanel);
-            this.flowLayoutPanel4.Controls.Add(this.chakramPanel);
-            this.flowLayoutPanel4.Controls.Add(this.earthSpearPanel);
-            this.flowLayoutPanel4.Controls.Add(this.bombPanel);
-            this.mainPanel.SetFlowBreak(this.flowLayoutPanel4, true);
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(10, 402);
-            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(320, 112);
-            this.flowLayoutPanel4.TabIndex = 115;
-            this.flowLayoutPanel4.DoubleClick += new System.EventHandler(this.SelectFormColor);
-            // 
-            // flowLayoutPanel5
-            // 
-            this.flowLayoutPanel5.AutoSize = true;
-            this.flowLayoutPanel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel5.Controls.Add(this.ocarina);
-            this.flowLayoutPanel5.Controls.Add(this.mantra);
-            this.flowLayoutPanel5.Controls.Add(this.vessel);
-            this.flowLayoutPanel5.Controls.Add(this.keySword);
-            this.flowLayoutPanel5.Controls.Add(this.lampOfTime);
-            this.flowLayoutPanel5.Controls.Add(this.mapsPanel);
-            this.flowLayoutPanel5.Controls.Add(this.ankhJewelPanel);
-            this.mainPanel.SetFlowBreak(this.flowLayoutPanel5, true);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(10, 522);
-            this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(280, 56);
-            this.flowLayoutPanel5.TabIndex = 115;
-            this.flowLayoutPanel5.DoubleClick += new System.EventHandler(this.SelectFormColor);
-            // 
-            // flowLayoutPanel6
-            // 
-            this.flowLayoutPanel6.AutoSize = true;
-            this.flowLayoutPanel6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel6.Controls.Add(this.shellHorn);
-            this.flowLayoutPanel6.Controls.Add(this.waterproofCase);
-            this.flowLayoutPanel6.Controls.Add(this.heatproofCase);
-            this.flowLayoutPanel6.Controls.Add(this.swimsuit);
-            this.flowLayoutPanel6.Controls.Add(this.djedPillar);
-            this.flowLayoutPanel6.Controls.Add(this.mantraSingle);
-            this.flowLayoutPanel6.Controls.Add(this.xmailer);
-            this.flowLayoutPanel6.Controls.Add(this.yagomap);
-            this.flowLayoutPanel6.Controls.Add(this.yagostr);
-            this.flowLayoutPanel6.Controls.Add(this.bunemon);
-            this.flowLayoutPanel6.Controls.Add(this.bunplus);
-            this.flowLayoutPanel6.Controls.Add(this.guild);
-            this.flowLayoutPanel6.Controls.Add(this.beolamu);
-            this.flowLayoutPanel6.Controls.Add(this.emusic);
-            this.flowLayoutPanel6.Controls.Add(this.randc);
-            this.flowLayoutPanel6.Controls.Add(this.capstar);
-            this.flowLayoutPanel6.Controls.Add(this.deathv);
-            this.flowLayoutPanel6.Controls.Add(this.move);
-            this.flowLayoutPanel6.Controls.Add(this.mekuri);
-            this.flowLayoutPanel6.Controls.Add(this.bounce);
-            this.flowLayoutPanel6.Controls.Add(this.miracle);
-            this.flowLayoutPanel6.Controls.Add(this.lamulana);
-            this.mainPanel.SetFlowBreak(this.flowLayoutPanel6, true);
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(10, 586);
-            this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(320, 120);
-            this.flowLayoutPanel6.TabIndex = 120;
-            // 
-            // bossPanel
-            // 
-            this.bossPanel.AutoSize = true;
-            this.bossPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.bossPanel.Controls.Add(this.amphisbaena);
-            this.bossPanel.Controls.Add(this.sakit);
-            this.bossPanel.Controls.Add(this.ellmac);
-            this.bossPanel.Controls.Add(this.bahamut);
-            this.bossPanel.Controls.Add(this.viy);
-            this.bossPanel.Controls.Add(this.palenque);
-            this.bossPanel.Controls.Add(this.baphomet);
-            this.bossPanel.Controls.Add(this.tiamat);
-            this.mainPanel.SetFlowBreak(this.bossPanel, true);
-            this.bossPanel.Location = new System.Drawing.Point(10, 714);
-            this.bossPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.bossPanel.MaximumSize = new System.Drawing.Size(280, 0);
-            this.bossPanel.Name = "bossPanel";
-            this.bossPanel.Size = new System.Drawing.Size(280, 34);
-            this.bossPanel.TabIndex = 112;
-            this.bossPanel.DoubleClick += new System.EventHandler(this.SelectFormColor);
-            // 
-            // itemColorDialog
-            // 
-            this.itemColorDialog.AnyColor = true;
-            this.itemColorDialog.SolidColorOnly = true;
-            // 
-            // hermesBoots
-            // 
-            this.hermesBoots.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_hermesboots_blank;
-            this.hermesBoots.Collected = false;
-            this.hermesBoots.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_hermesboots;
-            this.hermesBoots.ForeCollected = false;
-            this.hermesBoots.ForeImage = null;
-            this.hermesBoots.Location = new System.Drawing.Point(0, 0);
-            this.hermesBoots.Margin = new System.Windows.Forms.Padding(0);
-            this.hermesBoots.Name = "hermesBoots";
-            this.hermesBoots.RedrawOnStateChange = true;
-            this.hermesBoots.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_hermesboots_blank;
-            this.hermesBoots.Size = new System.Drawing.Size(40, 40);
-            this.hermesBoots.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_hermesboots_solid;
-            this.hermesBoots.TabIndex = 44;
-            this.hermesBoots.TabStop = false;
-            // 
-            // grappleClaw
-            // 
-            this.grappleClaw.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_grappleclaw_blank;
-            this.grappleClaw.Collected = false;
-            this.grappleClaw.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_grappleclaw;
-            this.grappleClaw.ForeCollected = false;
-            this.grappleClaw.ForeImage = null;
-            this.grappleClaw.Location = new System.Drawing.Point(40, 0);
-            this.grappleClaw.Margin = new System.Windows.Forms.Padding(0);
-            this.grappleClaw.Name = "grappleClaw";
-            this.grappleClaw.RedrawOnStateChange = true;
-            this.grappleClaw.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_grappleclaw_blank;
-            this.grappleClaw.Size = new System.Drawing.Size(40, 40);
-            this.grappleClaw.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_grappleclaw_solid;
-            this.grappleClaw.TabIndex = 45;
-            this.grappleClaw.TabStop = false;
-            // 
-            // feather
-            // 
-            this.feather.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_feather_blank;
-            this.feather.Collected = false;
-            this.feather.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_feather;
-            this.feather.ForeCollected = false;
-            this.feather.ForeImage = null;
-            this.feather.Location = new System.Drawing.Point(80, 0);
-            this.feather.Margin = new System.Windows.Forms.Padding(0);
-            this.feather.Name = "feather";
-            this.feather.RedrawOnStateChange = true;
-            this.feather.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_feather_blank;
-            this.feather.Size = new System.Drawing.Size(40, 40);
-            this.feather.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_feather_solid;
-            this.feather.TabIndex = 46;
-            this.feather.TabStop = false;
-            // 
-            // scanner
-            // 
-            this.scanner.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_handscanner_blank;
-            this.scanner.Collected = false;
-            this.scanner.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_handscanner;
-            this.scanner.ForeCollected = false;
-            this.scanner.ForeImage = null;
-            this.scanner.Location = new System.Drawing.Point(120, 0);
-            this.scanner.Margin = new System.Windows.Forms.Padding(0);
-            this.scanner.Name = "scanner";
-            this.scanner.RedrawOnStateChange = true;
-            this.scanner.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_handscanner_blank;
-            this.scanner.Size = new System.Drawing.Size(40, 40);
-            this.scanner.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_handscanner_solid;
-            this.scanner.TabIndex = 1;
-            this.scanner.TabStop = false;
-            // 
-            // readerPanel
-            // 
-            this.readerPanel.Controls.Add(this.reader);
-            this.readerPanel.Controls.Add(this.translationTablets);
-            this.readerPanel.Item = this.reader;
-            this.readerPanel.Label = this.translationTablets;
-            this.readerPanel.Location = new System.Drawing.Point(160, 0);
-            this.readerPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.readerPanel.Name = "readerPanel";
-            this.readerPanel.Size = new System.Drawing.Size(40, 56);
-            this.readerPanel.TabIndex = 111;
-            this.readerPanel.TreatAsAmmo = false;
-            // 
-            // reader
-            // 
-            this.reader.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_reader_blank;
-            this.reader.Collected = false;
-            this.reader.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_reader;
-            this.reader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.reader.ForeCollected = false;
-            this.reader.ForeImage = null;
-            this.reader.Location = new System.Drawing.Point(0, 0);
-            this.reader.Name = "reader";
-            this.reader.RedrawOnStateChange = false;
-            this.reader.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_reader_blank;
-            this.reader.Size = new System.Drawing.Size(40, 40);
-            this.reader.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_software_solid;
-            this.reader.TabIndex = 2;
-            this.reader.TabStop = false;
-            // 
-            // translationTablets
-            // 
-            this.translationTablets.Count = 0;
-            this.translationTablets.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.translationTablets.FormatString = "{0}%";
-            this.translationTablets.Location = new System.Drawing.Point(0, 40);
-            this.translationTablets.Max = 100;
-            this.translationTablets.Name = "translationTablets";
-            this.translationTablets.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.translationTablets.Size = new System.Drawing.Size(40, 16);
-            this.translationTablets.TabIndex = 48;
-            this.translationTablets.Text = "0%";
-            this.translationTablets.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.translationTablets.TreatAsAmmo = false;
-            // 
-            // holyGrail
-            // 
-            this.holyGrail.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_holygrail_blank;
-            this.holyGrail.CollectedImages = new System.Drawing.Bitmap[] {
-        global::LMRItemTracker.Properties.Resources.Icon_holygrail2,
-        global::LMRItemTracker.Properties.Resources.Icon_holygrail3,
-        global::LMRItemTracker.Properties.Resources.Icon_holygrail};
-            this.holyGrail.Location = new System.Drawing.Point(200, 0);
-            this.holyGrail.Margin = new System.Windows.Forms.Padding(0);
-            this.holyGrail.Name = "holyGrail";
-            this.holyGrail.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_holygrail_blank;
-            this.holyGrail.Size = new System.Drawing.Size(40, 40);
-            this.holyGrail.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_holygrail_solid;
-            this.holyGrail.TabIndex = 114;
-            this.holyGrail.TabStop = false;
-            // 
-            // mirai
-            // 
-            this.mirai.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_mirai_blank;
-            this.mirai.Collected = false;
-            this.mirai.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_mirai;
-            this.mirai.ForeCollected = false;
-            this.mirai.ForeImage = null;
-            this.mirai.Location = new System.Drawing.Point(240, 0);
-            this.mirai.Margin = new System.Windows.Forms.Padding(0);
-            this.mirai.Name = "mirai";
-            this.mirai.RedrawOnStateChange = true;
-            this.mirai.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_mirai_blank;
-            this.mirai.Size = new System.Drawing.Size(40, 40);
-            this.mirai.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_software_solid;
-            this.mirai.TabIndex = 115;
-            this.mirai.TabStop = false;
             // 
             // bronzeMirror
             // 
@@ -1525,6 +1396,33 @@ namespace LMRItemTracker
             this.skullWallCount.Text = "0/4";
             this.skullWallCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.skullWallCount.TreatAsAmmo = false;
+            this.skullWallCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.AutoSize = true;
+            this.flowLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel3.Controls.Add(this.originSeal);
+            this.flowLayoutPanel3.Controls.Add(this.birthSeal);
+            this.flowLayoutPanel3.Controls.Add(this.lifeSeal);
+            this.flowLayoutPanel3.Controls.Add(this.deathSeal);
+            this.flowLayoutPanel3.Controls.Add(this.bookOfTheDead);
+            this.flowLayoutPanel3.Controls.Add(this.ring);
+            this.flowLayoutPanel3.Controls.Add(this.fairyClothes);
+            this.flowLayoutPanel3.Controls.Add(this.msx2);
+            this.flowLayoutPanel3.Controls.Add(this.scriptures);
+            this.flowLayoutPanel3.Controls.Add(this.crucifix);
+            this.flowLayoutPanel3.Controls.Add(this.perfume);
+            this.flowLayoutPanel3.Controls.Add(this.glove);
+            this.flowLayoutPanel3.Controls.Add(this.bracelet);
+            this.flowLayoutPanel3.Controls.Add(this.spaulder);
+            this.mainPanel.SetFlowBreak(this.flowLayoutPanel3, true);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(10, 314);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(320, 80);
+            this.flowLayoutPanel3.TabIndex = 117;
+            this.flowLayoutPanel3.DoubleClick += new System.EventHandler(this.SelectFormColor);
             // 
             // originSeal
             // 
@@ -1764,6 +1662,32 @@ namespace LMRItemTracker
             this.spaulder.TabIndex = 100;
             this.spaulder.TabStop = false;
             // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.AutoSize = true;
+            this.flowLayoutPanel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel4.Controls.Add(this.whip);
+            this.flowLayoutPanel4.Controls.Add(this.knife);
+            this.flowLayoutPanel4.Controls.Add(this.axe);
+            this.flowLayoutPanel4.Controls.Add(this.katana);
+            this.flowLayoutPanel4.Controls.Add(this.shield);
+            this.flowLayoutPanel4.Controls.Add(this.gauntlet);
+            this.flowLayoutPanel4.Controls.Add(this.pistolPanel);
+            this.flowLayoutPanel4.Controls.Add(this.shurikenPanel);
+            this.flowLayoutPanel4.Controls.Add(this.rollingShurikenPanel);
+            this.flowLayoutPanel4.Controls.Add(this.caltropsPanel);
+            this.flowLayoutPanel4.Controls.Add(this.flareGunPanel);
+            this.flowLayoutPanel4.Controls.Add(this.chakramPanel);
+            this.flowLayoutPanel4.Controls.Add(this.earthSpearPanel);
+            this.flowLayoutPanel4.Controls.Add(this.bombPanel);
+            this.mainPanel.SetFlowBreak(this.flowLayoutPanel4, true);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(10, 402);
+            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(320, 112);
+            this.flowLayoutPanel4.TabIndex = 115;
+            this.flowLayoutPanel4.DoubleClick += new System.EventHandler(this.SelectFormColor);
+            // 
             // whip
             // 
             this.whip.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_whip;
@@ -1889,6 +1813,7 @@ namespace LMRItemTracker
             this.pistolAmmoCount.TabIndex = 68;
             this.pistolAmmoCount.Text = "0:0";
             this.pistolAmmoCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.pistolAmmoCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
             // 
             // pistol
             // 
@@ -1935,6 +1860,7 @@ namespace LMRItemTracker
             this.shurikenAmmoCount.Text = "0";
             this.shurikenAmmoCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.shurikenAmmoCount.TreatAsAmmo = false;
+            this.shurikenAmmoCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
             // 
             // shuriken
             // 
@@ -1981,6 +1907,7 @@ namespace LMRItemTracker
             this.rollingShurikenAmmoCount.Text = "0";
             this.rollingShurikenAmmoCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.rollingShurikenAmmoCount.TreatAsAmmo = false;
+            this.rollingShurikenAmmoCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
             // 
             // rollingShuriken
             // 
@@ -2027,6 +1954,7 @@ namespace LMRItemTracker
             this.caltropsAmmoCount.Text = "0";
             this.caltropsAmmoCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.caltropsAmmoCount.TreatAsAmmo = true;
+            this.caltropsAmmoCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
             // 
             // caltrops
             // 
@@ -2073,6 +2001,7 @@ namespace LMRItemTracker
             this.flareGunAmmoCount.Text = "0";
             this.flareGunAmmoCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.flareGunAmmoCount.TreatAsAmmo = false;
+            this.flareGunAmmoCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
             // 
             // flareGun
             // 
@@ -2119,6 +2048,7 @@ namespace LMRItemTracker
             this.chakramAmmoCount.Text = "0";
             this.chakramAmmoCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.chakramAmmoCount.TreatAsAmmo = false;
+            this.chakramAmmoCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
             // 
             // chakram
             // 
@@ -2165,6 +2095,7 @@ namespace LMRItemTracker
             this.earthSpearAmmoCount.Text = "0";
             this.earthSpearAmmoCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.earthSpearAmmoCount.TreatAsAmmo = false;
+            this.earthSpearAmmoCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
             // 
             // earthSpear
             // 
@@ -2211,6 +2142,7 @@ namespace LMRItemTracker
             this.bombAmmoCount.Text = "0";
             this.bombAmmoCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bombAmmoCount.TreatAsAmmo = false;
+            this.bombAmmoCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
             // 
             // bomb
             // 
@@ -2229,6 +2161,25 @@ namespace LMRItemTracker
             this.bomb.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_bomb_solid;
             this.bomb.TabIndex = 54;
             this.bomb.TabStop = false;
+            // 
+            // flowLayoutPanel5
+            // 
+            this.flowLayoutPanel5.AutoSize = true;
+            this.flowLayoutPanel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel5.Controls.Add(this.ocarina);
+            this.flowLayoutPanel5.Controls.Add(this.mantra);
+            this.flowLayoutPanel5.Controls.Add(this.vessel);
+            this.flowLayoutPanel5.Controls.Add(this.keySword);
+            this.flowLayoutPanel5.Controls.Add(this.lampOfTime);
+            this.flowLayoutPanel5.Controls.Add(this.mapsPanel);
+            this.flowLayoutPanel5.Controls.Add(this.ankhJewelPanel);
+            this.mainPanel.SetFlowBreak(this.flowLayoutPanel5, true);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(10, 522);
+            this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
+            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(280, 56);
+            this.flowLayoutPanel5.TabIndex = 115;
+            this.flowLayoutPanel5.DoubleClick += new System.EventHandler(this.SelectFormColor);
             // 
             // ocarina
             // 
@@ -2335,6 +2286,7 @@ namespace LMRItemTracker
             this.mapCount.Text = "0/17";
             this.mapCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.mapCount.TreatAsAmmo = false;
+            this.mapCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
             // 
             // maps
             // 
@@ -2401,6 +2353,40 @@ namespace LMRItemTracker
             this.ankhJewelCount.Text = "0";
             this.ankhJewelCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.ankhJewelCount.TreatAsAmmo = false;
+            this.ankhJewelCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
+            // 
+            // flowLayoutPanel6
+            // 
+            this.flowLayoutPanel6.AutoSize = true;
+            this.flowLayoutPanel6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel6.Controls.Add(this.shellHorn);
+            this.flowLayoutPanel6.Controls.Add(this.waterproofCase);
+            this.flowLayoutPanel6.Controls.Add(this.heatproofCase);
+            this.flowLayoutPanel6.Controls.Add(this.swimsuit);
+            this.flowLayoutPanel6.Controls.Add(this.djedPillar);
+            this.flowLayoutPanel6.Controls.Add(this.mantraSingle);
+            this.flowLayoutPanel6.Controls.Add(this.xmailer);
+            this.flowLayoutPanel6.Controls.Add(this.yagomap);
+            this.flowLayoutPanel6.Controls.Add(this.yagostr);
+            this.flowLayoutPanel6.Controls.Add(this.bunemon);
+            this.flowLayoutPanel6.Controls.Add(this.bunplus);
+            this.flowLayoutPanel6.Controls.Add(this.guild);
+            this.flowLayoutPanel6.Controls.Add(this.beolamu);
+            this.flowLayoutPanel6.Controls.Add(this.emusic);
+            this.flowLayoutPanel6.Controls.Add(this.randc);
+            this.flowLayoutPanel6.Controls.Add(this.capstar);
+            this.flowLayoutPanel6.Controls.Add(this.deathv);
+            this.flowLayoutPanel6.Controls.Add(this.move);
+            this.flowLayoutPanel6.Controls.Add(this.mekuri);
+            this.flowLayoutPanel6.Controls.Add(this.bounce);
+            this.flowLayoutPanel6.Controls.Add(this.miracle);
+            this.flowLayoutPanel6.Controls.Add(this.lamulana);
+            this.mainPanel.SetFlowBreak(this.flowLayoutPanel6, true);
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(10, 586);
+            this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
+            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(320, 120);
+            this.flowLayoutPanel6.TabIndex = 120;
             // 
             // shellHorn
             // 
@@ -2776,6 +2762,27 @@ namespace LMRItemTracker
             this.lamulana.TabIndex = 137;
             this.lamulana.TabStop = false;
             // 
+            // bossPanel
+            // 
+            this.bossPanel.AutoSize = true;
+            this.bossPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.bossPanel.Controls.Add(this.amphisbaena);
+            this.bossPanel.Controls.Add(this.sakit);
+            this.bossPanel.Controls.Add(this.ellmac);
+            this.bossPanel.Controls.Add(this.bahamut);
+            this.bossPanel.Controls.Add(this.viy);
+            this.bossPanel.Controls.Add(this.palenque);
+            this.bossPanel.Controls.Add(this.baphomet);
+            this.bossPanel.Controls.Add(this.tiamat);
+            this.mainPanel.SetFlowBreak(this.bossPanel, true);
+            this.bossPanel.Location = new System.Drawing.Point(10, 714);
+            this.bossPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.bossPanel.MaximumSize = new System.Drawing.Size(280, 0);
+            this.bossPanel.Name = "bossPanel";
+            this.bossPanel.Size = new System.Drawing.Size(280, 34);
+            this.bossPanel.TabIndex = 112;
+            this.bossPanel.DoubleClick += new System.EventHandler(this.SelectFormColor);
+            // 
             // amphisbaena
             // 
             this.amphisbaena.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_amphisbaena_blank;
@@ -2912,6 +2919,11 @@ namespace LMRItemTracker
             this.tiamat.TabIndex = 19;
             this.tiamat.TabStop = false;
             // 
+            // itemColorDialog
+            // 
+            this.itemColorDialog.AnyColor = true;
+            this.itemColorDialog.SolidColorOnly = true;
+            // 
             // LaMulanaItemTrackerForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2922,12 +2934,19 @@ namespace LMRItemTracker
             this.Name = "LaMulanaItemTrackerForm";
             this.Text = "Item Tracker";
             this.TopMost = true;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formClosing);
             this.Load += new System.EventHandler(this.LaMulanaItemTrackerForm_Load);
             this.DoubleClick += new System.EventHandler(this.SelectFormColor);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.hermesBoots)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grappleClaw)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.feather)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scanner)).EndInit();
+            this.readerPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.reader)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.holyGrail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mirai)).EndInit();
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
             this.overviewPanel.ResumeLayout(false);
@@ -2940,19 +2959,6 @@ namespace LMRItemTracker
             this.deathPanel.ResumeLayout(false);
             this.deathPanel.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel3.ResumeLayout(false);
-            this.flowLayoutPanel4.ResumeLayout(false);
-            this.flowLayoutPanel5.ResumeLayout(false);
-            this.flowLayoutPanel6.ResumeLayout(false);
-            this.bossPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.hermesBoots)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grappleClaw)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.feather)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scanner)).EndInit();
-            this.readerPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.reader)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.holyGrail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mirai)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bronzeMirror)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fruitOfEden)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.twinStatue)).EndInit();
@@ -2982,6 +2988,7 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.torude)).EndInit();
             this.shrinePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.skullWall)).EndInit();
+            this.flowLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.originSeal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.birthSeal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lifeSeal)).EndInit();
@@ -2996,6 +3003,7 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.glove)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bracelet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spaulder)).EndInit();
+            this.flowLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.whip)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.knife)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axe)).EndInit();
@@ -3018,6 +3026,7 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.earthSpear)).EndInit();
             this.bombPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bomb)).EndInit();
+            this.flowLayoutPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ocarina)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mantra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vessel)).EndInit();
@@ -3027,6 +3036,7 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.maps)).EndInit();
             this.ankhJewelPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ankhJewels)).EndInit();
+            this.flowLayoutPanel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.shellHorn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.waterproofCase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.heatproofCase)).EndInit();
@@ -3049,6 +3059,7 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.bounce)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.miracle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lamulana)).EndInit();
+            this.bossPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.amphisbaena)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sakit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ellmac)).EndInit();
@@ -3084,7 +3095,6 @@ namespace LMRItemTracker
         private bool gameStarted;
 
         private List<String> allItems;
-        private SettingsBackup settingsBackup;
 
         [STAThread]
         static void Main(string[] args)
