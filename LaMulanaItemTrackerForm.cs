@@ -651,6 +651,10 @@ namespace LMRItemTracker
             {
                 return "Whip";
             }
+            else if("w-forbidden".Equals(flagName))
+            {
+                return "Provocative Bathing Suit";
+            }
             return null;
         }
 
@@ -675,7 +679,7 @@ namespace LMRItemTracker
                 || "w-clothes".Equals(flagName) || "w-scriptures".Equals(flagName) || "w-hermes".Equals(flagName)
                 || "w-fruit".Equals(flagName) || "w-twin-statue".Equals(flagName) || "w-bracelet".Equals(flagName)
                 || "w-perfume".Equals(flagName) || "w-spaulder".Equals(flagName) || "w-dimension-key".Equals(flagName)
-                || "w-icecape".Equals(flagName))
+                || "w-icecape".Equals(flagName) || "w-forbidden".Equals(flagName))
             {
                 // Non-usable items with no special image handling
                 SetImage(flagName, isAdd);

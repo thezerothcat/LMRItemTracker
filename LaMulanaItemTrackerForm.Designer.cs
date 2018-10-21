@@ -2345,7 +2345,7 @@ namespace LMRItemTracker
             this.ankhJewelCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.ankhJewelCount.FormatString = "{0}";
             this.ankhJewelCount.Location = new System.Drawing.Point(0, 40);
-            this.ankhJewelCount.Max = 0;
+            this.ankhJewelCount.Max = 9;
             this.ankhJewelCount.Name = "ankhJewelCount";
             this.ankhJewelCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ankhJewelCount.Size = new System.Drawing.Size(40, 16);

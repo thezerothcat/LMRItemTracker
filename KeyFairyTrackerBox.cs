@@ -88,7 +88,7 @@ namespace LMRItemTracker
 
         private void UpdateImage(System.Windows.Forms.PaintEventArgs e)
         {
-            if (!miracleCollected && !mekuriCollected && "solid".Equals(Properties.Settings.Default.BackgroundMode))
+            if ((!miracleCollected || !mekuriCollected) && "solid".Equals(Properties.Settings.Default.BackgroundMode) && !LaMulanaItemTrackerForm.DialogOpen)
             {
                 e.Graphics.Clear(Properties.Settings.Default.BackgroundColor);
                 System.Drawing.Imaging.ImageAttributes imageAttributes = new System.Drawing.Imaging.ImageAttributes();
@@ -105,7 +105,7 @@ namespace LMRItemTracker
                         });
 
                 imageAttributes.SetColorMatrix(colorMatrix);
-                e.Graphics.DrawImage(Properties.Resources.Icon_keysword_solid, new System.Drawing.Rectangle(0, 0, 40, 40), 0, 0, 40, 40, System.Drawing.GraphicsUnit.Pixel, imageAttributes);
+                e.Graphics.DrawImage(Properties.Resources.Icon_keyfairy_solid, new System.Drawing.Rectangle(0, 0, 40, 40), 0, 0, 40, 40, System.Drawing.GraphicsUnit.Pixel, imageAttributes);
             }
         }
     }
