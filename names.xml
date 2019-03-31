@@ -134,7 +134,8 @@
 	<item id="word-049" value="inv-w-mulanatalisman" />
 	<item id="word-04a" value="inv-w-forbidden" />
 	<item id="word-04c" value="inv-w-msx2" />
-	<item id="byte-108" value="w-medicine-yellow" comments="2" />
+  <item id="word-054" value="inv-w-secrettroflife" />
+  <item id="byte-108" value="w-medicine-yellow" comments="2" />
 	<item id="byte-109" value="w-medicine-green" comments="2" />
 	<item id="byte-10a" value="w-medicine-red" comments="2" />
 	<item id="word-051" value="inv-w-maternity" />

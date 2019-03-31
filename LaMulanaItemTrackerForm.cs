@@ -115,6 +115,7 @@ namespace LMRItemTracker
             this.allItems.Add("Rolling Shuriken");
             this.allItems.Add("Scalesphere");
             this.allItems.Add("Scriptures");
+            this.allItems.Add("Secret Treasure of Life");
             this.allItems.Add("Serpent Staff");
             this.allItems.Add("Shield");
             this.allItems.Add("Shell Horn");
@@ -390,6 +391,10 @@ namespace LMRItemTracker
             else if ("w-spaulder".Equals(flagName))
             {
                 return "Spaulder";
+            }
+            else if ("w-secrettroflife".Equals(flagName))
+            {
+                return "Secret Treasure of Life";
             }
             else if ("w-icecape".Equals(flagName))
             {
@@ -679,7 +684,7 @@ namespace LMRItemTracker
                 || "w-clothes".Equals(flagName) || "w-scriptures".Equals(flagName) || "w-hermes".Equals(flagName)
                 || "w-fruit".Equals(flagName) || "w-twin-statue".Equals(flagName) || "w-bracelet".Equals(flagName)
                 || "w-perfume".Equals(flagName) || "w-spaulder".Equals(flagName) || "w-dimension-key".Equals(flagName)
-                || "w-icecape".Equals(flagName) || "w-forbidden".Equals(flagName))
+                || "w-icecape".Equals(flagName) || "w-forbidden".Equals(flagName) || "w-secrettroflife".Equals(flagName))
             {
                 // Non-usable items with no special image handling
                 SetImage(flagName, isAdd);
@@ -1128,6 +1133,7 @@ namespace LMRItemTracker
                 // Upgrade settings from 1.0.11 where item names were different.
                 Properties.Settings.Default.Panel1Contents = Properties.Settings.Default.Panel1Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe");
                 Properties.Settings.Default.Panel2Contents = Properties.Settings.Default.Panel2Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe");
+                Properties.Settings.Default.Panel2Contents = Properties.Settings.Default.Panel2Contents + ",Secret Treasure of Life";
                 Properties.Settings.Default.Panel3Contents = Properties.Settings.Default.Panel3Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe");
                 Properties.Settings.Default.Panel4Contents = Properties.Settings.Default.Panel4Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe");
                 Properties.Settings.Default.Panel5Contents = Properties.Settings.Default.Panel5Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe");
@@ -1534,6 +1540,10 @@ namespace LMRItemTracker
             {
                 return global::LMRItemTracker.Properties.Resources.Icon_spaulder;
             }
+            else if ("w-secrettroflife".Equals(flagName))
+            {
+                return global::LMRItemTracker.Properties.Resources.Icon_secrettreasureoflife;
+            }
             else if ("w-icecape".Equals(flagName))
             {
                 return global::LMRItemTracker.Properties.Resources.Icon_icecape;
@@ -1822,6 +1832,10 @@ namespace LMRItemTracker
             {
                 return global::LMRItemTracker.Properties.Resources.Icon_swimsuit;
             }
+            else if ("w-secrettroflife".Equals(flagName))
+            {
+                return global::LMRItemTracker.Properties.Resources.Icon_secrettreasureoflife;
+            }
             else if ("whip".Equals(flagName))
             {
                 return global::LMRItemTracker.Properties.Resources.Icon_whip;
@@ -1906,6 +1920,10 @@ namespace LMRItemTracker
             else if ("Spaulder".Equals(itemName))
             {
                 return "w-spaulder";
+            }
+            else if ("Secret Treasure of Life".Equals(itemName))
+            {
+                return "w-secrettroflife";
             }
             else if ("Ice Cape".Equals(itemName))
             {
@@ -2579,6 +2597,10 @@ namespace LMRItemTracker
             if ("Ankh Jewels".Equals(itemName))
             {
                 return ankhJewelPanel;
+            }
+            if ("Secret Treasure of Life".Equals(itemName))
+            {
+                return secretTreasureOfLife;
             }
             return null;
         }

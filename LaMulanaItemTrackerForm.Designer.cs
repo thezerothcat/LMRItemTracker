@@ -82,6 +82,9 @@ namespace LMRItemTracker
             this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
             this.spaulderLabel = new System.Windows.Forms.Label();
             this.spaulderCount = new System.Windows.Forms.Label();
+            this.totalSpauldersPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.totalSpauldersLabel = new System.Windows.Forms.Label();
+            this.totalSpauldersCount = new System.Windows.Forms.Label();
             this.overviewPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.lastItemPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.lastItemLabel = new System.Windows.Forms.Label();
@@ -122,6 +125,7 @@ namespace LMRItemTracker
             this.shrinePanel = new LMRItemTracker.ItemTextPanel();
             this.skullWall = new LMRItemTracker.TrackerBox();
             this.skullWallCount = new LMRItemTracker.TrackerLabel();
+            this.secretTreasureOfLife = new LMRItemTracker.TrackerBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.originSeal = new LMRItemTracker.TrackerBox();
             this.birthSeal = new LMRItemTracker.TrackerBox();
@@ -213,9 +217,6 @@ namespace LMRItemTracker
             this.baphomet = new LMRItemTracker.TrackerBox();
             this.tiamat = new LMRItemTracker.TrackerBox();
             this.itemColorDialog = new System.Windows.Forms.ColorDialog();
-            this.totalSpauldersPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.totalSpauldersLabel = new System.Windows.Forms.Label();
-            this.totalSpauldersCount = new System.Windows.Forms.Label();
             this.menu.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hermesBoots)).BeginInit();
@@ -229,6 +230,7 @@ namespace LMRItemTracker
             this.mainPanel.SuspendLayout();
             this.spaulderPanel.SuspendLayout();
             this.flowLayoutPanel9.SuspendLayout();
+            this.totalSpauldersPanel.SuspendLayout();
             this.overviewPanel.SuspendLayout();
             this.lastItemPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lastItem1)).BeginInit();
@@ -265,6 +267,7 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.torude)).BeginInit();
             this.shrinePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skullWall)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.secretTreasureOfLife)).BeginInit();
             this.flowLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.originSeal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.birthSeal)).BeginInit();
@@ -345,7 +348,6 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.palenque)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baphomet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tiamat)).BeginInit();
-            this.totalSpauldersPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // textColorDialog
@@ -835,6 +837,44 @@ namespace LMRItemTracker
             this.spaulderCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.spaulderCount.MouseClick += new System.Windows.Forms.MouseEventHandler(this.spaulderCount_MouseClick);
             // 
+            // totalSpauldersPanel
+            // 
+            this.totalSpauldersPanel.AutoSize = true;
+            this.totalSpauldersPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.totalSpauldersPanel.Controls.Add(this.totalSpauldersLabel);
+            this.totalSpauldersPanel.Controls.Add(this.totalSpauldersCount);
+            this.totalSpauldersPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.totalSpauldersPanel.Location = new System.Drawing.Point(167, 0);
+            this.totalSpauldersPanel.Margin = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.totalSpauldersPanel.Name = "totalSpauldersPanel";
+            this.totalSpauldersPanel.Size = new System.Drawing.Size(138, 40);
+            this.totalSpauldersPanel.TabIndex = 120;
+            this.totalSpauldersPanel.WrapContents = false;
+            // 
+            // totalSpauldersLabel
+            // 
+            this.totalSpauldersLabel.AutoSize = true;
+            this.totalSpauldersLabel.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.totalSpauldersLabel.Location = new System.Drawing.Point(3, 0);
+            this.totalSpauldersLabel.MinimumSize = new System.Drawing.Size(0, 40);
+            this.totalSpauldersLabel.Name = "totalSpauldersLabel";
+            this.totalSpauldersLabel.Size = new System.Drawing.Size(111, 40);
+            this.totalSpauldersLabel.TabIndex = 0;
+            this.totalSpauldersLabel.Text = "Total Spaulders:";
+            this.totalSpauldersLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // totalSpauldersCount
+            // 
+            this.totalSpauldersCount.AutoSize = true;
+            this.totalSpauldersCount.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.totalSpauldersCount.Location = new System.Drawing.Point(120, 0);
+            this.totalSpauldersCount.MinimumSize = new System.Drawing.Size(0, 40);
+            this.totalSpauldersCount.Name = "totalSpauldersCount";
+            this.totalSpauldersCount.Size = new System.Drawing.Size(15, 40);
+            this.totalSpauldersCount.TabIndex = 1;
+            this.totalSpauldersCount.Text = "0";
+            this.totalSpauldersCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // overviewPanel
             // 
             this.overviewPanel.AutoSize = true;
@@ -976,6 +1016,7 @@ namespace LMRItemTracker
             this.flowLayoutPanel2.Controls.Add(this.magatamaJewel);
             this.flowLayoutPanel2.Controls.Add(this.torude);
             this.flowLayoutPanel2.Controls.Add(this.shrinePanel);
+            this.flowLayoutPanel2.Controls.Add(this.secretTreasureOfLife);
             this.mainPanel.SetFlowBreak(this.flowLayoutPanel2, true);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(10, 170);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
@@ -1481,6 +1522,23 @@ namespace LMRItemTracker
             this.skullWallCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.skullWallCount.TreatAsAmmo = false;
             this.skullWallCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
+            // 
+            // secretTreasureOfLife
+            // 
+            this.secretTreasureOfLife.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_secrettreasureoflife_blank;
+            this.secretTreasureOfLife.Collected = false;
+            this.secretTreasureOfLife.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_secrettreasureoflife;
+            this.secretTreasureOfLife.ForeCollected = false;
+            this.secretTreasureOfLife.ForeImage = null;
+            this.secretTreasureOfLife.Location = new System.Drawing.Point(160, 120);
+            this.secretTreasureOfLife.Margin = new System.Windows.Forms.Padding(0);
+            this.secretTreasureOfLife.Name = "secretTreasureOfLife";
+            this.secretTreasureOfLife.RedrawOnStateChange = true;
+            this.secretTreasureOfLife.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_secrettreasureoflife_blank;
+            this.secretTreasureOfLife.Size = new System.Drawing.Size(40, 40);
+            this.secretTreasureOfLife.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_secrettreasureoflife_solid;
+            this.secretTreasureOfLife.TabIndex = 118;
+            this.secretTreasureOfLife.TabStop = false;
             // 
             // flowLayoutPanel3
             // 
@@ -3008,44 +3066,6 @@ namespace LMRItemTracker
             this.itemColorDialog.AnyColor = true;
             this.itemColorDialog.SolidColorOnly = true;
             // 
-            // totalSpauldersPanel
-            // 
-            this.totalSpauldersPanel.AutoSize = true;
-            this.totalSpauldersPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.totalSpauldersPanel.Controls.Add(this.totalSpauldersLabel);
-            this.totalSpauldersPanel.Controls.Add(this.totalSpauldersCount);
-            this.totalSpauldersPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.totalSpauldersPanel.Location = new System.Drawing.Point(167, 0);
-            this.totalSpauldersPanel.Margin = new System.Windows.Forms.Padding(17, 0, 0, 0);
-            this.totalSpauldersPanel.Name = "totalSpauldersPanel";
-            this.totalSpauldersPanel.Size = new System.Drawing.Size(138, 40);
-            this.totalSpauldersPanel.TabIndex = 120;
-            this.totalSpauldersPanel.WrapContents = false;
-            // 
-            // totalSpauldersLabel
-            // 
-            this.totalSpauldersLabel.AutoSize = true;
-            this.totalSpauldersLabel.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.totalSpauldersLabel.Location = new System.Drawing.Point(3, 0);
-            this.totalSpauldersLabel.MinimumSize = new System.Drawing.Size(0, 40);
-            this.totalSpauldersLabel.Name = "totalSpauldersLabel";
-            this.totalSpauldersLabel.Size = new System.Drawing.Size(111, 40);
-            this.totalSpauldersLabel.TabIndex = 0;
-            this.totalSpauldersLabel.Text = "Total Spaulders:";
-            this.totalSpauldersLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // totalSpauldersCount
-            // 
-            this.totalSpauldersCount.AutoSize = true;
-            this.totalSpauldersCount.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.totalSpauldersCount.Location = new System.Drawing.Point(120, 0);
-            this.totalSpauldersCount.MinimumSize = new System.Drawing.Size(0, 40);
-            this.totalSpauldersCount.Name = "totalSpauldersCount";
-            this.totalSpauldersCount.Size = new System.Drawing.Size(15, 40);
-            this.totalSpauldersCount.TabIndex = 1;
-            this.totalSpauldersCount.Text = "0";
-            this.totalSpauldersCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // LaMulanaItemTrackerForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -3075,6 +3095,8 @@ namespace LMRItemTracker
             this.spaulderPanel.PerformLayout();
             this.flowLayoutPanel9.ResumeLayout(false);
             this.flowLayoutPanel9.PerformLayout();
+            this.totalSpauldersPanel.ResumeLayout(false);
+            this.totalSpauldersPanel.PerformLayout();
             this.overviewPanel.ResumeLayout(false);
             this.overviewPanel.PerformLayout();
             this.lastItemPanel.ResumeLayout(false);
@@ -3114,6 +3136,7 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.torude)).EndInit();
             this.shrinePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.skullWall)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.secretTreasureOfLife)).EndInit();
             this.flowLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.originSeal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.birthSeal)).EndInit();
@@ -3194,8 +3217,6 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.palenque)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baphomet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tiamat)).EndInit();
-            this.totalSpauldersPanel.ResumeLayout(false);
-            this.totalSpauldersPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3398,5 +3419,6 @@ namespace LMRItemTracker
         private FlowLayoutPanel totalSpauldersPanel;
         private Label totalSpauldersLabel;
         private Label totalSpauldersCount;
+        private TrackerBox secretTreasureOfLife;
     }
 }
