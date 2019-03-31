@@ -56,7 +56,7 @@
   <ItemGroup>
     <Reference Include="LiveSplit.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\Downloads\LiveSplit_1.7.4\LiveSplit.Core.dll</HintPath>
+      <HintPath>.\LiveSplit.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

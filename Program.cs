@@ -179,6 +179,24 @@ namespace LMRItemTracker
                 {
                     laMulanaItemTrackerForm.toggleItem(updatedName, false);
                 }
+
+                if (displayname.Equals("inv-w-spaulder"))
+                {
+                    bool isAdd = false;
+                    if (cur is ushort)
+                    {
+                        isAdd = (ushort)cur > (ushort)old;
+                    }
+                    else if (cur is short)
+                    {
+                        isAdd = (short)cur > (short)old;
+                    }
+
+                    if(isAdd)
+                    {
+                        laMulanaItemTrackerForm.SafeUpdateSpaulderCount();
+                    }
+                }
             }
             else if (displayname.StartsWith("w-"))
             {

@@ -1092,6 +1092,27 @@ namespace LMRItemTracker
             UpdateCount(deathCount, Properties.Settings.Default.DeathCount, int.MaxValue);
         }
 
+        public void SafeUpdateSpaulderCount()
+        {
+            if (this.gameStarted)
+            {
+                UpdateSpaulderCount(true);
+            }
+        }
+
+        public void UpdateSpaulderCount(bool isAdd)
+        {
+            if (isAdd)
+            {
+                Properties.Settings.Default.SpaulderCount += 1;
+            }
+            else
+            {
+                Properties.Settings.Default.SpaulderCount -= 1;
+            }
+            UpdateCount(spaulderCount, Properties.Settings.Default.SpaulderCount, int.MaxValue);
+        }
+
         private void LaMulanaItemTrackerForm_Load(object sender, EventArgs e)
         {
             if(Properties.Settings.Default.UpgradeRequired)
@@ -2668,6 +2689,8 @@ namespace LMRItemTracker
             lastItemLabel.ForeColor = Properties.Settings.Default.TextColor;
             deathLabel.ForeColor = Properties.Settings.Default.TextColor;
             deathCount.ForeColor = Properties.Settings.Default.TextColor;
+            spaulderLabel.ForeColor = Properties.Settings.Default.TextColor;
+            spaulderCount.ForeColor = Properties.Settings.Default.TextColor;
 
             mapCount.UpdateTextColor();
             ankhJewelCount.UpdateTextColor();
@@ -2708,6 +2731,7 @@ namespace LMRItemTracker
             Properties.Settings.Default.ShowAmmoCount = true;
             Properties.Settings.Default.ShowDeathCount = true;
             Properties.Settings.Default.DeathCount = 0;
+            Properties.Settings.Default.SpaulderCount = 0;
 
             UpdateAlwaysOnTop();
             UpdateFormSize();
@@ -2958,6 +2982,25 @@ namespace LMRItemTracker
             else if (me.Button == System.Windows.Forms.MouseButtons.Right)
             {
                 UpdateDeathCount(false);
+            }
+        }
+
+        private void resetSpaulderCount(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.SpaulderCount = 0;
+            UpdateCount(spaulderCount, Properties.Settings.Default.SpaulderCount, int.MaxValue);
+        }
+
+        private void spaulderCount_MouseClick(object sender, MouseEventArgs e)
+        {
+            MouseEventArgs me = (MouseEventArgs)e;
+            if (me.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                UpdateSpaulderCount(true);
+            }
+            else if (me.Button == System.Windows.Forms.MouseButtons.Right)
+            {
+                UpdateSpaulderCount(false);
             }
         }
     }
