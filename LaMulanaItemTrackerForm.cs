@@ -1113,6 +1113,11 @@ namespace LMRItemTracker
             UpdateCount(spaulderCount, Properties.Settings.Default.SpaulderCount, int.MaxValue);
         }
 
+        public void UpdateTotalSpaulders(short totalSpaulders)
+        {
+            UpdateCount(totalSpauldersCount, totalSpaulders, int.MaxValue);
+        }
+
         private void LaMulanaItemTrackerForm_Load(object sender, EventArgs e)
         {
             if(Properties.Settings.Default.UpgradeRequired)
@@ -1141,6 +1146,8 @@ namespace LMRItemTracker
             UpdateBackgroundMode();
             UpdateShowLastItem();
             UpdateShowDeathCount();
+            UpdateCount(spaulderCount, Properties.Settings.Default.SpaulderCount, int.MaxValue);
+
             InitializeFormPanels();
 
             try
@@ -2691,6 +2698,8 @@ namespace LMRItemTracker
             deathCount.ForeColor = Properties.Settings.Default.TextColor;
             spaulderLabel.ForeColor = Properties.Settings.Default.TextColor;
             spaulderCount.ForeColor = Properties.Settings.Default.TextColor;
+            totalSpauldersLabel.ForeColor = Properties.Settings.Default.TextColor;
+            totalSpauldersCount.ForeColor = Properties.Settings.Default.TextColor;
 
             mapCount.UpdateTextColor();
             ankhJewelCount.UpdateTextColor();

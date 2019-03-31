@@ -186,13 +186,15 @@ namespace LMRItemTracker
                     if (cur is ushort)
                     {
                         isAdd = (ushort)cur > (ushort)old;
+                        laMulanaItemTrackerForm.UpdateTotalSpaulders((short)(ushort)cur);
                     }
                     else if (cur is short)
                     {
                         isAdd = (short)cur > (short)old;
+                        laMulanaItemTrackerForm.UpdateTotalSpaulders((short)cur);
                     }
 
-                    if(isAdd)
+                    if (isAdd)
                     {
                         laMulanaItemTrackerForm.SafeUpdateSpaulderCount();
                     }
