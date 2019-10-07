@@ -66,26 +66,56 @@ namespace LMRItemTracker
             this.showLastItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearLastItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.hermesBoots = new LMRItemTracker.TrackerBox();
-            this.grappleClaw = new LMRItemTracker.TrackerBox();
-            this.feather = new LMRItemTracker.TrackerBox();
-            this.scanner = new LMRItemTracker.TrackerBox();
             this.readerPanel = new LMRItemTracker.ItemTextPanel();
-            this.reader = new LMRItemTracker.TrackerBox();
             this.translationTablets = new LMRItemTracker.TrackerLabel();
-            this.holyGrail = new LMRItemTracker.MultiStateTrackerBox();
-            this.mirai = new LMRItemTracker.TrackerBox();
             this.mainPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.overviewPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.lastItemPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.lastItemLabel = new System.Windows.Forms.Label();
-            this.lastItem1 = new System.Windows.Forms.PictureBox();
-            this.lastItem2 = new System.Windows.Forms.PictureBox();
-            this.lastItem3 = new System.Windows.Forms.PictureBox();
             this.deathPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.deathLabel = new System.Windows.Forms.Label();
             this.deathCount = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.shrinePanel = new LMRItemTracker.ItemTextPanel();
+            this.skullWallCount = new LMRItemTracker.TrackerLabel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pistolPanel = new LMRItemTracker.PistolPanel();
+            this.pistolAmmoCount = new LMRItemTracker.PistolAmmoTrackerLabel();
+            this.shurikenPanel = new LMRItemTracker.ItemTextPanel();
+            this.shurikenAmmoCount = new LMRItemTracker.TrackerLabel();
+            this.rollingShurikenPanel = new LMRItemTracker.ItemTextPanel();
+            this.rollingShurikenAmmoCount = new LMRItemTracker.TrackerLabel();
+            this.caltropsPanel = new LMRItemTracker.ItemTextPanel();
+            this.caltropsAmmoCount = new LMRItemTracker.TrackerLabel();
+            this.flareGunPanel = new LMRItemTracker.ItemTextPanel();
+            this.flareGunAmmoCount = new LMRItemTracker.TrackerLabel();
+            this.chakramPanel = new LMRItemTracker.ItemTextPanel();
+            this.chakramAmmoCount = new LMRItemTracker.TrackerLabel();
+            this.earthSpearPanel = new LMRItemTracker.ItemTextPanel();
+            this.earthSpearAmmoCount = new LMRItemTracker.TrackerLabel();
+            this.bombPanel = new LMRItemTracker.ItemTextPanel();
+            this.bombAmmoCount = new LMRItemTracker.TrackerLabel();
+            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.mapsPanel = new LMRItemTracker.ItemTextPanel();
+            this.mapCount = new LMRItemTracker.TrackerLabel();
+            this.ankhJewelPanel = new LMRItemTracker.ItemTextPanel();
+            this.ankhJewelCount = new LMRItemTracker.TrackerLabel();
+            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
+            this.bossPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.itemColorDialog = new System.Windows.Forms.ColorDialog();
+            this.halloweenCandyPanel = new LMRItemTracker.ItemTextPanel();
+            this.halloweenCandyCount = new LMRItemTracker.TrackerLabel();
+            this.hermesBoots = new LMRItemTracker.TrackerBox();
+            this.grappleClaw = new LMRItemTracker.TrackerBox();
+            this.feather = new LMRItemTracker.TrackerBox();
+            this.scanner = new LMRItemTracker.TrackerBox();
+            this.reader = new LMRItemTracker.TrackerBox();
+            this.holyGrail = new LMRItemTracker.MultiStateTrackerBox();
+            this.mirai = new LMRItemTracker.TrackerBox();
+            this.lastItem1 = new System.Windows.Forms.PictureBox();
+            this.lastItem2 = new System.Windows.Forms.PictureBox();
+            this.lastItem3 = new System.Windows.Forms.PictureBox();
             this.bronzeMirror = new LMRItemTracker.TrackerBox();
             this.fruitOfEden = new LMRItemTracker.TrackerBox();
             this.twinStatue = new LMRItemTracker.TrackerBox();
@@ -113,10 +143,7 @@ namespace LMRItemTracker
             this.eyeOfTruth = new LMRItemTracker.TrackerBox();
             this.magatamaJewel = new LMRItemTracker.TrackerBox();
             this.torude = new LMRItemTracker.TrackerBox();
-            this.shrinePanel = new LMRItemTracker.ItemTextPanel();
             this.skullWall = new LMRItemTracker.TrackerBox();
-            this.skullWallCount = new LMRItemTracker.TrackerLabel();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.originSeal = new LMRItemTracker.TrackerBox();
             this.birthSeal = new LMRItemTracker.TrackerBox();
             this.lifeSeal = new LMRItemTracker.TrackerBox();
@@ -131,50 +158,28 @@ namespace LMRItemTracker
             this.glove = new LMRItemTracker.TrackerBox();
             this.bracelet = new LMRItemTracker.TrackerBox();
             this.spaulder = new LMRItemTracker.TrackerBox();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.whip = new LMRItemTracker.MultiStateTrackerBox();
             this.knife = new LMRItemTracker.TrackerBox();
             this.axe = new LMRItemTracker.TrackerBox();
             this.katana = new LMRItemTracker.TrackerBox();
             this.shield = new LMRItemTracker.MultiStateTrackerBox();
             this.gauntlet = new LMRItemTracker.TrackerBox();
-            this.pistolPanel = new LMRItemTracker.PistolPanel();
-            this.pistolAmmoCount = new LMRItemTracker.PistolAmmoTrackerLabel();
             this.pistol = new LMRItemTracker.TrackerBox();
-            this.shurikenPanel = new LMRItemTracker.ItemTextPanel();
-            this.shurikenAmmoCount = new LMRItemTracker.TrackerLabel();
             this.shuriken = new LMRItemTracker.TrackerBox();
-            this.rollingShurikenPanel = new LMRItemTracker.ItemTextPanel();
-            this.rollingShurikenAmmoCount = new LMRItemTracker.TrackerLabel();
             this.rollingShuriken = new LMRItemTracker.TrackerBox();
-            this.caltropsPanel = new LMRItemTracker.ItemTextPanel();
-            this.caltropsAmmoCount = new LMRItemTracker.TrackerLabel();
             this.caltrops = new LMRItemTracker.TrackerBox();
-            this.flareGunPanel = new LMRItemTracker.ItemTextPanel();
-            this.flareGunAmmoCount = new LMRItemTracker.TrackerLabel();
             this.flareGun = new LMRItemTracker.TrackerBox();
-            this.chakramPanel = new LMRItemTracker.ItemTextPanel();
-            this.chakramAmmoCount = new LMRItemTracker.TrackerLabel();
             this.chakram = new LMRItemTracker.TrackerBox();
-            this.earthSpearPanel = new LMRItemTracker.ItemTextPanel();
-            this.earthSpearAmmoCount = new LMRItemTracker.TrackerLabel();
             this.earthSpear = new LMRItemTracker.TrackerBox();
-            this.bombPanel = new LMRItemTracker.ItemTextPanel();
-            this.bombAmmoCount = new LMRItemTracker.TrackerLabel();
             this.bomb = new LMRItemTracker.TrackerBox();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.ocarina = new LMRItemTracker.TrackerBox();
             this.mantra = new LMRItemTracker.TrackerBox();
             this.vessel = new LMRItemTracker.MultiStateTrackerBox();
             this.keySword = new LMRItemTracker.KeySwordTrackerBox();
             this.lampOfTime = new LMRItemTracker.MultiStateTrackerBox();
-            this.mapsPanel = new LMRItemTracker.ItemTextPanel();
-            this.mapCount = new LMRItemTracker.TrackerLabel();
             this.maps = new LMRItemTracker.TrackerBox();
-            this.ankhJewelPanel = new LMRItemTracker.ItemTextPanel();
             this.ankhJewels = new LMRItemTracker.TrackerBox();
-            this.ankhJewelCount = new LMRItemTracker.TrackerLabel();
-            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
+            this.halloweenCandy = new LMRItemTracker.TrackerBox();
             this.shellHorn = new LMRItemTracker.TrackerBox();
             this.waterproofCase = new LMRItemTracker.TrackerBox();
             this.heatproofCase = new LMRItemTracker.TrackerBox();
@@ -197,7 +202,6 @@ namespace LMRItemTracker
             this.bounce = new LMRItemTracker.TrackerBox();
             this.miracle = new LMRItemTracker.TrackerBox();
             this.lamulana = new LMRItemTracker.TrackerBox();
-            this.bossPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.amphisbaena = new LMRItemTracker.TrackerBox();
             this.sakit = new LMRItemTracker.TrackerBox();
             this.ellmac = new LMRItemTracker.TrackerBox();
@@ -206,25 +210,41 @@ namespace LMRItemTracker
             this.palenque = new LMRItemTracker.TrackerBox();
             this.baphomet = new LMRItemTracker.TrackerBox();
             this.tiamat = new LMRItemTracker.TrackerBox();
-            this.itemColorDialog = new System.Windows.Forms.ColorDialog();
             this.menu.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.readerPanel.SuspendLayout();
+            this.mainPanel.SuspendLayout();
+            this.overviewPanel.SuspendLayout();
+            this.lastItemPanel.SuspendLayout();
+            this.deathPanel.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.shrinePanel.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
+            this.flowLayoutPanel4.SuspendLayout();
+            this.pistolPanel.SuspendLayout();
+            this.shurikenPanel.SuspendLayout();
+            this.rollingShurikenPanel.SuspendLayout();
+            this.caltropsPanel.SuspendLayout();
+            this.flareGunPanel.SuspendLayout();
+            this.chakramPanel.SuspendLayout();
+            this.earthSpearPanel.SuspendLayout();
+            this.bombPanel.SuspendLayout();
+            this.flowLayoutPanel5.SuspendLayout();
+            this.mapsPanel.SuspendLayout();
+            this.ankhJewelPanel.SuspendLayout();
+            this.flowLayoutPanel6.SuspendLayout();
+            this.bossPanel.SuspendLayout();
+            this.halloweenCandyPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hermesBoots)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grappleClaw)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.feather)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scanner)).BeginInit();
-            this.readerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reader)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.holyGrail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mirai)).BeginInit();
-            this.mainPanel.SuspendLayout();
-            this.overviewPanel.SuspendLayout();
-            this.lastItemPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lastItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lastItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lastItem3)).BeginInit();
-            this.deathPanel.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bronzeMirror)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fruitOfEden)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.twinStatue)).BeginInit();
@@ -252,9 +272,7 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.eyeOfTruth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.magatamaJewel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.torude)).BeginInit();
-            this.shrinePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skullWall)).BeginInit();
-            this.flowLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.originSeal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.birthSeal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lifeSeal)).BeginInit();
@@ -269,40 +287,28 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.glove)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bracelet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spaulder)).BeginInit();
-            this.flowLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.whip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.knife)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.katana)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shield)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gauntlet)).BeginInit();
-            this.pistolPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pistol)).BeginInit();
-            this.shurikenPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shuriken)).BeginInit();
-            this.rollingShurikenPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rollingShuriken)).BeginInit();
-            this.caltropsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.caltrops)).BeginInit();
-            this.flareGunPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flareGun)).BeginInit();
-            this.chakramPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chakram)).BeginInit();
-            this.earthSpearPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.earthSpear)).BeginInit();
-            this.bombPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bomb)).BeginInit();
-            this.flowLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ocarina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mantra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vessel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.keySword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lampOfTime)).BeginInit();
-            this.mapsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maps)).BeginInit();
-            this.ankhJewelPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ankhJewels)).BeginInit();
-            this.flowLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.halloweenCandy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shellHorn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.waterproofCase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.heatproofCase)).BeginInit();
@@ -325,7 +331,6 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.bounce)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.miracle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lamulana)).BeginInit();
-            this.bossPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.amphisbaena)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sakit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ellmac)).BeginInit();
@@ -583,74 +588,6 @@ namespace LMRItemTracker
             this.flowLayoutPanel1.TabIndex = 110;
             this.flowLayoutPanel1.DoubleClick += new System.EventHandler(this.SelectFormColor);
             // 
-            // hermesBoots
-            // 
-            this.hermesBoots.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_hermesboots_blank;
-            this.hermesBoots.Collected = false;
-            this.hermesBoots.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_hermesboots;
-            this.hermesBoots.ForeCollected = false;
-            this.hermesBoots.ForeImage = null;
-            this.hermesBoots.Location = new System.Drawing.Point(0, 0);
-            this.hermesBoots.Margin = new System.Windows.Forms.Padding(0);
-            this.hermesBoots.Name = "hermesBoots";
-            this.hermesBoots.RedrawOnStateChange = true;
-            this.hermesBoots.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_hermesboots_blank;
-            this.hermesBoots.Size = new System.Drawing.Size(40, 40);
-            this.hermesBoots.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_hermesboots_solid;
-            this.hermesBoots.TabIndex = 44;
-            this.hermesBoots.TabStop = false;
-            // 
-            // grappleClaw
-            // 
-            this.grappleClaw.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_grappleclaw_blank;
-            this.grappleClaw.Collected = false;
-            this.grappleClaw.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_grappleclaw;
-            this.grappleClaw.ForeCollected = false;
-            this.grappleClaw.ForeImage = null;
-            this.grappleClaw.Location = new System.Drawing.Point(40, 0);
-            this.grappleClaw.Margin = new System.Windows.Forms.Padding(0);
-            this.grappleClaw.Name = "grappleClaw";
-            this.grappleClaw.RedrawOnStateChange = true;
-            this.grappleClaw.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_grappleclaw_blank;
-            this.grappleClaw.Size = new System.Drawing.Size(40, 40);
-            this.grappleClaw.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_grappleclaw_solid;
-            this.grappleClaw.TabIndex = 45;
-            this.grappleClaw.TabStop = false;
-            // 
-            // feather
-            // 
-            this.feather.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_feather_blank;
-            this.feather.Collected = false;
-            this.feather.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_feather;
-            this.feather.ForeCollected = false;
-            this.feather.ForeImage = null;
-            this.feather.Location = new System.Drawing.Point(80, 0);
-            this.feather.Margin = new System.Windows.Forms.Padding(0);
-            this.feather.Name = "feather";
-            this.feather.RedrawOnStateChange = true;
-            this.feather.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_feather_blank;
-            this.feather.Size = new System.Drawing.Size(40, 40);
-            this.feather.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_feather_solid;
-            this.feather.TabIndex = 46;
-            this.feather.TabStop = false;
-            // 
-            // scanner
-            // 
-            this.scanner.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_handscanner_blank;
-            this.scanner.Collected = false;
-            this.scanner.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_handscanner;
-            this.scanner.ForeCollected = false;
-            this.scanner.ForeImage = null;
-            this.scanner.Location = new System.Drawing.Point(120, 0);
-            this.scanner.Margin = new System.Windows.Forms.Padding(0);
-            this.scanner.Name = "scanner";
-            this.scanner.RedrawOnStateChange = true;
-            this.scanner.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_handscanner_blank;
-            this.scanner.Size = new System.Drawing.Size(40, 40);
-            this.scanner.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_handscanner_solid;
-            this.scanner.TabIndex = 1;
-            this.scanner.TabStop = false;
-            // 
             // readerPanel
             // 
             this.readerPanel.Controls.Add(this.reader);
@@ -663,23 +600,6 @@ namespace LMRItemTracker
             this.readerPanel.Size = new System.Drawing.Size(40, 56);
             this.readerPanel.TabIndex = 111;
             this.readerPanel.TreatAsAmmo = false;
-            // 
-            // reader
-            // 
-            this.reader.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_reader_blank;
-            this.reader.Collected = false;
-            this.reader.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_reader;
-            this.reader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.reader.ForeCollected = false;
-            this.reader.ForeImage = null;
-            this.reader.Location = new System.Drawing.Point(0, 0);
-            this.reader.Name = "reader";
-            this.reader.RedrawOnStateChange = false;
-            this.reader.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_reader_blank;
-            this.reader.Size = new System.Drawing.Size(40, 40);
-            this.reader.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_software_solid;
-            this.reader.TabIndex = 2;
-            this.reader.TabStop = false;
             // 
             // translationTablets
             // 
@@ -696,39 +616,6 @@ namespace LMRItemTracker
             this.translationTablets.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.translationTablets.TreatAsAmmo = false;
             this.translationTablets.DoubleClick += new System.EventHandler(this.SelectTextColor);
-            // 
-            // holyGrail
-            // 
-            this.holyGrail.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_holygrail_blank;
-            this.holyGrail.CollectedImages = new System.Drawing.Bitmap[] {
-        global::LMRItemTracker.Properties.Resources.Icon_holygrail2,
-        global::LMRItemTracker.Properties.Resources.Icon_holygrail3,
-        global::LMRItemTracker.Properties.Resources.Icon_holygrail};
-            this.holyGrail.Location = new System.Drawing.Point(200, 0);
-            this.holyGrail.Margin = new System.Windows.Forms.Padding(0);
-            this.holyGrail.Name = "holyGrail";
-            this.holyGrail.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_holygrail_blank;
-            this.holyGrail.Size = new System.Drawing.Size(40, 40);
-            this.holyGrail.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_holygrail_solid;
-            this.holyGrail.TabIndex = 114;
-            this.holyGrail.TabStop = false;
-            // 
-            // mirai
-            // 
-            this.mirai.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_mirai_blank;
-            this.mirai.Collected = false;
-            this.mirai.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_mirai;
-            this.mirai.ForeCollected = false;
-            this.mirai.ForeImage = null;
-            this.mirai.Location = new System.Drawing.Point(240, 0);
-            this.mirai.Margin = new System.Windows.Forms.Padding(0);
-            this.mirai.Name = "mirai";
-            this.mirai.RedrawOnStateChange = true;
-            this.mirai.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_mirai_blank;
-            this.mirai.Size = new System.Drawing.Size(40, 40);
-            this.mirai.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_software_solid;
-            this.mirai.TabIndex = 115;
-            this.mirai.TabStop = false;
             // 
             // mainPanel
             // 
@@ -792,33 +679,6 @@ namespace LMRItemTracker
             this.lastItemLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lastItemLabel.Click += new System.EventHandler(this.changeLanguage);
             this.lastItemLabel.DoubleClick += new System.EventHandler(this.SelectTextColor);
-            // 
-            // lastItem1
-            // 
-            this.lastItem1.Location = new System.Drawing.Point(99, 0);
-            this.lastItem1.Margin = new System.Windows.Forms.Padding(0);
-            this.lastItem1.Name = "lastItem1";
-            this.lastItem1.Size = new System.Drawing.Size(40, 40);
-            this.lastItem1.TabIndex = 114;
-            this.lastItem1.TabStop = false;
-            // 
-            // lastItem2
-            // 
-            this.lastItem2.Location = new System.Drawing.Point(139, 0);
-            this.lastItem2.Margin = new System.Windows.Forms.Padding(0);
-            this.lastItem2.Name = "lastItem2";
-            this.lastItem2.Size = new System.Drawing.Size(40, 40);
-            this.lastItem2.TabIndex = 116;
-            this.lastItem2.TabStop = false;
-            // 
-            // lastItem3
-            // 
-            this.lastItem3.Location = new System.Drawing.Point(179, 0);
-            this.lastItem3.Margin = new System.Windows.Forms.Padding(0);
-            this.lastItem3.Name = "lastItem3";
-            this.lastItem3.Size = new System.Drawing.Size(40, 40);
-            this.lastItem3.TabIndex = 117;
-            this.lastItem3.TabStop = false;
             // 
             // deathPanel
             // 
@@ -899,6 +759,631 @@ namespace LMRItemTracker
             this.flowLayoutPanel2.Size = new System.Drawing.Size(320, 176);
             this.flowLayoutPanel2.TabIndex = 112;
             this.flowLayoutPanel2.DoubleClick += new System.EventHandler(this.SelectFormColor);
+            // 
+            // shrinePanel
+            // 
+            this.shrinePanel.Controls.Add(this.skullWall);
+            this.shrinePanel.Controls.Add(this.skullWallCount);
+            this.shrinePanel.Item = this.skullWall;
+            this.shrinePanel.Label = this.skullWallCount;
+            this.shrinePanel.Location = new System.Drawing.Point(120, 120);
+            this.shrinePanel.Margin = new System.Windows.Forms.Padding(0);
+            this.shrinePanel.Name = "shrinePanel";
+            this.shrinePanel.Size = new System.Drawing.Size(40, 56);
+            this.shrinePanel.TabIndex = 115;
+            this.shrinePanel.TreatAsAmmo = false;
+            // 
+            // skullWallCount
+            // 
+            this.skullWallCount.Count = 0;
+            this.skullWallCount.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.skullWallCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.skullWallCount.FormatString = "{0}/{1}";
+            this.skullWallCount.Location = new System.Drawing.Point(0, 40);
+            this.skullWallCount.Max = 4;
+            this.skullWallCount.Name = "skullWallCount";
+            this.skullWallCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.skullWallCount.Size = new System.Drawing.Size(40, 16);
+            this.skullWallCount.TabIndex = 67;
+            this.skullWallCount.Text = "0/4";
+            this.skullWallCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.skullWallCount.TreatAsAmmo = false;
+            this.skullWallCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.AutoSize = true;
+            this.flowLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel3.Controls.Add(this.originSeal);
+            this.flowLayoutPanel3.Controls.Add(this.birthSeal);
+            this.flowLayoutPanel3.Controls.Add(this.lifeSeal);
+            this.flowLayoutPanel3.Controls.Add(this.deathSeal);
+            this.flowLayoutPanel3.Controls.Add(this.bookOfTheDead);
+            this.flowLayoutPanel3.Controls.Add(this.ring);
+            this.flowLayoutPanel3.Controls.Add(this.fairyClothes);
+            this.flowLayoutPanel3.Controls.Add(this.msx2);
+            this.flowLayoutPanel3.Controls.Add(this.scriptures);
+            this.flowLayoutPanel3.Controls.Add(this.crucifix);
+            this.flowLayoutPanel3.Controls.Add(this.perfume);
+            this.flowLayoutPanel3.Controls.Add(this.glove);
+            this.flowLayoutPanel3.Controls.Add(this.bracelet);
+            this.flowLayoutPanel3.Controls.Add(this.spaulder);
+            this.mainPanel.SetFlowBreak(this.flowLayoutPanel3, true);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(10, 314);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(320, 80);
+            this.flowLayoutPanel3.TabIndex = 117;
+            this.flowLayoutPanel3.DoubleClick += new System.EventHandler(this.SelectFormColor);
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.AutoSize = true;
+            this.flowLayoutPanel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel4.Controls.Add(this.whip);
+            this.flowLayoutPanel4.Controls.Add(this.knife);
+            this.flowLayoutPanel4.Controls.Add(this.axe);
+            this.flowLayoutPanel4.Controls.Add(this.katana);
+            this.flowLayoutPanel4.Controls.Add(this.shield);
+            this.flowLayoutPanel4.Controls.Add(this.gauntlet);
+            this.flowLayoutPanel4.Controls.Add(this.pistolPanel);
+            this.flowLayoutPanel4.Controls.Add(this.shurikenPanel);
+            this.flowLayoutPanel4.Controls.Add(this.rollingShurikenPanel);
+            this.flowLayoutPanel4.Controls.Add(this.caltropsPanel);
+            this.flowLayoutPanel4.Controls.Add(this.flareGunPanel);
+            this.flowLayoutPanel4.Controls.Add(this.chakramPanel);
+            this.flowLayoutPanel4.Controls.Add(this.earthSpearPanel);
+            this.flowLayoutPanel4.Controls.Add(this.bombPanel);
+            this.mainPanel.SetFlowBreak(this.flowLayoutPanel4, true);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(10, 402);
+            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(320, 112);
+            this.flowLayoutPanel4.TabIndex = 115;
+            this.flowLayoutPanel4.DoubleClick += new System.EventHandler(this.SelectFormColor);
+            // 
+            // pistolPanel
+            // 
+            this.pistolPanel.Controls.Add(this.pistolAmmoCount);
+            this.pistolPanel.Controls.Add(this.pistol);
+            this.pistolPanel.Item = this.pistol;
+            this.pistolPanel.Label = this.pistolAmmoCount;
+            this.pistolPanel.Location = new System.Drawing.Point(240, 0);
+            this.pistolPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.pistolPanel.Name = "pistolPanel";
+            this.pistolPanel.Size = new System.Drawing.Size(40, 56);
+            this.pistolPanel.TabIndex = 109;
+            // 
+            // pistolAmmoCount
+            // 
+            this.pistolAmmoCount.BulletCount = 0;
+            this.pistolAmmoCount.ClipCount = 0;
+            this.pistolAmmoCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.pistolAmmoCount.Location = new System.Drawing.Point(0, 40);
+            this.pistolAmmoCount.Name = "pistolAmmoCount";
+            this.pistolAmmoCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.pistolAmmoCount.Size = new System.Drawing.Size(40, 16);
+            this.pistolAmmoCount.TabIndex = 68;
+            this.pistolAmmoCount.Text = "0:0";
+            this.pistolAmmoCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.pistolAmmoCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
+            // 
+            // shurikenPanel
+            // 
+            this.shurikenPanel.Controls.Add(this.shurikenAmmoCount);
+            this.shurikenPanel.Controls.Add(this.shuriken);
+            this.shurikenPanel.Item = this.shuriken;
+            this.shurikenPanel.Label = this.shurikenAmmoCount;
+            this.shurikenPanel.Location = new System.Drawing.Point(280, 0);
+            this.shurikenPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.shurikenPanel.Name = "shurikenPanel";
+            this.shurikenPanel.Size = new System.Drawing.Size(40, 56);
+            this.shurikenPanel.TabIndex = 110;
+            this.shurikenPanel.TreatAsAmmo = true;
+            // 
+            // shurikenAmmoCount
+            // 
+            this.shurikenAmmoCount.Count = 0;
+            this.shurikenAmmoCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.shurikenAmmoCount.FormatString = "{0}";
+            this.shurikenAmmoCount.Location = new System.Drawing.Point(0, 40);
+            this.shurikenAmmoCount.Max = 150;
+            this.shurikenAmmoCount.Name = "shurikenAmmoCount";
+            this.shurikenAmmoCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.shurikenAmmoCount.Size = new System.Drawing.Size(40, 16);
+            this.shurikenAmmoCount.TabIndex = 94;
+            this.shurikenAmmoCount.Text = "0";
+            this.shurikenAmmoCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.shurikenAmmoCount.TreatAsAmmo = false;
+            this.shurikenAmmoCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
+            // 
+            // rollingShurikenPanel
+            // 
+            this.rollingShurikenPanel.Controls.Add(this.rollingShurikenAmmoCount);
+            this.rollingShurikenPanel.Controls.Add(this.rollingShuriken);
+            this.rollingShurikenPanel.Item = this.rollingShuriken;
+            this.rollingShurikenPanel.Label = this.rollingShurikenAmmoCount;
+            this.rollingShurikenPanel.Location = new System.Drawing.Point(0, 56);
+            this.rollingShurikenPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.rollingShurikenPanel.Name = "rollingShurikenPanel";
+            this.rollingShurikenPanel.Size = new System.Drawing.Size(40, 56);
+            this.rollingShurikenPanel.TabIndex = 111;
+            this.rollingShurikenPanel.TreatAsAmmo = true;
+            // 
+            // rollingShurikenAmmoCount
+            // 
+            this.rollingShurikenAmmoCount.Count = 0;
+            this.rollingShurikenAmmoCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.rollingShurikenAmmoCount.FormatString = "{0}";
+            this.rollingShurikenAmmoCount.Location = new System.Drawing.Point(0, 40);
+            this.rollingShurikenAmmoCount.Max = 100;
+            this.rollingShurikenAmmoCount.Name = "rollingShurikenAmmoCount";
+            this.rollingShurikenAmmoCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.rollingShurikenAmmoCount.Size = new System.Drawing.Size(40, 16);
+            this.rollingShurikenAmmoCount.TabIndex = 98;
+            this.rollingShurikenAmmoCount.Text = "0";
+            this.rollingShurikenAmmoCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.rollingShurikenAmmoCount.TreatAsAmmo = false;
+            this.rollingShurikenAmmoCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
+            // 
+            // caltropsPanel
+            // 
+            this.caltropsPanel.Controls.Add(this.caltropsAmmoCount);
+            this.caltropsPanel.Controls.Add(this.caltrops);
+            this.caltropsPanel.Item = this.caltrops;
+            this.caltropsPanel.Label = this.caltropsAmmoCount;
+            this.caltropsPanel.Location = new System.Drawing.Point(40, 56);
+            this.caltropsPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.caltropsPanel.Name = "caltropsPanel";
+            this.caltropsPanel.Size = new System.Drawing.Size(40, 56);
+            this.caltropsPanel.TabIndex = 112;
+            this.caltropsPanel.TreatAsAmmo = true;
+            // 
+            // caltropsAmmoCount
+            // 
+            this.caltropsAmmoCount.Count = 0;
+            this.caltropsAmmoCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.caltropsAmmoCount.FormatString = "{0}";
+            this.caltropsAmmoCount.Location = new System.Drawing.Point(0, 40);
+            this.caltropsAmmoCount.Max = 80;
+            this.caltropsAmmoCount.Name = "caltropsAmmoCount";
+            this.caltropsAmmoCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.caltropsAmmoCount.Size = new System.Drawing.Size(40, 16);
+            this.caltropsAmmoCount.TabIndex = 99;
+            this.caltropsAmmoCount.Text = "0";
+            this.caltropsAmmoCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.caltropsAmmoCount.TreatAsAmmo = true;
+            this.caltropsAmmoCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
+            // 
+            // flareGunPanel
+            // 
+            this.flareGunPanel.Controls.Add(this.flareGunAmmoCount);
+            this.flareGunPanel.Controls.Add(this.flareGun);
+            this.flareGunPanel.Item = this.flareGun;
+            this.flareGunPanel.Label = this.flareGunAmmoCount;
+            this.flareGunPanel.Location = new System.Drawing.Point(80, 56);
+            this.flareGunPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.flareGunPanel.Name = "flareGunPanel";
+            this.flareGunPanel.Size = new System.Drawing.Size(40, 56);
+            this.flareGunPanel.TabIndex = 113;
+            this.flareGunPanel.TreatAsAmmo = true;
+            // 
+            // flareGunAmmoCount
+            // 
+            this.flareGunAmmoCount.Count = 0;
+            this.flareGunAmmoCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.flareGunAmmoCount.FormatString = "{0}";
+            this.flareGunAmmoCount.Location = new System.Drawing.Point(0, 40);
+            this.flareGunAmmoCount.Max = 80;
+            this.flareGunAmmoCount.Name = "flareGunAmmoCount";
+            this.flareGunAmmoCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.flareGunAmmoCount.Size = new System.Drawing.Size(40, 16);
+            this.flareGunAmmoCount.TabIndex = 112;
+            this.flareGunAmmoCount.Text = "0";
+            this.flareGunAmmoCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.flareGunAmmoCount.TreatAsAmmo = false;
+            this.flareGunAmmoCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
+            // 
+            // chakramPanel
+            // 
+            this.chakramPanel.Controls.Add(this.chakramAmmoCount);
+            this.chakramPanel.Controls.Add(this.chakram);
+            this.chakramPanel.Item = this.chakram;
+            this.chakramPanel.Label = this.chakramAmmoCount;
+            this.chakramPanel.Location = new System.Drawing.Point(120, 56);
+            this.chakramPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.chakramPanel.Name = "chakramPanel";
+            this.chakramPanel.Size = new System.Drawing.Size(40, 56);
+            this.chakramPanel.TabIndex = 114;
+            this.chakramPanel.TreatAsAmmo = true;
+            // 
+            // chakramAmmoCount
+            // 
+            this.chakramAmmoCount.Count = 0;
+            this.chakramAmmoCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.chakramAmmoCount.FormatString = "{0}";
+            this.chakramAmmoCount.Location = new System.Drawing.Point(0, 40);
+            this.chakramAmmoCount.Max = 10;
+            this.chakramAmmoCount.Name = "chakramAmmoCount";
+            this.chakramAmmoCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chakramAmmoCount.Size = new System.Drawing.Size(40, 16);
+            this.chakramAmmoCount.TabIndex = 112;
+            this.chakramAmmoCount.Text = "0";
+            this.chakramAmmoCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.chakramAmmoCount.TreatAsAmmo = false;
+            this.chakramAmmoCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
+            // 
+            // earthSpearPanel
+            // 
+            this.earthSpearPanel.Controls.Add(this.earthSpearAmmoCount);
+            this.earthSpearPanel.Controls.Add(this.earthSpear);
+            this.earthSpearPanel.Item = this.earthSpear;
+            this.earthSpearPanel.Label = this.earthSpearAmmoCount;
+            this.earthSpearPanel.Location = new System.Drawing.Point(160, 56);
+            this.earthSpearPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.earthSpearPanel.Name = "earthSpearPanel";
+            this.earthSpearPanel.Size = new System.Drawing.Size(40, 56);
+            this.earthSpearPanel.TabIndex = 115;
+            this.earthSpearPanel.TreatAsAmmo = true;
+            // 
+            // earthSpearAmmoCount
+            // 
+            this.earthSpearAmmoCount.Count = 0;
+            this.earthSpearAmmoCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.earthSpearAmmoCount.FormatString = "{0}";
+            this.earthSpearAmmoCount.Location = new System.Drawing.Point(0, 40);
+            this.earthSpearAmmoCount.Max = 80;
+            this.earthSpearAmmoCount.Name = "earthSpearAmmoCount";
+            this.earthSpearAmmoCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.earthSpearAmmoCount.Size = new System.Drawing.Size(40, 16);
+            this.earthSpearAmmoCount.TabIndex = 112;
+            this.earthSpearAmmoCount.Text = "0";
+            this.earthSpearAmmoCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.earthSpearAmmoCount.TreatAsAmmo = false;
+            this.earthSpearAmmoCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
+            // 
+            // bombPanel
+            // 
+            this.bombPanel.Controls.Add(this.bombAmmoCount);
+            this.bombPanel.Controls.Add(this.bomb);
+            this.bombPanel.Item = this.bomb;
+            this.bombPanel.Label = this.bombAmmoCount;
+            this.bombPanel.Location = new System.Drawing.Point(200, 56);
+            this.bombPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.bombPanel.Name = "bombPanel";
+            this.bombPanel.Size = new System.Drawing.Size(40, 56);
+            this.bombPanel.TabIndex = 116;
+            this.bombPanel.TreatAsAmmo = true;
+            // 
+            // bombAmmoCount
+            // 
+            this.bombAmmoCount.Count = 0;
+            this.bombAmmoCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.bombAmmoCount.FormatString = "{0}";
+            this.bombAmmoCount.Location = new System.Drawing.Point(0, 40);
+            this.bombAmmoCount.Max = 30;
+            this.bombAmmoCount.Name = "bombAmmoCount";
+            this.bombAmmoCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bombAmmoCount.Size = new System.Drawing.Size(40, 16);
+            this.bombAmmoCount.TabIndex = 112;
+            this.bombAmmoCount.Text = "0";
+            this.bombAmmoCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.bombAmmoCount.TreatAsAmmo = false;
+            this.bombAmmoCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
+            // 
+            // flowLayoutPanel5
+            // 
+            this.flowLayoutPanel5.AutoSize = true;
+            this.flowLayoutPanel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel5.Controls.Add(this.ocarina);
+            this.flowLayoutPanel5.Controls.Add(this.mantra);
+            this.flowLayoutPanel5.Controls.Add(this.vessel);
+            this.flowLayoutPanel5.Controls.Add(this.keySword);
+            this.flowLayoutPanel5.Controls.Add(this.lampOfTime);
+            this.flowLayoutPanel5.Controls.Add(this.mapsPanel);
+            this.flowLayoutPanel5.Controls.Add(this.ankhJewelPanel);
+            this.flowLayoutPanel5.Controls.Add(this.halloweenCandyPanel);
+            this.mainPanel.SetFlowBreak(this.flowLayoutPanel5, true);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(10, 522);
+            this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
+            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(320, 56);
+            this.flowLayoutPanel5.TabIndex = 115;
+            this.flowLayoutPanel5.DoubleClick += new System.EventHandler(this.SelectFormColor);
+            // 
+            // mapsPanel
+            // 
+            this.mapsPanel.Controls.Add(this.mapCount);
+            this.mapsPanel.Controls.Add(this.maps);
+            this.mapsPanel.Item = this.maps;
+            this.mapsPanel.Label = this.mapCount;
+            this.mapsPanel.Location = new System.Drawing.Point(200, 0);
+            this.mapsPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.mapsPanel.Name = "mapsPanel";
+            this.mapsPanel.Size = new System.Drawing.Size(40, 56);
+            this.mapsPanel.TabIndex = 113;
+            this.mapsPanel.TreatAsAmmo = false;
+            // 
+            // mapCount
+            // 
+            this.mapCount.Count = 0;
+            this.mapCount.Cursor = System.Windows.Forms.Cursors.Default;
+            this.mapCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.mapCount.FormatString = "{0}/{1}";
+            this.mapCount.Location = new System.Drawing.Point(-6, 40);
+            this.mapCount.Max = 17;
+            this.mapCount.Name = "mapCount";
+            this.mapCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.mapCount.Size = new System.Drawing.Size(52, 16);
+            this.mapCount.TabIndex = 23;
+            this.mapCount.Text = "0/17";
+            this.mapCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.mapCount.TreatAsAmmo = false;
+            this.mapCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
+            // 
+            // ankhJewelPanel
+            // 
+            this.ankhJewelPanel.Controls.Add(this.ankhJewels);
+            this.ankhJewelPanel.Controls.Add(this.ankhJewelCount);
+            this.ankhJewelPanel.Item = this.ankhJewels;
+            this.ankhJewelPanel.Label = this.ankhJewelCount;
+            this.ankhJewelPanel.Location = new System.Drawing.Point(240, 0);
+            this.ankhJewelPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.ankhJewelPanel.Name = "ankhJewelPanel";
+            this.ankhJewelPanel.Size = new System.Drawing.Size(40, 56);
+            this.ankhJewelPanel.TabIndex = 114;
+            this.ankhJewelPanel.TreatAsAmmo = false;
+            // 
+            // ankhJewelCount
+            // 
+            this.ankhJewelCount.Count = 0;
+            this.ankhJewelCount.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ankhJewelCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.ankhJewelCount.FormatString = "{0}";
+            this.ankhJewelCount.Location = new System.Drawing.Point(0, 40);
+            this.ankhJewelCount.Max = 9;
+            this.ankhJewelCount.Name = "ankhJewelCount";
+            this.ankhJewelCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ankhJewelCount.Size = new System.Drawing.Size(40, 16);
+            this.ankhJewelCount.TabIndex = 28;
+            this.ankhJewelCount.Text = "0";
+            this.ankhJewelCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ankhJewelCount.TreatAsAmmo = false;
+            this.ankhJewelCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
+            // 
+            // flowLayoutPanel6
+            // 
+            this.flowLayoutPanel6.AutoSize = true;
+            this.flowLayoutPanel6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel6.Controls.Add(this.shellHorn);
+            this.flowLayoutPanel6.Controls.Add(this.waterproofCase);
+            this.flowLayoutPanel6.Controls.Add(this.heatproofCase);
+            this.flowLayoutPanel6.Controls.Add(this.swimsuit);
+            this.flowLayoutPanel6.Controls.Add(this.djedPillar);
+            this.flowLayoutPanel6.Controls.Add(this.mantraSingle);
+            this.flowLayoutPanel6.Controls.Add(this.xmailer);
+            this.flowLayoutPanel6.Controls.Add(this.yagomap);
+            this.flowLayoutPanel6.Controls.Add(this.yagostr);
+            this.flowLayoutPanel6.Controls.Add(this.bunemon);
+            this.flowLayoutPanel6.Controls.Add(this.bunplus);
+            this.flowLayoutPanel6.Controls.Add(this.guild);
+            this.flowLayoutPanel6.Controls.Add(this.beolamu);
+            this.flowLayoutPanel6.Controls.Add(this.emusic);
+            this.flowLayoutPanel6.Controls.Add(this.randc);
+            this.flowLayoutPanel6.Controls.Add(this.capstar);
+            this.flowLayoutPanel6.Controls.Add(this.deathv);
+            this.flowLayoutPanel6.Controls.Add(this.move);
+            this.flowLayoutPanel6.Controls.Add(this.mekuri);
+            this.flowLayoutPanel6.Controls.Add(this.bounce);
+            this.flowLayoutPanel6.Controls.Add(this.miracle);
+            this.flowLayoutPanel6.Controls.Add(this.lamulana);
+            this.mainPanel.SetFlowBreak(this.flowLayoutPanel6, true);
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(10, 586);
+            this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
+            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(320, 120);
+            this.flowLayoutPanel6.TabIndex = 120;
+            // 
+            // bossPanel
+            // 
+            this.bossPanel.AutoSize = true;
+            this.bossPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.bossPanel.Controls.Add(this.amphisbaena);
+            this.bossPanel.Controls.Add(this.sakit);
+            this.bossPanel.Controls.Add(this.ellmac);
+            this.bossPanel.Controls.Add(this.bahamut);
+            this.bossPanel.Controls.Add(this.viy);
+            this.bossPanel.Controls.Add(this.palenque);
+            this.bossPanel.Controls.Add(this.baphomet);
+            this.bossPanel.Controls.Add(this.tiamat);
+            this.mainPanel.SetFlowBreak(this.bossPanel, true);
+            this.bossPanel.Location = new System.Drawing.Point(10, 714);
+            this.bossPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.bossPanel.MaximumSize = new System.Drawing.Size(280, 0);
+            this.bossPanel.Name = "bossPanel";
+            this.bossPanel.Size = new System.Drawing.Size(280, 34);
+            this.bossPanel.TabIndex = 112;
+            this.bossPanel.DoubleClick += new System.EventHandler(this.SelectFormColor);
+            // 
+            // itemColorDialog
+            // 
+            this.itemColorDialog.AnyColor = true;
+            this.itemColorDialog.SolidColorOnly = true;
+            // 
+            // halloweenCandyPanel
+            // 
+            this.halloweenCandyPanel.Controls.Add(this.halloweenCandy);
+            this.halloweenCandyPanel.Controls.Add(this.halloweenCandyCount);
+            this.halloweenCandyPanel.Item = this.halloweenCandy;
+            this.halloweenCandyPanel.Label = this.halloweenCandyCount;
+            this.halloweenCandyPanel.Location = new System.Drawing.Point(280, 0);
+            this.halloweenCandyPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.halloweenCandyPanel.Name = "halloweenCandyPanel";
+            this.halloweenCandyPanel.Size = new System.Drawing.Size(40, 56);
+            this.halloweenCandyPanel.TabIndex = 121;
+            this.halloweenCandyPanel.TreatAsAmmo = false;
+            // 
+            // halloweenCandyCount
+            // 
+            this.halloweenCandyCount.Count = 0;
+            this.halloweenCandyCount.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.halloweenCandyCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.halloweenCandyCount.FormatString = "{0}";
+            this.halloweenCandyCount.Location = new System.Drawing.Point(0, 40);
+            this.halloweenCandyCount.Max = 29;
+            this.halloweenCandyCount.Name = "halloweenCandyCount";
+            this.halloweenCandyCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.halloweenCandyCount.Size = new System.Drawing.Size(40, 16);
+            this.halloweenCandyCount.TabIndex = 28;
+            this.halloweenCandyCount.Text = "0";
+            this.halloweenCandyCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.halloweenCandyCount.TreatAsAmmo = false;
+            this.halloweenCandyCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
+            // 
+            // hermesBoots
+            // 
+            this.hermesBoots.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_hermesboots_blank;
+            this.hermesBoots.Collected = false;
+            this.hermesBoots.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_hermesboots;
+            this.hermesBoots.ForeCollected = false;
+            this.hermesBoots.ForeImage = null;
+            this.hermesBoots.Location = new System.Drawing.Point(0, 0);
+            this.hermesBoots.Margin = new System.Windows.Forms.Padding(0);
+            this.hermesBoots.Name = "hermesBoots";
+            this.hermesBoots.RedrawOnStateChange = true;
+            this.hermesBoots.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_hermesboots_blank;
+            this.hermesBoots.Size = new System.Drawing.Size(40, 40);
+            this.hermesBoots.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_hermesboots_solid;
+            this.hermesBoots.TabIndex = 44;
+            this.hermesBoots.TabStop = false;
+            // 
+            // grappleClaw
+            // 
+            this.grappleClaw.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_grappleclaw_blank;
+            this.grappleClaw.Collected = false;
+            this.grappleClaw.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_grappleclaw;
+            this.grappleClaw.ForeCollected = false;
+            this.grappleClaw.ForeImage = null;
+            this.grappleClaw.Location = new System.Drawing.Point(40, 0);
+            this.grappleClaw.Margin = new System.Windows.Forms.Padding(0);
+            this.grappleClaw.Name = "grappleClaw";
+            this.grappleClaw.RedrawOnStateChange = true;
+            this.grappleClaw.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_grappleclaw_blank;
+            this.grappleClaw.Size = new System.Drawing.Size(40, 40);
+            this.grappleClaw.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_grappleclaw_solid;
+            this.grappleClaw.TabIndex = 45;
+            this.grappleClaw.TabStop = false;
+            // 
+            // feather
+            // 
+            this.feather.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_feather_blank;
+            this.feather.Collected = false;
+            this.feather.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_feather;
+            this.feather.ForeCollected = false;
+            this.feather.ForeImage = null;
+            this.feather.Location = new System.Drawing.Point(80, 0);
+            this.feather.Margin = new System.Windows.Forms.Padding(0);
+            this.feather.Name = "feather";
+            this.feather.RedrawOnStateChange = true;
+            this.feather.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_feather_blank;
+            this.feather.Size = new System.Drawing.Size(40, 40);
+            this.feather.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_feather_solid;
+            this.feather.TabIndex = 46;
+            this.feather.TabStop = false;
+            // 
+            // scanner
+            // 
+            this.scanner.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_handscanner_blank;
+            this.scanner.Collected = false;
+            this.scanner.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_handscanner;
+            this.scanner.ForeCollected = false;
+            this.scanner.ForeImage = null;
+            this.scanner.Location = new System.Drawing.Point(120, 0);
+            this.scanner.Margin = new System.Windows.Forms.Padding(0);
+            this.scanner.Name = "scanner";
+            this.scanner.RedrawOnStateChange = true;
+            this.scanner.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_handscanner_blank;
+            this.scanner.Size = new System.Drawing.Size(40, 40);
+            this.scanner.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_handscanner_solid;
+            this.scanner.TabIndex = 1;
+            this.scanner.TabStop = false;
+            // 
+            // reader
+            // 
+            this.reader.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_reader_blank;
+            this.reader.Collected = false;
+            this.reader.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_reader;
+            this.reader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.reader.ForeCollected = false;
+            this.reader.ForeImage = null;
+            this.reader.Location = new System.Drawing.Point(0, 0);
+            this.reader.Name = "reader";
+            this.reader.RedrawOnStateChange = false;
+            this.reader.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_reader_blank;
+            this.reader.Size = new System.Drawing.Size(40, 40);
+            this.reader.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_software_solid;
+            this.reader.TabIndex = 2;
+            this.reader.TabStop = false;
+            // 
+            // holyGrail
+            // 
+            this.holyGrail.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_holygrail_blank;
+            this.holyGrail.CollectedImages = new System.Drawing.Bitmap[] {
+        global::LMRItemTracker.Properties.Resources.Icon_holygrail2,
+        global::LMRItemTracker.Properties.Resources.Icon_holygrail3,
+        global::LMRItemTracker.Properties.Resources.Icon_holygrail};
+            this.holyGrail.Location = new System.Drawing.Point(200, 0);
+            this.holyGrail.Margin = new System.Windows.Forms.Padding(0);
+            this.holyGrail.Name = "holyGrail";
+            this.holyGrail.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_holygrail_blank;
+            this.holyGrail.Size = new System.Drawing.Size(40, 40);
+            this.holyGrail.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_holygrail_solid;
+            this.holyGrail.TabIndex = 114;
+            this.holyGrail.TabStop = false;
+            // 
+            // mirai
+            // 
+            this.mirai.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_mirai_blank;
+            this.mirai.Collected = false;
+            this.mirai.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_mirai;
+            this.mirai.ForeCollected = false;
+            this.mirai.ForeImage = null;
+            this.mirai.Location = new System.Drawing.Point(240, 0);
+            this.mirai.Margin = new System.Windows.Forms.Padding(0);
+            this.mirai.Name = "mirai";
+            this.mirai.RedrawOnStateChange = true;
+            this.mirai.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_mirai_blank;
+            this.mirai.Size = new System.Drawing.Size(40, 40);
+            this.mirai.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_software_solid;
+            this.mirai.TabIndex = 115;
+            this.mirai.TabStop = false;
+            // 
+            // lastItem1
+            // 
+            this.lastItem1.Location = new System.Drawing.Point(99, 0);
+            this.lastItem1.Margin = new System.Windows.Forms.Padding(0);
+            this.lastItem1.Name = "lastItem1";
+            this.lastItem1.Size = new System.Drawing.Size(40, 40);
+            this.lastItem1.TabIndex = 114;
+            this.lastItem1.TabStop = false;
+            // 
+            // lastItem2
+            // 
+            this.lastItem2.Location = new System.Drawing.Point(139, 0);
+            this.lastItem2.Margin = new System.Windows.Forms.Padding(0);
+            this.lastItem2.Name = "lastItem2";
+            this.lastItem2.Size = new System.Drawing.Size(40, 40);
+            this.lastItem2.TabIndex = 116;
+            this.lastItem2.TabStop = false;
+            // 
+            // lastItem3
+            // 
+            this.lastItem3.Location = new System.Drawing.Point(179, 0);
+            this.lastItem3.Margin = new System.Windows.Forms.Padding(0);
+            this.lastItem3.Name = "lastItem3";
+            this.lastItem3.Size = new System.Drawing.Size(40, 40);
+            this.lastItem3.TabIndex = 117;
+            this.lastItem3.TabStop = false;
             // 
             // bronzeMirror
             // 
@@ -1350,19 +1835,6 @@ namespace LMRItemTracker
             this.torude.TabIndex = 96;
             this.torude.TabStop = false;
             // 
-            // shrinePanel
-            // 
-            this.shrinePanel.Controls.Add(this.skullWall);
-            this.shrinePanel.Controls.Add(this.skullWallCount);
-            this.shrinePanel.Item = this.skullWall;
-            this.shrinePanel.Label = this.skullWallCount;
-            this.shrinePanel.Location = new System.Drawing.Point(120, 120);
-            this.shrinePanel.Margin = new System.Windows.Forms.Padding(0);
-            this.shrinePanel.Name = "shrinePanel";
-            this.shrinePanel.Size = new System.Drawing.Size(40, 56);
-            this.shrinePanel.TabIndex = 115;
-            this.shrinePanel.TreatAsAmmo = false;
-            // 
             // skullWall
             // 
             this.skullWall.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("skullWall.BackgroundImage")));
@@ -1380,49 +1852,6 @@ namespace LMRItemTracker
             this.skullWall.SolidImage = null;
             this.skullWall.TabIndex = 35;
             this.skullWall.TabStop = false;
-            // 
-            // skullWallCount
-            // 
-            this.skullWallCount.Count = 0;
-            this.skullWallCount.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.skullWallCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.skullWallCount.FormatString = "{0}/{1}";
-            this.skullWallCount.Location = new System.Drawing.Point(0, 40);
-            this.skullWallCount.Max = 4;
-            this.skullWallCount.Name = "skullWallCount";
-            this.skullWallCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.skullWallCount.Size = new System.Drawing.Size(40, 16);
-            this.skullWallCount.TabIndex = 67;
-            this.skullWallCount.Text = "0/4";
-            this.skullWallCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.skullWallCount.TreatAsAmmo = false;
-            this.skullWallCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.AutoSize = true;
-            this.flowLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel3.Controls.Add(this.originSeal);
-            this.flowLayoutPanel3.Controls.Add(this.birthSeal);
-            this.flowLayoutPanel3.Controls.Add(this.lifeSeal);
-            this.flowLayoutPanel3.Controls.Add(this.deathSeal);
-            this.flowLayoutPanel3.Controls.Add(this.bookOfTheDead);
-            this.flowLayoutPanel3.Controls.Add(this.ring);
-            this.flowLayoutPanel3.Controls.Add(this.fairyClothes);
-            this.flowLayoutPanel3.Controls.Add(this.msx2);
-            this.flowLayoutPanel3.Controls.Add(this.scriptures);
-            this.flowLayoutPanel3.Controls.Add(this.crucifix);
-            this.flowLayoutPanel3.Controls.Add(this.perfume);
-            this.flowLayoutPanel3.Controls.Add(this.glove);
-            this.flowLayoutPanel3.Controls.Add(this.bracelet);
-            this.flowLayoutPanel3.Controls.Add(this.spaulder);
-            this.mainPanel.SetFlowBreak(this.flowLayoutPanel3, true);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(10, 314);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(320, 80);
-            this.flowLayoutPanel3.TabIndex = 117;
-            this.flowLayoutPanel3.DoubleClick += new System.EventHandler(this.SelectFormColor);
             // 
             // originSeal
             // 
@@ -1662,32 +2091,6 @@ namespace LMRItemTracker
             this.spaulder.TabIndex = 100;
             this.spaulder.TabStop = false;
             // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.AutoSize = true;
-            this.flowLayoutPanel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel4.Controls.Add(this.whip);
-            this.flowLayoutPanel4.Controls.Add(this.knife);
-            this.flowLayoutPanel4.Controls.Add(this.axe);
-            this.flowLayoutPanel4.Controls.Add(this.katana);
-            this.flowLayoutPanel4.Controls.Add(this.shield);
-            this.flowLayoutPanel4.Controls.Add(this.gauntlet);
-            this.flowLayoutPanel4.Controls.Add(this.pistolPanel);
-            this.flowLayoutPanel4.Controls.Add(this.shurikenPanel);
-            this.flowLayoutPanel4.Controls.Add(this.rollingShurikenPanel);
-            this.flowLayoutPanel4.Controls.Add(this.caltropsPanel);
-            this.flowLayoutPanel4.Controls.Add(this.flareGunPanel);
-            this.flowLayoutPanel4.Controls.Add(this.chakramPanel);
-            this.flowLayoutPanel4.Controls.Add(this.earthSpearPanel);
-            this.flowLayoutPanel4.Controls.Add(this.bombPanel);
-            this.mainPanel.SetFlowBreak(this.flowLayoutPanel4, true);
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(10, 402);
-            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(320, 112);
-            this.flowLayoutPanel4.TabIndex = 115;
-            this.flowLayoutPanel4.DoubleClick += new System.EventHandler(this.SelectFormColor);
-            // 
             // whip
             // 
             this.whip.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_whip;
@@ -1789,32 +2192,6 @@ namespace LMRItemTracker
             this.gauntlet.TabIndex = 74;
             this.gauntlet.TabStop = false;
             // 
-            // pistolPanel
-            // 
-            this.pistolPanel.Controls.Add(this.pistolAmmoCount);
-            this.pistolPanel.Controls.Add(this.pistol);
-            this.pistolPanel.Item = this.pistol;
-            this.pistolPanel.Label = this.pistolAmmoCount;
-            this.pistolPanel.Location = new System.Drawing.Point(240, 0);
-            this.pistolPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.pistolPanel.Name = "pistolPanel";
-            this.pistolPanel.Size = new System.Drawing.Size(40, 56);
-            this.pistolPanel.TabIndex = 109;
-            // 
-            // pistolAmmoCount
-            // 
-            this.pistolAmmoCount.BulletCount = 0;
-            this.pistolAmmoCount.ClipCount = 0;
-            this.pistolAmmoCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.pistolAmmoCount.Location = new System.Drawing.Point(0, 40);
-            this.pistolAmmoCount.Name = "pistolAmmoCount";
-            this.pistolAmmoCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.pistolAmmoCount.Size = new System.Drawing.Size(40, 16);
-            this.pistolAmmoCount.TabIndex = 68;
-            this.pistolAmmoCount.Text = "0:0";
-            this.pistolAmmoCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.pistolAmmoCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
-            // 
             // pistol
             // 
             this.pistol.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_pistol_blank;
@@ -1832,35 +2209,6 @@ namespace LMRItemTracker
             this.pistol.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_pistol_solid;
             this.pistol.TabIndex = 93;
             this.pistol.TabStop = false;
-            // 
-            // shurikenPanel
-            // 
-            this.shurikenPanel.Controls.Add(this.shurikenAmmoCount);
-            this.shurikenPanel.Controls.Add(this.shuriken);
-            this.shurikenPanel.Item = this.shuriken;
-            this.shurikenPanel.Label = this.shurikenAmmoCount;
-            this.shurikenPanel.Location = new System.Drawing.Point(280, 0);
-            this.shurikenPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.shurikenPanel.Name = "shurikenPanel";
-            this.shurikenPanel.Size = new System.Drawing.Size(40, 56);
-            this.shurikenPanel.TabIndex = 110;
-            this.shurikenPanel.TreatAsAmmo = true;
-            // 
-            // shurikenAmmoCount
-            // 
-            this.shurikenAmmoCount.Count = 0;
-            this.shurikenAmmoCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.shurikenAmmoCount.FormatString = "{0}";
-            this.shurikenAmmoCount.Location = new System.Drawing.Point(0, 40);
-            this.shurikenAmmoCount.Max = 150;
-            this.shurikenAmmoCount.Name = "shurikenAmmoCount";
-            this.shurikenAmmoCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.shurikenAmmoCount.Size = new System.Drawing.Size(40, 16);
-            this.shurikenAmmoCount.TabIndex = 94;
-            this.shurikenAmmoCount.Text = "0";
-            this.shurikenAmmoCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.shurikenAmmoCount.TreatAsAmmo = false;
-            this.shurikenAmmoCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
             // 
             // shuriken
             // 
@@ -1880,35 +2228,6 @@ namespace LMRItemTracker
             this.shuriken.TabIndex = 97;
             this.shuriken.TabStop = false;
             // 
-            // rollingShurikenPanel
-            // 
-            this.rollingShurikenPanel.Controls.Add(this.rollingShurikenAmmoCount);
-            this.rollingShurikenPanel.Controls.Add(this.rollingShuriken);
-            this.rollingShurikenPanel.Item = this.rollingShuriken;
-            this.rollingShurikenPanel.Label = this.rollingShurikenAmmoCount;
-            this.rollingShurikenPanel.Location = new System.Drawing.Point(0, 56);
-            this.rollingShurikenPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.rollingShurikenPanel.Name = "rollingShurikenPanel";
-            this.rollingShurikenPanel.Size = new System.Drawing.Size(40, 56);
-            this.rollingShurikenPanel.TabIndex = 111;
-            this.rollingShurikenPanel.TreatAsAmmo = true;
-            // 
-            // rollingShurikenAmmoCount
-            // 
-            this.rollingShurikenAmmoCount.Count = 0;
-            this.rollingShurikenAmmoCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.rollingShurikenAmmoCount.FormatString = "{0}";
-            this.rollingShurikenAmmoCount.Location = new System.Drawing.Point(0, 40);
-            this.rollingShurikenAmmoCount.Max = 100;
-            this.rollingShurikenAmmoCount.Name = "rollingShurikenAmmoCount";
-            this.rollingShurikenAmmoCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.rollingShurikenAmmoCount.Size = new System.Drawing.Size(40, 16);
-            this.rollingShurikenAmmoCount.TabIndex = 98;
-            this.rollingShurikenAmmoCount.Text = "0";
-            this.rollingShurikenAmmoCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.rollingShurikenAmmoCount.TreatAsAmmo = false;
-            this.rollingShurikenAmmoCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
-            // 
             // rollingShuriken
             // 
             this.rollingShuriken.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_rollingshuriken_blank;
@@ -1926,35 +2245,6 @@ namespace LMRItemTracker
             this.rollingShuriken.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_rollingshuriken_solid;
             this.rollingShuriken.TabIndex = 98;
             this.rollingShuriken.TabStop = false;
-            // 
-            // caltropsPanel
-            // 
-            this.caltropsPanel.Controls.Add(this.caltropsAmmoCount);
-            this.caltropsPanel.Controls.Add(this.caltrops);
-            this.caltropsPanel.Item = this.caltrops;
-            this.caltropsPanel.Label = this.caltropsAmmoCount;
-            this.caltropsPanel.Location = new System.Drawing.Point(40, 56);
-            this.caltropsPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.caltropsPanel.Name = "caltropsPanel";
-            this.caltropsPanel.Size = new System.Drawing.Size(40, 56);
-            this.caltropsPanel.TabIndex = 112;
-            this.caltropsPanel.TreatAsAmmo = true;
-            // 
-            // caltropsAmmoCount
-            // 
-            this.caltropsAmmoCount.Count = 0;
-            this.caltropsAmmoCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.caltropsAmmoCount.FormatString = "{0}";
-            this.caltropsAmmoCount.Location = new System.Drawing.Point(0, 40);
-            this.caltropsAmmoCount.Max = 80;
-            this.caltropsAmmoCount.Name = "caltropsAmmoCount";
-            this.caltropsAmmoCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.caltropsAmmoCount.Size = new System.Drawing.Size(40, 16);
-            this.caltropsAmmoCount.TabIndex = 99;
-            this.caltropsAmmoCount.Text = "0";
-            this.caltropsAmmoCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.caltropsAmmoCount.TreatAsAmmo = true;
-            this.caltropsAmmoCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
             // 
             // caltrops
             // 
@@ -1974,35 +2264,6 @@ namespace LMRItemTracker
             this.caltrops.TabIndex = 99;
             this.caltrops.TabStop = false;
             // 
-            // flareGunPanel
-            // 
-            this.flareGunPanel.Controls.Add(this.flareGunAmmoCount);
-            this.flareGunPanel.Controls.Add(this.flareGun);
-            this.flareGunPanel.Item = this.flareGun;
-            this.flareGunPanel.Label = this.flareGunAmmoCount;
-            this.flareGunPanel.Location = new System.Drawing.Point(80, 56);
-            this.flareGunPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.flareGunPanel.Name = "flareGunPanel";
-            this.flareGunPanel.Size = new System.Drawing.Size(40, 56);
-            this.flareGunPanel.TabIndex = 113;
-            this.flareGunPanel.TreatAsAmmo = true;
-            // 
-            // flareGunAmmoCount
-            // 
-            this.flareGunAmmoCount.Count = 0;
-            this.flareGunAmmoCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.flareGunAmmoCount.FormatString = "{0}";
-            this.flareGunAmmoCount.Location = new System.Drawing.Point(0, 40);
-            this.flareGunAmmoCount.Max = 80;
-            this.flareGunAmmoCount.Name = "flareGunAmmoCount";
-            this.flareGunAmmoCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flareGunAmmoCount.Size = new System.Drawing.Size(40, 16);
-            this.flareGunAmmoCount.TabIndex = 112;
-            this.flareGunAmmoCount.Text = "0";
-            this.flareGunAmmoCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.flareGunAmmoCount.TreatAsAmmo = false;
-            this.flareGunAmmoCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
-            // 
             // flareGun
             // 
             this.flareGun.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_flaregun_blank;
@@ -2020,35 +2281,6 @@ namespace LMRItemTracker
             this.flareGun.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_flaregun_solid;
             this.flareGun.TabIndex = 86;
             this.flareGun.TabStop = false;
-            // 
-            // chakramPanel
-            // 
-            this.chakramPanel.Controls.Add(this.chakramAmmoCount);
-            this.chakramPanel.Controls.Add(this.chakram);
-            this.chakramPanel.Item = this.chakram;
-            this.chakramPanel.Label = this.chakramAmmoCount;
-            this.chakramPanel.Location = new System.Drawing.Point(120, 56);
-            this.chakramPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.chakramPanel.Name = "chakramPanel";
-            this.chakramPanel.Size = new System.Drawing.Size(40, 56);
-            this.chakramPanel.TabIndex = 114;
-            this.chakramPanel.TreatAsAmmo = true;
-            // 
-            // chakramAmmoCount
-            // 
-            this.chakramAmmoCount.Count = 0;
-            this.chakramAmmoCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.chakramAmmoCount.FormatString = "{0}";
-            this.chakramAmmoCount.Location = new System.Drawing.Point(0, 40);
-            this.chakramAmmoCount.Max = 10;
-            this.chakramAmmoCount.Name = "chakramAmmoCount";
-            this.chakramAmmoCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chakramAmmoCount.Size = new System.Drawing.Size(40, 16);
-            this.chakramAmmoCount.TabIndex = 112;
-            this.chakramAmmoCount.Text = "0";
-            this.chakramAmmoCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.chakramAmmoCount.TreatAsAmmo = false;
-            this.chakramAmmoCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
             // 
             // chakram
             // 
@@ -2068,35 +2300,6 @@ namespace LMRItemTracker
             this.chakram.TabIndex = 83;
             this.chakram.TabStop = false;
             // 
-            // earthSpearPanel
-            // 
-            this.earthSpearPanel.Controls.Add(this.earthSpearAmmoCount);
-            this.earthSpearPanel.Controls.Add(this.earthSpear);
-            this.earthSpearPanel.Item = this.earthSpear;
-            this.earthSpearPanel.Label = this.earthSpearAmmoCount;
-            this.earthSpearPanel.Location = new System.Drawing.Point(160, 56);
-            this.earthSpearPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.earthSpearPanel.Name = "earthSpearPanel";
-            this.earthSpearPanel.Size = new System.Drawing.Size(40, 56);
-            this.earthSpearPanel.TabIndex = 115;
-            this.earthSpearPanel.TreatAsAmmo = true;
-            // 
-            // earthSpearAmmoCount
-            // 
-            this.earthSpearAmmoCount.Count = 0;
-            this.earthSpearAmmoCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.earthSpearAmmoCount.FormatString = "{0}";
-            this.earthSpearAmmoCount.Location = new System.Drawing.Point(0, 40);
-            this.earthSpearAmmoCount.Max = 80;
-            this.earthSpearAmmoCount.Name = "earthSpearAmmoCount";
-            this.earthSpearAmmoCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.earthSpearAmmoCount.Size = new System.Drawing.Size(40, 16);
-            this.earthSpearAmmoCount.TabIndex = 112;
-            this.earthSpearAmmoCount.Text = "0";
-            this.earthSpearAmmoCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.earthSpearAmmoCount.TreatAsAmmo = false;
-            this.earthSpearAmmoCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
-            // 
             // earthSpear
             // 
             this.earthSpear.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_earthspear_blank;
@@ -2115,35 +2318,6 @@ namespace LMRItemTracker
             this.earthSpear.TabIndex = 85;
             this.earthSpear.TabStop = false;
             // 
-            // bombPanel
-            // 
-            this.bombPanel.Controls.Add(this.bombAmmoCount);
-            this.bombPanel.Controls.Add(this.bomb);
-            this.bombPanel.Item = this.bomb;
-            this.bombPanel.Label = this.bombAmmoCount;
-            this.bombPanel.Location = new System.Drawing.Point(200, 56);
-            this.bombPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.bombPanel.Name = "bombPanel";
-            this.bombPanel.Size = new System.Drawing.Size(40, 56);
-            this.bombPanel.TabIndex = 116;
-            this.bombPanel.TreatAsAmmo = true;
-            // 
-            // bombAmmoCount
-            // 
-            this.bombAmmoCount.Count = 0;
-            this.bombAmmoCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.bombAmmoCount.FormatString = "{0}";
-            this.bombAmmoCount.Location = new System.Drawing.Point(0, 40);
-            this.bombAmmoCount.Max = 30;
-            this.bombAmmoCount.Name = "bombAmmoCount";
-            this.bombAmmoCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bombAmmoCount.Size = new System.Drawing.Size(40, 16);
-            this.bombAmmoCount.TabIndex = 112;
-            this.bombAmmoCount.Text = "0";
-            this.bombAmmoCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.bombAmmoCount.TreatAsAmmo = false;
-            this.bombAmmoCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
-            // 
             // bomb
             // 
             this.bomb.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_bomb_blank;
@@ -2161,25 +2335,6 @@ namespace LMRItemTracker
             this.bomb.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_bomb_solid;
             this.bomb.TabIndex = 54;
             this.bomb.TabStop = false;
-            // 
-            // flowLayoutPanel5
-            // 
-            this.flowLayoutPanel5.AutoSize = true;
-            this.flowLayoutPanel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel5.Controls.Add(this.ocarina);
-            this.flowLayoutPanel5.Controls.Add(this.mantra);
-            this.flowLayoutPanel5.Controls.Add(this.vessel);
-            this.flowLayoutPanel5.Controls.Add(this.keySword);
-            this.flowLayoutPanel5.Controls.Add(this.lampOfTime);
-            this.flowLayoutPanel5.Controls.Add(this.mapsPanel);
-            this.flowLayoutPanel5.Controls.Add(this.ankhJewelPanel);
-            this.mainPanel.SetFlowBreak(this.flowLayoutPanel5, true);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(10, 522);
-            this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(280, 56);
-            this.flowLayoutPanel5.TabIndex = 115;
-            this.flowLayoutPanel5.DoubleClick += new System.EventHandler(this.SelectFormColor);
             // 
             // ocarina
             // 
@@ -2258,36 +2413,6 @@ namespace LMRItemTracker
             this.lampOfTime.TabIndex = 120;
             this.lampOfTime.TabStop = false;
             // 
-            // mapsPanel
-            // 
-            this.mapsPanel.Controls.Add(this.mapCount);
-            this.mapsPanel.Controls.Add(this.maps);
-            this.mapsPanel.Item = this.maps;
-            this.mapsPanel.Label = this.mapCount;
-            this.mapsPanel.Location = new System.Drawing.Point(200, 0);
-            this.mapsPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.mapsPanel.Name = "mapsPanel";
-            this.mapsPanel.Size = new System.Drawing.Size(40, 56);
-            this.mapsPanel.TabIndex = 113;
-            this.mapsPanel.TreatAsAmmo = false;
-            // 
-            // mapCount
-            // 
-            this.mapCount.Count = 0;
-            this.mapCount.Cursor = System.Windows.Forms.Cursors.Default;
-            this.mapCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.mapCount.FormatString = "{0}/{1}";
-            this.mapCount.Location = new System.Drawing.Point(-6, 40);
-            this.mapCount.Max = 17;
-            this.mapCount.Name = "mapCount";
-            this.mapCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.mapCount.Size = new System.Drawing.Size(52, 16);
-            this.mapCount.TabIndex = 23;
-            this.mapCount.Text = "0/17";
-            this.mapCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.mapCount.TreatAsAmmo = false;
-            this.mapCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
-            // 
             // maps
             // 
             this.maps.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_map;
@@ -2307,19 +2432,6 @@ namespace LMRItemTracker
             this.maps.TabIndex = 24;
             this.maps.TabStop = false;
             // 
-            // ankhJewelPanel
-            // 
-            this.ankhJewelPanel.Controls.Add(this.ankhJewels);
-            this.ankhJewelPanel.Controls.Add(this.ankhJewelCount);
-            this.ankhJewelPanel.Item = this.ankhJewels;
-            this.ankhJewelPanel.Label = this.ankhJewelCount;
-            this.ankhJewelPanel.Location = new System.Drawing.Point(240, 0);
-            this.ankhJewelPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.ankhJewelPanel.Name = "ankhJewelPanel";
-            this.ankhJewelPanel.Size = new System.Drawing.Size(40, 56);
-            this.ankhJewelPanel.TabIndex = 114;
-            this.ankhJewelPanel.TreatAsAmmo = false;
-            // 
             // ankhJewels
             // 
             this.ankhJewels.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_ankhjewel_blank;
@@ -2338,55 +2450,23 @@ namespace LMRItemTracker
             this.ankhJewels.TabIndex = 29;
             this.ankhJewels.TabStop = false;
             // 
-            // ankhJewelCount
+            // halloweenCandy
             // 
-            this.ankhJewelCount.Count = 0;
-            this.ankhJewelCount.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ankhJewelCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.ankhJewelCount.FormatString = "{0}";
-            this.ankhJewelCount.Location = new System.Drawing.Point(0, 40);
-            this.ankhJewelCount.Max = 9;
-            this.ankhJewelCount.Name = "ankhJewelCount";
-            this.ankhJewelCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ankhJewelCount.Size = new System.Drawing.Size(40, 16);
-            this.ankhJewelCount.TabIndex = 28;
-            this.ankhJewelCount.Text = "0";
-            this.ankhJewelCount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ankhJewelCount.TreatAsAmmo = false;
-            this.ankhJewelCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
-            // 
-            // flowLayoutPanel6
-            // 
-            this.flowLayoutPanel6.AutoSize = true;
-            this.flowLayoutPanel6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel6.Controls.Add(this.shellHorn);
-            this.flowLayoutPanel6.Controls.Add(this.waterproofCase);
-            this.flowLayoutPanel6.Controls.Add(this.heatproofCase);
-            this.flowLayoutPanel6.Controls.Add(this.swimsuit);
-            this.flowLayoutPanel6.Controls.Add(this.djedPillar);
-            this.flowLayoutPanel6.Controls.Add(this.mantraSingle);
-            this.flowLayoutPanel6.Controls.Add(this.xmailer);
-            this.flowLayoutPanel6.Controls.Add(this.yagomap);
-            this.flowLayoutPanel6.Controls.Add(this.yagostr);
-            this.flowLayoutPanel6.Controls.Add(this.bunemon);
-            this.flowLayoutPanel6.Controls.Add(this.bunplus);
-            this.flowLayoutPanel6.Controls.Add(this.guild);
-            this.flowLayoutPanel6.Controls.Add(this.beolamu);
-            this.flowLayoutPanel6.Controls.Add(this.emusic);
-            this.flowLayoutPanel6.Controls.Add(this.randc);
-            this.flowLayoutPanel6.Controls.Add(this.capstar);
-            this.flowLayoutPanel6.Controls.Add(this.deathv);
-            this.flowLayoutPanel6.Controls.Add(this.move);
-            this.flowLayoutPanel6.Controls.Add(this.mekuri);
-            this.flowLayoutPanel6.Controls.Add(this.bounce);
-            this.flowLayoutPanel6.Controls.Add(this.miracle);
-            this.flowLayoutPanel6.Controls.Add(this.lamulana);
-            this.mainPanel.SetFlowBreak(this.flowLayoutPanel6, true);
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(10, 586);
-            this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(320, 120);
-            this.flowLayoutPanel6.TabIndex = 120;
+            this.halloweenCandy.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_halloween_blank;
+            this.halloweenCandy.Collected = false;
+            this.halloweenCandy.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_halloween;
+            this.halloweenCandy.Dock = System.Windows.Forms.DockStyle.Top;
+            this.halloweenCandy.ForeCollected = false;
+            this.halloweenCandy.ForeImage = null;
+            this.halloweenCandy.Location = new System.Drawing.Point(0, 0);
+            this.halloweenCandy.Margin = new System.Windows.Forms.Padding(0);
+            this.halloweenCandy.Name = "halloweenCandy";
+            this.halloweenCandy.RedrawOnStateChange = false;
+            this.halloweenCandy.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_halloween_blank;
+            this.halloweenCandy.Size = new System.Drawing.Size(40, 40);
+            this.halloweenCandy.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_halloween_solid;
+            this.halloweenCandy.TabIndex = 29;
+            this.halloweenCandy.TabStop = false;
             // 
             // shellHorn
             // 
@@ -2762,27 +2842,6 @@ namespace LMRItemTracker
             this.lamulana.TabIndex = 137;
             this.lamulana.TabStop = false;
             // 
-            // bossPanel
-            // 
-            this.bossPanel.AutoSize = true;
-            this.bossPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.bossPanel.Controls.Add(this.amphisbaena);
-            this.bossPanel.Controls.Add(this.sakit);
-            this.bossPanel.Controls.Add(this.ellmac);
-            this.bossPanel.Controls.Add(this.bahamut);
-            this.bossPanel.Controls.Add(this.viy);
-            this.bossPanel.Controls.Add(this.palenque);
-            this.bossPanel.Controls.Add(this.baphomet);
-            this.bossPanel.Controls.Add(this.tiamat);
-            this.mainPanel.SetFlowBreak(this.bossPanel, true);
-            this.bossPanel.Location = new System.Drawing.Point(10, 714);
-            this.bossPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.bossPanel.MaximumSize = new System.Drawing.Size(280, 0);
-            this.bossPanel.Name = "bossPanel";
-            this.bossPanel.Size = new System.Drawing.Size(280, 34);
-            this.bossPanel.TabIndex = 112;
-            this.bossPanel.DoubleClick += new System.EventHandler(this.SelectFormColor);
-            // 
             // amphisbaena
             // 
             this.amphisbaena.BackgroundImage = global::LMRItemTracker.Properties.Resources.Boss_amphisbaena_blank;
@@ -2919,11 +2978,6 @@ namespace LMRItemTracker
             this.tiamat.TabIndex = 19;
             this.tiamat.TabStop = false;
             // 
-            // itemColorDialog
-            // 
-            this.itemColorDialog.AnyColor = true;
-            this.itemColorDialog.SolidColorOnly = true;
-            // 
             // LaMulanaItemTrackerForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2939,26 +2993,43 @@ namespace LMRItemTracker
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.hermesBoots)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grappleClaw)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.feather)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scanner)).EndInit();
             this.readerPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.reader)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.holyGrail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mirai)).EndInit();
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
             this.overviewPanel.ResumeLayout(false);
             this.overviewPanel.PerformLayout();
             this.lastItemPanel.ResumeLayout(false);
             this.lastItemPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lastItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lastItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lastItem3)).EndInit();
             this.deathPanel.ResumeLayout(false);
             this.deathPanel.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
+            this.shrinePanel.ResumeLayout(false);
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.flowLayoutPanel4.ResumeLayout(false);
+            this.pistolPanel.ResumeLayout(false);
+            this.shurikenPanel.ResumeLayout(false);
+            this.rollingShurikenPanel.ResumeLayout(false);
+            this.caltropsPanel.ResumeLayout(false);
+            this.flareGunPanel.ResumeLayout(false);
+            this.chakramPanel.ResumeLayout(false);
+            this.earthSpearPanel.ResumeLayout(false);
+            this.bombPanel.ResumeLayout(false);
+            this.flowLayoutPanel5.ResumeLayout(false);
+            this.mapsPanel.ResumeLayout(false);
+            this.ankhJewelPanel.ResumeLayout(false);
+            this.flowLayoutPanel6.ResumeLayout(false);
+            this.bossPanel.ResumeLayout(false);
+            this.halloweenCandyPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.hermesBoots)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grappleClaw)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.feather)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scanner)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reader)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.holyGrail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mirai)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lastItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lastItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lastItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bronzeMirror)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fruitOfEden)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.twinStatue)).EndInit();
@@ -2986,9 +3057,7 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.eyeOfTruth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.magatamaJewel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.torude)).EndInit();
-            this.shrinePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.skullWall)).EndInit();
-            this.flowLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.originSeal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.birthSeal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lifeSeal)).EndInit();
@@ -3003,40 +3072,28 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.glove)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bracelet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spaulder)).EndInit();
-            this.flowLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.whip)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.knife)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.katana)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shield)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gauntlet)).EndInit();
-            this.pistolPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pistol)).EndInit();
-            this.shurikenPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.shuriken)).EndInit();
-            this.rollingShurikenPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.rollingShuriken)).EndInit();
-            this.caltropsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.caltrops)).EndInit();
-            this.flareGunPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.flareGun)).EndInit();
-            this.chakramPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chakram)).EndInit();
-            this.earthSpearPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.earthSpear)).EndInit();
-            this.bombPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bomb)).EndInit();
-            this.flowLayoutPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ocarina)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mantra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vessel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.keySword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lampOfTime)).EndInit();
-            this.mapsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.maps)).EndInit();
-            this.ankhJewelPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ankhJewels)).EndInit();
-            this.flowLayoutPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.halloweenCandy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shellHorn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.waterproofCase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.heatproofCase)).EndInit();
@@ -3059,7 +3116,6 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.bounce)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.miracle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lamulana)).EndInit();
-            this.bossPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.amphisbaena)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sakit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ellmac)).EndInit();
@@ -3261,5 +3317,8 @@ namespace LMRItemTracker
         private MultiStateTrackerBox vessel;
         private KeySwordTrackerBox keySword;
         private MultiStateTrackerBox lampOfTime;
+        private ItemTextPanel halloweenCandyPanel;
+        private TrackerBox halloweenCandy;
+        private TrackerLabel halloweenCandyCount;
     }
 }

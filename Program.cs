@@ -163,6 +163,23 @@ namespace LMRItemTracker
                     laMulanaItemTrackerForm.UpdateLastItem(displayname);
                 }
             }
+            else if(displayname.Equals("halloween-candy"))
+            {
+                int ammoCount = 0;
+                if (cur is ushort)
+                {
+                    ammoCount = (ushort)cur;
+                }
+                else if (cur is short)
+                {
+                    ammoCount = (short)cur;
+                }
+                else if(cur is byte)
+                {
+                    ammoCount = (byte)cur;
+                }
+                laMulanaItemTrackerForm.SetAmmoCount(displayname, ammoCount);
+            }
             else if (displayname.Equals("invtr-grailfull") || displayname.Equals("invtr-grailbr"))
             {
                 laMulanaItemTrackerForm.ToggleGrail(displayname, (ushort)cur >= 1);

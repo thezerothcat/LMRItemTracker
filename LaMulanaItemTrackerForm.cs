@@ -76,6 +76,7 @@ namespace LMRItemTracker
             this.allItems.Add("reader.exe");
             this.allItems.Add("Grapple Claw");
             this.allItems.Add("guild.exe");
+            this.allItems.Add("Halloween Item");
             this.allItems.Add("Hand Scanner");
             this.allItems.Add("Heatproof Case");
             this.allItems.Add("Helmet");
@@ -643,6 +644,10 @@ namespace LMRItemTracker
             {
                 return "Ankh Jewels";
             }
+            else if ("halloween-candy".Equals(flagName))
+            {
+                return "Halloween Item";
+            }
             else if ("shield-buckler".Equals(flagName))
             {
                 return "Buckler";
@@ -1077,6 +1082,11 @@ namespace LMRItemTracker
                 ankhJewelPanel.Item.Collected = newCount != 0;
                 ankhJewelPanel.UpdateCount(newCount);
             }
+            else if ("halloween-candy".Equals(flagName))
+            {
+                halloweenCandyPanel.Item.Collected = newCount != 0;
+                halloweenCandyPanel.UpdateCount(newCount);
+            }
         }
 
         public void UpdateDeathCount(bool isAdd)
@@ -1104,7 +1114,7 @@ namespace LMRItemTracker
                 Properties.Settings.Default.Panel2Contents = Properties.Settings.Default.Panel2Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe");
                 Properties.Settings.Default.Panel3Contents = Properties.Settings.Default.Panel3Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe");
                 Properties.Settings.Default.Panel4Contents = Properties.Settings.Default.Panel4Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe");
-                Properties.Settings.Default.Panel5Contents = Properties.Settings.Default.Panel5Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe");
+                Properties.Settings.Default.Panel5Contents = Properties.Settings.Default.Panel5Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe") + ",Halloween Item";
                 Properties.Settings.Default.Panel6Contents = Properties.Settings.Default.Panel6Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe");
                 Properties.Settings.Default.Save();
             }
@@ -1429,6 +1439,10 @@ namespace LMRItemTracker
             else if ("ankh-jewels".Equals(flagName))
             {
                 return global::LMRItemTracker.Properties.Resources.Icon_ankhjewel;
+            }
+            else if ("halloween-candy".Equals(flagName))
+            {
+                return global::LMRItemTracker.Properties.Resources.Icon_halloween;
             }
             else if ("w-scanner".Equals(flagName))
             {
@@ -1986,6 +2000,10 @@ namespace LMRItemTracker
             else if ("Ankh Jewels".Equals(itemName))
             {
                 return "ankh-jewels";
+            }
+            else if ("Halloween Item".Equals(itemName))
+            {
+                return "halloween-candy";
             }
             else if ("Waterproof Case".Equals(itemName))
             {
@@ -2552,6 +2570,10 @@ namespace LMRItemTracker
             {
                 return ankhJewelPanel;
             }
+            if ("Halloween Item".Equals(itemName))
+            {
+                return halloweenCandyPanel;
+            }
             return null;
         }
 
@@ -2671,6 +2693,7 @@ namespace LMRItemTracker
 
             mapCount.UpdateTextColor();
             ankhJewelCount.UpdateTextColor();
+            halloweenCandyCount.UpdateTextColor();
             translationTablets.UpdateTextColor();
             shurikenAmmoCount.UpdateTextColor();
             rollingShurikenAmmoCount.UpdateTextColor();
@@ -2697,7 +2720,7 @@ namespace LMRItemTracker
             Properties.Settings.Default.Panel2Contents = "Bronze Mirror,Fruit of Eden,Twin Statue,Key of Eternity,Helmet,Plane Model,Crystal Skull,Dimensional Key,Pochette Key,Ice Cape,Scalesphere,Cog of the Soul,Dragon Bone,Serpent Staff,Mulana Talisman,Woman Statue,Pepper,Talisman,Diary,Mini Doll,Treasures,Anchor,Key Fairy Combo,Isis' Pendant,Eye of Truth,Magatama Jewel,torude.exe,Shrine Wall Removal";
             Properties.Settings.Default.Panel3Contents = "Origin Seal,Birth Seal,Life Seal,Death Seal,Book of the Dead,Ring,Fairy Clothes,Mobile Super X2,Scriptures,Crucifix,Perfume,Glove,Bracelet,Spaulder";
             Properties.Settings.Default.Panel4Contents = "Whip,Knife,Axe,Katana,Shield,Gauntlet,Pistol,Shuriken,Rolling Shuriken,Caltrops,Flare Gun,Chakram,Earth Spear,Bomb";
-            Properties.Settings.Default.Panel5Contents = "Philosopher's Ocarina,Mantra/Djed Pillar,Vessel/Medicine,Key Sword,Lamp of Time,Maps,Ankh Jewels";
+            Properties.Settings.Default.Panel5Contents = "Philosopher's Ocarina,Mantra/Djed Pillar,Vessel/Medicine,Key Sword,Lamp of Time,Maps,Ankh Jewels,Halloween Item";
             Properties.Settings.Default.BackgroundColor = System.Drawing.SystemColors.Control;
             Properties.Settings.Default.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(200)))));
             Properties.Settings.Default.FormWidth = 356;

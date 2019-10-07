@@ -14,9 +14,6 @@
     <Setting Name="Panel4Contents" Type="System.String" Scope="User">
       <Value Profile="(Default)">Whip,Knife,Axe,Katana,Shield,Gauntlet,Pistol,Shuriken,Rolling Shuriken,Caltrops,Flare Gun,Chakram,Earth Spear,Bomb</Value>
     </Setting>
-    <Setting Name="Panel5Contents" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Philosopher's Ocarina,Mantra/Djed Pillar,Vessel/Medicine,Key Sword,Lamp of Time,Maps,Ankh Jewels</Value>
-    </Setting>
     <Setting Name="BackgroundColor" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">Control</Value>
     </Setting>
@@ -55,6 +52,9 @@
     </Setting>
     <Setting Name="ItemColor" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="Panel5Contents" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Philosopher's Ocarina,Mantra/Djed Pillar,Vessel/Medicine,Key Sword,Lamp of Time,Maps,Ankh Jewels,Halloween Item</Value>
     </Setting>
   </Settings>
 </SettingsFile>
