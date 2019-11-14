@@ -28,6 +28,8 @@ namespace EyeOfTruth
 
         public override bool Attach()
         {
+            Exception enumeration_exception = null;
+
             if (!Attach((Process p) =>
             {
                 if (!p.ProcessName.ToLowerInvariant().StartsWith("lamulana"))
@@ -36,14 +38,17 @@ namespace EyeOfTruth
                 {
                     return p.MainModule.FileVersionInfo.ProductName == "La-Mulana";
                 }
-                catch (Win32Exception) // sigh, see http://www.aboutmycode.com/net/access-denied-process-bugs/
+                catch (Win32Exception e) // sigh, see http://www.aboutmycode.com/net/access-denied-process-bugs/
                 {
-                    throw;
+                    enumeration_exception = e;
+                    return false;
                 }
                 catch { return false; }
             }))
             {
                 offsets = null;
+                if (enumeration_exception != null)
+                    throw enumeration_exception;
                 return false;
             }
 
