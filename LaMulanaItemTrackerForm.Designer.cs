@@ -65,6 +65,7 @@ namespace LMRItemTracker
             this.clearDeathCountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showLastItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearLastItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearSpauldersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.hermesBoots = new LMRItemTracker.TrackerBox();
             this.grappleClaw = new LMRItemTracker.TrackerBox();
@@ -76,6 +77,14 @@ namespace LMRItemTracker
             this.holyGrail = new LMRItemTracker.MultiStateTrackerBox();
             this.mirai = new LMRItemTracker.TrackerBox();
             this.mainPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.spaulderPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
+            this.spaulderLabel = new System.Windows.Forms.Label();
+            this.spaulderCount = new System.Windows.Forms.Label();
+            this.totalSpauldersPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.totalSpauldersLabel = new System.Windows.Forms.Label();
+            this.totalSpauldersCount = new System.Windows.Forms.Label();
             this.overviewPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.lastItemPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.lastItemLabel = new System.Windows.Forms.Label();
@@ -116,6 +125,7 @@ namespace LMRItemTracker
             this.shrinePanel = new LMRItemTracker.ItemTextPanel();
             this.skullWall = new LMRItemTracker.TrackerBox();
             this.skullWallCount = new LMRItemTracker.TrackerLabel();
+            this.secretTreasureOfLife = new LMRItemTracker.TrackerBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.originSeal = new LMRItemTracker.TrackerBox();
             this.birthSeal = new LMRItemTracker.TrackerBox();
@@ -218,6 +228,9 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.holyGrail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mirai)).BeginInit();
             this.mainPanel.SuspendLayout();
+            this.spaulderPanel.SuspendLayout();
+            this.flowLayoutPanel9.SuspendLayout();
+            this.totalSpauldersPanel.SuspendLayout();
             this.overviewPanel.SuspendLayout();
             this.lastItemPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lastItem1)).BeginInit();
@@ -254,6 +267,7 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.torude)).BeginInit();
             this.shrinePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skullWall)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.secretTreasureOfLife)).BeginInit();
             this.flowLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.originSeal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.birthSeal)).BeginInit();
@@ -423,7 +437,8 @@ namespace LMRItemTracker
             this.showDeathCountToolStripMenuItem,
             this.clearDeathCountToolStripMenuItem,
             this.showLastItemToolStripMenuItem,
-            this.clearLastItemToolStripMenuItem});
+            this.clearLastItemToolStripMenuItem,
+            this.clearSpauldersToolStripMenuItem});
             this.layoutToolStripMenuItem.Name = "layoutToolStripMenuItem";
             this.layoutToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.layoutToolStripMenuItem.Text = "Layout";
@@ -564,6 +579,13 @@ namespace LMRItemTracker
             this.clearLastItemToolStripMenuItem.Text = "Clear Recent Items";
             this.clearLastItemToolStripMenuItem.Click += new System.EventHandler(this.clearLastItem);
             // 
+            // clearSpauldersToolStripMenuItem
+            // 
+            this.clearSpauldersToolStripMenuItem.Name = "clearSpauldersToolStripMenuItem";
+            this.clearSpauldersToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.clearSpauldersToolStripMenuItem.Text = "Clear Spaulders";
+            this.clearSpauldersToolStripMenuItem.Click += new System.EventHandler(this.resetSpaulderCount);
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoSize = true;
@@ -576,7 +598,7 @@ namespace LMRItemTracker
             this.flowLayoutPanel1.Controls.Add(this.holyGrail);
             this.flowLayoutPanel1.Controls.Add(this.mirai);
             this.mainPanel.SetFlowBreak(this.flowLayoutPanel1, true);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 66);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 106);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(280, 56);
@@ -734,6 +756,7 @@ namespace LMRItemTracker
             // 
             this.mainPanel.AutoSize = true;
             this.mainPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.mainPanel.Controls.Add(this.spaulderPanel);
             this.mainPanel.Controls.Add(this.overviewPanel);
             this.mainPanel.Controls.Add(this.flowLayoutPanel1);
             this.mainPanel.Controls.Add(this.flowLayoutPanel2);
@@ -747,9 +770,110 @@ namespace LMRItemTracker
             this.mainPanel.Margin = new System.Windows.Forms.Padding(0);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Padding = new System.Windows.Forms.Padding(10);
-            this.mainPanel.Size = new System.Drawing.Size(340, 758);
+            this.mainPanel.Size = new System.Drawing.Size(340, 798);
             this.mainPanel.TabIndex = 111;
             this.mainPanel.DoubleClick += new System.EventHandler(this.SelectFormColor);
+            // 
+            // spaulderPanel
+            // 
+            this.spaulderPanel.AutoSize = true;
+            this.spaulderPanel.Controls.Add(this.flowLayoutPanel8);
+            this.spaulderPanel.Controls.Add(this.flowLayoutPanel9);
+            this.mainPanel.SetFlowBreak(this.spaulderPanel, true);
+            this.spaulderPanel.Location = new System.Drawing.Point(10, 10);
+            this.spaulderPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.spaulderPanel.Name = "spaulderPanel";
+            this.spaulderPanel.Size = new System.Drawing.Size(305, 40);
+            this.spaulderPanel.TabIndex = 120;
+            this.spaulderPanel.WrapContents = false;
+            // 
+            // flowLayoutPanel8
+            // 
+            this.flowLayoutPanel8.AutoSize = true;
+            this.spaulderPanel.SetFlowBreak(this.flowLayoutPanel8, true);
+            this.flowLayoutPanel8.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel8.Margin = new System.Windows.Forms.Padding(0, 0, 0, 16);
+            this.flowLayoutPanel8.Name = "flowLayoutPanel8";
+            this.flowLayoutPanel8.Size = new System.Drawing.Size(0, 0);
+            this.flowLayoutPanel8.TabIndex = 118;
+            // 
+            // flowLayoutPanel9
+            // 
+            this.flowLayoutPanel9.AutoSize = true;
+            this.flowLayoutPanel9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel9.Controls.Add(this.spaulderLabel);
+            this.flowLayoutPanel9.Controls.Add(this.spaulderCount);
+            this.flowLayoutPanel9.Controls.Add(this.totalSpauldersPanel);
+            this.flowLayoutPanel9.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel9.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel9.Name = "flowLayoutPanel9";
+            this.flowLayoutPanel9.Size = new System.Drawing.Size(305, 40);
+            this.flowLayoutPanel9.TabIndex = 119;
+            this.flowLayoutPanel9.WrapContents = false;
+            // 
+            // spaulderLabel
+            // 
+            this.spaulderLabel.AutoSize = true;
+            this.spaulderLabel.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.spaulderLabel.Location = new System.Drawing.Point(3, 0);
+            this.spaulderLabel.MinimumSize = new System.Drawing.Size(0, 40);
+            this.spaulderLabel.Name = "spaulderLabel";
+            this.spaulderLabel.Size = new System.Drawing.Size(123, 40);
+            this.spaulderLabel.TabIndex = 0;
+            this.spaulderLabel.Text = "Times Spaulder\'d:";
+            this.spaulderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.spaulderLabel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.spaulderCount_MouseClick);
+            // 
+            // spaulderCount
+            // 
+            this.spaulderCount.AutoSize = true;
+            this.spaulderCount.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.spaulderCount.Location = new System.Drawing.Point(132, 0);
+            this.spaulderCount.MinimumSize = new System.Drawing.Size(0, 40);
+            this.spaulderCount.Name = "spaulderCount";
+            this.spaulderCount.Size = new System.Drawing.Size(15, 40);
+            this.spaulderCount.TabIndex = 1;
+            this.spaulderCount.Text = "0";
+            this.spaulderCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.spaulderCount.MouseClick += new System.Windows.Forms.MouseEventHandler(this.spaulderCount_MouseClick);
+            // 
+            // totalSpauldersPanel
+            // 
+            this.totalSpauldersPanel.AutoSize = true;
+            this.totalSpauldersPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.totalSpauldersPanel.Controls.Add(this.totalSpauldersLabel);
+            this.totalSpauldersPanel.Controls.Add(this.totalSpauldersCount);
+            this.totalSpauldersPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.totalSpauldersPanel.Location = new System.Drawing.Point(167, 0);
+            this.totalSpauldersPanel.Margin = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.totalSpauldersPanel.Name = "totalSpauldersPanel";
+            this.totalSpauldersPanel.Size = new System.Drawing.Size(138, 40);
+            this.totalSpauldersPanel.TabIndex = 120;
+            this.totalSpauldersPanel.WrapContents = false;
+            // 
+            // totalSpauldersLabel
+            // 
+            this.totalSpauldersLabel.AutoSize = true;
+            this.totalSpauldersLabel.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.totalSpauldersLabel.Location = new System.Drawing.Point(3, 0);
+            this.totalSpauldersLabel.MinimumSize = new System.Drawing.Size(0, 40);
+            this.totalSpauldersLabel.Name = "totalSpauldersLabel";
+            this.totalSpauldersLabel.Size = new System.Drawing.Size(111, 40);
+            this.totalSpauldersLabel.TabIndex = 0;
+            this.totalSpauldersLabel.Text = "Total Spaulders:";
+            this.totalSpauldersLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // totalSpauldersCount
+            // 
+            this.totalSpauldersCount.AutoSize = true;
+            this.totalSpauldersCount.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.totalSpauldersCount.Location = new System.Drawing.Point(120, 0);
+            this.totalSpauldersCount.MinimumSize = new System.Drawing.Size(0, 40);
+            this.totalSpauldersCount.Name = "totalSpauldersCount";
+            this.totalSpauldersCount.Size = new System.Drawing.Size(15, 40);
+            this.totalSpauldersCount.TabIndex = 1;
+            this.totalSpauldersCount.Text = "0";
+            this.totalSpauldersCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // overviewPanel
             // 
@@ -757,7 +881,7 @@ namespace LMRItemTracker
             this.overviewPanel.Controls.Add(this.lastItemPanel);
             this.overviewPanel.Controls.Add(this.deathPanel);
             this.mainPanel.SetFlowBreak(this.overviewPanel, true);
-            this.overviewPanel.Location = new System.Drawing.Point(10, 10);
+            this.overviewPanel.Location = new System.Drawing.Point(10, 50);
             this.overviewPanel.Margin = new System.Windows.Forms.Padding(0);
             this.overviewPanel.Name = "overviewPanel";
             this.overviewPanel.Size = new System.Drawing.Size(303, 56);
@@ -892,8 +1016,9 @@ namespace LMRItemTracker
             this.flowLayoutPanel2.Controls.Add(this.magatamaJewel);
             this.flowLayoutPanel2.Controls.Add(this.torude);
             this.flowLayoutPanel2.Controls.Add(this.shrinePanel);
+            this.flowLayoutPanel2.Controls.Add(this.secretTreasureOfLife);
             this.mainPanel.SetFlowBreak(this.flowLayoutPanel2, true);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(10, 130);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(10, 170);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(320, 176);
@@ -1398,6 +1523,23 @@ namespace LMRItemTracker
             this.skullWallCount.TreatAsAmmo = false;
             this.skullWallCount.DoubleClick += new System.EventHandler(this.SelectTextColor);
             // 
+            // secretTreasureOfLife
+            // 
+            this.secretTreasureOfLife.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_secrettreasureoflife_blank;
+            this.secretTreasureOfLife.Collected = false;
+            this.secretTreasureOfLife.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_secrettreasureoflife;
+            this.secretTreasureOfLife.ForeCollected = false;
+            this.secretTreasureOfLife.ForeImage = null;
+            this.secretTreasureOfLife.Location = new System.Drawing.Point(160, 120);
+            this.secretTreasureOfLife.Margin = new System.Windows.Forms.Padding(0);
+            this.secretTreasureOfLife.Name = "secretTreasureOfLife";
+            this.secretTreasureOfLife.RedrawOnStateChange = true;
+            this.secretTreasureOfLife.ShadedImage = global::LMRItemTracker.Properties.Resources.Icon_secrettreasureoflife_blank;
+            this.secretTreasureOfLife.Size = new System.Drawing.Size(40, 40);
+            this.secretTreasureOfLife.SolidImage = global::LMRItemTracker.Properties.Resources.Icon_secrettreasureoflife_solid;
+            this.secretTreasureOfLife.TabIndex = 118;
+            this.secretTreasureOfLife.TabStop = false;
+            // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.AutoSize = true;
@@ -1417,7 +1559,7 @@ namespace LMRItemTracker
             this.flowLayoutPanel3.Controls.Add(this.bracelet);
             this.flowLayoutPanel3.Controls.Add(this.spaulder);
             this.mainPanel.SetFlowBreak(this.flowLayoutPanel3, true);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(10, 314);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(10, 354);
             this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(320, 80);
@@ -1681,7 +1823,7 @@ namespace LMRItemTracker
             this.flowLayoutPanel4.Controls.Add(this.earthSpearPanel);
             this.flowLayoutPanel4.Controls.Add(this.bombPanel);
             this.mainPanel.SetFlowBreak(this.flowLayoutPanel4, true);
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(10, 402);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(10, 442);
             this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
             this.flowLayoutPanel4.Size = new System.Drawing.Size(320, 112);
@@ -2174,7 +2316,7 @@ namespace LMRItemTracker
             this.flowLayoutPanel5.Controls.Add(this.mapsPanel);
             this.flowLayoutPanel5.Controls.Add(this.ankhJewelPanel);
             this.mainPanel.SetFlowBreak(this.flowLayoutPanel5, true);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(10, 522);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(10, 562);
             this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
             this.flowLayoutPanel5.Size = new System.Drawing.Size(280, 56);
@@ -2382,7 +2524,7 @@ namespace LMRItemTracker
             this.flowLayoutPanel6.Controls.Add(this.miracle);
             this.flowLayoutPanel6.Controls.Add(this.lamulana);
             this.mainPanel.SetFlowBreak(this.flowLayoutPanel6, true);
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(10, 586);
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(10, 626);
             this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
             this.flowLayoutPanel6.Size = new System.Drawing.Size(320, 120);
@@ -2775,7 +2917,7 @@ namespace LMRItemTracker
             this.bossPanel.Controls.Add(this.baphomet);
             this.bossPanel.Controls.Add(this.tiamat);
             this.mainPanel.SetFlowBreak(this.bossPanel, true);
-            this.bossPanel.Location = new System.Drawing.Point(10, 714);
+            this.bossPanel.Location = new System.Drawing.Point(10, 754);
             this.bossPanel.Margin = new System.Windows.Forms.Padding(0);
             this.bossPanel.MaximumSize = new System.Drawing.Size(280, 0);
             this.bossPanel.Name = "bossPanel";
@@ -2949,6 +3091,12 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.mirai)).EndInit();
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
+            this.spaulderPanel.ResumeLayout(false);
+            this.spaulderPanel.PerformLayout();
+            this.flowLayoutPanel9.ResumeLayout(false);
+            this.flowLayoutPanel9.PerformLayout();
+            this.totalSpauldersPanel.ResumeLayout(false);
+            this.totalSpauldersPanel.PerformLayout();
             this.overviewPanel.ResumeLayout(false);
             this.overviewPanel.PerformLayout();
             this.lastItemPanel.ResumeLayout(false);
@@ -2988,6 +3136,7 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.torude)).EndInit();
             this.shrinePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.skullWall)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.secretTreasureOfLife)).EndInit();
             this.flowLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.originSeal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.birthSeal)).EndInit();
@@ -3261,5 +3410,15 @@ namespace LMRItemTracker
         private MultiStateTrackerBox vessel;
         private KeySwordTrackerBox keySword;
         private MultiStateTrackerBox lampOfTime;
+        private FlowLayoutPanel spaulderPanel;
+        private FlowLayoutPanel flowLayoutPanel8;
+        private FlowLayoutPanel flowLayoutPanel9;
+        private Label spaulderLabel;
+        private Label spaulderCount;
+        private ToolStripMenuItem clearSpauldersToolStripMenuItem;
+        private FlowLayoutPanel totalSpauldersPanel;
+        private Label totalSpauldersLabel;
+        private Label totalSpauldersCount;
+        private TrackerBox secretTreasureOfLife;
     }
 }

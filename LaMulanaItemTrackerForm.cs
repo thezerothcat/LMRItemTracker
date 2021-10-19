@@ -115,6 +115,7 @@ namespace LMRItemTracker
             this.allItems.Add("Rolling Shuriken");
             this.allItems.Add("Scalesphere");
             this.allItems.Add("Scriptures");
+            this.allItems.Add("Secret Treasure of Life");
             this.allItems.Add("Serpent Staff");
             this.allItems.Add("Shield");
             this.allItems.Add("Shell Horn");
@@ -390,6 +391,10 @@ namespace LMRItemTracker
             else if ("w-spaulder".Equals(flagName))
             {
                 return "Spaulder";
+            }
+            else if ("w-secrettroflife".Equals(flagName))
+            {
+                return "Secret Treasure of Life";
             }
             else if ("w-icecape".Equals(flagName))
             {
@@ -679,7 +684,7 @@ namespace LMRItemTracker
                 || "w-clothes".Equals(flagName) || "w-scriptures".Equals(flagName) || "w-hermes".Equals(flagName)
                 || "w-fruit".Equals(flagName) || "w-twin-statue".Equals(flagName) || "w-bracelet".Equals(flagName)
                 || "w-perfume".Equals(flagName) || "w-spaulder".Equals(flagName) || "w-dimension-key".Equals(flagName)
-                || "w-icecape".Equals(flagName) || "w-forbidden".Equals(flagName))
+                || "w-icecape".Equals(flagName) || "w-forbidden".Equals(flagName) || "w-secrettroflife".Equals(flagName))
             {
                 // Non-usable items with no special image handling
                 SetImage(flagName, isAdd);
@@ -1092,6 +1097,32 @@ namespace LMRItemTracker
             UpdateCount(deathCount, Properties.Settings.Default.DeathCount, int.MaxValue);
         }
 
+        public void SafeUpdateSpaulderCount()
+        {
+            if (this.gameStarted)
+            {
+                UpdateSpaulderCount(true);
+            }
+        }
+
+        public void UpdateSpaulderCount(bool isAdd)
+        {
+            if (isAdd)
+            {
+                Properties.Settings.Default.SpaulderCount += 1;
+            }
+            else
+            {
+                Properties.Settings.Default.SpaulderCount -= 1;
+            }
+            UpdateCount(spaulderCount, Properties.Settings.Default.SpaulderCount, int.MaxValue);
+        }
+
+        public void UpdateTotalSpaulders(short totalSpaulders)
+        {
+            UpdateCount(totalSpauldersCount, totalSpaulders, int.MaxValue);
+        }
+
         private void LaMulanaItemTrackerForm_Load(object sender, EventArgs e)
         {
             if(Properties.Settings.Default.UpgradeRequired)
@@ -1102,6 +1133,7 @@ namespace LMRItemTracker
                 // Upgrade settings from 1.0.11 where item names were different.
                 Properties.Settings.Default.Panel1Contents = Properties.Settings.Default.Panel1Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe");
                 Properties.Settings.Default.Panel2Contents = Properties.Settings.Default.Panel2Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe");
+                Properties.Settings.Default.Panel2Contents = Properties.Settings.Default.Panel2Contents + ",Secret Treasure of Life";
                 Properties.Settings.Default.Panel3Contents = Properties.Settings.Default.Panel3Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe");
                 Properties.Settings.Default.Panel4Contents = Properties.Settings.Default.Panel4Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe");
                 Properties.Settings.Default.Panel5Contents = Properties.Settings.Default.Panel5Contents.Replace("Hermes Boots", "Hermes' Boots").Replace("Glyph Reader", "reader.exe");
@@ -1120,6 +1152,8 @@ namespace LMRItemTracker
             UpdateBackgroundMode();
             UpdateShowLastItem();
             UpdateShowDeathCount();
+            UpdateCount(spaulderCount, Properties.Settings.Default.SpaulderCount, int.MaxValue);
+
             InitializeFormPanels();
 
             try
@@ -1506,6 +1540,10 @@ namespace LMRItemTracker
             {
                 return global::LMRItemTracker.Properties.Resources.Icon_spaulder;
             }
+            else if ("w-secrettroflife".Equals(flagName))
+            {
+                return global::LMRItemTracker.Properties.Resources.Icon_secrettreasureoflife;
+            }
             else if ("w-icecape".Equals(flagName))
             {
                 return global::LMRItemTracker.Properties.Resources.Icon_icecape;
@@ -1794,6 +1832,10 @@ namespace LMRItemTracker
             {
                 return global::LMRItemTracker.Properties.Resources.Icon_swimsuit;
             }
+            else if ("w-secrettroflife".Equals(flagName))
+            {
+                return global::LMRItemTracker.Properties.Resources.Icon_secrettreasureoflife;
+            }
             else if ("whip".Equals(flagName))
             {
                 return global::LMRItemTracker.Properties.Resources.Icon_whip;
@@ -1878,6 +1920,10 @@ namespace LMRItemTracker
             else if ("Spaulder".Equals(itemName))
             {
                 return "w-spaulder";
+            }
+            else if ("Secret Treasure of Life".Equals(itemName))
+            {
+                return "w-secrettroflife";
             }
             else if ("Ice Cape".Equals(itemName))
             {
@@ -2552,6 +2598,10 @@ namespace LMRItemTracker
             {
                 return ankhJewelPanel;
             }
+            if ("Secret Treasure of Life".Equals(itemName))
+            {
+                return secretTreasureOfLife;
+            }
             return null;
         }
 
@@ -2668,6 +2718,10 @@ namespace LMRItemTracker
             lastItemLabel.ForeColor = Properties.Settings.Default.TextColor;
             deathLabel.ForeColor = Properties.Settings.Default.TextColor;
             deathCount.ForeColor = Properties.Settings.Default.TextColor;
+            spaulderLabel.ForeColor = Properties.Settings.Default.TextColor;
+            spaulderCount.ForeColor = Properties.Settings.Default.TextColor;
+            totalSpauldersLabel.ForeColor = Properties.Settings.Default.TextColor;
+            totalSpauldersCount.ForeColor = Properties.Settings.Default.TextColor;
 
             mapCount.UpdateTextColor();
             ankhJewelCount.UpdateTextColor();
@@ -2708,6 +2762,7 @@ namespace LMRItemTracker
             Properties.Settings.Default.ShowAmmoCount = true;
             Properties.Settings.Default.ShowDeathCount = true;
             Properties.Settings.Default.DeathCount = 0;
+            Properties.Settings.Default.SpaulderCount = 0;
 
             UpdateAlwaysOnTop();
             UpdateFormSize();
@@ -2958,6 +3013,25 @@ namespace LMRItemTracker
             else if (me.Button == System.Windows.Forms.MouseButtons.Right)
             {
                 UpdateDeathCount(false);
+            }
+        }
+
+        private void resetSpaulderCount(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.SpaulderCount = 0;
+            UpdateCount(spaulderCount, Properties.Settings.Default.SpaulderCount, int.MaxValue);
+        }
+
+        private void spaulderCount_MouseClick(object sender, MouseEventArgs e)
+        {
+            MouseEventArgs me = (MouseEventArgs)e;
+            if (me.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                UpdateSpaulderCount(true);
+            }
+            else if (me.Button == System.Windows.Forms.MouseButtons.Right)
+            {
+                UpdateSpaulderCount(false);
             }
         }
     }
