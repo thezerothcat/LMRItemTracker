@@ -2423,36 +2423,6 @@ namespace LMRItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Icon_secrettreasureoflife {
-            get {
-                object obj = ResourceManager.GetObject("Icon_secrettreasureoflife", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Icon_secrettreasureoflife_blank {
-            get {
-                object obj = ResourceManager.GetObject("Icon_secrettreasureoflife_blank", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Icon_secrettreasureoflife_solid {
-            get {
-                object obj = ResourceManager.GetObject("Icon_secrettreasureoflife_solid", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Icon_serpentstaff {
             get {
                 object obj = ResourceManager.GetObject("Icon_serpentstaff", resourceCulture);
