@@ -929,7 +929,7 @@ namespace LMRItemTracker
                         lastItem1.Image = lastItemImage;
                         if ("w-map-shrine".Equals(flagName))
                         {
-                            lastItem1.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_map;
+                            lastItem1.BackgroundImage = global::LMRItemTracker.Properties.Resources.mapcandy;
                         }
                         else
                         {
@@ -1420,11 +1420,11 @@ namespace LMRItemTracker
             }
             else if ("w-map-shrine".Equals(flagName))
             {
-                return global::LMRItemTracker.Properties.Resources.Icon_dragonbone_small;
+                return global::LMRItemTracker.Properties.Resources.mapcandy;
             }
             else if (flagName.StartsWith("w-map-"))
             {
-                return global::LMRItemTracker.Properties.Resources.Icon_map;
+                return global::LMRItemTracker.Properties.Resources.mapcandy;
             }
             else if ("ankh-jewels".Equals(flagName))
             {

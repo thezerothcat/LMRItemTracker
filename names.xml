@@ -101,7 +101,10 @@
     <item id="byte-0df" value="w-map-ruins" />
     <item id="byte-0e0" value="w-map-birth" />
     <item id="byte-0e1" value="w-map-dimensional" />
-	<item id="word-057" value="inv-w-soft-yagomap" />
+  <item id="byte-ab0" value="w-candy-mom" />
+  <item id="byte-401" value="w-candy-escape" />
+
+  <item id="word-057" value="inv-w-soft-yagomap" />
 	<item id="word-058" value="inv-w-soft-yagostr" />
 	<item id="word-055" value="inv-w-soft-reader" />
 	<item id="word-056" value="inv-w-soft-xmailer" />

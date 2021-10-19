@@ -970,4 +970,7 @@
   <data name="Icon_keyfairy_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_keyfairy_solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="mapcandy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mapcandy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -116,6 +116,30 @@ namespace LMRItemTracker
                     laMulanaItemTrackerForm.ToggleMap(displayname, false);
                 }
             }
+            else if (displayname.Equals("w-candy-escape"))
+            {
+                if ((byte)old < 2 && (byte)cur >= 2)
+                {
+                    laMulanaItemTrackerForm.ToggleMap(displayname, true);
+                    laMulanaItemTrackerForm.UpdateLastItem(displayname);
+                }
+                else if ((byte)old >= 2 && (byte)cur < 2)
+                {
+                    laMulanaItemTrackerForm.ToggleMap(displayname, false);
+                }
+            }
+            else if (displayname.Equals("w-candy-mom"))
+            {
+                if ((byte)old < 1 && (byte)cur >= 1)
+                {
+                    laMulanaItemTrackerForm.ToggleMap(displayname, true);
+                    laMulanaItemTrackerForm.UpdateLastItem(displayname);
+                }
+                else if ((byte)old >= 1 && (byte)cur < 1)
+                {
+                    laMulanaItemTrackerForm.ToggleMap(displayname, false);
+                }
+            }
             else if (displayname.Equals("whip"))
             {
                 // For some reason, this is getting read as ushort even though it's actually signed.

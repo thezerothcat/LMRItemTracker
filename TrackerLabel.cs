@@ -9,6 +9,7 @@
         public int Max { get; set; }
         public string FormatString { get; set; }
         public bool TreatAsAmmo { get; set; }
+        public int MaxDisplay { get; set; }
 
         public TrackerLabel()
         {
@@ -25,7 +26,7 @@
                     Invoke(new System.Action(() =>
                     {
                         Count = newCount;
-                        Text = string.Format(FormatString, newCount, Max);
+                        Text = string.Format(FormatString, newCount, MaxDisplay);
                         Font = Text.Length > 3 ? SMALL_FONT : LARGE_FONT;
                         Refresh();
                     }));
@@ -33,7 +34,7 @@
                 else
                 {
                     Count = newCount;
-                    Text = string.Format(FormatString, Count, Max);
+                    Text = string.Format(FormatString, Count, MaxDisplay);
                     Font = Text.Length > 3 ? SMALL_FONT : LARGE_FONT;
                 }
             }

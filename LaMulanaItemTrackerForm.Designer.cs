@@ -2277,8 +2277,9 @@ namespace LMRItemTracker
             this.mapCount.Cursor = System.Windows.Forms.Cursors.Default;
             this.mapCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.mapCount.FormatString = "{0}/{1}";
+            this.mapCount.MaxDisplay = 17;
             this.mapCount.Location = new System.Drawing.Point(-6, 40);
-            this.mapCount.Max = 17;
+            this.mapCount.Max = 19;
             this.mapCount.Name = "mapCount";
             this.mapCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.mapCount.Size = new System.Drawing.Size(52, 16);
@@ -2290,12 +2291,12 @@ namespace LMRItemTracker
             // 
             // maps
             // 
-            this.maps.BackgroundImage = global::LMRItemTracker.Properties.Resources.Icon_map;
+            this.maps.BackgroundImage = global::LMRItemTracker.Properties.Resources.mapcandy;
             this.maps.Collected = true;
-            this.maps.CollectedImage = global::LMRItemTracker.Properties.Resources.Icon_map;
+            this.maps.CollectedImage = global::LMRItemTracker.Properties.Resources.mapcandy;
             this.maps.Dock = System.Windows.Forms.DockStyle.Top;
             this.maps.ForeCollected = false;
-            this.maps.ForeImage = global::LMRItemTracker.Properties.Resources.Icon_dragonbone_small;
+            this.maps.ForeImage = global::LMRItemTracker.Properties.Resources.mapcandy;
             this.maps.Location = new System.Drawing.Point(0, 0);
             this.maps.Margin = new System.Windows.Forms.Padding(0);
             this.maps.Name = "maps";
