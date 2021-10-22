@@ -76,6 +76,10 @@ namespace LMRItemTracker
             this.holyGrail = new LMRItemTracker.MultiStateTrackerBox();
             this.mirai = new LMRItemTracker.TrackerBox();
             this.mainPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
+            this.curseLevelPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.curseLevelLabel = new System.Windows.Forms.Label();
+            this.curseLevelCount = new System.Windows.Forms.Label();
             this.overviewPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.lastItemPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.lastItemLabel = new System.Windows.Forms.Label();
@@ -218,6 +222,8 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.holyGrail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mirai)).BeginInit();
             this.mainPanel.SuspendLayout();
+            this.flowLayoutPanel9.SuspendLayout();
+            this.curseLevelPanel.SuspendLayout();
             this.overviewPanel.SuspendLayout();
             this.lastItemPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lastItem1)).BeginInit();
@@ -576,7 +582,7 @@ namespace LMRItemTracker
             this.flowLayoutPanel1.Controls.Add(this.holyGrail);
             this.flowLayoutPanel1.Controls.Add(this.mirai);
             this.mainPanel.SetFlowBreak(this.flowLayoutPanel1, true);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 66);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 106);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(280, 56);
@@ -688,6 +694,7 @@ namespace LMRItemTracker
             this.translationTablets.FormatString = "{0}%";
             this.translationTablets.Location = new System.Drawing.Point(0, 40);
             this.translationTablets.Max = 100;
+            this.translationTablets.MaxDisplay = 100;
             this.translationTablets.Name = "translationTablets";
             this.translationTablets.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.translationTablets.Size = new System.Drawing.Size(40, 16);
@@ -734,6 +741,7 @@ namespace LMRItemTracker
             // 
             this.mainPanel.AutoSize = true;
             this.mainPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.mainPanel.Controls.Add(this.flowLayoutPanel9);
             this.mainPanel.Controls.Add(this.overviewPanel);
             this.mainPanel.Controls.Add(this.flowLayoutPanel1);
             this.mainPanel.Controls.Add(this.flowLayoutPanel2);
@@ -747,9 +755,60 @@ namespace LMRItemTracker
             this.mainPanel.Margin = new System.Windows.Forms.Padding(0);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Padding = new System.Windows.Forms.Padding(10);
-            this.mainPanel.Size = new System.Drawing.Size(340, 758);
+            this.mainPanel.Size = new System.Drawing.Size(340, 798);
             this.mainPanel.TabIndex = 111;
             this.mainPanel.DoubleClick += new System.EventHandler(this.SelectFormColor);
+            // 
+            // flowLayoutPanel9
+            // 
+            this.flowLayoutPanel9.AutoSize = true;
+            this.flowLayoutPanel9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel9.Controls.Add(this.curseLevelPanel);
+            this.mainPanel.SetFlowBreak(this.flowLayoutPanel9, true);
+            this.flowLayoutPanel9.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel9.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel9.Name = "flowLayoutPanel9";
+            this.flowLayoutPanel9.Size = new System.Drawing.Size(114, 40);
+            this.flowLayoutPanel9.TabIndex = 119;
+            this.flowLayoutPanel9.WrapContents = false;
+            // 
+            // curseLevelPanel
+            // 
+            this.curseLevelPanel.AutoSize = true;
+            this.curseLevelPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.curseLevelPanel.Controls.Add(this.curseLevelLabel);
+            this.curseLevelPanel.Controls.Add(this.curseLevelCount);
+            this.curseLevelPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.curseLevelPanel.Location = new System.Drawing.Point(0, 0);
+            this.curseLevelPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.curseLevelPanel.Name = "curseLevelPanel";
+            this.curseLevelPanel.Size = new System.Drawing.Size(114, 40);
+            this.curseLevelPanel.TabIndex = 120;
+            this.curseLevelPanel.WrapContents = false;
+            // 
+            // curseLevelLabel
+            // 
+            this.curseLevelLabel.AutoSize = true;
+            this.curseLevelLabel.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.curseLevelLabel.Location = new System.Drawing.Point(3, 0);
+            this.curseLevelLabel.MinimumSize = new System.Drawing.Size(0, 40);
+            this.curseLevelLabel.Name = "curseLevelLabel";
+            this.curseLevelLabel.Size = new System.Drawing.Size(87, 40);
+            this.curseLevelLabel.TabIndex = 0;
+            this.curseLevelLabel.Text = "Curse Level:";
+            this.curseLevelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // curseLevelCount
+            // 
+            this.curseLevelCount.AutoSize = true;
+            this.curseLevelCount.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.curseLevelCount.Location = new System.Drawing.Point(96, 0);
+            this.curseLevelCount.MinimumSize = new System.Drawing.Size(0, 40);
+            this.curseLevelCount.Name = "curseLevelCount";
+            this.curseLevelCount.Size = new System.Drawing.Size(15, 40);
+            this.curseLevelCount.TabIndex = 1;
+            this.curseLevelCount.Text = "0";
+            this.curseLevelCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // overviewPanel
             // 
@@ -757,7 +816,7 @@ namespace LMRItemTracker
             this.overviewPanel.Controls.Add(this.lastItemPanel);
             this.overviewPanel.Controls.Add(this.deathPanel);
             this.mainPanel.SetFlowBreak(this.overviewPanel, true);
-            this.overviewPanel.Location = new System.Drawing.Point(10, 10);
+            this.overviewPanel.Location = new System.Drawing.Point(10, 50);
             this.overviewPanel.Margin = new System.Windows.Forms.Padding(0);
             this.overviewPanel.Name = "overviewPanel";
             this.overviewPanel.Size = new System.Drawing.Size(303, 56);
@@ -893,7 +952,7 @@ namespace LMRItemTracker
             this.flowLayoutPanel2.Controls.Add(this.torude);
             this.flowLayoutPanel2.Controls.Add(this.shrinePanel);
             this.mainPanel.SetFlowBreak(this.flowLayoutPanel2, true);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(10, 130);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(10, 170);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(320, 176);
@@ -1389,6 +1448,7 @@ namespace LMRItemTracker
             this.skullWallCount.FormatString = "{0}/{1}";
             this.skullWallCount.Location = new System.Drawing.Point(0, 40);
             this.skullWallCount.Max = 4;
+            this.skullWallCount.MaxDisplay = 4;
             this.skullWallCount.Name = "skullWallCount";
             this.skullWallCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.skullWallCount.Size = new System.Drawing.Size(40, 16);
@@ -1417,7 +1477,7 @@ namespace LMRItemTracker
             this.flowLayoutPanel3.Controls.Add(this.bracelet);
             this.flowLayoutPanel3.Controls.Add(this.spaulder);
             this.mainPanel.SetFlowBreak(this.flowLayoutPanel3, true);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(10, 314);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(10, 354);
             this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(320, 80);
@@ -1681,7 +1741,7 @@ namespace LMRItemTracker
             this.flowLayoutPanel4.Controls.Add(this.earthSpearPanel);
             this.flowLayoutPanel4.Controls.Add(this.bombPanel);
             this.mainPanel.SetFlowBreak(this.flowLayoutPanel4, true);
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(10, 402);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(10, 442);
             this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
             this.flowLayoutPanel4.Size = new System.Drawing.Size(320, 112);
@@ -1853,6 +1913,7 @@ namespace LMRItemTracker
             this.shurikenAmmoCount.FormatString = "{0}";
             this.shurikenAmmoCount.Location = new System.Drawing.Point(0, 40);
             this.shurikenAmmoCount.Max = 150;
+            this.shurikenAmmoCount.MaxDisplay = 150;
             this.shurikenAmmoCount.Name = "shurikenAmmoCount";
             this.shurikenAmmoCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.shurikenAmmoCount.Size = new System.Drawing.Size(40, 16);
@@ -1900,6 +1961,7 @@ namespace LMRItemTracker
             this.rollingShurikenAmmoCount.FormatString = "{0}";
             this.rollingShurikenAmmoCount.Location = new System.Drawing.Point(0, 40);
             this.rollingShurikenAmmoCount.Max = 100;
+            this.rollingShurikenAmmoCount.MaxDisplay = 100;
             this.rollingShurikenAmmoCount.Name = "rollingShurikenAmmoCount";
             this.rollingShurikenAmmoCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.rollingShurikenAmmoCount.Size = new System.Drawing.Size(40, 16);
@@ -1947,6 +2009,7 @@ namespace LMRItemTracker
             this.caltropsAmmoCount.FormatString = "{0}";
             this.caltropsAmmoCount.Location = new System.Drawing.Point(0, 40);
             this.caltropsAmmoCount.Max = 80;
+            this.caltropsAmmoCount.MaxDisplay = 80;
             this.caltropsAmmoCount.Name = "caltropsAmmoCount";
             this.caltropsAmmoCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.caltropsAmmoCount.Size = new System.Drawing.Size(40, 16);
@@ -1994,6 +2057,7 @@ namespace LMRItemTracker
             this.flareGunAmmoCount.FormatString = "{0}";
             this.flareGunAmmoCount.Location = new System.Drawing.Point(0, 40);
             this.flareGunAmmoCount.Max = 80;
+            this.flareGunAmmoCount.MaxDisplay = 80;
             this.flareGunAmmoCount.Name = "flareGunAmmoCount";
             this.flareGunAmmoCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.flareGunAmmoCount.Size = new System.Drawing.Size(40, 16);
@@ -2041,6 +2105,7 @@ namespace LMRItemTracker
             this.chakramAmmoCount.FormatString = "{0}";
             this.chakramAmmoCount.Location = new System.Drawing.Point(0, 40);
             this.chakramAmmoCount.Max = 10;
+            this.chakramAmmoCount.MaxDisplay = 10;
             this.chakramAmmoCount.Name = "chakramAmmoCount";
             this.chakramAmmoCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.chakramAmmoCount.Size = new System.Drawing.Size(40, 16);
@@ -2088,6 +2153,7 @@ namespace LMRItemTracker
             this.earthSpearAmmoCount.FormatString = "{0}";
             this.earthSpearAmmoCount.Location = new System.Drawing.Point(0, 40);
             this.earthSpearAmmoCount.Max = 80;
+            this.earthSpearAmmoCount.MaxDisplay = 80;
             this.earthSpearAmmoCount.Name = "earthSpearAmmoCount";
             this.earthSpearAmmoCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.earthSpearAmmoCount.Size = new System.Drawing.Size(40, 16);
@@ -2135,6 +2201,7 @@ namespace LMRItemTracker
             this.bombAmmoCount.FormatString = "{0}";
             this.bombAmmoCount.Location = new System.Drawing.Point(0, 40);
             this.bombAmmoCount.Max = 30;
+            this.bombAmmoCount.MaxDisplay = 30;
             this.bombAmmoCount.Name = "bombAmmoCount";
             this.bombAmmoCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bombAmmoCount.Size = new System.Drawing.Size(40, 16);
@@ -2174,7 +2241,7 @@ namespace LMRItemTracker
             this.flowLayoutPanel5.Controls.Add(this.mapsPanel);
             this.flowLayoutPanel5.Controls.Add(this.ankhJewelPanel);
             this.mainPanel.SetFlowBreak(this.flowLayoutPanel5, true);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(10, 522);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(10, 562);
             this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
             this.flowLayoutPanel5.Size = new System.Drawing.Size(280, 56);
@@ -2277,9 +2344,9 @@ namespace LMRItemTracker
             this.mapCount.Cursor = System.Windows.Forms.Cursors.Default;
             this.mapCount.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.mapCount.FormatString = "{0}/{1}";
-            this.mapCount.MaxDisplay = 17;
             this.mapCount.Location = new System.Drawing.Point(-6, 40);
             this.mapCount.Max = 19;
+            this.mapCount.MaxDisplay = 17;
             this.mapCount.Name = "mapCount";
             this.mapCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.mapCount.Size = new System.Drawing.Size(52, 16);
@@ -2347,6 +2414,7 @@ namespace LMRItemTracker
             this.ankhJewelCount.FormatString = "{0}";
             this.ankhJewelCount.Location = new System.Drawing.Point(0, 40);
             this.ankhJewelCount.Max = 9;
+            this.ankhJewelCount.MaxDisplay = 8;
             this.ankhJewelCount.Name = "ankhJewelCount";
             this.ankhJewelCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ankhJewelCount.Size = new System.Drawing.Size(40, 16);
@@ -2383,7 +2451,7 @@ namespace LMRItemTracker
             this.flowLayoutPanel6.Controls.Add(this.miracle);
             this.flowLayoutPanel6.Controls.Add(this.lamulana);
             this.mainPanel.SetFlowBreak(this.flowLayoutPanel6, true);
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(10, 586);
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(10, 626);
             this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
             this.flowLayoutPanel6.Size = new System.Drawing.Size(320, 120);
@@ -2776,7 +2844,7 @@ namespace LMRItemTracker
             this.bossPanel.Controls.Add(this.baphomet);
             this.bossPanel.Controls.Add(this.tiamat);
             this.mainPanel.SetFlowBreak(this.bossPanel, true);
-            this.bossPanel.Location = new System.Drawing.Point(10, 714);
+            this.bossPanel.Location = new System.Drawing.Point(10, 754);
             this.bossPanel.Margin = new System.Windows.Forms.Padding(0);
             this.bossPanel.MaximumSize = new System.Drawing.Size(280, 0);
             this.bossPanel.Name = "bossPanel";
@@ -2950,6 +3018,10 @@ namespace LMRItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.mirai)).EndInit();
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
+            this.flowLayoutPanel9.ResumeLayout(false);
+            this.flowLayoutPanel9.PerformLayout();
+            this.curseLevelPanel.ResumeLayout(false);
+            this.curseLevelPanel.PerformLayout();
             this.overviewPanel.ResumeLayout(false);
             this.overviewPanel.PerformLayout();
             this.lastItemPanel.ResumeLayout(false);
@@ -3262,5 +3334,9 @@ namespace LMRItemTracker
         private MultiStateTrackerBox vessel;
         private KeySwordTrackerBox keySword;
         private MultiStateTrackerBox lampOfTime;
+        private FlowLayoutPanel flowLayoutPanel9;
+        private FlowLayoutPanel curseLevelPanel;
+        private Label curseLevelLabel;
+        private Label curseLevelCount;
     }
 }

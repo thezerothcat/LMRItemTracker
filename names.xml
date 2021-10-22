@@ -102,7 +102,7 @@
     <item id="byte-0e0" value="w-map-birth" />
     <item id="byte-0e1" value="w-map-dimensional" />
   <item id="byte-ab0" value="w-candy-mom" />
-  <item id="byte-401" value="w-candy-escape" />
+  <item id="byte-ab3" value="w-candy-escape" />
 
   <item id="word-057" value="inv-w-soft-yagomap" />
 	<item id="word-058" value="inv-w-soft-yagostr" />
@@ -137,9 +137,10 @@
 	<item id="word-049" value="inv-w-mulanatalisman" />
 	<item id="word-04a" value="inv-w-forbidden" />
 	<item id="word-04c" value="inv-w-msx2" />
-	<item id="byte-108" value="w-medicine-yellow" comments="2" />
+  <item id="word-054" value="inv-w-secrettroflife" />
+  <item id="byte-108" value="w-medicine-red" comments="2" />
 	<item id="byte-109" value="w-medicine-green" comments="2" />
-	<item id="byte-10a" value="w-medicine-red" comments="2" />
+	<item id="byte-10a" value="w-medicine-yellow" comments="2" />
 	<item id="word-051" value="inv-w-maternity" />
 	<item id="byte-118" value="fairypointsactive" comment="fairy points work and healing fairy in credits" />
     <item id="byte-aea" value="mantra-amphisbaena" comments="2=recited?" />
@@ -165,22 +166,7 @@
     <item id="byte-35c" value="orb-shrine-f" />
     <item id="byte-35d" value="orb-ruin" />
     <item id="byte-35e" value="orb-dimension" />
-    <item id="byte-a94" value="w-map-a94" />
-    <item id="byte-a95" value="w-map-a95" />
-    <item id="byte-a96" value="w-map-a96" />
-    <item id="byte-a97" value="w-map-a97" />
-    <item id="byte-a98" value="w-map-a98" />
-    <item id="byte-a99" value="w-map-a99" />
-    <item id="byte-a9a" value="w-map-a9a" />
-    <item id="byte-a9b" value="w-map-a9b" />
-    <item id="byte-a9c" value="w-map-a9c" />
-    <item id="byte-a9d" value="w-map-a9d" />
-    <item id="byte-a9e" value="w-map-a9e" />
-    <item id="byte-a9f" value="w-map-a9f" />
-    <item id="byte-aa0" value="w-map-aa0" />
-    <item id="byte-aa1" value="w-map-aa1" />
-    <item id="byte-aa2" value="w-map-aa2" />
-    <item id="byte-aa3" value="w-map-aa3" />
+    <item id="byte-aaa" value="w-custom-cursed" />
 	<item id="word-000" value="whip" />
 	<item id="word-010" value="shield-buckler" />
     <item id="word-011" value="shield-silver" />

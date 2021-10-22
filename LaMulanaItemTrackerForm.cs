@@ -1092,6 +1092,16 @@ namespace LMRItemTracker
             UpdateCount(deathCount, Properties.Settings.Default.DeathCount, int.MaxValue);
         }
 
+        public void UpdateCurseLevel(short curseLevel)
+        {
+            UpdateCount(curseLevelCount, curseLevel, int.MaxValue);
+            if(curseLevel > 0)
+            {
+                Properties.Settings.Default.ShowCurseLevel = true;
+                UpdateShowCurseLevel();
+            }
+        }
+
         private void LaMulanaItemTrackerForm_Load(object sender, EventArgs e)
         {
             if(Properties.Settings.Default.UpgradeRequired)
@@ -1120,6 +1130,8 @@ namespace LMRItemTracker
             UpdateBackgroundMode();
             UpdateShowLastItem();
             UpdateShowDeathCount();
+            UpdateShowCurseLevel();
+
             InitializeFormPanels();
 
             try
@@ -2658,6 +2670,30 @@ namespace LMRItemTracker
             deathPanel.Visible = Properties.Settings.Default.ShowDeathCount;
         }
 
+        private void UpdateShowCurseLevel()
+        {
+            ShowPanel(flowLayoutPanel9, Properties.Settings.Default.ShowCurseLevel);
+        }
+
+        public void ShowPanel(FlowLayoutPanel flowLayoutPanel, Boolean makeVisible)
+        {
+            if (flowLayoutPanel.InvokeRequired)
+            {
+                Invoke(new System.Action(() =>
+                {
+                    flowLayoutPanel9.Visible = makeVisible;
+                    flowLayoutPanel9.Refresh();
+                    mainPanel.Refresh();
+                }));
+            }
+            else
+            {
+                flowLayoutPanel9.Visible = makeVisible;
+                flowLayoutPanel9.Refresh();
+                mainPanel.Refresh();
+            }
+        }
+
         private void UpdateFormColor()
         {
             this.BackColor = Properties.Settings.Default.BackgroundColor;
@@ -2668,6 +2704,8 @@ namespace LMRItemTracker
             lastItemLabel.ForeColor = Properties.Settings.Default.TextColor;
             deathLabel.ForeColor = Properties.Settings.Default.TextColor;
             deathCount.ForeColor = Properties.Settings.Default.TextColor;
+            curseLevelLabel.ForeColor = Properties.Settings.Default.TextColor;
+            curseLevelCount.ForeColor = Properties.Settings.Default.TextColor;
 
             mapCount.UpdateTextColor();
             ankhJewelCount.UpdateTextColor();
@@ -2903,6 +2941,7 @@ namespace LMRItemTracker
 
         private void Redraw()
         {
+            RedrawPanel(flowLayoutPanel9);
             RedrawPanel(flowLayoutPanel1);
             RedrawPanel(flowLayoutPanel2);
             RedrawPanel(flowLayoutPanel3);

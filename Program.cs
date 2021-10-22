@@ -203,10 +203,18 @@ namespace LMRItemTracker
                 {
                     laMulanaItemTrackerForm.toggleItem(updatedName, false);
                 }
+
             }
             else if (displayname.StartsWith("w-"))
             {
-                if ((byte)old < 2 && (byte)cur >= 2)
+                if (displayname.Equals("w-custom-cursed"))
+                {
+                    if (cur is byte)
+                    {
+                        laMulanaItemTrackerForm.UpdateCurseLevel((byte)cur);
+                    }
+                }
+                else if ((byte)old < 2 && (byte)cur >= 2)
                 {
                     laMulanaItemTrackerForm.toggleItem(displayname, true);
                     laMulanaItemTrackerForm.UpdateLastItem(displayname);
